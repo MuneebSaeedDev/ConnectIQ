@@ -1,0 +1,136 @@
+/*
+  Design tokens reverse-engineered from the Figma source
+  (see docs/figma/design-system-notes.md). No Figma variables/styles
+  were bound in the design file, so these values are the de-facto
+  spec for a real token system going forward. Do not re-hardcode
+  hex values in components — extend this file instead.
+*/
+
+:root {
+  /* Color — brand */
+  --color-primary: #0f5699;
+
+  /* Color — text */
+  --color-text-primary: #0f172a;
+  --color-text-primary-alt: #111827;
+  --color-text-secondary: #64748b;
+  --color-text-secondary-alt: #6b7280;
+  --color-text-secondary-strong: #475569;
+  --color-text-tertiary: #374151;
+  /* --color-text-muted/-faint intentionally use the secondary values,
+     not the original Figma-observed #94a3b8/#cbd5e1 — those fail WCAG
+     AA contrast (2.56:1 / 1.48:1) against white/page backgrounds and
+     were used for real status/metadata text, not decoration (caught
+     in SCR-001 UI review). The lighter hex values are kept below as
+     decorative-only tokens for non-text use (dots, dividers). */
+  --color-text-muted: var(--color-text-secondary);
+  --color-text-muted-alt: var(--color-text-secondary-alt);
+  --color-text-faint: var(--color-text-secondary);
+
+  /* Color — border/divider */
+  --color-border: #e2e8f0;
+  --color-border-subtle: #f1f5f9;
+  --color-border-faint: #f8fafc;
+
+  /* Decorative-only — do not use for text. These are the original
+     Figma-observed light values (#94a3b8/#cbd5e1), safe for dots,
+     dividers, and disabled fills but not WCAG-compliant as text color. */
+  --color-decorative-muted: #94a3b8;
+  --color-decorative-faint: #cbd5e1;
+
+  /* Color — surface */
+  --color-surface-page: #f8fafc;
+  --color-surface-card: #ffffff;
+  --color-surface-muted: #fafbfc;
+  --color-surface-muted-alt: #f3f5f7;
+  --color-surface-hover: #eceef2;
+
+  /* Overlay/scrim — for modal/dialog backdrops. Not observed as a
+     bound Figma value (no variables exist in the source file); this
+     is a standard dark-at-low-opacity scrim consistent with the
+     dialog's own dimmed-backdrop appearance on SCR-008's Figma frame,
+     not a reuse of --color-decorative-muted (that token is reserved
+     for small decorative accents, not page-covering overlays). */
+  --color-overlay-scrim: rgba(15, 23, 42, 0.28);
+
+  /* Color — semantic */
+  --color-success: #16a34a;
+  --color-success-strong: #15803d;
+  --color-success-bg: #f0fdf4;
+  --color-danger: #dc2626;
+  --color-danger-strong: #b91c1c;
+  --color-danger-bg: #fef2f2;
+  --color-danger-border: #fecaca;
+  --color-warning: #d97706;
+  --color-warning-bg: #fffbeb;
+
+  /* Color — on-fill text (text drawn over a solid brand/semantic fill,
+     not over a page/card surface — kept separate from --color-text-*
+     since those are always meant for light surfaces) */
+  --color-text-on-primary: #ffffff;
+
+  /* Color — shell accent (AppShell/Header/Sidebar/Footer, nodes
+     211:1981/211:2024/213:5159/213:5708). Figma's shell frames use a
+     distinct accent blue (#2563eb) for the active-nav highlight, org
+     switcher badge, and user-avatar initials — separate from
+     --color-primary (#0f5699, used by auth/dashboard screens) rather
+     than merged into it, since the two hex values are visually
+     different and this file's rule is to preserve observed values
+     as real tokens, not to unify colors Figma itself did not unify. */
+  --color-shell-accent: #2563eb;
+  --color-shell-accent-wash: #eff6ff;
+  --color-shell-accent-border: #bfdbfe;
+  --color-shell-nav-active-bg: #eff6ff;
+  --color-shell-nav-text: #64748b;
+  --color-shell-nav-text-strong: #475569;
+  /* Section-heading text ("DATA", "PIPELINES", etc.) must NOT reuse
+     the Figma-observed #cbd5e1 — same WCAG-AA failure precedent
+     documented above for --color-text-faint (2.56:1/1.48:1, caught in
+     SCR-001 UI review). Reuses --color-text-secondary (real, readable
+     metadata-text token) instead, so these headings stay legible. */
+  --color-shell-nav-heading: var(--color-text-secondary);
+  --color-shell-badge-bg: #fee2e2;
+
+  /* User Profile Menu avatar fill (Figma node 39:6826, "Amelia Chen —
+     avatar" / org-badge sub-avatar) — a two-stop navy→shell-accent
+     gradient distinct from --color-shell-accent's flat fill, observed
+     directly on both avatar instances in that node's design context.
+     Kept as its own token rather than reused elsewhere, since no
+     other shell element uses a gradient fill. */
+  --gradient-shell-avatar: linear-gradient(135deg, #1e3a5f 0%, #0f5699 100%);
+
+  /* Typography */
+  --font-sans: 'Inter', system-ui, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, Consolas, monospace;
+
+  /* --text-xs is reserved for genuinely decorative micro-labels only
+     (per design-system-notes.md: "always small, decorative/technical,
+     never body copy"). Real status/metadata content must use
+     --text-meta (11px) or larger — 9px was found in SCR-001 UI review
+     rendering meaningful content (env/version/build info), not
+     decoration. */
+  --text-xs: 9px;
+  --text-meta: 11px;
+  --text-sm: 12px;
+  --text-base: 13px;
+  --text-lg: 16px;
+  --text-xl: 19px;
+
+  /* Spacing (≈4px base unit) */
+  --space-1: 4px;
+  --space-2: 6px;
+  --space-3: 8px;
+  --space-4: 12px;
+  --space-5: 16px;
+  --space-6: 20px;
+  --space-7: 24px;
+  --space-8: 28px;
+  --space-9: 36px;
+
+  /* Radius */
+  --radius-sm: 3px;
+  --radius-md: 6px;
+
+  /* Reference viewport for the current desktop-only design set */
+  --viewport-reference: 1440px;
+}

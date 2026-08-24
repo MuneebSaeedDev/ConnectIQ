@@ -1,0 +1,12 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="IcoMessageSquare" clip-path="url(#clip0_0_13)">
+<path id="Vector" d="M11.1429 1.39286H1.85714C1.61087 1.39286 1.37468 1.49069 1.20054 1.66483C1.0264 1.83897 0.928572 2.07516 0.928572 2.32143V8.82143C0.928572 9.0677 1.0264 9.30389 1.20054 9.47803C1.37468 9.65217 1.61087 9.75 1.85714 9.75H4.17857L6.5 11.6071L8.82143 8.82143H11.1429C11.3891 8.82143 11.6253 8.7236 11.7995 8.54946C11.9736 8.37532 12.0714 8.13913 12.0714 7.89286V1.39286C12.0714 1.14658 11.9736 0.910399 11.7995 0.736258C11.6253 0.562117 11.3891 0.464286 11.1429 0.464286V1.39286Z" stroke="#374151" stroke-width="1.20714" stroke-linejoin="round"/>
+<path id="Vector_2" d="M3.71429 4.64286H9.28571" stroke="#374151" stroke-width="1.02143" stroke-linecap="round"/>
+<path id="Vector_3" d="M3.71429 6.96429H7.42857" stroke="#374151" stroke-width="1.02143" stroke-linecap="round"/>
+</g>
+<defs>
+<clipPath id="clip0_0_13">
+<rect width="13" height="13" fill="white"/>
+</clipPath>
+</defs>
+</svg>

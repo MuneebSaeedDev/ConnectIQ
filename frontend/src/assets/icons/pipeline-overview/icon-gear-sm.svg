@@ -1,0 +1,11 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="IcoGearSm" clip-path="url(#clip0_0_4)">
+<path id="Vector" d="M5.5 7.07143C6.36788 7.07143 7.07143 6.36788 7.07143 5.5C7.07143 4.63212 6.36788 3.92857 5.5 3.92857C4.63212 3.92857 3.92857 4.63212 3.92857 5.5C3.92857 6.36788 4.63212 7.07143 5.5 7.07143Z" stroke="#6B7280" stroke-width="1.02143"/>
+<path id="Vector_2" d="M5.5 0.785714V2.35714M5.5 8.64286V10.2143M0.785714 5.5H2.35714M8.64286 5.5H10.2143M2.27857 2.27857L3.37857 3.37857M7.62143 7.62143L8.72143 8.72143M2.27857 8.72143L3.37857 7.62143M7.62143 3.37857L8.72143 2.27857" stroke="#6B7280" stroke-width="1.02143" stroke-linecap="round"/>
+</g>
+<defs>
+<clipPath id="clip0_0_4">
+<rect width="11" height="11" fill="white"/>
+</clipPath>
+</defs>
+</svg>

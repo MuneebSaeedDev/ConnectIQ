@@ -1,0 +1,12 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="IcoAlertCircle" clip-path="url(#clip0_0_4)">
+<path id="Vector" d="M6.5 11.6071C9.3206 11.6071 11.6071 9.3206 11.6071 6.5C11.6071 3.6794 9.3206 1.39286 6.5 1.39286C3.6794 1.39286 1.39286 3.6794 1.39286 6.5C1.39286 9.3206 3.6794 11.6071 6.5 11.6071Z" stroke="#DC2626" stroke-width="1.20714"/>
+<path id="Vector_2" d="M6.5 4.17857V6.96429" stroke="#DC2626" stroke-width="1.3" stroke-linecap="round"/>
+<path id="Vector_3" d="M6.5 9.47143C6.85899 9.47143 7.15 9.18041 7.15 8.82143C7.15 8.46244 6.85899 8.17143 6.5 8.17143C6.14102 8.17143 5.85 8.46244 5.85 8.82143C5.85 9.18041 6.14102 9.47143 6.5 9.47143Z" fill="#DC2626"/>
+</g>
+<defs>
+<clipPath id="clip0_0_4">
+<rect width="13" height="13" fill="white"/>
+</clipPath>
+</defs>
+</svg>
