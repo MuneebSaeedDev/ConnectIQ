@@ -189,7 +189,7 @@ function Header({ data, refetch, isFetching }) {
         </button>
         <button
           type="button"
-          className="flex h-8 items-center gap-token-2 rounded-md bg-primary px-token-4 text-token-sm font-semibold text-on-primary hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-60 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+          className="flex h-8 items-center gap-token-2 rounded-md bg-primary px-token-4 text-token-sm font-semibold text-text-on-primary hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-60 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
           disabled
           title="Inviting a user requires MOD-005’s invitation endpoint (still PLANNED). User creation is invitation-driven, not self-registration."
         >
@@ -215,7 +215,7 @@ function LicenseBanner({ license }) {
   return (
     <div className="flex flex-wrap items-center justify-between gap-token-3 rounded-md border border-warning bg-warning-bg px-token-5 py-token-3" role="status">
       <div className="flex items-center gap-token-3">
-        <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-warning/20 text-warning" aria-hidden="true">
+        <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-warning text-text-on-primary" aria-hidden="true">
           <IconWarning />
         </span>
         <div>
@@ -465,7 +465,7 @@ function UsersTable({
                 type="button"
                 onClick={chip.clear}
                 aria-label={`Remove filter ${chip.label}`}
-                className="flex h-3.5 w-3.5 items-center justify-center rounded-full hover:bg-primary/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-1 focus-visible:outline-primary"
+                className="flex h-3.5 w-3.5 items-center justify-center rounded-full hover:bg-shell-accent-border focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-1 focus-visible:outline-primary"
               >
                 ×
               </button>
