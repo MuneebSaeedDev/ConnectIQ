@@ -28,6 +28,8 @@ import DepartmentManagementScreen from '../features/organizations/pages/Departme
 import TeamManagementScreen from '../features/organizations/pages/TeamManagementScreen';
 import OrganizationActivityScreen from '../features/organizations/pages/OrganizationActivityScreen';
 import UserListScreen from '../features/users/pages/UserListScreen';
+import AddUserScreen from '../features/users/pages/AddUserScreen';
+import EditUserScreen from '../features/users/pages/EditUserScreen';
 import AppShell from '../features/shell/components/AppShell.jsx';
 
 // Every route below renders inside the real shared AppShell (MOD-001
@@ -101,6 +103,8 @@ export const router = createBrowserRouter([
   { path: '/organizations/:id/activity', element: <OrganizationActivityScreen /> },
   { path: '/organizations/:id', element: <OrganizationDetailsScreen /> },
   { path: '/users', element: <UserListScreen /> },
+  { path: '/users/new', element: <AddUserScreen /> },
+  { path: '/users/:id/edit', element: <EditUserScreen /> },
   { path: '/organizations/current/teams', element: <TeamManagementScreen /> },
   { path: '/roles', element: shellRoute('SCR-040', 'Roles', ['ConnectIQ', 'Administration', 'Roles']) },
   { path: '/organizations/current/activity', element: <OrganizationActivityScreen /> },

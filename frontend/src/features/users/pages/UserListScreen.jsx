@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import AppShell from '../../shell/components/AppShell';
 import { useUserList } from '../hooks/useUserList';
 
@@ -42,6 +43,7 @@ const STATUS_TONE = {
 /** SCR-032 — User List Screen. Node 101:4147, drawer 101:5921. */
 export default function UserListScreen() {
   const orgId = 'current';
+  const navigate = useNavigate();
   const [search, setSearch] = useState('');
   const [role, setRole] = useState('All roles');
   const [department, setDepartment] = useState('All departments');
@@ -83,7 +85,7 @@ export default function UserListScreen() {
   return (
     <AppShell breadcrumb={['ConnectIQ', 'Administration', 'Users']}>
       <div className="flex flex-col gap-token-6">
-        <Header data={data} refetch={refetch} isFetching={isFetching} />
+        <Header data={data} refetch={refetch} isFetching={isFetching} onInvite={() => navigate('/users/new')} />
 
         <span className="sr-only" role="status" aria-live="polite">
           {isLoading
@@ -148,7 +150,7 @@ export default function UserListScreen() {
   );
 }
 
-function Header({ data, refetch, isFetching }) {
+function Header({ data, refetch, isFetching, onInvite }) {
   return (
     <div className="flex flex-col gap-token-3 lg:flex-row lg:items-end lg:justify-between">
       <div>
@@ -189,9 +191,9 @@ function Header({ data, refetch, isFetching }) {
         </button>
         <button
           type="button"
+          onClick={onInvite}
           className="flex h-8 items-center gap-token-2 rounded-md bg-primary px-token-4 text-token-sm font-semibold text-text-on-primary hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-60 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
-          disabled
-          title="Inviting a user requires MOD-005’s invitation endpoint (still PLANNED). User creation is invitation-driven, not self-registration."
+          title="Invite a new user. Provisioning is invitation-driven (admin-invite), not self-registration."
         >
           <IconPlus />
           Invite User
