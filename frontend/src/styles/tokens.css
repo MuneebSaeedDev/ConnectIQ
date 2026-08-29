@@ -62,6 +62,12 @@
   --color-danger-bg: #fef2f2;
   --color-danger-border: #fecaca;
   --color-warning: #d97706;
+  /* --color-warning at #d97706 is ~3.0:1 on white — fine for icons,
+     dots, and borders but a WCAG-AA failure for small text (caught in
+     SCR-036 UI review). --color-warning-strong (#b45309 ≈ 4.9:1) is the
+     text-safe warning color; use it for meaningful warning copy and
+     reserve --color-warning for non-text accents. */
+  --color-warning-strong: #b45309;
   --color-warning-bg: #fffbeb;
 
   /* Color — on-fill text (text drawn over a solid brand/semantic fill,

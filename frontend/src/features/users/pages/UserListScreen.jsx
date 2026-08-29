@@ -669,6 +669,7 @@ function UsersTable({
           user={activeUser}
           detail={data.details?.[activeUser.id] ?? null}
           mocked={data.mocked}
+          onViewProfile={() => navigate(`/users/${encodeURIComponent(activeUser.id)}`)}
           onClose={() => setActiveId(null)}
         />
       )}
@@ -676,7 +677,7 @@ function UsersTable({
   );
 }
 
-function UserDrawer({ user, detail, mocked, onClose }) {
+function UserDrawer({ user, detail, mocked, onViewProfile, onClose }) {
   const panelRef = useRef(null);
   const closeRef = useRef(null);
   const triggerRef = useRef(typeof document !== 'undefined' ? document.activeElement : null);
@@ -785,6 +786,13 @@ function UserDrawer({ user, detail, mocked, onClose }) {
         </div>
 
         <div className="flex flex-wrap gap-token-2 border-b border-border-subtle px-token-5 py-token-3">
+          <button
+            type="button"
+            onClick={onViewProfile}
+            className="flex h-7 items-center rounded-md bg-primary px-token-3 text-token-sm font-semibold text-text-on-primary hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+          >
+            View Full Profile
+          </button>
           {[
             { label: 'Edit User', title: 'Editing a user requires MOD-005’s user endpoint (still PLANNED).' },
             { label: 'Manage Roles', title: 'Role management requires MOD-005’s user endpoint (still PLANNED).' },

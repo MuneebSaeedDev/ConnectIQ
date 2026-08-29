@@ -40,6 +40,7 @@ export default {
         'danger-bg': 'var(--color-danger-bg)',
         'danger-border': 'var(--color-danger-border)',
         warning: 'var(--color-warning)',
+        'warning-strong': 'var(--color-warning-strong)',
         'warning-bg': 'var(--color-warning-bg)',
         'overlay-scrim': 'var(--color-overlay-scrim)',
         'shell-accent': 'var(--color-shell-accent)',

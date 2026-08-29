@@ -30,6 +30,11 @@ import OrganizationActivityScreen from '../features/organizations/pages/Organiza
 import UserListScreen from '../features/users/pages/UserListScreen';
 import AddUserScreen from '../features/users/pages/AddUserScreen';
 import EditUserScreen from '../features/users/pages/EditUserScreen';
+import UserDetailsScreen from '../features/users/pages/UserDetailsScreen';
+import UserProfileScreen from '../features/users/pages/UserProfileScreen';
+import UserActivityHistoryScreen from '../features/users/pages/UserActivityHistoryScreen';
+import UserLoginHistoryScreen from '../features/users/pages/UserLoginHistoryScreen';
+import UserPermissionManagementScreen from '../features/users/pages/UserPermissionManagementScreen';
 import AppShell from '../features/shell/components/AppShell.jsx';
 
 // Every route below renders inside the real shared AppShell (MOD-001
@@ -58,7 +63,7 @@ export const router = createBrowserRouter([
   { path: '/2fa', element: <TwoFactorAuthenticationScreen /> },
   { path: '/account/change-password', element: <ChangePasswordScreen /> },
   { path: '/logout', element: <LogoutScreen /> },
-  { path: '/profile', element: <RoutePlaceholder screenId="SCR-036" title="User Profile" /> },
+  { path: '/profile', element: <UserProfileScreen /> },
   { path: '/dashboard', element: <DashboardScreen /> },
 
   // Data
@@ -105,6 +110,10 @@ export const router = createBrowserRouter([
   { path: '/users', element: <UserListScreen /> },
   { path: '/users/new', element: <AddUserScreen /> },
   { path: '/users/:id/edit', element: <EditUserScreen /> },
+  { path: '/users/:id/activity', element: <UserActivityHistoryScreen /> },
+  { path: '/users/:id/login-history', element: <UserLoginHistoryScreen /> },
+  { path: '/users/:id/permissions', element: <UserPermissionManagementScreen /> },
+  { path: '/users/:id', element: <UserDetailsScreen /> },
   { path: '/organizations/current/teams', element: <TeamManagementScreen /> },
   { path: '/roles', element: shellRoute('SCR-040', 'Roles', ['ConnectIQ', 'Administration', 'Roles']) },
   { path: '/organizations/current/activity', element: <OrganizationActivityScreen /> },
