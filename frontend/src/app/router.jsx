@@ -35,6 +35,13 @@ import UserProfileScreen from '../features/users/pages/UserProfileScreen';
 import UserActivityHistoryScreen from '../features/users/pages/UserActivityHistoryScreen';
 import UserLoginHistoryScreen from '../features/users/pages/UserLoginHistoryScreen';
 import UserPermissionManagementScreen from '../features/users/pages/UserPermissionManagementScreen';
+import RoleListScreen from '../features/roles/pages/RoleListScreen';
+import EditRoleScreen from '../features/roles/pages/EditRoleScreen';
+import CreateRoleScreen from '../features/roles/pages/CreateRoleScreen';
+import PermissionMatrixScreen from '../features/roles/pages/PermissionMatrixScreen';
+import AccessControlSettingsScreen from '../features/roles/pages/AccessControlSettingsScreen';
+import DataSourceListScreen from '../features/dataSources/pages/DataSourceListScreen';
+import AddDataSourceScreen from '../features/dataSources/pages/AddDataSourceScreen';
 import AppShell from '../features/shell/components/AppShell.jsx';
 
 // Every route below renders inside the real shared AppShell (MOD-001
@@ -67,7 +74,8 @@ export const router = createBrowserRouter([
   { path: '/dashboard', element: <DashboardScreen /> },
 
   // Data
-  { path: '/data-sources', element: shellRoute('SCR-045', 'Data Sources', ['ConnectIQ', 'Data', 'Data Sources']) },
+  { path: '/data-sources', element: <DataSourceListScreen /> },
+  { path: '/data-sources/new', element: <AddDataSourceScreen /> },
   { path: '/destinations', element: shellRoute('SCR-057', 'Destinations', ['ConnectIQ', 'Data', 'Destinations']) },
 
   // Pipelines
@@ -115,7 +123,10 @@ export const router = createBrowserRouter([
   { path: '/users/:id/permissions', element: <UserPermissionManagementScreen /> },
   { path: '/users/:id', element: <UserDetailsScreen /> },
   { path: '/organizations/current/teams', element: <TeamManagementScreen /> },
-  { path: '/roles', element: shellRoute('SCR-040', 'Roles', ['ConnectIQ', 'Administration', 'Roles']) },
+  { path: '/roles', element: <RoleListScreen /> },
+  { path: '/roles/new', element: <CreateRoleScreen /> },
+  { path: '/roles/permissions', element: <PermissionMatrixScreen /> },
+  { path: '/roles/:id/edit', element: <EditRoleScreen /> },
   { path: '/organizations/current/activity', element: <OrganizationActivityScreen /> },
-  { path: '/settings/access-control', element: shellRoute('SCR-044', 'Settings', ['ConnectIQ', 'Administration', 'Settings']) },
+  { path: '/settings/access-control', element: <AccessControlSettingsScreen /> },
 ]);
