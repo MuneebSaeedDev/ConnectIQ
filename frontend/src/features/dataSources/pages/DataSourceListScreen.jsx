@@ -173,7 +173,7 @@ function Header({ data, refetch, isFetching }) {
           Import Configuration
         </button>
         <Link
-          to="/data-sources/new"
+          to="/data-sources/new/connection"
           className="flex h-8 items-center gap-token-2 rounded-md bg-primary px-token-4 text-token-sm font-semibold text-text-on-primary hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
         >
           <IconPlus />

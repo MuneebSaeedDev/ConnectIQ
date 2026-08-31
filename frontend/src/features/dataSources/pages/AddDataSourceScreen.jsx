@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useSearchParams } from 'react-router-dom';
 import AppShell from '../../shell/components/AppShell';
 import {
   CONNECTOR_GROUPS,
@@ -177,7 +177,22 @@ function formatRows(total) {
 /** SCR-046 — Add Data Source Screen. Node 115:28040, Figma page "Page 1". */
 export default function AddDataSourceScreen() {
   const navigate = useNavigate();
-  const [form, setForm] = useState(INITIAL_FORM);
+  const [searchParams] = useSearchParams();
+  /* SCR-047 (Source Connection Setup) hands off here with the chosen
+     connection method's connector via `?connector=<id>`. Seed the form
+     with it when it names a real connector; otherwise keep the default. */
+  const requestedConnector = searchParams.get('connector');
+  const [form, setForm] = useState(() => {
+    if (requestedConnector && CONNECTORS_BY_ID[requestedConnector]) {
+      const next = CONNECTORS_BY_ID[requestedConnector];
+      return {
+        ...INITIAL_FORM,
+        connectorId: requestedConnector,
+        port: next?.defaultPort != null ? String(next.defaultPort) : INITIAL_FORM.port,
+      };
+    }
+    return INITIAL_FORM;
+  });
   const [touched, setTouched] = useState({});
   const [submitAttempted, setSubmitAttempted] = useState(false);
   const [confirmOpen, setConfirmOpen] = useState(false);

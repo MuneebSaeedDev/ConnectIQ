@@ -42,6 +42,16 @@ import PermissionMatrixScreen from '../features/roles/pages/PermissionMatrixScre
 import AccessControlSettingsScreen from '../features/roles/pages/AccessControlSettingsScreen';
 import DataSourceListScreen from '../features/dataSources/pages/DataSourceListScreen';
 import AddDataSourceScreen from '../features/dataSources/pages/AddDataSourceScreen';
+import ApiConnectorSetupScreen from '../features/dataSources/pages/ApiConnectorSetupScreen';
+import DatabaseConnectorSetupScreen from '../features/dataSources/pages/DatabaseConnectorSetupScreen';
+import SourceConnectionSetupScreen from '../features/dataSources/pages/SourceConnectionSetupScreen';
+import CsvUploadScreen from '../features/dataSources/pages/CsvUploadScreen';
+import ExcelUploadScreen from '../features/dataSources/pages/ExcelUploadScreen';
+import FtpConnectionScreen from '../features/dataSources/pages/FtpConnectionScreen';
+import WebhookConfigurationScreen from '../features/dataSources/pages/WebhookConfigurationScreen';
+import SftpConnectionScreen from '../features/dataSources/pages/SftpConnectionScreen';
+import ConnectionTestResultScreen from '../features/dataSources/pages/ConnectionTestResultScreen';
+import SourceHealthMonitoringScreen from '../features/dataSources/pages/SourceHealthMonitoringScreen';
 import AppShell from '../features/shell/components/AppShell.jsx';
 
 // Every route below renders inside the real shared AppShell (MOD-001
@@ -76,6 +86,16 @@ export const router = createBrowserRouter([
   // Data
   { path: '/data-sources', element: <DataSourceListScreen /> },
   { path: '/data-sources/new', element: <AddDataSourceScreen /> },
+  { path: '/data-sources/new/connection', element: <SourceConnectionSetupScreen /> },
+  { path: '/data-sources/new/database', element: <DatabaseConnectorSetupScreen /> },
+  { path: '/data-sources/new/api', element: <ApiConnectorSetupScreen /> },
+  { path: '/data-sources/new/csv', element: <CsvUploadScreen /> },
+  { path: '/data-sources/new/excel', element: <ExcelUploadScreen /> },
+  { path: '/data-sources/new/ftp', element: <FtpConnectionScreen /> },
+  { path: '/data-sources/new/sftp', element: <SftpConnectionScreen /> },
+  { path: '/data-sources/new/webhook', element: <WebhookConfigurationScreen /> },
+  { path: '/data-sources/new/test-result', element: <ConnectionTestResultScreen /> },
+  { path: '/data-sources/:id/health', element: <SourceHealthMonitoringScreen /> },
   { path: '/destinations', element: shellRoute('SCR-057', 'Destinations', ['ConnectIQ', 'Data', 'Destinations']) },
 
   // Pipelines
