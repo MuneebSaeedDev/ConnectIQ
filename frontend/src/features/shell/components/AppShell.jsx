@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import Header from './Header';
@@ -37,10 +37,12 @@ export default function AppShell({ breadcrumb, children }) {
   const roleLabel = ROLE_LABELS[role] ?? role;
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
   const location = useLocation();
+  const [prevPathname, setPrevPathname] = useState(location.pathname);
 
-  useEffect(() => {
+  if (prevPathname !== location.pathname) {
+    setPrevPathname(location.pathname);
     setMobileNavOpen(false);
-  }, [location.pathname]);
+  }
 
   return (
     <div className="flex h-full bg-surface-page overflow-hidden">

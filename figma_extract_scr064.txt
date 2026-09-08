@@ -1,0 +1,942 @@
+const imgVariant1 = "https://www.figma.com/api/mcp/asset/dac5d182-04b5-4bd9-9866-0edb8d47f3f0.svg";
+
+type Component1Props = {
+  className?: string;
+  variant?: "1";
+};
+
+function Component1({ className, variant = "1" }: Component1Props) {
+  return (
+    <div className={className || "relative size-[14px]"} data-node-id="146:7803">
+      <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgVariant1} />
+    </div>
+  );
+}
+
+export default function CreatePipelineScreen() {
+  return (
+    <div className="bg-[#f0f2f5] content-stretch flex flex-col items-start justify-center pb-[649px] relative size-full" data-node-id="146:7807" data-name="Create Pipeline Screen">
+      <div className="bg-[#f0f2f5] flex-[1_0_0] min-h-px relative w-full" data-node-id="146:7808" data-name="div#root">
+        <div className="absolute bg-[#f0f2f5] content-stretch flex flex-col items-start left-0 min-h-[1200px] right-0 top-0" data-node-id="146:7809" data-name="div.flex">
+          <div className="bg-white border-[#e2e5ea] border-b border-solid content-stretch flex flex-col items-start pb-[17px] pt-[16px] px-[24px] relative shrink-0 w-full" data-node-id="146:7810" data-name="div.bg-white">
+            <div className="relative shrink-0 w-full" data-node-id="146:7811" data-name="div.flex">
+              <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex items-start justify-between relative size-full">
+                <div className="content-stretch flex flex-col gap-[2px] items-start min-w-[576px] relative shrink-0" data-node-id="146:7812" data-name="div">
+                  <div className="content-stretch flex gap-[6px] items-center relative shrink-0 w-full" data-node-id="146:7813" data-name="nav.flex">
+                    <div className="content-stretch flex flex-col items-start relative shrink-0" data-node-id="146:7814" data-name="span.cursor-pointer">
+                      <div className="[word-break:break-word] flex flex-col font-['JetBrains_Mono:Regular'] font-normal justify-center leading-[0] relative shrink-0 text-[#9ca3af] text-[12px] whitespace-nowrap" data-node-id="146:7815">
+                        <p className="leading-[16px]">Pipelines</p>
+                      </div>
+                    </div>
+                    <div className="content-stretch flex flex-col items-start relative shrink-0" data-node-id="146:7816" data-name="span">
+                      <div className="[word-break:break-word] flex flex-col font-['JetBrains_Mono:Regular'] font-normal justify-center leading-[0] relative shrink-0 text-[#9ca3af] text-[12px] whitespace-nowrap" data-node-id="146:7817">
+                        <p className="leading-[16px]">/</p>
+                      </div>
+                    </div>
+                    <div className="content-stretch flex flex-col items-start relative shrink-0" data-node-id="146:7818" data-name="span.cursor-pointer">
+                      <div className="[word-break:break-word] flex flex-col font-['JetBrains_Mono:Regular'] font-normal justify-center leading-[0] relative shrink-0 text-[#9ca3af] text-[12px] whitespace-nowrap" data-node-id="146:7819">
+                        <p className="leading-[16px]">Pipeline Library</p>
+                      </div>
+                    </div>
+                    <div className="content-stretch flex flex-col items-start relative shrink-0" data-node-id="146:7820" data-name="span">
+                      <div className="[word-break:break-word] flex flex-col font-['JetBrains_Mono:Regular'] font-normal justify-center leading-[0] relative shrink-0 text-[#9ca3af] text-[12px] whitespace-nowrap" data-node-id="146:7821">
+                        <p className="leading-[16px]">/</p>
+                      </div>
+                    </div>
+                    <div className="content-stretch flex flex-col items-start relative shrink-0" data-node-id="146:7822" data-name="span.font-medium">
+                      <div className="[word-break:break-word] flex flex-col font-['JetBrains_Mono:Medium'] font-medium justify-center leading-[0] relative shrink-0 text-[#0f1117] text-[12px] whitespace-nowrap" data-node-id="146:7823">
+                        <p className="leading-[16px]">Create Pipeline</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="content-stretch flex flex-col items-start pt-[5px] relative shrink-0 w-full" data-node-id="146:7824" data-name="h1.text-lg">
+                    <div className="[word-break:break-word] flex flex-col font-['Inter:Semi_Bold'] font-semibold justify-center leading-[0] not-italic relative shrink-0 text-[#0f1117] text-[18px] whitespace-nowrap" data-node-id="146:7825">
+                      <p className="leading-[22.5px]">Create Pipeline</p>
+                    </div>
+                  </div>
+                  <div className="content-stretch flex flex-col items-start max-w-[576px] relative shrink-0 w-full" data-node-id="146:7826" data-name="p.text-sm">
+                    <div className="[word-break:break-word] flex flex-col font-['Inter:Regular'] font-normal justify-center leading-[0] not-italic relative shrink-0 text-[#6b7280] text-[14px] whitespace-nowrap" data-node-id="146:7827">
+                      <p className="leading-[20px] mb-0">Configure a new data pipeline by defining its workflow, connectivity, scheduling,</p>
+                      <p className="leading-[20px]">ownership, and execution settings.</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="content-stretch flex gap-[8px] items-center relative shrink-0" data-node-id="146:7828" data-name="div.flex">
+                  <div className="bg-white border border-[#e2e5ea] border-solid content-stretch flex flex-col items-center justify-center px-[13px] py-[7px] relative rounded-[4px] shrink-0" data-node-id="146:7829" data-name="button.px-3">
+                    <div className="[word-break:break-word] flex flex-col font-['Inter:Medium'] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[#4b5563] text-[12px] text-center whitespace-nowrap" data-node-id="146:7830">
+                      <p className="leading-[16px]">Cancel</p>
+                    </div>
+                  </div>
+                  <div className="bg-white border border-[#e2e5ea] border-solid content-stretch flex flex-col items-center justify-center px-[13px] py-[7px] relative rounded-[4px] shrink-0" data-node-id="146:7831" data-name="button.px-3">
+                    <div className="[word-break:break-word] flex flex-col font-['Inter:Medium'] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[#4b5563] text-[12px] text-center whitespace-nowrap" data-node-id="146:7832">
+                      <p className="leading-[16px]">Import Template</p>
+                    </div>
+                  </div>
+                  <div className="bg-[#eff6ff] border border-[#bfdbfe] border-solid content-stretch flex flex-col items-center justify-center px-[13px] py-[7px] relative rounded-[4px] shrink-0" data-node-id="146:7833" data-name="button.px-3">
+                    <div className="[word-break:break-word] flex flex-col font-['Inter:Semi_Bold'] font-semibold justify-center leading-[0] not-italic relative shrink-0 text-[#2563eb] text-[12px] text-center whitespace-nowrap" data-node-id="146:7834">
+                      <p className="leading-[16px]">Save Draft</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="bg-white border-[#e2e5ea] border-b border-solid content-stretch flex flex-col items-start pb-[13px] pt-[12px] px-[24px] relative shrink-0 w-full" data-node-id="146:7835" data-name="div.bg-white">
+            <div className="relative shrink-0 w-full" data-node-id="146:7836" data-name="div.flex">
+              <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex items-center overflow-auto relative rounded-[inherit] size-full">
+                <div className="content-stretch flex items-center relative shrink-0" data-node-id="146:7837" data-name="div.flex">
+                  <div className="content-stretch flex gap-[8px] items-center px-[8px] py-[4px] relative shrink-0" data-node-id="146:7838" data-name="div.flex">
+                    <div className="bg-[#0f1117] content-stretch flex items-center justify-center relative rounded-[33554400px] shrink-0 size-[20px]" data-node-id="146:7839" data-name="div.w-5">
+                      <div className="-translate-y-1/2 absolute bg-[rgba(255,255,255,0)] left-0 rounded-[33554400px] shadow-[0px_0px_0px_1px_white,0px_0px_0px_3px_#0f1117] size-[20px] top-1/2" data-node-id="146:7840" data-name="div.w-5:shadow" />
+                      <div className="[word-break:break-word] flex flex-col font-['JetBrains_Mono:Bold'] font-bold justify-center leading-[0] relative shrink-0 text-[10px] text-center text-white whitespace-nowrap" data-node-id="146:7841">
+                        <p className="leading-[15px]">1</p>
+                      </div>
+                    </div>
+                    <div className="content-stretch flex flex-col items-start relative shrink-0" data-node-id="146:7842" data-name="span.text-xs">
+                      <div className="[word-break:break-word] flex flex-col font-['Inter:Medium'] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[#0f1117] text-[12px] whitespace-nowrap" data-node-id="146:7843">
+                        <p className="leading-[16px]">General Information</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="bg-[#e2e5ea] h-px relative shrink-0 w-[32px]" data-node-id="146:7844" data-name="div.w-8" />
+                </div>
+                <div className="content-stretch flex gap-[0.01px] items-center relative shrink-0" data-node-id="146:7845" data-name="div.flex">
+                  <div className="content-stretch flex gap-[8px] items-center px-[8px] py-[4px] relative shrink-0" data-node-id="146:7846" data-name="div.flex">
+                    <div className="bg-[#f3f4f6] border border-[#e2e5ea] border-solid content-stretch flex items-center justify-center p-px relative rounded-[33554400px] shrink-0 size-[20px]" data-node-id="146:7847" data-name="div.w-5">
+                      <div className="[word-break:break-word] flex flex-col font-['JetBrains_Mono:Bold'] font-bold justify-center leading-[0] relative shrink-0 text-[#9ca3af] text-[10px] text-center whitespace-nowrap" data-node-id="146:7848">
+                        <p className="leading-[15px]">2</p>
+                      </div>
+                    </div>
+                    <div className="content-stretch flex flex-col items-start relative shrink-0" data-node-id="146:7849" data-name="span.text-xs">
+                      <div className="[word-break:break-word] flex flex-col font-['Inter:Medium'] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[#9ca3af] text-[12px] whitespace-nowrap" data-node-id="146:7850">
+                        <p className="leading-[16px]">Source Configuration</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="bg-[#e2e5ea] h-px relative shrink-0 w-[32px]" data-node-id="146:7851" data-name="div.w-8" />
+                </div>
+                <div className="content-stretch flex items-center relative shrink-0" data-node-id="146:7852" data-name="div.flex">
+                  <div className="content-stretch flex gap-[8px] items-center px-[8px] py-[4px] relative shrink-0" data-node-id="146:7853" data-name="div.flex">
+                    <div className="bg-[#f3f4f6] border border-[#e2e5ea] border-solid content-stretch flex items-center justify-center p-px relative rounded-[33554400px] shrink-0 size-[20px]" data-node-id="146:7854" data-name="div.w-5">
+                      <div className="[word-break:break-word] flex flex-col font-['JetBrains_Mono:Bold'] font-bold justify-center leading-[0] relative shrink-0 text-[#9ca3af] text-[10px] text-center whitespace-nowrap" data-node-id="146:7855">
+                        <p className="leading-[15px]">3</p>
+                      </div>
+                    </div>
+                    <div className="content-stretch flex flex-col items-start relative shrink-0" data-node-id="146:7856" data-name="span.text-xs">
+                      <div className="[word-break:break-word] flex flex-col font-['Inter:Medium'] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[#9ca3af] text-[12px] whitespace-nowrap" data-node-id="146:7857">
+                        <p className="leading-[16px]">Destination Configuration</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="bg-[#e2e5ea] h-px relative shrink-0 w-[32px]" data-node-id="146:7858" data-name="div.w-8" />
+                </div>
+                <div className="content-stretch flex items-center relative shrink-0" data-node-id="146:7859" data-name="div.flex">
+                  <div className="content-stretch flex gap-[8px] items-center px-[8px] py-[4px] relative shrink-0" data-node-id="146:7860" data-name="div.flex">
+                    <div className="bg-[#f3f4f6] border border-[#e2e5ea] border-solid content-stretch flex items-center justify-center p-px relative rounded-[33554400px] shrink-0 size-[20px]" data-node-id="146:7861" data-name="div.w-5">
+                      <div className="[word-break:break-word] flex flex-col font-['JetBrains_Mono:Bold'] font-bold justify-center leading-[0] relative shrink-0 text-[#9ca3af] text-[10px] text-center whitespace-nowrap" data-node-id="146:7862">
+                        <p className="leading-[15px]">4</p>
+                      </div>
+                    </div>
+                    <div className="content-stretch flex flex-col items-start relative shrink-0" data-node-id="146:7863" data-name="span.text-xs">
+                      <div className="[word-break:break-word] flex flex-col font-['Inter:Medium'] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[#9ca3af] text-[12px] whitespace-nowrap" data-node-id="146:7864">
+                        <p className="leading-[16px]">Scheduling</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="bg-[#e2e5ea] h-px relative shrink-0 w-[32px]" data-node-id="146:7865" data-name="div.w-8" />
+                </div>
+                <div className="content-stretch flex items-center relative shrink-0" data-node-id="146:7866" data-name="div.flex">
+                  <div className="content-stretch flex gap-[8px] items-center px-[8px] py-[4px] relative shrink-0" data-node-id="146:7867" data-name="div.flex">
+                    <div className="bg-[#f3f4f6] border border-[#e2e5ea] border-solid content-stretch flex items-center justify-center p-px relative rounded-[33554400px] shrink-0 size-[20px]" data-node-id="146:7868" data-name="div.w-5">
+                      <div className="[word-break:break-word] flex flex-col font-['JetBrains_Mono:Bold'] font-bold justify-center leading-[0] relative shrink-0 text-[#9ca3af] text-[10px] text-center whitespace-nowrap" data-node-id="146:7869">
+                        <p className="leading-[15px]">5</p>
+                      </div>
+                    </div>
+                    <div className="content-stretch flex flex-col items-start relative shrink-0" data-node-id="146:7870" data-name="span.text-xs">
+                      <div className="[word-break:break-word] flex flex-col font-['Inter:Medium'] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[#9ca3af] text-[12px] whitespace-nowrap" data-node-id="146:7871">
+                        <p className="leading-[16px]">Execution Settings</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="bg-[#e2e5ea] h-px relative shrink-0 w-[32px]" data-node-id="146:7872" data-name="div.w-8" />
+                </div>
+                <div className="content-stretch flex items-center relative shrink-0" data-node-id="146:7873" data-name="div.flex">
+                  <div className="content-stretch flex gap-[8px] items-center px-[8px] py-[4px] relative shrink-0" data-node-id="146:7874" data-name="div.flex">
+                    <div className="bg-[#f3f4f6] border border-[#e2e5ea] border-solid content-stretch flex items-center justify-center p-px relative rounded-[33554400px] shrink-0 size-[20px]" data-node-id="146:7875" data-name="div.w-5">
+                      <div className="[word-break:break-word] flex flex-col font-['JetBrains_Mono:Bold'] font-bold justify-center leading-[0] relative shrink-0 text-[#9ca3af] text-[10px] text-center whitespace-nowrap" data-node-id="146:7876">
+                        <p className="leading-[15px]">6</p>
+                      </div>
+                    </div>
+                    <div className="content-stretch flex flex-col items-start relative shrink-0" data-node-id="146:7877" data-name="span.text-xs">
+                      <div className="[word-break:break-word] flex flex-col font-['Inter:Medium'] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[#9ca3af] text-[12px] whitespace-nowrap" data-node-id="146:7878">
+                        <p className="leading-[16px]">Validation</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="bg-[#e2e5ea] h-px relative shrink-0 w-[32px]" data-node-id="146:7879" data-name="div.w-8" />
+                </div>
+                <div className="content-stretch flex gap-[8px] items-center px-[8px] py-[4px] relative shrink-0" data-node-id="146:7880" data-name="div.flex">
+                  <div className="bg-[#f3f4f6] border border-[#e2e5ea] border-solid content-stretch flex items-center justify-center p-px relative rounded-[33554400px] shrink-0 size-[20px]" data-node-id="146:7881" data-name="div.w-5">
+                    <div className="[word-break:break-word] flex flex-col font-['JetBrains_Mono:Bold'] font-bold justify-center leading-[0] relative shrink-0 text-[#9ca3af] text-[10px] text-center whitespace-nowrap" data-node-id="146:7882">
+                      <p className="leading-[15px]">7</p>
+                    </div>
+                  </div>
+                  <div className="content-stretch flex flex-col items-start relative shrink-0" data-node-id="146:7883" data-name="span.text-xs">
+                    <div className="[word-break:break-word] flex flex-col font-['Inter:Medium'] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[#9ca3af] text-[12px] whitespace-nowrap" data-node-id="146:7884">
+                      <p className="leading-[16px]">{`Review & Publish`}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="content-stretch flex items-start relative shrink-0 w-full" data-node-id="146:7885" data-name="div.flex">
+            <div className="content-stretch flex flex-[1_0_0] flex-col items-start min-w-px overflow-auto p-[24px] relative self-stretch" data-node-id="146:7886" data-name="div.flex-1">
+              <div className="content-stretch flex flex-col gap-[20px] items-start max-w-[768px] relative shrink-0 w-[768px]" data-node-id="146:7887" data-name="div.max-w-3xl">
+                <div className="content-stretch flex gap-[8px] items-center relative shrink-0 w-full" data-node-id="146:7888" data-name="div.flex">
+                  <div className="bg-[#f3f4f6] border border-[#e2e5ea] border-solid content-stretch flex flex-col items-start px-[9px] py-[3px] relative rounded-[4px] shrink-0" data-node-id="146:7889" data-name="span.text-xs">
+                    <div className="[word-break:break-word] flex flex-col font-['JetBrains_Mono:Medium'] font-medium justify-center leading-[0] relative shrink-0 text-[#9ca3af] text-[12px] whitespace-nowrap" data-node-id="146:7890">
+                      <p className="leading-[16px]">STEP 1 / 7</p>
+                    </div>
+                  </div>
+                  <div className="content-stretch flex flex-col items-start relative shrink-0" data-node-id="146:7891" data-name="h2.text-sm">
+                    <div className="[word-break:break-word] flex flex-col font-['Inter:Semi_Bold'] font-semibold justify-center leading-[0] not-italic relative shrink-0 text-[#0f1117] text-[14px] whitespace-nowrap" data-node-id="146:7892">
+                      <p className="leading-[20px]">General Information</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="content-stretch flex flex-col gap-[20px] items-start relative shrink-0 w-full" data-node-id="146:7893" data-name="div.space-y-5">
+                  <div className="bg-white border border-[#e2e5ea] border-solid content-stretch flex flex-col items-start p-px relative rounded-[4px] shrink-0 w-full" data-node-id="146:7894" data-name="div.bg-white">
+                    <div className="bg-[#f9fafb] border-[#e2e5ea] border-b border-solid relative shrink-0 w-full" data-node-id="146:7895" data-name="div.px-4">
+                      <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-start pb-[13px] pt-[16px] px-[16px] relative size-full">
+                        <div className="[word-break:break-word] flex flex-col font-['JetBrains_Mono:Bold'] font-bold justify-center leading-[0] relative shrink-0 text-[#4b5563] text-[12px] tracking-[0.3px] uppercase whitespace-nowrap" data-node-id="146:7896">
+                          <p className="leading-[16px]">Pipeline Identity</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="h-[304.5px] relative shrink-0 w-full" data-node-id="146:7897" data-name="div.p-4">
+                      <div className="bg-clip-padding border-0 border-[transparent] border-solid gap-x-[16px] gap-y-[16px] grid grid-cols-[repeat(2,minmax(0,1fr))] grid-rows-[___78.50px_104px_58px] p-[16px] relative size-full">
+                        <div className="col-[1/span_2] content-stretch flex flex-col gap-[4px] items-start justify-self-stretch relative row-1 self-start shrink-0" data-node-id="146:7898" data-name="div.col-span-2">
+                          <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="146:7899" data-name="label.block">
+                            <div className="[word-break:break-word] flex flex-col font-['Inter:Medium'] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[#374151] text-[12px] w-full" data-node-id="146:7900">
+                              <p>
+                                <span className="leading-[16px]">{`Pipeline Name `}</span>
+                                <span className="leading-[16px] text-[#dc2626]">*</span>
+                              </p>
+                            </div>
+                          </div>
+                          <div className="bg-white border border-[#e2e5ea] border-solid content-stretch flex items-start justify-center overflow-clip px-[13px] py-[10px] relative rounded-[4px] shrink-0 w-full" data-node-id="146:7901" data-name="input.w-full">
+                            <div className="flex-[1_0_0] min-w-px relative" data-node-id="146:7902" data-name="div#placeholder">
+                              <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-start overflow-clip relative rounded-[inherit] size-full">
+                                <div className="[word-break:break-word] flex flex-col font-['JetBrains_Mono:Regular'] font-normal justify-center leading-[0] relative shrink-0 text-[#d1d5db] text-[14px] w-full" data-node-id="146:7903">
+                                  <p className="leading-[normal]">e.g. customer-orders-to-warehouse</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="146:7904" data-name="p.mt-1">
+                            <div className="[word-break:break-word] flex flex-col font-['Inter:Regular'] font-normal justify-center leading-[0] not-italic relative shrink-0 text-[#9ca3af] text-[11px] w-full" data-node-id="146:7905">
+                              <p className="leading-[16.5px]">Use lowercase letters, numbers, and hyphens. Must be unique within the organization.</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="col-[1/span_2] content-stretch flex flex-col gap-[4px] items-start justify-self-stretch pb-[6px] relative row-2 self-start shrink-0" data-node-id="146:7906" data-name="div.col-span-2">
+                          <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="146:7907" data-name="label.block">
+                            <div className="[word-break:break-word] flex flex-col font-['Inter:Medium'] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[#374151] text-[12px] w-full" data-node-id="146:7908">
+                              <p className="leading-[16px]">Description</p>
+                            </div>
+                          </div>
+                          <div className="bg-white border border-[#e2e5ea] border-solid content-stretch flex items-start justify-center overflow-auto pb-[49px] pt-[9px] px-[13px] relative rounded-[4px] shrink-0 w-full" data-node-id="146:7909" data-name="textarea.w-full">
+                            <div className="flex-[1_0_0] min-w-px relative" data-node-id="146:7910" data-name="div#placeholder">
+                              <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-start relative size-full">
+                                <div className="[word-break:break-word] flex flex-col font-['Inter:Regular'] font-normal justify-center leading-[0] not-italic relative shrink-0 text-[#d1d5db] text-[14px] w-full" data-node-id="146:7911">
+                                  <p className="leading-[20px]">Describe the purpose and data flow of this pipeline…</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="col-1 content-stretch flex flex-col gap-[4px] items-start justify-self-stretch relative row-3 self-start shrink-0" data-node-id="146:7912" data-name="div">
+                          <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="146:7913" data-name="label.block">
+                            <div className="[word-break:break-word] flex flex-col font-['Inter:Medium'] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[#374151] text-[12px] w-full" data-node-id="146:7914">
+                              <p className="leading-[16px]">Category</p>
+                            </div>
+                          </div>
+                          <div className="bg-white border border-[#e2e5ea] border-solid content-stretch flex items-center justify-center px-[13px] py-[9px] relative rounded-[4px] shrink-0 w-full" data-node-id="146:7915" data-name="select.w-full">
+                            <div className="flex-[1_0_0] min-w-px relative" data-node-id="146:7916" data-name="div">
+                              <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-start relative size-full">
+                                <div className="[word-break:break-word] flex flex-col font-['Inter:Regular'] font-normal justify-center leading-[0] not-italic relative shrink-0 text-[#0f1117] text-[14px] w-full" data-node-id="146:7917">
+                                  <p className="leading-[20px]">Select category</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="col-2 content-stretch flex flex-col gap-[4px] items-start justify-self-stretch relative row-3 self-start shrink-0" data-node-id="146:7918" data-name="div">
+                          <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="146:7919" data-name="label.block">
+                            <div className="[word-break:break-word] flex flex-col font-['Inter:Medium'] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[#374151] text-[12px] w-full" data-node-id="146:7920">
+                              <p className="leading-[16px]">Business Domain</p>
+                            </div>
+                          </div>
+                          <div className="bg-white border border-[#e2e5ea] border-solid content-stretch flex items-center justify-center px-[13px] py-[9px] relative rounded-[4px] shrink-0 w-full" data-node-id="146:7921" data-name="select.w-full">
+                            <div className="flex-[1_0_0] min-w-px relative" data-node-id="146:7922" data-name="div">
+                              <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-start relative size-full">
+                                <div className="[word-break:break-word] flex flex-col font-['Inter:Regular'] font-normal justify-center leading-[0] not-italic relative shrink-0 text-[#0f1117] text-[14px] w-full" data-node-id="146:7923">
+                                  <p className="leading-[20px]">Select domain</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="bg-white border border-[#e2e5ea] border-solid content-stretch flex flex-col items-start p-px relative rounded-[4px] shrink-0 w-full" data-node-id="146:7924" data-name="div.bg-white">
+                    <div className="bg-[#f9fafb] border-[#e2e5ea] border-b border-solid relative shrink-0 w-full" data-node-id="146:7925" data-name="div.px-4">
+                      <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-start pb-[13px] pt-[16px] px-[16px] relative size-full">
+                        <div className="[word-break:break-word] flex flex-col font-['JetBrains_Mono:Bold'] font-bold justify-center leading-[0] relative shrink-0 text-[#4b5563] text-[12px] tracking-[0.3px] uppercase whitespace-nowrap" data-node-id="146:7926">
+                          <p className="leading-[16px]">{`Environment & Classification`}</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="h-[187px] relative shrink-0 w-full" data-node-id="146:7927" data-name="div.p-4">
+                      <div className="bg-clip-padding border-0 border-[transparent] border-solid gap-x-[16px] gap-y-[16px] grid grid-cols-[repeat(2,minmax(0,1fr))] grid-rows-[__58px_81px] p-[16px] relative size-full">
+                        <div className="col-1 content-stretch flex flex-col gap-[4px] items-start justify-self-stretch pb-[4px] relative row-1 self-start shrink-0" data-node-id="146:7928" data-name="div">
+                          <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="146:7929" data-name="label.block">
+                            <div className="[word-break:break-word] flex flex-col font-['Inter:Medium'] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[#374151] text-[12px] w-full" data-node-id="146:7930">
+                              <p>
+                                <span className="leading-[16px]">{`Environment `}</span>
+                                <span className="leading-[16px] text-[#dc2626]">*</span>
+                              </p>
+                            </div>
+                          </div>
+                          <div className="content-stretch flex gap-[8px] items-start relative shrink-0 w-full" data-node-id="146:7931" data-name="div.flex">
+                            <div className="bg-[#eff6ff] border border-[#2563eb] border-solid content-stretch flex items-center px-[13px] py-[9px] relative rounded-[4px] self-stretch shrink-0" data-node-id="146:7932" data-name="label.flex">
+                              <div className="relative shrink-0" data-node-id="146:7933" data-name="span">
+                                <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-start relative size-full">
+                                  <div className="[word-break:break-word] flex flex-col font-['Inter:Medium'] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[#2563eb] text-[12px] whitespace-nowrap" data-node-id="146:7934">
+                                    <p className="leading-[16px]">Development</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div className="border border-[#e2e5ea] border-solid content-stretch flex items-center px-[13px] py-[9px] relative rounded-[4px] self-stretch shrink-0" data-node-id="146:7935" data-name="label.flex">
+                              <div className="relative shrink-0" data-node-id="146:7936" data-name="span">
+                                <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-start relative size-full">
+                                  <div className="[word-break:break-word] flex flex-col font-['Inter:Regular'] font-normal justify-center leading-[0] not-italic relative shrink-0 text-[#6b7280] text-[12px] whitespace-nowrap" data-node-id="146:7937">
+                                    <p className="leading-[16px]">Staging</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div className="border border-[#e2e5ea] border-solid content-stretch flex items-center px-[13px] py-[9px] relative rounded-[4px] self-stretch shrink-0" data-node-id="146:7938" data-name="label.flex">
+                              <div className="relative shrink-0" data-node-id="146:7939" data-name="span">
+                                <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-start relative size-full">
+                                  <div className="[word-break:break-word] flex flex-col font-['Inter:Regular'] font-normal justify-center leading-[0] not-italic relative shrink-0 text-[#6b7280] text-[12px] whitespace-nowrap" data-node-id="146:7940">
+                                    <p className="leading-[16px]">Production</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="col-2 content-stretch flex flex-col gap-[4px] items-start justify-self-stretch relative row-1 self-start shrink-0" data-node-id="146:7941" data-name="div">
+                          <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="146:7942" data-name="label.block">
+                            <div className="[word-break:break-word] flex flex-col font-['Inter:Medium'] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[#374151] text-[12px] w-full" data-node-id="146:7943">
+                              <p className="leading-[16px]">Version</p>
+                            </div>
+                          </div>
+                          <div className="bg-white border border-[#e2e5ea] border-solid content-stretch flex items-start justify-center overflow-clip px-[13px] py-[9px] relative rounded-[4px] shrink-0 w-full" data-node-id="146:7944" data-name="input.w-full">
+                            <div className="flex-[1_0_0] min-w-px relative" data-node-id="146:7945" data-name="div">
+                              <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-start overflow-auto relative rounded-[inherit] size-full">
+                                <div className="[word-break:break-word] flex flex-col font-['JetBrains_Mono:Regular'] font-normal justify-center leading-[0] relative shrink-0 text-[#0f1117] text-[14px] w-full" data-node-id="146:7946">
+                                  <p className="leading-[20px]">1.0.0</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="col-[1/span_2] content-stretch flex flex-col gap-[4px] items-start justify-self-stretch relative row-2 self-start shrink-0" data-node-id="146:7947" data-name="div.col-span-2">
+                          <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="146:7948" data-name="label.block">
+                            <div className="[word-break:break-word] flex flex-col font-['Inter:Medium'] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[#374151] text-[12px] w-full" data-node-id="146:7949">
+                              <p className="leading-[16px]">Tags</p>
+                            </div>
+                          </div>
+                          <div className="bg-white border border-[#e2e5ea] border-solid content-center flex flex-wrap gap-[0px_6px] items-center min-h-[38px] px-[13px] py-[9px] relative rounded-[4px] shrink-0 w-full" data-node-id="146:7950" data-name="div.flex">
+                            <div className="bg-[#f3f4f6] border border-[#e2e5ea] border-solid relative rounded-[4px] shrink-0" data-node-id="146:7951" data-name="span.flex">
+                              <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex gap-[4px] items-center px-[9px] py-[3px] relative size-full">
+                                <div className="[word-break:break-word] flex flex-col font-['JetBrains_Mono:Medium'] font-medium justify-center leading-[0] relative shrink-0 text-[#374151] text-[11px] whitespace-nowrap" data-node-id="146:7952">
+                                  <p className="leading-[16.5px]">etl</p>
+                                </div>
+                                <div className="relative shrink-0" data-node-id="146:7953" data-name="button.leading-none">
+                                  <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-center justify-center relative size-full">
+                                    <div className="[word-break:break-word] flex flex-col font-['JetBrains_Mono:Medium'] font-medium justify-center leading-[0] relative shrink-0 text-[#9ca3af] text-[11px] text-center whitespace-nowrap" data-node-id="146:7954">
+                                      <p className="leading-[11px]">×</p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div className="bg-[#f3f4f6] border border-[#e2e5ea] border-solid relative rounded-[4px] shrink-0" data-node-id="146:7955" data-name="span.flex">
+                              <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex gap-[4px] items-center px-[9px] py-[3px] relative size-full">
+                                <div className="[word-break:break-word] flex flex-col font-['JetBrains_Mono:Medium'] font-medium justify-center leading-[0] relative shrink-0 text-[#374151] text-[11px] whitespace-nowrap" data-node-id="146:7956">
+                                  <p className="leading-[16.5px]">orders</p>
+                                </div>
+                                <div className="relative shrink-0" data-node-id="146:7957" data-name="button.leading-none">
+                                  <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-center justify-center relative size-full">
+                                    <div className="[word-break:break-word] flex flex-col font-['JetBrains_Mono:Medium'] font-medium justify-center leading-[0] relative shrink-0 text-[#9ca3af] text-[11px] text-center whitespace-nowrap" data-node-id="146:7958">
+                                      <p className="leading-[11px]">×</p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div className="bg-[#f3f4f6] border border-[#e2e5ea] border-solid relative rounded-[4px] shrink-0" data-node-id="146:7959" data-name="span.flex">
+                              <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex gap-[4px] items-center px-[9px] py-[3px] relative size-full">
+                                <div className="[word-break:break-word] flex flex-col font-['JetBrains_Mono:Medium'] font-medium justify-center leading-[0] relative shrink-0 text-[#374151] text-[11px] whitespace-nowrap" data-node-id="146:7960">
+                                  <p className="leading-[16.5px]">warehouse</p>
+                                </div>
+                                <div className="relative shrink-0" data-node-id="146:7961" data-name="button.leading-none">
+                                  <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-center justify-center relative size-full">
+                                    <div className="[word-break:break-word] flex flex-col font-['JetBrains_Mono:Medium'] font-medium justify-center leading-[0] relative shrink-0 text-[#9ca3af] text-[11px] text-center whitespace-nowrap" data-node-id="146:7962">
+                                      <p className="leading-[11px]">×</p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div className="flex-[1_0_0] min-w-[80px] relative" data-node-id="146:7963" data-name="input.flex-1">
+                              <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-start min-w-[inherit] overflow-clip pb-[2px] pt-px relative rounded-[inherit] size-full">
+                                <div className="content-stretch flex flex-col items-start overflow-clip relative shrink-0 w-full" data-node-id="146:7964" data-name="div#placeholder">
+                                  <div className="[word-break:break-word] flex flex-col font-['Inter:Regular'] font-normal justify-center leading-[0] not-italic relative shrink-0 text-[#d1d5db] text-[14px] w-full" data-node-id="146:7965">
+                                    <p className="leading-[normal]">Add tag…</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="146:7966" data-name="p.mt-1">
+                            <div className="[word-break:break-word] flex flex-col font-['Inter:Regular'] font-normal justify-center leading-[0] not-italic relative shrink-0 text-[#9ca3af] text-[11px] w-full" data-node-id="146:7967">
+                              <p className="leading-[16.5px]">Press Enter to add a tag.</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="bg-white border border-[#e2e5ea] border-solid content-stretch flex flex-col items-start p-px relative rounded-[4px] shrink-0 w-full" data-node-id="146:7968" data-name="div.bg-white">
+                    <div className="bg-[#f9fafb] border-[#e2e5ea] border-b border-solid relative shrink-0 w-full" data-node-id="146:7969" data-name="div.px-4">
+                      <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-start pb-[13px] pt-[16px] px-[16px] relative size-full">
+                        <div className="[word-break:break-word] flex flex-col font-['JetBrains_Mono:Bold'] font-bold justify-center leading-[0] relative shrink-0 text-[#4b5563] text-[12px] tracking-[0.3px] uppercase whitespace-nowrap" data-node-id="146:7970">
+                          <p className="leading-[16px]">Ownership</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="relative shrink-0 w-full" data-node-id="146:7971" data-name="div.p-4">
+                      <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex gap-[16px] items-start justify-center p-[16px] relative size-full">
+                        <div className="content-stretch flex flex-[1_0_0] flex-col gap-[4px] items-start min-w-px relative" data-node-id="146:7972" data-name="div">
+                          <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="146:7973" data-name="label.block">
+                            <div className="[word-break:break-word] flex flex-col font-['Inter:Medium'] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[#374151] text-[12px] w-full" data-node-id="146:7974">
+                              <p>
+                                <span className="leading-[16px]">{`Pipeline Owner `}</span>
+                                <span className="leading-[16px] text-[#dc2626]">*</span>
+                              </p>
+                            </div>
+                          </div>
+                          <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="146:7975" data-name="div.relative">
+                            <div className="bg-white border border-[#e2e5ea] border-solid content-stretch flex items-start justify-center overflow-clip pl-[33px] pr-[13px] py-[9px] relative rounded-[4px] shrink-0 w-full" data-node-id="146:7976" data-name="input.w-full">
+                              <div className="flex-[1_0_0] min-w-px relative" data-node-id="146:7977" data-name="div">
+                                <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-start overflow-auto relative rounded-[inherit] size-full">
+                                  <div className="[word-break:break-word] flex flex-col font-['Inter:Regular'] font-normal justify-center leading-[0] not-italic relative shrink-0 text-[#0f1117] text-[14px] w-full" data-node-id="146:7978">
+                                    <p className="leading-[20px]">Maya Chen</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div className="absolute bottom-[28.95%] content-stretch flex flex-col items-start left-[10px] top-[28.95%]" data-node-id="146:7979" data-name="div.absolute">
+                              <div className="bg-[#7c3aed] content-stretch flex items-center justify-center relative rounded-[33554400px] shrink-0 size-[16px]" data-node-id="146:7980" data-name="div.w-4">
+                                <div className="[word-break:break-word] flex flex-col font-['Inter:Bold'] font-bold justify-center leading-[0] not-italic relative shrink-0 text-[8px] text-center text-white whitespace-nowrap" data-node-id="146:7981">
+                                  <p className="leading-[12px]">M</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="content-stretch flex flex-[1_0_0] flex-col gap-[4px] items-start min-w-px relative" data-node-id="146:7982" data-name="div">
+                          <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="146:7983" data-name="label.block">
+                            <div className="[word-break:break-word] flex flex-col font-['Inter:Medium'] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[#374151] text-[12px] w-full" data-node-id="146:7984">
+                              <p className="leading-[16px]">Team</p>
+                            </div>
+                          </div>
+                          <div className="bg-white border border-[#e2e5ea] border-solid content-stretch flex items-center justify-center px-[13px] py-[9px] relative rounded-[4px] shrink-0 w-full" data-node-id="146:7985" data-name="select.w-full">
+                            <div className="flex-[1_0_0] min-w-px relative" data-node-id="146:7986" data-name="div">
+                              <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-start relative size-full">
+                                <div className="[word-break:break-word] flex flex-col font-['Inter:Regular'] font-normal justify-center leading-[0] not-italic relative shrink-0 text-[#0f1117] text-[14px] w-full" data-node-id="146:7987">
+                                  <p className="leading-[20px]">Data Engineering</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="bg-white border border-[#e2e5ea] border-solid content-stretch flex flex-col gap-[16px] items-center pb-[17px] pt-px px-px relative rounded-[4px] shrink-0 w-full" data-node-id="146:7988" data-name="div.bg-white">
+                    <div className="bg-[#f9fafb] border-[#e2e5ea] border-b border-solid relative shrink-0 w-full" data-node-id="146:7989" data-name="div.px-4">
+                      <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex gap-[8px] items-center pb-[11px] pt-[15px] px-[16px] relative size-full">
+                        <div className="[word-break:break-word] flex flex-col font-['JetBrains_Mono:Bold'] font-bold justify-center leading-[0] relative shrink-0 text-[#4b5563] text-[12px] tracking-[0.3px] uppercase whitespace-nowrap" data-node-id="146:7990">
+                          <p className="leading-[16px]">Pipeline Template</p>
+                        </div>
+                        <div className="bg-white border border-[#e2e5ea] border-solid relative rounded-[4px] shrink-0" data-node-id="146:7991" data-name="span.ml-2">
+                          <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex items-start px-[7px] py-[2px] relative size-full">
+                            <div className="[word-break:break-word] flex flex-col font-['JetBrains_Mono:Regular'] font-normal justify-center leading-[0] relative shrink-0 text-[#9ca3af] text-[10px] whitespace-nowrap" data-node-id="146:7992">
+                              <p className="leading-[15px]">OPTIONAL</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="h-[197px] relative shrink-0 w-[734px]" data-node-id="146:7993" data-name="div.grid">
+                      <div className="bg-clip-padding border-0 border-[transparent] border-solid gap-x-[12px] gap-y-[12px] grid grid-cols-[repeat(3,minmax(0,1fr))] grid-rows-[__92.50px_92.50px] relative size-full">
+                        <div className="bg-[#eff6ff] border border-[#2563eb] border-solid col-1 content-stretch flex flex-col gap-[2px] items-start justify-self-stretch p-[13px] relative rounded-[4px] row-1 self-start shrink-0" data-node-id="146:7994" data-name="div.p-3">
+                          <div className="relative shrink-0 w-full" data-node-id="146:7995" data-name="div.text-lg">
+                            <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-start relative size-full">
+                              <div className="[word-break:break-word] flex flex-col font-['Inter:Regular'] font-normal justify-center leading-[0] not-italic relative shrink-0 text-[#0f1117] text-[18px] w-full" data-node-id="146:7996">
+                                <p className="leading-[28px]">◻</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div className="relative shrink-0 w-full" data-node-id="146:7997" data-name="div.text-xs">
+                            <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-start pt-[2px] relative size-full">
+                              <div className="[word-break:break-word] flex flex-col font-['Inter:Medium'] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[#2563eb] text-[12px] w-full" data-node-id="146:7998">
+                                <p className="leading-[16px]">Blank Pipeline</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div className="relative shrink-0 w-full" data-node-id="146:7999" data-name="div">
+                            <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-start relative size-full">
+                              <div className="[word-break:break-word] flex flex-col font-['Inter:Regular'] font-normal justify-center leading-[0] not-italic relative shrink-0 text-[#9ca3af] text-[11px] w-full" data-node-id="146:8000">
+                                <p className="leading-[16.5px]">Start from scratch</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="border border-[#e2e5ea] border-solid col-2 content-stretch flex flex-col gap-[2px] items-start justify-self-stretch p-[13px] relative rounded-[4px] row-1 self-start shrink-0" data-node-id="146:8001" data-name="div.p-3">
+                          <div className="relative shrink-0 w-full" data-node-id="146:8002" data-name="div.text-lg">
+                            <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-start relative size-full">
+                              <div className="[word-break:break-word] flex flex-col font-['Inter:Regular'] font-normal justify-center leading-[0] not-italic relative shrink-0 text-[#0f1117] text-[18px] w-full" data-node-id="146:8003">
+                                <p className="leading-[28px]">⇄</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div className="relative shrink-0 w-full" data-node-id="146:8004" data-name="div.text-xs">
+                            <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-start pt-[2px] relative size-full">
+                              <div className="[word-break:break-word] flex flex-col font-['Inter:Medium'] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[#0f1117] text-[12px] w-full" data-node-id="146:8005">
+                                <p className="leading-[16px]">Database Sync</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div className="relative shrink-0 w-full" data-node-id="146:8006" data-name="div">
+                            <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-start relative size-full">
+                              <div className="[word-break:break-word] flex flex-col font-['Inter:Regular'] font-normal justify-center leading-[0] not-italic relative shrink-0 text-[#9ca3af] text-[11px] w-full" data-node-id="146:8007">
+                                <p className="leading-[16.5px]">DB → DB replication</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="border border-[#e2e5ea] border-solid col-3 content-stretch flex flex-col gap-[2px] items-start justify-self-stretch p-[13px] relative rounded-[4px] row-1 self-start shrink-0" data-node-id="146:8008" data-name="div.p-3">
+                          <div className="relative shrink-0 w-full" data-node-id="146:8009" data-name="div.text-lg">
+                            <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-start relative size-full">
+                              <div className="[word-break:break-word] flex flex-col font-['Inter:Regular'] font-normal justify-center leading-[0] not-italic relative shrink-0 text-[#0f1117] text-[18px] w-full" data-node-id="146:8010">
+                                <p className="leading-[28px]">⬇</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div className="relative shrink-0 w-full" data-node-id="146:8011" data-name="div.text-xs">
+                            <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-start pt-[2px] relative size-full">
+                              <div className="[word-break:break-word] flex flex-col font-['Inter:Medium'] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[#0f1117] text-[12px] w-full" data-node-id="146:8012">
+                                <p className="leading-[16px]">API Ingestion</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div className="relative shrink-0 w-full" data-node-id="146:8013" data-name="div">
+                            <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-start relative size-full">
+                              <div className="[word-break:break-word] flex flex-col font-['Inter:Regular'] font-normal justify-center leading-[0] not-italic relative shrink-0 text-[#9ca3af] text-[11px] w-full" data-node-id="146:8014">
+                                <p className="leading-[16.5px]">REST/GraphQL source</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="border border-[#e2e5ea] border-solid col-1 content-stretch flex flex-col gap-[2px] items-start justify-self-stretch p-[13px] relative rounded-[4px] row-2 self-start shrink-0" data-node-id="146:8015" data-name="div.p-3">
+                          <div className="relative shrink-0 w-full" data-node-id="146:8016" data-name="div.text-lg">
+                            <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-start relative size-full">
+                              <div className="[word-break:break-word] flex flex-col font-['Inter:Regular'] font-normal justify-center leading-[0] not-italic relative shrink-0 text-[#0f1117] text-[18px] w-full" data-node-id="146:8017">
+                                <p className="leading-[28px]">📄</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div className="relative shrink-0 w-full" data-node-id="146:8018" data-name="div.text-xs">
+                            <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-start pt-[2px] relative size-full">
+                              <div className="[word-break:break-word] flex flex-col font-['Inter:Medium'] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[#0f1117] text-[12px] w-full" data-node-id="146:8019">
+                                <p className="leading-[16px]">File Import</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div className="relative shrink-0 w-full" data-node-id="146:8020" data-name="div">
+                            <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-start relative size-full">
+                              <div className="[word-break:break-word] flex flex-col font-['Inter:Regular'] font-normal justify-center leading-[0] not-italic relative shrink-0 text-[#9ca3af] text-[11px] w-full" data-node-id="146:8021">
+                                <p className="leading-[16.5px]">CSV/JSON/Parquet</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="border border-[#e2e5ea] border-solid col-2 content-stretch flex flex-col gap-[2px] items-start justify-self-stretch p-[13px] relative rounded-[4px] row-2 self-start shrink-0" data-node-id="146:8022" data-name="div.p-3">
+                          <div className="relative shrink-0 w-full" data-node-id="146:8023" data-name="div.text-lg">
+                            <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-start relative size-full">
+                              <div className="[word-break:break-word] flex flex-col font-['Inter:Regular'] font-normal justify-center leading-[0] not-italic relative shrink-0 text-[#0f1117] text-[18px] w-full" data-node-id="146:8024">
+                                <p className="leading-[28px]">△</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div className="relative shrink-0 w-full" data-node-id="146:8025" data-name="div.text-xs">
+                            <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-start pt-[2px] relative size-full">
+                              <div className="[word-break:break-word] flex flex-col font-['Inter:Medium'] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[#0f1117] text-[12px] w-full" data-node-id="146:8026">
+                                <p className="leading-[16px]">CDC Pipeline</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div className="relative shrink-0 w-full" data-node-id="146:8027" data-name="div">
+                            <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-start relative size-full">
+                              <div className="[word-break:break-word] flex flex-col font-['Inter:Regular'] font-normal justify-center leading-[0] not-italic relative shrink-0 text-[#9ca3af] text-[11px] w-full" data-node-id="146:8028">
+                                <p className="leading-[16.5px]">Change data capture</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="border border-[#e2e5ea] border-solid col-3 content-stretch flex flex-col gap-[2px] items-start justify-self-stretch p-[13px] relative rounded-[4px] row-2 self-start shrink-0" data-node-id="146:8029" data-name="div.p-3">
+                          <div className="relative shrink-0 w-full" data-node-id="146:8030" data-name="div.text-lg">
+                            <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-start relative size-full">
+                              <div className="[word-break:break-word] flex flex-col font-['Inter:Regular'] font-normal justify-center leading-[0] not-italic relative shrink-0 text-[#0f1117] text-[18px] w-full" data-node-id="146:8031">
+                                <p className="leading-[28px]">⟳</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div className="relative shrink-0 w-full" data-node-id="146:8032" data-name="div.text-xs">
+                            <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-start pt-[2px] relative size-full">
+                              <div className="[word-break:break-word] flex flex-col font-['Inter:Medium'] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[#0f1117] text-[12px] w-full" data-node-id="146:8033">
+                                <p className="leading-[16px]">Stream Processor</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div className="relative shrink-0 w-full" data-node-id="146:8034" data-name="div">
+                            <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-start relative size-full">
+                              <div className="[word-break:break-word] flex flex-col font-['Inter:Regular'] font-normal justify-center leading-[0] not-italic relative shrink-0 text-[#9ca3af] text-[11px] w-full" data-node-id="146:8035">
+                                <p className="leading-[16.5px]">Kafka/Kinesis</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="bg-white border border-[#e2e5ea] border-solid content-stretch flex flex-col items-start p-px relative rounded-[4px] shrink-0 w-full" data-node-id="146:8036" data-name="div.bg-white">
+                    <div className="relative shrink-0 w-full" data-node-id="146:8037" data-name="div.px-4">
+                      <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex gap-[12px] items-center px-[16px] py-[12px] relative size-full">
+                        <div className="bg-[#f3f4f6] border border-[#e2e5ea] border-solid content-stretch flex items-center justify-center p-px relative rounded-[33554400px] shrink-0 size-[20px]" data-node-id="146:8038" data-name="div.w-5">
+                          <div className="[word-break:break-word] flex flex-col font-['JetBrains_Mono:Bold'] font-bold justify-center leading-[0] relative shrink-0 text-[#9ca3af] text-[10px] text-center whitespace-nowrap" data-node-id="146:8039">
+                            <p className="leading-[15px]">2</p>
+                          </div>
+                        </div>
+                        <div className="content-stretch flex flex-col items-start relative shrink-0" data-node-id="146:8040" data-name="div">
+                          <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="146:8041" data-name="div.text-xs">
+                            <div className="[word-break:break-word] flex flex-col font-['Inter:Semi_Bold'] font-semibold justify-center leading-[0] not-italic relative shrink-0 text-[#6b7280] text-[12px] whitespace-nowrap" data-node-id="146:8042">
+                              <p className="leading-[16px]">Source Configuration</p>
+                            </div>
+                          </div>
+                          <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="146:8043" data-name="div">
+                            <div className="[word-break:break-word] flex flex-col font-['Inter:Regular'] font-normal justify-center leading-[0] not-italic relative shrink-0 text-[#9ca3af] text-[11px] whitespace-nowrap" data-node-id="146:8044">
+                              <p className="leading-[16.5px]">Select connector, dataset, authentication, and query settings.</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="content-stretch flex flex-[1_0_0] flex-col items-end min-w-[14px] pl-[357.078px] relative" data-node-id="146:8045" data-name="div.ml-auto:margin">
+                          <div className="content-stretch flex flex-col items-start relative shrink-0" data-node-id="146:8046" data-name="div.ml-auto">
+                            <Component1 className="relative shrink-0 size-[14px]" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="bg-white border border-[#e2e5ea] border-solid content-stretch flex flex-col items-start p-px relative rounded-[4px] shrink-0 w-full" data-node-id="146:8049" data-name="div.bg-white">
+                    <div className="relative shrink-0 w-full" data-node-id="146:8050" data-name="div.px-4">
+                      <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex gap-[12px] items-center px-[16px] py-[12px] relative size-full">
+                        <div className="bg-[#f3f4f6] border border-[#e2e5ea] border-solid content-stretch flex items-center justify-center p-px relative rounded-[33554400px] shrink-0 size-[20px]" data-node-id="146:8051" data-name="div.w-5">
+                          <div className="[word-break:break-word] flex flex-col font-['JetBrains_Mono:Bold'] font-bold justify-center leading-[0] relative shrink-0 text-[#9ca3af] text-[10px] text-center whitespace-nowrap" data-node-id="146:8052">
+                            <p className="leading-[15px]">3</p>
+                          </div>
+                        </div>
+                        <div className="content-stretch flex flex-col items-start relative shrink-0" data-node-id="146:8053" data-name="div">
+                          <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="146:8054" data-name="div.text-xs">
+                            <div className="[word-break:break-word] flex flex-col font-['Inter:Semi_Bold'] font-semibold justify-center leading-[0] not-italic relative shrink-0 text-[#6b7280] text-[12px] whitespace-nowrap" data-node-id="146:8055">
+                              <p className="leading-[16px]">Destination Configuration</p>
+                            </div>
+                          </div>
+                          <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="146:8056" data-name="div">
+                            <div className="[word-break:break-word] flex flex-col font-['Inter:Regular'] font-normal justify-center leading-[0] not-italic relative shrink-0 text-[#9ca3af] text-[11px] whitespace-nowrap" data-node-id="146:8057">
+                              <p className="leading-[16.5px]">Configure target system, write mode, and output settings.</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="content-stretch flex flex-[1_0_0] flex-col items-end min-w-[14px] pl-[376.188px] relative" data-node-id="146:8058" data-name="div.ml-auto:margin">
+                          <div className="content-stretch flex flex-col items-start relative shrink-0" data-node-id="146:8059" data-name="div.ml-auto">
+                            <Component1 className="relative shrink-0 size-[14px]" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="bg-white border border-[#e2e5ea] border-solid content-stretch flex flex-col items-start p-px relative rounded-[4px] shrink-0 w-full" data-node-id="146:8062" data-name="div.bg-white">
+                    <div className="relative shrink-0 w-full" data-node-id="146:8063" data-name="div.px-4">
+                      <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex gap-[12px] items-center px-[16px] py-[12px] relative size-full">
+                        <div className="bg-[#f3f4f6] border border-[#e2e5ea] border-solid content-stretch flex items-center justify-center p-px relative rounded-[33554400px] shrink-0 size-[20px]" data-node-id="146:8064" data-name="div.w-5">
+                          <div className="[word-break:break-word] flex flex-col font-['JetBrains_Mono:Bold'] font-bold justify-center leading-[0] relative shrink-0 text-[#9ca3af] text-[10px] text-center whitespace-nowrap" data-node-id="146:8065">
+                            <p className="leading-[15px]">4</p>
+                          </div>
+                        </div>
+                        <div className="content-stretch flex flex-col items-start relative shrink-0" data-node-id="146:8066" data-name="div">
+                          <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="146:8067" data-name="div.text-xs">
+                            <div className="[word-break:break-word] flex flex-col font-['Inter:Semi_Bold'] font-semibold justify-center leading-[0] not-italic relative shrink-0 text-[#6b7280] text-[12px] whitespace-nowrap" data-node-id="146:8068">
+                              <p className="leading-[16px]">Scheduling</p>
+                            </div>
+                          </div>
+                          <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="146:8069" data-name="div">
+                            <div className="[word-break:break-word] flex flex-col font-['Inter:Regular'] font-normal justify-center leading-[0] not-italic relative shrink-0 text-[#9ca3af] text-[11px] whitespace-nowrap" data-node-id="146:8070">
+                              <p className="leading-[16.5px]">Set trigger type, cron expression, timezone, and retry policy.</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="content-stretch flex flex-[1_0_0] flex-col items-end min-w-[14px] pl-[361.938px] relative" data-node-id="146:8071" data-name="div.ml-auto:margin">
+                          <div className="content-stretch flex flex-col items-start relative shrink-0" data-node-id="146:8072" data-name="div.ml-auto">
+                            <Component1 className="relative shrink-0 size-[14px]" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="bg-white border border-[#e2e5ea] border-solid content-stretch flex flex-col items-start p-px relative rounded-[4px] shrink-0 w-full" data-node-id="146:8075" data-name="div.bg-white">
+                    <div className="relative shrink-0 w-full" data-node-id="146:8076" data-name="div.px-4">
+                      <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex gap-[12px] items-center px-[16px] py-[12px] relative size-full">
+                        <div className="bg-[#f3f4f6] border border-[#e2e5ea] border-solid content-stretch flex items-center justify-center p-px relative rounded-[33554400px] shrink-0 size-[20px]" data-node-id="146:8077" data-name="div.w-5">
+                          <div className="[word-break:break-word] flex flex-col font-['JetBrains_Mono:Bold'] font-bold justify-center leading-[0] relative shrink-0 text-[#9ca3af] text-[10px] text-center whitespace-nowrap" data-node-id="146:8078">
+                            <p className="leading-[15px]">5</p>
+                          </div>
+                        </div>
+                        <div className="content-stretch flex flex-col items-start relative shrink-0" data-node-id="146:8079" data-name="div">
+                          <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="146:8080" data-name="div.text-xs">
+                            <div className="[word-break:break-word] flex flex-col font-['Inter:Semi_Bold'] font-semibold justify-center leading-[0] not-italic relative shrink-0 text-[#6b7280] text-[12px] whitespace-nowrap" data-node-id="146:8081">
+                              <p className="leading-[16px]">Execution Settings</p>
+                            </div>
+                          </div>
+                          <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="146:8082" data-name="div">
+                            <div className="[word-break:break-word] flex flex-col font-['Inter:Regular'] font-normal justify-center leading-[0] not-italic relative shrink-0 text-[#9ca3af] text-[11px] whitespace-nowrap" data-node-id="146:8083">
+                              <p className="leading-[16.5px]">Parallelism, worker pool, failure handling, monitoring, and validation rules.</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="content-stretch flex flex-[1_0_0] flex-col items-end min-w-[14px] pl-[293.469px] relative" data-node-id="146:8084" data-name="div.ml-auto:margin">
+                          <div className="content-stretch flex flex-col items-start relative shrink-0" data-node-id="146:8085" data-name="div.ml-auto">
+                            <Component1 className="relative shrink-0 size-[14px]" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="bg-white border border-[#e2e5ea] border-solid content-stretch flex flex-col items-start p-px relative rounded-[4px] shrink-0 w-full" data-node-id="146:8088" data-name="div.bg-white">
+                    <div className="relative shrink-0 w-full" data-node-id="146:8089" data-name="div.px-4">
+                      <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex gap-[12px] items-center px-[16px] py-[12px] relative size-full">
+                        <div className="bg-[#f3f4f6] border border-[#e2e5ea] border-solid content-stretch flex items-center justify-center p-px relative rounded-[33554400px] shrink-0 size-[20px]" data-node-id="146:8090" data-name="div.w-5">
+                          <div className="[word-break:break-word] flex flex-col font-['JetBrains_Mono:Bold'] font-bold justify-center leading-[0] relative shrink-0 text-[#9ca3af] text-[10px] text-center whitespace-nowrap" data-node-id="146:8091">
+                            <p className="leading-[15px]">6</p>
+                          </div>
+                        </div>
+                        <div className="content-stretch flex flex-col items-start relative shrink-0" data-node-id="146:8092" data-name="div">
+                          <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="146:8093" data-name="div.text-xs">
+                            <div className="[word-break:break-word] flex flex-col font-['Inter:Semi_Bold'] font-semibold justify-center leading-[0] not-italic relative shrink-0 text-[#6b7280] text-[12px] whitespace-nowrap" data-node-id="146:8094">
+                              <p className="leading-[16px]">Validation</p>
+                            </div>
+                          </div>
+                          <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="146:8095" data-name="div">
+                            <div className="[word-break:break-word] flex flex-col font-['Inter:Regular'] font-normal justify-center leading-[0] not-italic relative shrink-0 text-[#9ca3af] text-[11px] whitespace-nowrap" data-node-id="146:8096">
+                              <p className="leading-[16.5px]">Run pre-publish checks across configuration, connectivity, and data flow.</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="content-stretch flex flex-[1_0_0] flex-col items-end min-w-[14px] pl-[294.203px] relative" data-node-id="146:8097" data-name="div.ml-auto:margin">
+                          <div className="content-stretch flex flex-col items-start relative shrink-0" data-node-id="146:8098" data-name="div.ml-auto">
+                            <Component1 className="relative shrink-0 size-[14px]" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="bg-white border border-[#e2e5ea] border-solid content-stretch flex flex-col items-start p-px relative rounded-[4px] shrink-0 w-full" data-node-id="146:8101" data-name="div.bg-white">
+                    <div className="relative shrink-0 w-full" data-node-id="146:8102" data-name="div.px-4">
+                      <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex gap-[12px] items-center px-[16px] py-[12px] relative size-full">
+                        <div className="bg-[#f3f4f6] border border-[#e2e5ea] border-solid content-stretch flex items-center justify-center p-px relative rounded-[33554400px] shrink-0 size-[20px]" data-node-id="146:8103" data-name="div.w-5">
+                          <div className="[word-break:break-word] flex flex-col font-['JetBrains_Mono:Bold'] font-bold justify-center leading-[0] relative shrink-0 text-[#9ca3af] text-[10px] text-center whitespace-nowrap" data-node-id="146:8104">
+                            <p className="leading-[15px]">7</p>
+                          </div>
+                        </div>
+                        <div className="content-stretch flex flex-col items-start relative shrink-0" data-node-id="146:8105" data-name="div">
+                          <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="146:8106" data-name="div.text-xs">
+                            <div className="[word-break:break-word] flex flex-col font-['Inter:Semi_Bold'] font-semibold justify-center leading-[0] not-italic relative shrink-0 text-[#6b7280] text-[12px] whitespace-nowrap" data-node-id="146:8107">
+                              <p className="leading-[16px]">{`Review & Publish`}</p>
+                            </div>
+                          </div>
+                          <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="146:8108" data-name="div">
+                            <div className="[word-break:break-word] flex flex-col font-['Inter:Regular'] font-normal justify-center leading-[0] not-italic relative shrink-0 text-[#9ca3af] text-[11px] whitespace-nowrap" data-node-id="146:8109">
+                              <p className="leading-[16.5px]">Final review of all settings before publishing the pipeline.</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="content-stretch flex flex-[1_0_0] flex-col items-end min-w-[14px] pl-[381.359px] relative" data-node-id="146:8110" data-name="div.ml-auto:margin">
+                          <div className="content-stretch flex flex-col items-start relative shrink-0" data-node-id="146:8111" data-name="div.ml-auto">
+                            <Component1 className="relative shrink-0 size-[14px]" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="bg-white border-[#e2e5ea] border-l border-solid content-stretch flex flex-col items-start overflow-auto pl-px relative self-stretch shrink-0 w-[256px]" data-node-id="146:8114" data-name="div.w-64">
+              <div className="bg-[#f9fafb] border-[#e2e5ea] border-b border-solid relative shrink-0 w-full" data-node-id="146:8115" data-name="div.px-4">
+                <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-start pb-[14.5px] pt-[17.5px] px-[16px] relative size-full">
+                  <div className="[word-break:break-word] flex flex-col font-['JetBrains_Mono:Bold'] font-bold justify-center leading-[0] relative shrink-0 text-[#6b7280] text-[11px] tracking-[0.275px] uppercase whitespace-nowrap" data-node-id="146:8116">
+                    <p className="leading-[16.5px]">Pipeline Summary</p>
+                  </div>
+                </div>
+              </div>
+              <div className="flex-[1_0_0] min-h-px relative w-full" data-node-id="146:8117" data-name="div.flex-1">
+                <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col gap-[16px] items-start p-[16px] relative size-full">
+                  <div className="content-stretch flex flex-col gap-[6px] items-start relative shrink-0 w-full" data-node-id="146:8118" data-name="div">
+                    <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="146:8119" data-name="div.font-mono">
+                      <div className="[word-break:break-word] flex flex-col font-['JetBrains_Mono:Regular'] font-normal justify-center leading-[0] relative shrink-0 text-[#9ca3af] text-[10px] tracking-[0.25px] uppercase w-full" data-node-id="146:8120">
+                        <p className="leading-[15px]">Status</p>
+                      </div>
+                    </div>
+                    <div className="content-stretch flex items-center relative shrink-0 w-full" data-node-id="146:8121" data-name="div.flex">
+                      <div className="bg-[#fef3c7] border border-[#fde68a] border-solid content-stretch flex gap-[6px] items-center px-[11px] py-[5px] relative rounded-[4px] shrink-0" data-node-id="146:8122" data-name="span.inline-flex">
+                        <div className="bg-[#d97706] relative rounded-[33554400px] shrink-0 size-[6px]" data-node-id="146:8123" data-name="span.rounded-full" />
+                        <div className="[word-break:break-word] flex flex-col font-['JetBrains_Mono:Bold'] font-bold justify-center leading-[0] relative shrink-0 text-[#92400e] text-[12px] whitespace-nowrap" data-node-id="146:8124">
+                          <p className="leading-[16px]">Draft</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="content-stretch flex flex-col gap-[4px] items-start relative shrink-0 w-full" data-node-id="146:8125" data-name="div">
+                    <div className="content-stretch flex items-center justify-between pb-[2px] relative shrink-0 w-full" data-node-id="146:8126" data-name="div.flex">
+                      <div className="content-stretch flex flex-col items-start relative shrink-0" data-node-id="146:8127" data-name="div.font-mono">
+                        <div className="[word-break:break-word] flex flex-col font-['JetBrains_Mono:Regular'] font-normal justify-center leading-[0] relative shrink-0 text-[#9ca3af] text-[10px] tracking-[0.25px] uppercase whitespace-nowrap" data-node-id="146:8128">
+                          <p className="leading-[15px]">Configuration Progress</p>
+                        </div>
+                      </div>
+                      <div className="content-stretch flex flex-col items-start relative shrink-0" data-node-id="146:8129" data-name="span.font-mono">
+                        <div className="[word-break:break-word] flex flex-col font-['JetBrains_Mono:Bold'] font-bold justify-center leading-[0] relative shrink-0 text-[#374151] text-[11px] whitespace-nowrap" data-node-id="146:8130">
+                          <p className="leading-[16.5px]">14%</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="bg-[#f3f4f6] h-[6px] overflow-clip relative rounded-[33554400px] shrink-0 w-full" data-node-id="146:8131" data-name="div.rounded-full">
+                      <div className="absolute bg-[#2563eb] inset-[0_86%_0_0] rounded-[33554400px]" data-node-id="146:8132" data-name="div.h-full" />
+                    </div>
+                    <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="146:8133" data-name="div.mt-1">
+                      <div className="[word-break:break-word] flex flex-col font-['Inter:Regular'] font-normal justify-center leading-[0] not-italic relative shrink-0 text-[#9ca3af] text-[10px] w-full" data-node-id="146:8134">
+                        <p className="leading-[15px]">1 of 7 steps completed</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="content-stretch flex flex-col gap-[8px] items-start relative shrink-0 w-full" data-node-id="146:8135" data-name="div">
+                    <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="146:8136" data-name="div.font-mono">
+                      <div className="[word-break:break-word] flex flex-col font-['JetBrains_Mono:Regular'] font-normal justify-center leading-[0] relative shrink-0 text-[#9ca3af] text-[10px] tracking-[0.25px] uppercase w-full" data-node-id="146:8137">
+                        <p className="leading-[15px]">Quick Summary</p>
+                      </div>
+                    </div>
+                    <div className="content-stretch flex flex-col gap-[7.8px] items-start relative shrink-0 w-full" data-node-id="146:8138" data-name="div.space-y-2">
+                      <div className="content-stretch flex items-start justify-between relative shrink-0 w-full" data-node-id="146:8139" data-name="div.flex">
+                        <div className="[word-break:break-word] flex flex-col font-['Inter:Regular'] font-normal justify-center leading-[0] not-italic relative shrink-0 text-[#9ca3af] text-[11px] whitespace-nowrap" data-node-id="146:8140">
+                          <p className="leading-[16.5px]">Source</p>
+                        </div>
+                        <div className="content-stretch flex flex-col items-end relative shrink-0" data-node-id="146:8141" data-name="span.font-medium">
+                          <div className="[word-break:break-word] flex flex-col font-['Inter:Italic'] font-normal italic justify-center leading-[0] relative shrink-0 text-[#d1d5db] text-[11px] text-right whitespace-nowrap" data-node-id="146:8142">
+                            <p className="leading-[16.5px]">Not configured</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="content-stretch flex items-start justify-between relative shrink-0 w-full" data-node-id="146:8143" data-name="div.flex">
+                        <div className="[word-break:break-word] flex flex-col font-['Inter:Regular'] font-normal justify-center leading-[0] not-italic relative shrink-0 text-[#9ca3af] text-[11px] whitespace-nowrap" data-node-id="146:8144">
+                          <p className="leading-[16.5px]">Destination</p>
+                        </div>
+                        <div className="content-stretch flex flex-col items-end relative shrink-0" data-node-id="146:8145" data-name="span.font-medium">
+                          <div className="[word-break:break-word] flex flex-col font-['Inter:Italic'] font-normal italic justify-center leading-[0] relative shrink-0 text-[#d1d5db] text-[11px] text-right whitespace-nowrap" data-node-id="146:8146">
+                            <p className="leading-[16.5px]">Not configured</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="content-stretch flex items-start justify-between relative shrink-0 w-full" data-node-id="146:8147" data-name="div.flex">
+                        <div className="[word-break:break-word] flex flex-col font-['Inter:Regular'] font-normal justify-center leading-[0] not-italic relative shrink-0 text-[#9ca3af] text-[11px] whitespace-nowrap" data-node-id="146:8148">
+                          <p className="leading-[16.5px]">Schedule</p>
+                        </div>
+                        <div className="content-stretch flex flex-col items-end relative shrink-0" data-node-id="146:8149" data-name="span.font-medium">
+                          <div className="[word-break:break-word] flex flex-col font-['Inter:Italic'] font-normal italic justify-center leading-[0] relative shrink-0 text-[#d1d5db] text-[11px] text-right whitespace-nowrap" data-node-id="146:8150">
+                            <p className="leading-[16.5px]">Not configured</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="content-stretch flex items-start justify-between relative shrink-0 w-full" data-node-id="146:8151" data-name="div.flex">
+                        <div className="[word-break:break-word] flex flex-col font-['Inter:Regular'] font-normal justify-center leading-[0] not-italic relative shrink-0 text-[#9ca3af] text-[11px] whitespace-nowrap" data-node-id="146:8152">
+                          <p className="leading-[16.5px]">Owner</p>
+                        </div>
+                        <div className="content-stretch flex flex-col items-end relative shrink-0" data-node-id="146:8153" data-name="span.font-medium">
+                          <div className="[word-break:break-word] flex flex-col font-['JetBrains_Mono:Medium'] font-medium justify-center leading-[0] relative shrink-0 text-[#374151] text-[11px] text-right whitespace-nowrap" data-node-id="146:8154">
+                            <p className="leading-[16.5px]">Maya Chen</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="content-stretch flex items-start justify-between relative shrink-0 w-full" data-node-id="146:8155" data-name="div.flex">
+                        <div className="[word-break:break-word] flex flex-col font-['Inter:Regular'] font-normal justify-center leading-[0] not-italic relative shrink-0 text-[#9ca3af] text-[11px] whitespace-nowrap" data-node-id="146:8156">
+                          <p className="leading-[16.5px]">Environment</p>
+                        </div>
+                        <div className="content-stretch flex flex-col items-end relative shrink-0" data-node-id="146:8157" data-name="span.font-medium">
+                          <div className="[word-break:break-word] flex flex-col font-['JetBrains_Mono:Medium'] font-medium justify-center leading-[0] relative shrink-0 text-[#374151] text-[11px] text-right whitespace-nowrap" data-node-id="146:8158">
+                            <p className="leading-[16.5px]">Development</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="content-stretch flex items-start justify-between relative shrink-0 w-full" data-node-id="146:8159" data-name="div.flex">
+                        <div className="[word-break:break-word] flex flex-col font-['Inter:Regular'] font-normal justify-center leading-[0] not-italic relative shrink-0 text-[#9ca3af] text-[11px] whitespace-nowrap" data-node-id="146:8160">
+                          <p className="leading-[16.5px]">Version</p>
+                        </div>
+                        <div className="content-stretch flex flex-col items-end relative shrink-0" data-node-id="146:8161" data-name="span.font-medium">
+                          <div className="[word-break:break-word] flex flex-col font-['JetBrains_Mono:Medium'] font-medium justify-center leading-[0] relative shrink-0 text-[#374151] text-[11px] text-right whitespace-nowrap" data-node-id="146:8162">
+                            <p className="leading-[16.5px]">1.0.0</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="content-stretch flex flex-col gap-[8px] items-start relative shrink-0 w-full" data-node-id="146:8163" data-name="div">
+                    <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="146:8164" data-name="div.font-mono">
+                      <div className="[word-break:break-word] flex flex-col font-['JetBrains_Mono:Regular'] font-normal justify-center leading-[0] relative shrink-0 text-[#9ca3af] text-[10px] tracking-[0.25px] uppercase w-full" data-node-id="146:8165">
+                        <p className="leading-[15px]">Validation Status</p>
+                      </div>
+                    </div>
+                    <div className="content-stretch flex flex-col gap-[6px] items-start relative shrink-0 w-full" data-node-id="146:8166" data-name="div">
+                      <div className="content-stretch flex items-center justify-between relative shrink-0 w-full" data-node-id="146:8167" data-name="div.flex">
+                        <div className="content-stretch flex flex-col items-start relative shrink-0" data-node-id="146:8168" data-name="span">
+                          <div className="[word-break:break-word] flex flex-col font-['Inter:Regular'] font-normal justify-center leading-[0] not-italic relative shrink-0 text-[#6b7280] text-[11px] whitespace-nowrap" data-node-id="146:8169">
+                            <p className="leading-[16.5px]">Configuration</p>
+                          </div>
+                        </div>
+ 

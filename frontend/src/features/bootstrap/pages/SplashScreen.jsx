@@ -12,9 +12,12 @@ const MIN_DISPLAY_MS = 1200;
 export default function SplashScreen() {
   const navigate = useNavigate();
   const { steps, error, complete, progress, activeStep, config, hasSession } = useBootstrap();
-  const mountedAt = useRef(Date.now());
+  const mountedAt = useRef(null);
 
   useEffect(() => {
+    if (mountedAt.current === null) {
+      mountedAt.current = Date.now();
+    }
     if (!complete) return;
     const elapsed = Date.now() - mountedAt.current;
     const remaining = Math.max(0, MIN_DISPLAY_MS - elapsed);

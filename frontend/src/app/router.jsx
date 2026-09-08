@@ -52,6 +52,14 @@ import WebhookConfigurationScreen from '../features/dataSources/pages/WebhookCon
 import SftpConnectionScreen from '../features/dataSources/pages/SftpConnectionScreen';
 import ConnectionTestResultScreen from '../features/dataSources/pages/ConnectionTestResultScreen';
 import SourceHealthMonitoringScreen from '../features/dataSources/pages/SourceHealthMonitoringScreen';
+import DestinationListScreen from '../features/destinations/pages/DestinationListScreen';
+import AddDestinationScreen from '../features/destinations/pages/AddDestinationScreen';
+import DestinationConnectionTestScreen from '../features/destinations/pages/DestinationConnectionTestScreen';
+import DestinationConfigurationScreen from '../features/destinations/pages/DestinationConfigurationScreen';
+import DestinationHealthMonitoringScreen from '../features/destinations/pages/DestinationHealthMonitoringScreen';
+import DestinationHistoryScreen from '../features/destinations/pages/DestinationHistoryScreen';
+import CreatePipelineScreen from '../features/pipelines/pages/CreatePipelineScreen';
+import PipelineListScreen from '../features/pipelines/pages/PipelineListScreen';
 import AppShell from '../features/shell/components/AppShell.jsx';
 
 // Every route below renders inside the real shared AppShell (MOD-001
@@ -96,11 +104,17 @@ export const router = createBrowserRouter([
   { path: '/data-sources/new/webhook', element: <WebhookConfigurationScreen /> },
   { path: '/data-sources/new/test-result', element: <ConnectionTestResultScreen /> },
   { path: '/data-sources/:id/health', element: <SourceHealthMonitoringScreen /> },
-  { path: '/destinations', element: shellRoute('SCR-057', 'Destinations', ['ConnectIQ', 'Data', 'Destinations']) },
+  { path: '/destinations', element: <DestinationListScreen /> },
+  { path: '/destinations/new', element: <AddDestinationScreen /> },
+  { path: '/destinations/new/test', element: <DestinationConnectionTestScreen /> },
+  { path: '/destinations/:id/configure', element: <DestinationConfigurationScreen /> },
+  { path: '/destinations/:id/health', element: <DestinationHealthMonitoringScreen /> },
+  { path: '/destinations/:id/history', element: <DestinationHistoryScreen /> },
+  { path: '/destinations/history', element: <DestinationHistoryScreen /> },
 
   // Pipelines
-  { path: '/pipelines', element: shellRoute('SCR-063', 'Pipeline Library', ['ConnectIQ', 'Pipelines', 'Pipeline Library']) },
-  { path: '/pipelines/new', element: shellRoute('SCR-064', 'Pipeline Builder — Overview', ['ConnectIQ', 'Pipelines', 'Pipeline Builder']) },
+  { path: '/pipelines', element: <PipelineListScreen /> },
+  { path: '/pipelines/new', element: <CreatePipelineScreen /> },
   { path: '/pipelines/new/source', element: shellRoute('SCR-067', 'Pipeline Builder — Source', ['ConnectIQ', 'Pipelines', 'Pipeline Builder', 'Source']) },
   { path: '/pipelines/new/destination', element: shellRoute('SCR-064', 'Pipeline Builder — Destination', ['ConnectIQ', 'Pipelines', 'Pipeline Builder', 'Destination']) },
   { path: '/pipelines/new/transformations', element: shellRoute('SCR-070', 'Pipeline Builder — Transformations', ['ConnectIQ', 'Pipelines', 'Pipeline Builder', 'Transformations']) },
