@@ -60,6 +60,13 @@ import DestinationHealthMonitoringScreen from '../features/destinations/pages/De
 import DestinationHistoryScreen from '../features/destinations/pages/DestinationHistoryScreen';
 import CreatePipelineScreen from '../features/pipelines/pages/CreatePipelineScreen';
 import PipelineListScreen from '../features/pipelines/pages/PipelineListScreen';
+import VisualPipelineBuilderScreen from '../features/pipelines/pages/VisualPipelineBuilderScreen';
+import NodeLibraryScreen from '../features/pipelines/pages/NodeLibraryScreen';
+import SourceNodeConfigScreen from '../features/pipelines/pages/SourceNodeConfigScreen';
+import FilterNodeConfigScreen from '../features/pipelines/pages/FilterNodeConfigScreen';
+import MappingNodeConfigScreen from '../features/pipelines/pages/MappingNodeConfigScreen';
+import TransformationNodeConfigScreen from '../features/pipelines/pages/TransformationNodeConfigScreen';
+import ValidationNodeConfigScreen from '../features/pipelines/pages/ValidationNodeConfigScreen';
 import AppShell from '../features/shell/components/AppShell.jsx';
 
 // Every route below renders inside the real shared AppShell (MOD-001
@@ -115,9 +122,39 @@ export const router = createBrowserRouter([
   // Pipelines
   { path: '/pipelines', element: <PipelineListScreen /> },
   { path: '/pipelines/new', element: <CreatePipelineScreen /> },
-  { path: '/pipelines/new/source', element: shellRoute('SCR-067', 'Pipeline Builder — Source', ['ConnectIQ', 'Pipelines', 'Pipeline Builder', 'Source']) },
+  { path: '/pipelines/:id/builder', element: <VisualPipelineBuilderScreen /> },
+  { path: '/pipelines/builder', element: <VisualPipelineBuilderScreen /> },
+  { path: '/pipelines/nodes', element: <NodeLibraryScreen /> },
+  { path: '/pipelines/library/nodes', element: <NodeLibraryScreen /> },
+  { path: '/pipelines/builder/nodes', element: <NodeLibraryScreen /> },
+  { path: '/pipelines/library', element: <NodeLibraryScreen /> },
+  { path: '/pipelines/new/source', element: <SourceNodeConfigScreen /> },
+  { path: '/pipelines/nodes/source', element: <SourceNodeConfigScreen /> },
+  { path: '/pipelines/:id/nodes/source', element: <SourceNodeConfigScreen /> },
+  { path: '/pipelines/builder/nodes/source', element: <SourceNodeConfigScreen /> },
+  { path: '/pipelines/builder/source', element: <SourceNodeConfigScreen /> },
+  { path: '/pipelines/new/filter', element: <FilterNodeConfigScreen /> },
+  { path: '/pipelines/nodes/filter', element: <FilterNodeConfigScreen /> },
+  { path: '/pipelines/:id/nodes/filter', element: <FilterNodeConfigScreen /> },
+  { path: '/pipelines/builder/nodes/filter', element: <FilterNodeConfigScreen /> },
+  { path: '/pipelines/builder/filter', element: <FilterNodeConfigScreen /> },
+  { path: '/pipelines/new/mapping', element: <MappingNodeConfigScreen /> },
+  { path: '/pipelines/nodes/mapping', element: <MappingNodeConfigScreen /> },
+  { path: '/pipelines/:id/nodes/mapping', element: <MappingNodeConfigScreen /> },
+  { path: '/pipelines/builder/nodes/mapping', element: <MappingNodeConfigScreen /> },
+  { path: '/pipelines/builder/mapping', element: <MappingNodeConfigScreen /> },
+  { path: '/pipelines/new/transformation', element: <TransformationNodeConfigScreen /> },
+  { path: '/pipelines/nodes/transformation', element: <TransformationNodeConfigScreen /> },
+  { path: '/pipelines/:id/nodes/transformation', element: <TransformationNodeConfigScreen /> },
+  { path: '/pipelines/builder/nodes/transformation', element: <TransformationNodeConfigScreen /> },
+  { path: '/pipelines/builder/transformation', element: <TransformationNodeConfigScreen /> },
+  { path: '/pipelines/new/validation', element: <ValidationNodeConfigScreen /> },
+  { path: '/pipelines/nodes/validation', element: <ValidationNodeConfigScreen /> },
+  { path: '/pipelines/:id/nodes/validation', element: <ValidationNodeConfigScreen /> },
+  { path: '/pipelines/builder/nodes/validation', element: <ValidationNodeConfigScreen /> },
+  { path: '/pipelines/builder/validation', element: <ValidationNodeConfigScreen /> },
   { path: '/pipelines/new/destination', element: shellRoute('SCR-064', 'Pipeline Builder — Destination', ['ConnectIQ', 'Pipelines', 'Pipeline Builder', 'Destination']) },
-  { path: '/pipelines/new/transformations', element: shellRoute('SCR-070', 'Pipeline Builder — Transformations', ['ConnectIQ', 'Pipelines', 'Pipeline Builder', 'Transformations']) },
+  { path: '/pipelines/new/transformations', element: <TransformationNodeConfigScreen /> },
   { path: '/pipelines/new/schedule', element: shellRoute('SCR-064', 'Pipeline Builder — Schedule', ['ConnectIQ', 'Pipelines', 'Pipeline Builder', 'Schedule']) },
   { path: '/pipelines/new/parameters', element: shellRoute('SCR-064', 'Pipeline Builder — Parameters', ['ConnectIQ', 'Pipelines', 'Pipeline Builder', 'Parameters']) },
   { path: '/pipelines/new/review', element: shellRoute('SCR-064', 'Pipeline Builder — Review', ['ConnectIQ', 'Pipelines', 'Pipeline Builder', 'Review']) },

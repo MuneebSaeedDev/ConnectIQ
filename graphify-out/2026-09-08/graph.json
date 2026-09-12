@@ -78,7 +78,7 @@
       "_origin": "ast",
       "id": "frontend_src_features_destinations_services_destinationhealthmonitoring_api_destinationhealtherror",
       "community": 109,
-      "community_name": "apiFetch",
+      "community_name": "readJson",
       "norm_label": "destinationhealtherror"
     },
     {
@@ -93,19 +93,6 @@
       "community": 110,
       "community_name": "destinationConfiguration.api.js",
       "norm_label": "destinationconfigerror"
-    },
-    {
-      "label": "OrganizationListError",
-      "file_type": "code",
-      "source_file": "frontend/src/features/organizations/services/organizationList.api.js",
-      "source_location": "L35",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "id": "frontend_src_features_organizations_services_organizationlist_api_organizationlisterror",
-      "community": 112,
-      "community_name": "OrganizationListScreen.jsx",
-      "norm_label": "organizationlisterror"
     },
     {
       "label": "DestinationHistoryError",
@@ -186,6 +173,19 @@
       "norm_label": "pipelinelisterror"
     },
     {
+      "label": "DashboardError",
+      "file_type": "code",
+      "source_file": "frontend/src/features/dashboard/services/dashboard.api.js",
+      "source_location": "L20",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "id": "frontend_src_features_dashboard_services_dashboard_api_dashboarderror",
+      "community": 137,
+      "community_name": "dashboard.api.js",
+      "norm_label": "dashboarderror"
+    },
+    {
       "label": "NotificationsError",
       "file_type": "code",
       "source_file": "frontend/src/features/notifications/services/notifications.api.js",
@@ -199,30 +199,43 @@
       "norm_label": "notificationserror"
     },
     {
-      "label": "SystemHealthError",
+      "label": "PasswordResetError",
       "file_type": "code",
-      "source_file": "frontend/src/features/dashboard/services/systemHealth.api.js",
+      "source_file": "frontend/src/features/auth/services/auth.api.js",
+      "source_location": "L20",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "id": "frontend_src_features_auth_services_auth_api_passwordreseterror",
+      "community": 143,
+      "community_name": "react",
+      "norm_label": "passwordreseterror"
+    },
+    {
+      "label": "DataQualityError",
+      "file_type": "code",
+      "source_file": "frontend/src/features/dashboard/services/dataQuality.api.js",
       "source_location": "L23",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
-      "id": "frontend_src_features_dashboard_services_systemhealth_api_systemhealtherror",
-      "community": 140,
-      "community_name": "readJson",
-      "norm_label": "systemhealtherror"
+      "id": "frontend_src_features_dashboard_services_dataquality_api_dataqualityerror",
+      "community": 144,
+      "community_name": "dataQuality.api.js",
+      "norm_label": "dataqualityerror"
     },
     {
-      "label": "SourceHealthError",
+      "label": "DestinationHealthError",
       "file_type": "code",
-      "source_file": "frontend/src/features/dashboard/services/sourceHealth.api.js",
-      "source_location": "L25",
+      "source_file": "frontend/src/features/dashboard/services/destinationHealth.api.js",
+      "source_location": "L38",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
-      "id": "frontend_src_features_dashboard_services_sourcehealth_api_sourcehealtherror",
-      "community": 15,
-      "community_name": "SourceHealthScreen.jsx",
-      "norm_label": "sourcehealtherror"
+      "id": "frontend_src_features_dashboard_services_destinationhealth_api_destinationhealtherror",
+      "community": 146,
+      "community_name": "destinationHealth.api.js",
+      "norm_label": "destinationhealtherror"
     },
     {
       "label": "ErrorAnalyticsError",
@@ -233,9 +246,61 @@
       "_callable_class": true,
       "_origin": "ast",
       "id": "frontend_src_features_dashboard_services_erroranalytics_api_erroranalyticserror",
-      "community": 2,
-      "community_name": "ErrorAnalyticsScreen.jsx",
+      "community": 147,
+      "community_name": "errorAnalytics.api.js",
       "norm_label": "erroranalyticserror"
+    },
+    {
+      "label": "OrganizationActivityError",
+      "file_type": "code",
+      "source_file": "frontend/src/features/organizations/services/organizationActivity.api.js",
+      "source_location": "L41",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "id": "frontend_src_features_organizations_services_organizationactivity_api_organizationactivityerror",
+      "community": 149,
+      "community_name": "organizationActivity.api.js",
+      "norm_label": "organizationactivityerror"
+    },
+    {
+      "label": "OrganizationListError",
+      "file_type": "code",
+      "source_file": "frontend/src/features/organizations/services/organizationList.api.js",
+      "source_location": "L35",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "id": "frontend_src_features_organizations_services_organizationlist_api_organizationlisterror",
+      "community": 150,
+      "community_name": "organizationList.api.js",
+      "norm_label": "organizationlisterror"
+    },
+    {
+      "label": "UserListError",
+      "file_type": "code",
+      "source_file": "frontend/src/features/users/services/userList.api.js",
+      "source_location": "L47",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "id": "frontend_src_features_users_services_userlist_api_userlisterror",
+      "community": 151,
+      "community_name": "userList.api.js",
+      "norm_label": "userlisterror"
+    },
+    {
+      "label": "PerformanceAnalyticsError",
+      "file_type": "code",
+      "source_file": "frontend/src/features/dashboard/services/performanceAnalytics.api.js",
+      "source_location": "L31",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "id": "frontend_src_features_dashboard_services_performanceanalytics_api_performanceanalyticserror",
+      "community": 25,
+      "community_name": "PerformanceAnalyticsScreen.jsx",
+      "norm_label": "performanceanalyticserror"
     },
     {
       "label": "ExcelUploadError",
@@ -262,19 +327,6 @@
       "community": 46,
       "community_name": "UserDetailsScreen.jsx",
       "norm_label": "userdetailserror"
-    },
-    {
-      "label": "RealTimeMonitoringError",
-      "file_type": "code",
-      "source_file": "frontend/src/features/dashboard/services/realTimeMonitoring.api.js",
-      "source_location": "L37",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "id": "frontend_src_features_dashboard_services_realtimemonitoring_api_realtimemonitoringerror",
-      "community": 47,
-      "community_name": "RealTimeMonitoringScreen.jsx",
-      "norm_label": "realtimemonitoringerror"
     },
     {
       "label": "RoleListError",
@@ -342,58 +394,6 @@
       "norm_label": "editusererror"
     },
     {
-      "label": "ExecutiveDashboardError",
-      "file_type": "code",
-      "source_file": "frontend/src/features/dashboard/services/executiveDashboard.api.js",
-      "source_location": "L24",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "id": "frontend_src_features_dashboard_services_executivedashboard_api_executivedashboarderror",
-      "community": 6,
-      "community_name": "ExecutiveDashboardScreen.jsx",
-      "norm_label": "executivedashboarderror"
-    },
-    {
-      "label": "DashboardError",
-      "file_type": "code",
-      "source_file": "frontend/src/features/dashboard/services/dashboard.api.js",
-      "source_location": "L20",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "id": "frontend_src_features_dashboard_services_dashboard_api_dashboarderror",
-      "community": 61,
-      "community_name": "client.js",
-      "norm_label": "dashboarderror"
-    },
-    {
-      "label": "DataQualityError",
-      "file_type": "code",
-      "source_file": "frontend/src/features/dashboard/services/dataQuality.api.js",
-      "source_location": "L23",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "id": "frontend_src_features_dashboard_services_dataquality_api_dataqualityerror",
-      "community": 61,
-      "community_name": "client.js",
-      "norm_label": "dataqualityerror"
-    },
-    {
-      "label": "DestinationHealthError",
-      "file_type": "code",
-      "source_file": "frontend/src/features/dashboard/services/destinationHealth.api.js",
-      "source_location": "L38",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "id": "frontend_src_features_dashboard_services_destinationhealth_api_destinationhealtherror",
-      "community": 61,
-      "community_name": "client.js",
-      "norm_label": "destinationhealtherror"
-    },
-    {
       "label": "ExecutionStatisticsError",
       "file_type": "code",
       "source_file": "frontend/src/features/dashboard/services/executionStatistics.api.js",
@@ -407,17 +407,17 @@
       "norm_label": "executionstatisticserror"
     },
     {
-      "label": "PerformanceAnalyticsError",
+      "label": "ExecutiveDashboardError",
       "file_type": "code",
-      "source_file": "frontend/src/features/dashboard/services/performanceAnalytics.api.js",
-      "source_location": "L31",
+      "source_file": "frontend/src/features/dashboard/services/executiveDashboard.api.js",
+      "source_location": "L24",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
-      "id": "frontend_src_features_dashboard_services_performanceanalytics_api_performanceanalyticserror",
+      "id": "frontend_src_features_dashboard_services_executivedashboard_api_executivedashboarderror",
       "community": 61,
       "community_name": "client.js",
-      "norm_label": "performanceanalyticserror"
+      "norm_label": "executivedashboarderror"
     },
     {
       "label": "PipelineOverviewError",
@@ -433,6 +433,45 @@
       "norm_label": "pipelineoverviewerror"
     },
     {
+      "label": "RealTimeMonitoringError",
+      "file_type": "code",
+      "source_file": "frontend/src/features/dashboard/services/realTimeMonitoring.api.js",
+      "source_location": "L37",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "id": "frontend_src_features_dashboard_services_realtimemonitoring_api_realtimemonitoringerror",
+      "community": 61,
+      "community_name": "client.js",
+      "norm_label": "realtimemonitoringerror"
+    },
+    {
+      "label": "SourceHealthError",
+      "file_type": "code",
+      "source_file": "frontend/src/features/dashboard/services/sourceHealth.api.js",
+      "source_location": "L25",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "id": "frontend_src_features_dashboard_services_sourcehealth_api_sourcehealtherror",
+      "community": 61,
+      "community_name": "client.js",
+      "norm_label": "sourcehealtherror"
+    },
+    {
+      "label": "SystemHealthError",
+      "file_type": "code",
+      "source_file": "frontend/src/features/dashboard/services/systemHealth.api.js",
+      "source_location": "L23",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "id": "frontend_src_features_dashboard_services_systemhealth_api_systemhealtherror",
+      "community": 61,
+      "community_name": "client.js",
+      "norm_label": "systemhealtherror"
+    },
+    {
       "label": "DepartmentManagementError",
       "file_type": "code",
       "source_file": "frontend/src/features/organizations/services/departmentManagement.api.js",
@@ -446,45 +485,6 @@
       "norm_label": "departmentmanagementerror"
     },
     {
-      "label": "OrganizationActivityError",
-      "file_type": "code",
-      "source_file": "frontend/src/features/organizations/services/organizationActivity.api.js",
-      "source_location": "L41",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "id": "frontend_src_features_organizations_services_organizationactivity_api_organizationactivityerror",
-      "community": 61,
-      "community_name": "client.js",
-      "norm_label": "organizationactivityerror"
-    },
-    {
-      "label": "TeamManagementError",
-      "file_type": "code",
-      "source_file": "frontend/src/features/organizations/services/teamManagement.api.js",
-      "source_location": "L45",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "id": "frontend_src_features_organizations_services_teammanagement_api_teammanagementerror",
-      "community": 61,
-      "community_name": "client.js",
-      "norm_label": "teammanagementerror"
-    },
-    {
-      "label": "UserListError",
-      "file_type": "code",
-      "source_file": "frontend/src/features/users/services/userList.api.js",
-      "source_location": "L47",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "id": "frontend_src_features_users_services_userlist_api_userlisterror",
-      "community": 61,
-      "community_name": "client.js",
-      "norm_label": "userlisterror"
-    },
-    {
       "label": "DestinationError",
       "file_type": "code",
       "source_file": "frontend/src/features/destinations/services/addDestination.api.js",
@@ -494,7 +494,7 @@
       "_origin": "ast",
       "id": "frontend_src_features_destinations_services_adddestination_api_destinationerror",
       "community": 66,
-      "community_name": "AddDestinationScreen.jsx",
+      "community_name": "AppShell",
       "norm_label": "destinationerror"
     },
     {
@@ -602,19 +602,6 @@
       "norm_label": "passwordresetconfirmerror"
     },
     {
-      "label": "PasswordResetError",
-      "file_type": "code",
-      "source_file": "frontend/src/features/auth/services/auth.api.js",
-      "source_location": "L20",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "id": "frontend_src_features_auth_services_auth_api_passwordreseterror",
-      "community": 78,
-      "community_name": "auth.api.js",
-      "norm_label": "passwordreseterror"
-    },
-    {
       "label": "TwoFactorError",
       "file_type": "code",
       "source_file": "frontend/src/features/auth/services/auth.api.js",
@@ -693,6 +680,19 @@
       "norm_label": "databaseconnectorerror"
     },
     {
+      "label": "TeamManagementError",
+      "file_type": "code",
+      "source_file": "frontend/src/features/organizations/services/teamManagement.api.js",
+      "source_location": "L45",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "id": "frontend_src_features_organizations_services_teammanagement_api_teammanagementerror",
+      "community": 88,
+      "community_name": "teamManagement.api.js",
+      "norm_label": "teammanagementerror"
+    },
+    {
       "label": "ConnectionTestResultError",
       "file_type": "code",
       "source_file": "frontend/src/features/dataSources/services/connectionTestResult.api.js",
@@ -756,18 +756,6 @@
       "community": 97,
       "community_name": "destinationConnectionTest.api.js",
       "norm_label": "destinationconnectiontesterror"
-    },
-    {
-      "label": "useTeamManagement()",
-      "file_type": "code",
-      "source_file": "frontend/src/features/organizations/hooks/useTeamManagement.js",
-      "source_location": "L14",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "frontend_src_features_organizations_hooks_useteammanagement_useteammanagement",
-      "community": 0,
-      "community_name": "TeamManagementScreen.jsx",
-      "norm_label": "useteammanagement()"
     },
     {
       "label": "FilterSelect()",
@@ -1032,18 +1020,6 @@
       "community": 0,
       "community_name": "TeamManagementScreen.jsx",
       "norm_label": "togglerow()"
-    },
-    {
-      "label": "getTeamManagement()",
-      "file_type": "code",
-      "source_file": "frontend/src/features/organizations/services/teamManagement.api.js",
-      "source_location": "L102",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "frontend_src_features_organizations_services_teammanagement_api_getteammanagement",
-      "community": 0,
-      "community_name": "TeamManagementScreen.jsx",
-      "norm_label": "getteammanagement()"
     },
     {
       "label": "useChangePassword()",
@@ -2710,8 +2686,32 @@
       "_origin": "ast",
       "id": "frontend_src_features_destinations_hooks_usedestinationhealthmonitoring_usedestinationhealthmonitoring",
       "community": 109,
-      "community_name": "apiFetch",
+      "community_name": "readJson",
       "norm_label": "usedestinationhealthmonitoring()"
+    },
+    {
+      "label": "DestinationHealthMonitoringScreen()",
+      "file_type": "code",
+      "source_file": "frontend/src/features/destinations/pages/DestinationHealthMonitoringScreen.jsx",
+      "source_location": "L66",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "frontend_src_features_destinations_pages_destinationhealthmonitoringscreen_destinationhealthmonitoringscreen",
+      "community": 109,
+      "community_name": "readJson",
+      "norm_label": "destinationhealthmonitoringscreen()"
+    },
+    {
+      "label": "Sparkline()",
+      "file_type": "code",
+      "source_file": "frontend/src/features/destinations/pages/DestinationHealthMonitoringScreen.jsx",
+      "source_location": "L28",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "frontend_src_features_destinations_pages_destinationhealthmonitoringscreen_sparkline",
+      "community": 109,
+      "community_name": "readJson",
+      "norm_label": "sparkline()"
     },
     {
       "label": "acknowledgeDestinationAlert()",
@@ -2722,7 +2722,7 @@
       "_origin": "ast",
       "id": "frontend_src_features_destinations_services_destinationhealthmonitoring_api_acknowledgedestinationalert",
       "community": 109,
-      "community_name": "apiFetch",
+      "community_name": "readJson",
       "norm_label": "acknowledgedestinationalert()"
     },
     {
@@ -2734,7 +2734,7 @@
       "_origin": "ast",
       "id": "frontend_src_features_destinations_services_destinationhealthmonitoring_api_destinationhealtherror_constructor",
       "community": 109,
-      "community_name": "apiFetch",
+      "community_name": "readJson",
       "norm_label": ".constructor()"
     },
     {
@@ -2746,7 +2746,7 @@
       "_origin": "ast",
       "id": "frontend_src_features_destinations_services_destinationhealthmonitoring_api_getdestinationhealth",
       "community": 109,
-      "community_name": "apiFetch",
+      "community_name": "readJson",
       "norm_label": "getdestinationhealth()"
     },
     {
@@ -2758,7 +2758,7 @@
       "_origin": "ast",
       "id": "frontend_src_features_destinations_services_destinationhealthmonitoring_api_runalldestinationhealthchecks",
       "community": 109,
-      "community_name": "apiFetch",
+      "community_name": "readJson",
       "norm_label": "runalldestinationhealthchecks()"
     },
     {
@@ -2770,7 +2770,7 @@
       "_origin": "ast",
       "id": "frontend_src_features_destinations_services_destinationhealthmonitoring_api_rundestinationhealthcheck",
       "community": 109,
-      "community_name": "apiFetch",
+      "community_name": "readJson",
       "norm_label": "rundestinationhealthcheck()"
     },
     {
@@ -2782,20 +2782,20 @@
       "_origin": "ast",
       "id": "frontend_src_features_destinations_services_destinationhealthmonitoring_api_testdestinationconnectivity",
       "community": 109,
-      "community_name": "apiFetch",
+      "community_name": "readJson",
       "norm_label": "testdestinationconnectivity()"
     },
     {
-      "label": "apiFetch()",
+      "label": "readJson()",
       "file_type": "code",
       "source_file": "frontend/src/services/api/client.js",
-      "source_location": "L16",
+      "source_location": "L30",
       "_callable": true,
       "_origin": "ast",
-      "id": "frontend_src_services_api_client_apifetch",
+      "id": "frontend_src_services_api_client_readjson",
       "community": 109,
-      "community_name": "apiFetch",
-      "norm_label": "apifetch()"
+      "community_name": "readJson",
+      "norm_label": "readjson()"
     },
     {
       "label": "ActionBar()",
@@ -4582,7 +4582,7 @@
       "_origin": "ast",
       "id": "frontend_src_features_auth_hooks_uselogout_uselogout",
       "community": 118,
-      "community_name": "useAppSelector",
+      "community_name": "useAppDispatch",
       "norm_label": "uselogout()"
     },
     {
@@ -4594,7 +4594,7 @@
       "_origin": "ast",
       "id": "frontend_src_features_auth_hooks_uselogout_uselogout_confirm",
       "community": 118,
-      "community_name": "useAppSelector",
+      "community_name": "useAppDispatch",
       "norm_label": "confirm()"
     },
     {
@@ -4606,7 +4606,7 @@
       "_origin": "ast",
       "id": "frontend_src_features_auth_hooks_uselogout_uselogout_reset",
       "community": 118,
-      "community_name": "useAppSelector",
+      "community_name": "useAppDispatch",
       "norm_label": "reset()"
     },
     {
@@ -4618,7 +4618,7 @@
       "_origin": "ast",
       "id": "frontend_src_features_auth_pages_logoutscreen_logoutscreen",
       "community": 118,
-      "community_name": "useAppSelector",
+      "community_name": "useAppDispatch",
       "norm_label": "logoutscreen()"
     },
     {
@@ -4630,7 +4630,7 @@
       "_origin": "ast",
       "id": "frontend_src_features_auth_pages_logoutscreen_logoutscreen_handlecancel",
       "community": 118,
-      "community_name": "useAppSelector",
+      "community_name": "useAppDispatch",
       "norm_label": "handlecancel()"
     },
     {
@@ -4642,7 +4642,7 @@
       "_origin": "ast",
       "id": "frontend_src_features_auth_pages_logoutscreen_logoutscreen_handleconfirm",
       "community": 118,
-      "community_name": "useAppSelector",
+      "community_name": "useAppDispatch",
       "norm_label": "handleconfirm()"
     },
     {
@@ -4654,7 +4654,7 @@
       "_origin": "ast",
       "id": "frontend_src_features_auth_services_auth_api_logout",
       "community": 118,
-      "community_name": "useAppSelector",
+      "community_name": "useAppDispatch",
       "norm_label": "logout()"
     },
     {
@@ -4934,6 +4934,270 @@
       "norm_label": "updateuser()"
     },
     {
+      "label": "NotificationPanel()",
+      "file_type": "code",
+      "source_file": "frontend/src/features/notifications/components/NotificationPanel.jsx",
+      "source_location": "L54",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "frontend_src_features_notifications_components_notificationpanel_notificationpanel",
+      "community": 121,
+      "community_name": "AppShell.jsx",
+      "norm_label": "notificationpanel()"
+    },
+    {
+      "label": "NotificationSkeleton()",
+      "file_type": "code",
+      "source_file": "frontend/src/features/notifications/components/NotificationPanel.jsx",
+      "source_location": "L294",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "frontend_src_features_notifications_components_notificationpanel_notificationskeleton",
+      "community": 121,
+      "community_name": "AppShell.jsx",
+      "norm_label": "notificationskeleton()"
+    },
+    {
+      "label": "Footer()",
+      "file_type": "code",
+      "source_file": "frontend/src/features/shell/components/Footer.jsx",
+      "source_location": "L23",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "frontend_src_features_shell_components_footer_footer",
+      "community": 121,
+      "community_name": "AppShell.jsx",
+      "norm_label": "footer()"
+    },
+    {
+      "label": "FooterDivider()",
+      "file_type": "code",
+      "source_file": "frontend/src/features/shell/components/Footer.jsx",
+      "source_location": "L67",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "frontend_src_features_shell_components_footer_footerdivider",
+      "community": 121,
+      "community_name": "AppShell.jsx",
+      "norm_label": "footerdivider()"
+    },
+    {
+      "label": "FooterStat()",
+      "file_type": "code",
+      "source_file": "frontend/src/features/shell/components/Footer.jsx",
+      "source_location": "L71",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "frontend_src_features_shell_components_footer_footerstat",
+      "community": 121,
+      "community_name": "AppShell.jsx",
+      "norm_label": "footerstat()"
+    },
+    {
+      "label": "Header()",
+      "file_type": "code",
+      "source_file": "frontend/src/features/shell/components/Header.jsx",
+      "source_location": "L36",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "frontend_src_features_shell_components_header_header",
+      "community": 121,
+      "community_name": "AppShell.jsx",
+      "norm_label": "header()"
+    },
+    {
+      "label": "getFocusable()",
+      "file_type": "code",
+      "source_file": "frontend/src/features/shell/components/Header.jsx",
+      "source_location": "L62",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "frontend_src_features_shell_components_header_header_getfocusable",
+      "community": 121,
+      "community_name": "AppShell.jsx",
+      "norm_label": "getfocusable()"
+    },
+    {
+      "label": "handleKeyDown()",
+      "file_type": "code",
+      "source_file": "frontend/src/features/shell/components/Header.jsx",
+      "source_location": "L77",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "frontend_src_features_shell_components_header_header_handlekeydown",
+      "community": 121,
+      "community_name": "AppShell.jsx",
+      "norm_label": "handlekeydown()"
+    },
+    {
+      "label": "handlePointerDown()",
+      "file_type": "code",
+      "source_file": "frontend/src/features/shell/components/Header.jsx",
+      "source_location": "L72",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "frontend_src_features_shell_components_header_header_handlepointerdown",
+      "community": 121,
+      "community_name": "AppShell.jsx",
+      "norm_label": "handlepointerdown()"
+    },
+    {
+      "label": "CollapsedSidebar()",
+      "file_type": "code",
+      "source_file": "frontend/src/features/shell/components/Sidebar.jsx",
+      "source_location": "L208",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "frontend_src_features_shell_components_sidebar_collapsedsidebar",
+      "community": 121,
+      "community_name": "AppShell.jsx",
+      "norm_label": "collapsedsidebar()"
+    },
+    {
+      "label": "ExpandedSidebar()",
+      "file_type": "code",
+      "source_file": "frontend/src/features/shell/components/Sidebar.jsx",
+      "source_location": "L58",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "frontend_src_features_shell_components_sidebar_expandedsidebar",
+      "community": 121,
+      "community_name": "AppShell.jsx",
+      "norm_label": "expandedsidebar()"
+    },
+    {
+      "label": "NavSection()",
+      "file_type": "code",
+      "source_file": "frontend/src/features/shell/components/Sidebar.jsx",
+      "source_location": "L110",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "frontend_src_features_shell_components_sidebar_navsection",
+      "community": 121,
+      "community_name": "AppShell.jsx",
+      "norm_label": "navsection()"
+    },
+    {
+      "label": "NestedNavGroup()",
+      "file_type": "code",
+      "source_file": "frontend/src/features/shell/components/Sidebar.jsx",
+      "source_location": "L155",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "frontend_src_features_shell_components_sidebar_nestednavgroup",
+      "community": 121,
+      "community_name": "AppShell.jsx",
+      "norm_label": "nestednavgroup()"
+    },
+    {
+      "label": "Sidebar()",
+      "file_type": "code",
+      "source_file": "frontend/src/features/shell/components/Sidebar.jsx",
+      "source_location": "L33",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "frontend_src_features_shell_components_sidebar_sidebar",
+      "community": 121,
+      "community_name": "AppShell.jsx",
+      "norm_label": "sidebar()"
+    },
+    {
+      "label": "SidebarLink()",
+      "file_type": "code",
+      "source_file": "frontend/src/features/shell/components/Sidebar.jsx",
+      "source_location": "L182",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "frontend_src_features_shell_components_sidebar_sidebarlink",
+      "community": 121,
+      "community_name": "AppShell.jsx",
+      "norm_label": "sidebarlink()"
+    },
+    {
+      "label": "SidebarToggleIcon()",
+      "file_type": "code",
+      "source_file": "frontend/src/features/shell/components/SidebarToggleIcon.jsx",
+      "source_location": "L13",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "frontend_src_features_shell_components_sidebartoggleicon_sidebartoggleicon",
+      "community": 121,
+      "community_name": "AppShell.jsx",
+      "norm_label": "sidebartoggleicon()"
+    },
+    {
+      "label": "MenuItem()",
+      "file_type": "code",
+      "source_file": "frontend/src/features/shell/components/UserProfileMenu.jsx",
+      "source_location": "L258",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "frontend_src_features_shell_components_userprofilemenu_menuitem",
+      "community": 121,
+      "community_name": "AppShell.jsx",
+      "norm_label": "menuitem()"
+    },
+    {
+      "label": "UserProfileMenu()",
+      "file_type": "code",
+      "source_file": "frontend/src/features/shell/components/UserProfileMenu.jsx",
+      "source_location": "L49",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "frontend_src_features_shell_components_userprofilemenu_userprofilemenu",
+      "community": 121,
+      "community_name": "AppShell.jsx",
+      "norm_label": "userprofilemenu()"
+    },
+    {
+      "label": "getFocusable()",
+      "file_type": "code",
+      "source_file": "frontend/src/features/shell/components/UserProfileMenu.jsx",
+      "source_location": "L60",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "frontend_src_features_shell_components_userprofilemenu_userprofilemenu_getfocusable",
+      "community": 121,
+      "community_name": "AppShell.jsx",
+      "norm_label": "getfocusable()"
+    },
+    {
+      "label": "goTo()",
+      "file_type": "code",
+      "source_file": "frontend/src/features/shell/components/UserProfileMenu.jsx",
+      "source_location": "L104",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "frontend_src_features_shell_components_userprofilemenu_userprofilemenu_goto",
+      "community": 121,
+      "community_name": "AppShell.jsx",
+      "norm_label": "goto()"
+    },
+    {
+      "label": "handleKeyDown()",
+      "file_type": "code",
+      "source_file": "frontend/src/features/shell/components/UserProfileMenu.jsx",
+      "source_location": "L75",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "frontend_src_features_shell_components_userprofilemenu_userprofilemenu_handlekeydown",
+      "community": 121,
+      "community_name": "AppShell.jsx",
+      "norm_label": "handlekeydown()"
+    },
+    {
+      "label": "handlePointerDown()",
+      "file_type": "code",
+      "source_file": "frontend/src/features/shell/components/UserProfileMenu.jsx",
+      "source_location": "L70",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "frontend_src_features_shell_components_userprofilemenu_userprofilemenu_handlepointerdown",
+      "community": 121,
+      "community_name": "AppShell.jsx",
+      "norm_label": "handlepointerdown()"
+    },
+    {
       "label": "hasAnyPermission()",
       "file_type": "code",
       "source_file": "frontend/src/features/shell/rbac/permissions.js",
@@ -4942,7 +5206,7 @@
       "_origin": "ast",
       "id": "frontend_src_features_shell_rbac_permissions_hasanypermission",
       "community": 121,
-      "community_name": "permissions.js",
+      "community_name": "AppShell.jsx",
       "norm_label": "hasanypermission()"
     },
     {
@@ -4954,7 +5218,7 @@
       "_origin": "ast",
       "id": "frontend_src_features_shell_rbac_permissions_haspermission",
       "community": 121,
-      "community_name": "permissions.js",
+      "community_name": "AppShell.jsx",
       "norm_label": "haspermission()"
     },
     {
@@ -4966,8 +5230,20 @@
       "_origin": "ast",
       "id": "frontend_src_features_shell_rbac_usevisiblenav_filternode",
       "community": 121,
-      "community_name": "permissions.js",
+      "community_name": "AppShell.jsx",
       "norm_label": "filternode()"
+    },
+    {
+      "label": "useVisibleNav()",
+      "file_type": "code",
+      "source_file": "frontend/src/features/shell/rbac/useVisibleNav.js",
+      "source_location": "L26",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "frontend_src_features_shell_rbac_usevisiblenav_usevisiblenav",
+      "community": 121,
+      "community_name": "AppShell.jsx",
+      "norm_label": "usevisiblenav()"
     },
     {
       "label": "ConfirmDialog()",
@@ -6098,66 +6374,6 @@
       "norm_label": "subscriptionlicensing()"
     },
     {
-      "label": "ChevronRightIcon()",
-      "file_type": "code",
-      "source_file": "frontend/src/features/pipelines/pages/CreatePipelineScreen.jsx",
-      "source_location": "L24",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "frontend_src_features_pipelines_pages_createpipelinescreen_chevronrighticon",
-      "community": 137,
-      "community_name": "CreatePipelineScreen.jsx",
-      "norm_label": "chevronrighticon()"
-    },
-    {
-      "label": "CreatePipelineScreen()",
-      "file_type": "code",
-      "source_file": "frontend/src/features/pipelines/pages/CreatePipelineScreen.jsx",
-      "source_location": "L41",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "frontend_src_features_pipelines_pages_createpipelinescreen_createpipelinescreen",
-      "community": 137,
-      "community_name": "CreatePipelineScreen.jsx",
-      "norm_label": "createpipelinescreen()"
-    },
-    {
-      "label": "createPipeline()",
-      "file_type": "code",
-      "source_file": "frontend/src/features/pipelines/services/createPipeline.api.js",
-      "source_location": "L193",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "frontend_src_features_pipelines_services_createpipeline_api_createpipeline",
-      "community": 137,
-      "community_name": "CreatePipelineScreen.jsx",
-      "norm_label": "createpipeline()"
-    },
-    {
-      "label": "savePipelineDraft()",
-      "file_type": "code",
-      "source_file": "frontend/src/features/pipelines/services/createPipeline.api.js",
-      "source_location": "L222",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "frontend_src_features_pipelines_services_createpipeline_api_savepipelinedraft",
-      "community": 137,
-      "community_name": "CreatePipelineScreen.jsx",
-      "norm_label": "savepipelinedraft()"
-    },
-    {
-      "label": "validatePipelineForm()",
-      "file_type": "code",
-      "source_file": "frontend/src/features/pipelines/services/createPipeline.api.js",
-      "source_location": "L161",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "frontend_src_features_pipelines_services_createpipeline_api_validatepipelineform",
-      "community": 137,
-      "community_name": "CreatePipelineScreen.jsx",
-      "norm_label": "validatepipelineform()"
-    },
-    {
       "label": "ConfirmDialog()",
       "file_type": "code",
       "source_file": "frontend/src/features/dataSources/pages/WebhookConfigurationScreen.jsx",
@@ -6238,7 +6454,7 @@
       "_origin": "ast",
       "id": "frontend_src_features_pipelines_hooks_usepipelinelist_usepipelinelist",
       "community": 140,
-      "community_name": "readJson",
+      "community_name": "apiFetch",
       "norm_label": "usepipelinelist()"
     },
     {
@@ -6250,7 +6466,7 @@
       "_origin": "ast",
       "id": "frontend_src_features_pipelines_services_pipelinelist_api_bulkoperatepipelines",
       "community": 140,
-      "community_name": "readJson",
+      "community_name": "apiFetch",
       "norm_label": "bulkoperatepipelines()"
     },
     {
@@ -6262,7 +6478,7 @@
       "_origin": "ast",
       "id": "frontend_src_features_pipelines_services_pipelinelist_api_deletepipeline",
       "community": 140,
-      "community_name": "readJson",
+      "community_name": "apiFetch",
       "norm_label": "deletepipeline()"
     },
     {
@@ -6274,7 +6490,7 @@
       "_origin": "ast",
       "id": "frontend_src_features_pipelines_services_pipelinelist_api_duplicatepipeline",
       "community": 140,
-      "community_name": "readJson",
+      "community_name": "apiFetch",
       "norm_label": "duplicatepipeline()"
     },
     {
@@ -6286,7 +6502,7 @@
       "_origin": "ast",
       "id": "frontend_src_features_pipelines_services_pipelinelist_api_getpipelines",
       "community": 140,
-      "community_name": "readJson",
+      "community_name": "apiFetch",
       "norm_label": "getpipelines()"
     },
     {
@@ -6298,7 +6514,7 @@
       "_origin": "ast",
       "id": "frontend_src_features_pipelines_services_pipelinelist_api_setpipelinestatus",
       "community": 140,
-      "community_name": "readJson",
+      "community_name": "apiFetch",
       "norm_label": "setpipelinestatus()"
     },
     {
@@ -6310,20 +6526,20 @@
       "_origin": "ast",
       "id": "frontend_src_features_pipelines_services_pipelinelist_api_triggerpipelinerun",
       "community": 140,
-      "community_name": "readJson",
+      "community_name": "apiFetch",
       "norm_label": "triggerpipelinerun()"
     },
     {
-      "label": "readJson()",
+      "label": "apiFetch()",
       "file_type": "code",
       "source_file": "frontend/src/services/api/client.js",
-      "source_location": "L30",
+      "source_location": "L16",
       "_callable": true,
       "_origin": "ast",
-      "id": "frontend_src_services_api_client_readjson",
+      "id": "frontend_src_services_api_client_apifetch",
       "community": 140,
-      "community_name": "readJson",
-      "norm_label": "readjson()"
+      "community_name": "apiFetch",
+      "norm_label": "apifetch()"
     },
     {
       "label": "ConfirmDialog()",
@@ -6406,7 +6622,7 @@
       "_origin": "ast",
       "id": "frontend_src_features_auth_hooks_useresetpasswordrequest_useresetpasswordrequest",
       "community": 143,
-      "community_name": "useResetPasswordRequest",
+      "community_name": "react",
       "norm_label": "useresetpasswordrequest()"
     },
     {
@@ -6418,7 +6634,7 @@
       "_origin": "ast",
       "id": "frontend_src_features_auth_hooks_useresetpasswordrequest_useresetpasswordrequest_submit",
       "community": 143,
-      "community_name": "useResetPasswordRequest",
+      "community_name": "react",
       "norm_label": "submit()"
     },
     {
@@ -6430,7 +6646,7 @@
       "_origin": "ast",
       "id": "frontend_src_features_auth_hooks_useresetpasswordrequest_useresetpasswordrequest_validate",
       "community": 143,
-      "community_name": "useResetPasswordRequest",
+      "community_name": "react",
       "norm_label": "validate()"
     },
     {
@@ -6442,7 +6658,7 @@
       "_origin": "ast",
       "id": "frontend_src_features_auth_pages_resetpasswordscreen_resetpasswordscreen",
       "community": 143,
-      "community_name": "useResetPasswordRequest",
+      "community_name": "react",
       "norm_label": "resetpasswordscreen()"
     },
     {
@@ -6454,7 +6670,7 @@
       "_origin": "ast",
       "id": "frontend_src_features_auth_pages_resetpasswordscreen_resetpasswordscreen_handlesubmit",
       "community": 143,
-      "community_name": "useResetPasswordRequest",
+      "community_name": "react",
       "norm_label": "handlesubmit()"
     },
     {
@@ -6466,7 +6682,7 @@
       "_origin": "ast",
       "id": "frontend_src_features_auth_services_auth_api_requestpasswordreset",
       "community": 143,
-      "community_name": "useResetPasswordRequest",
+      "community_name": "react",
       "norm_label": "requestpasswordreset()"
     },
     {
@@ -6530,54 +6746,6 @@
       "norm_label": "testconnection()"
     },
     {
-      "label": "Header()",
-      "file_type": "code",
-      "source_file": "frontend/src/features/shell/components/Header.jsx",
-      "source_location": "L36",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "frontend_src_features_shell_components_header_header",
-      "community": 146,
-      "community_name": "Header",
-      "norm_label": "header()"
-    },
-    {
-      "label": "getFocusable()",
-      "file_type": "code",
-      "source_file": "frontend/src/features/shell/components/Header.jsx",
-      "source_location": "L62",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "frontend_src_features_shell_components_header_header_getfocusable",
-      "community": 146,
-      "community_name": "Header",
-      "norm_label": "getfocusable()"
-    },
-    {
-      "label": "handleKeyDown()",
-      "file_type": "code",
-      "source_file": "frontend/src/features/shell/components/Header.jsx",
-      "source_location": "L77",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "frontend_src_features_shell_components_header_header_handlekeydown",
-      "community": 146,
-      "community_name": "Header",
-      "norm_label": "handlekeydown()"
-    },
-    {
-      "label": "handlePointerDown()",
-      "file_type": "code",
-      "source_file": "frontend/src/features/shell/components/Header.jsx",
-      "source_location": "L72",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "frontend_src_features_shell_components_header_header_handlepointerdown",
-      "community": 146,
-      "community_name": "Header",
-      "norm_label": "handlepointerdown()"
-    },
-    {
       "label": "ConfirmDialog()",
       "file_type": "code",
       "source_file": "frontend/src/features/dataSources/pages/AddDataSourceScreen.jsx",
@@ -6624,102 +6792,6 @@
       "community": 148,
       "community_name": "ConfirmDialog",
       "norm_label": "formatrows()"
-    },
-    {
-      "label": "CollapsedSidebar()",
-      "file_type": "code",
-      "source_file": "frontend/src/features/shell/components/Sidebar.jsx",
-      "source_location": "L208",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "frontend_src_features_shell_components_sidebar_collapsedsidebar",
-      "community": 149,
-      "community_name": "Sidebar.jsx",
-      "norm_label": "collapsedsidebar()"
-    },
-    {
-      "label": "ExpandedSidebar()",
-      "file_type": "code",
-      "source_file": "frontend/src/features/shell/components/Sidebar.jsx",
-      "source_location": "L58",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "frontend_src_features_shell_components_sidebar_expandedsidebar",
-      "community": 149,
-      "community_name": "Sidebar.jsx",
-      "norm_label": "expandedsidebar()"
-    },
-    {
-      "label": "NavSection()",
-      "file_type": "code",
-      "source_file": "frontend/src/features/shell/components/Sidebar.jsx",
-      "source_location": "L110",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "frontend_src_features_shell_components_sidebar_navsection",
-      "community": 149,
-      "community_name": "Sidebar.jsx",
-      "norm_label": "navsection()"
-    },
-    {
-      "label": "NestedNavGroup()",
-      "file_type": "code",
-      "source_file": "frontend/src/features/shell/components/Sidebar.jsx",
-      "source_location": "L155",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "frontend_src_features_shell_components_sidebar_nestednavgroup",
-      "community": 149,
-      "community_name": "Sidebar.jsx",
-      "norm_label": "nestednavgroup()"
-    },
-    {
-      "label": "Sidebar()",
-      "file_type": "code",
-      "source_file": "frontend/src/features/shell/components/Sidebar.jsx",
-      "source_location": "L33",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "frontend_src_features_shell_components_sidebar_sidebar",
-      "community": 149,
-      "community_name": "Sidebar.jsx",
-      "norm_label": "sidebar()"
-    },
-    {
-      "label": "SidebarLink()",
-      "file_type": "code",
-      "source_file": "frontend/src/features/shell/components/Sidebar.jsx",
-      "source_location": "L182",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "frontend_src_features_shell_components_sidebar_sidebarlink",
-      "community": 149,
-      "community_name": "Sidebar.jsx",
-      "norm_label": "sidebarlink()"
-    },
-    {
-      "label": "SidebarToggleIcon()",
-      "file_type": "code",
-      "source_file": "frontend/src/features/shell/components/SidebarToggleIcon.jsx",
-      "source_location": "L13",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "frontend_src_features_shell_components_sidebartoggleicon_sidebartoggleicon",
-      "community": 149,
-      "community_name": "Sidebar.jsx",
-      "norm_label": "sidebartoggleicon()"
-    },
-    {
-      "label": "useVisibleNav()",
-      "file_type": "code",
-      "source_file": "frontend/src/features/shell/rbac/useVisibleNav.js",
-      "source_location": "L26",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "frontend_src_features_shell_rbac_usevisiblenav_usevisiblenav",
-      "community": 149,
-      "community_name": "Sidebar.jsx",
-      "norm_label": "usevisiblenav()"
     },
     {
       "label": "useSourceHealth()",
@@ -6986,78 +7058,6 @@
       "norm_label": "getsourcehealth()"
     },
     {
-      "label": "DestinationHealthMonitoringScreen()",
-      "file_type": "code",
-      "source_file": "frontend/src/features/destinations/pages/DestinationHealthMonitoringScreen.jsx",
-      "source_location": "L66",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "frontend_src_features_destinations_pages_destinationhealthmonitoringscreen_destinationhealthmonitoringscreen",
-      "community": 150,
-      "community_name": "AppShell.jsx",
-      "norm_label": "destinationhealthmonitoringscreen()"
-    },
-    {
-      "label": "Sparkline()",
-      "file_type": "code",
-      "source_file": "frontend/src/features/destinations/pages/DestinationHealthMonitoringScreen.jsx",
-      "source_location": "L28",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "frontend_src_features_destinations_pages_destinationhealthmonitoringscreen_sparkline",
-      "community": 150,
-      "community_name": "AppShell.jsx",
-      "norm_label": "sparkline()"
-    },
-    {
-      "label": "AppShell()",
-      "file_type": "code",
-      "source_file": "frontend/src/features/shell/components/AppShell.jsx",
-      "source_location": "L34",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "frontend_src_features_shell_components_appshell_appshell",
-      "community": 150,
-      "community_name": "AppShell.jsx",
-      "norm_label": "appshell()"
-    },
-    {
-      "label": "Footer()",
-      "file_type": "code",
-      "source_file": "frontend/src/features/shell/components/Footer.jsx",
-      "source_location": "L23",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "frontend_src_features_shell_components_footer_footer",
-      "community": 150,
-      "community_name": "AppShell.jsx",
-      "norm_label": "footer()"
-    },
-    {
-      "label": "FooterDivider()",
-      "file_type": "code",
-      "source_file": "frontend/src/features/shell/components/Footer.jsx",
-      "source_location": "L67",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "frontend_src_features_shell_components_footer_footerdivider",
-      "community": 150,
-      "community_name": "AppShell.jsx",
-      "norm_label": "footerdivider()"
-    },
-    {
-      "label": "FooterStat()",
-      "file_type": "code",
-      "source_file": "frontend/src/features/shell/components/Footer.jsx",
-      "source_location": "L71",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "frontend_src_features_shell_components_footer_footerstat",
-      "community": 150,
-      "community_name": "AppShell.jsx",
-      "norm_label": "footerstat()"
-    },
-    {
       "label": "useLogin()",
       "file_type": "code",
       "source_file": "frontend/src/features/auth/hooks/useLogin.js",
@@ -7066,7 +7066,7 @@
       "_origin": "ast",
       "id": "frontend_src_features_auth_hooks_uselogin_uselogin",
       "community": 154,
-      "community_name": "react",
+      "community_name": "useLogin",
       "norm_label": "uselogin()"
     },
     {
@@ -7078,7 +7078,7 @@
       "_origin": "ast",
       "id": "frontend_src_features_auth_hooks_uselogin_uselogin_clearerror",
       "community": 154,
-      "community_name": "react",
+      "community_name": "useLogin",
       "norm_label": "clearerror()"
     },
     {
@@ -7090,7 +7090,7 @@
       "_origin": "ast",
       "id": "frontend_src_features_auth_hooks_uselogin_uselogin_submit",
       "community": 154,
-      "community_name": "react",
+      "community_name": "useLogin",
       "norm_label": "submit()"
     },
     {
@@ -7102,7 +7102,7 @@
       "_origin": "ast",
       "id": "frontend_src_features_auth_hooks_uselogin_uselogin_validate",
       "community": 154,
-      "community_name": "react",
+      "community_name": "useLogin",
       "norm_label": "validate()"
     },
     {
@@ -7114,7 +7114,7 @@
       "_origin": "ast",
       "id": "frontend_src_features_auth_pages_loginscreen_loginscreen",
       "community": 154,
-      "community_name": "react",
+      "community_name": "useLogin",
       "norm_label": "loginscreen()"
     },
     {
@@ -7126,7 +7126,7 @@
       "_origin": "ast",
       "id": "frontend_src_features_auth_pages_loginscreen_loginscreen_handlesubmit",
       "community": 154,
-      "community_name": "react",
+      "community_name": "useLogin",
       "norm_label": "handlesubmit()"
     },
     {
@@ -14098,7 +14098,7 @@
       "_origin": "ast",
       "id": "frontend_src_features_destinations_pages_adddestinationscreen_adddestinationscreen",
       "community": 66,
-      "community_name": "AddDestinationScreen.jsx",
+      "community_name": "AppShell",
       "norm_label": "adddestinationscreen()"
     },
     {
@@ -14110,7 +14110,7 @@
       "_origin": "ast",
       "id": "frontend_src_features_destinations_pages_adddestinationscreen_field",
       "community": 66,
-      "community_name": "AddDestinationScreen.jsx",
+      "community_name": "AppShell",
       "norm_label": "field()"
     },
     {
@@ -14122,7 +14122,7 @@
       "_origin": "ast",
       "id": "frontend_src_features_destinations_pages_adddestinationscreen_section",
       "community": 66,
-      "community_name": "AddDestinationScreen.jsx",
+      "community_name": "AppShell",
       "norm_label": "section()"
     },
     {
@@ -14134,7 +14134,7 @@
       "_origin": "ast",
       "id": "frontend_src_features_destinations_pages_adddestinationscreen_selectinput",
       "community": 66,
-      "community_name": "AddDestinationScreen.jsx",
+      "community_name": "AppShell",
       "norm_label": "selectinput()"
     },
     {
@@ -14146,7 +14146,7 @@
       "_origin": "ast",
       "id": "frontend_src_features_destinations_pages_adddestinationscreen_textinput",
       "community": 66,
-      "community_name": "AddDestinationScreen.jsx",
+      "community_name": "AppShell",
       "norm_label": "textinput()"
     },
     {
@@ -14158,7 +14158,7 @@
       "_origin": "ast",
       "id": "frontend_src_features_destinations_services_adddestination_api_createdestination",
       "community": 66,
-      "community_name": "AddDestinationScreen.jsx",
+      "community_name": "AppShell",
       "norm_label": "createdestination()"
     },
     {
@@ -14170,7 +14170,7 @@
       "_origin": "ast",
       "id": "frontend_src_features_destinations_services_adddestination_api_destinationerror_constructor",
       "community": 66,
-      "community_name": "AddDestinationScreen.jsx",
+      "community_name": "AppShell",
       "norm_label": ".constructor()"
     },
     {
@@ -14182,7 +14182,7 @@
       "_origin": "ast",
       "id": "frontend_src_features_destinations_services_adddestination_api_testconnection",
       "community": 66,
-      "community_name": "AddDestinationScreen.jsx",
+      "community_name": "AppShell",
       "norm_label": "testconnection()"
     },
     {
@@ -14194,7 +14194,7 @@
       "_origin": "ast",
       "id": "frontend_src_features_destinations_services_adddestination_api_validatedestination",
       "community": 66,
-      "community_name": "AddDestinationScreen.jsx",
+      "community_name": "AppShell",
       "norm_label": "validatedestination()"
     },
     {
@@ -14206,8 +14206,80 @@
       "_origin": "ast",
       "id": "frontend_src_features_destinations_services_adddestination_api_validatetestconnection",
       "community": 66,
-      "community_name": "AddDestinationScreen.jsx",
+      "community_name": "AppShell",
       "norm_label": "validatetestconnection()"
+    },
+    {
+      "label": "ChevronRightIcon()",
+      "file_type": "code",
+      "source_file": "frontend/src/features/pipelines/pages/CreatePipelineScreen.jsx",
+      "source_location": "L24",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "frontend_src_features_pipelines_pages_createpipelinescreen_chevronrighticon",
+      "community": 66,
+      "community_name": "AppShell",
+      "norm_label": "chevronrighticon()"
+    },
+    {
+      "label": "CreatePipelineScreen()",
+      "file_type": "code",
+      "source_file": "frontend/src/features/pipelines/pages/CreatePipelineScreen.jsx",
+      "source_location": "L41",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "frontend_src_features_pipelines_pages_createpipelinescreen_createpipelinescreen",
+      "community": 66,
+      "community_name": "AppShell",
+      "norm_label": "createpipelinescreen()"
+    },
+    {
+      "label": "createPipeline()",
+      "file_type": "code",
+      "source_file": "frontend/src/features/pipelines/services/createPipeline.api.js",
+      "source_location": "L193",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "frontend_src_features_pipelines_services_createpipeline_api_createpipeline",
+      "community": 66,
+      "community_name": "AppShell",
+      "norm_label": "createpipeline()"
+    },
+    {
+      "label": "savePipelineDraft()",
+      "file_type": "code",
+      "source_file": "frontend/src/features/pipelines/services/createPipeline.api.js",
+      "source_location": "L222",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "frontend_src_features_pipelines_services_createpipeline_api_savepipelinedraft",
+      "community": 66,
+      "community_name": "AppShell",
+      "norm_label": "savepipelinedraft()"
+    },
+    {
+      "label": "validatePipelineForm()",
+      "file_type": "code",
+      "source_file": "frontend/src/features/pipelines/services/createPipeline.api.js",
+      "source_location": "L161",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "frontend_src_features_pipelines_services_createpipeline_api_validatepipelineform",
+      "community": 66,
+      "community_name": "AppShell",
+      "norm_label": "validatepipelineform()"
+    },
+    {
+      "label": "AppShell()",
+      "file_type": "code",
+      "source_file": "frontend/src/features/shell/components/AppShell.jsx",
+      "source_location": "L34",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "frontend_src_features_shell_components_appshell_appshell",
+      "community": 66,
+      "community_name": "AppShell",
+      "norm_label": "appshell()"
     },
     {
       "label": "useTwoFactor()",
@@ -14218,7 +14290,7 @@
       "_origin": "ast",
       "id": "frontend_src_features_auth_hooks_usetwofactor_usetwofactor",
       "community": 67,
-      "community_name": "useTwoFactor.js",
+      "community_name": "useAppSelector",
       "norm_label": "usetwofactor()"
     },
     {
@@ -14230,7 +14302,7 @@
       "_origin": "ast",
       "id": "frontend_src_features_auth_hooks_usetwofactor_usetwofactor_handlekeydown",
       "community": 67,
-      "community_name": "useTwoFactor.js",
+      "community_name": "useAppSelector",
       "norm_label": "handlekeydown()"
     },
     {
@@ -14242,7 +14314,7 @@
       "_origin": "ast",
       "id": "frontend_src_features_auth_hooks_usetwofactor_usetwofactor_handlepaste",
       "community": 67,
-      "community_name": "useTwoFactor.js",
+      "community_name": "useAppSelector",
       "norm_label": "handlepaste()"
     },
     {
@@ -14254,7 +14326,7 @@
       "_origin": "ast",
       "id": "frontend_src_features_auth_hooks_usetwofactor_usetwofactor_resend",
       "community": 67,
-      "community_name": "useTwoFactor.js",
+      "community_name": "useAppSelector",
       "norm_label": "resend()"
     },
     {
@@ -14266,7 +14338,7 @@
       "_origin": "ast",
       "id": "frontend_src_features_auth_hooks_usetwofactor_usetwofactor_setdigit",
       "community": 67,
-      "community_name": "useTwoFactor.js",
+      "community_name": "useAppSelector",
       "norm_label": "setdigit()"
     },
     {
@@ -14278,7 +14350,7 @@
       "_origin": "ast",
       "id": "frontend_src_features_auth_hooks_usetwofactor_usetwofactor_submit",
       "community": 67,
-      "community_name": "useTwoFactor.js",
+      "community_name": "useAppSelector",
       "norm_label": "submit()"
     },
     {
@@ -14290,7 +14362,7 @@
       "_origin": "ast",
       "id": "frontend_src_features_auth_pages_twofactorauthenticationscreen_otpcell",
       "community": 67,
-      "community_name": "useTwoFactor.js",
+      "community_name": "useAppSelector",
       "norm_label": "otpcell()"
     },
     {
@@ -14302,7 +14374,7 @@
       "_origin": "ast",
       "id": "frontend_src_features_auth_pages_twofactorauthenticationscreen_twofactorauthenticationscreen",
       "community": 67,
-      "community_name": "useTwoFactor.js",
+      "community_name": "useAppSelector",
       "norm_label": "twofactorauthenticationscreen()"
     },
     {
@@ -14314,7 +14386,7 @@
       "_origin": "ast",
       "id": "frontend_src_features_auth_pages_twofactorauthenticationscreen_twofactorauthenticationscreen_handlesubmit",
       "community": 67,
-      "community_name": "useTwoFactor.js",
+      "community_name": "useAppSelector",
       "norm_label": "handlesubmit()"
     },
     {
@@ -14326,7 +14398,7 @@
       "_origin": "ast",
       "id": "frontend_src_features_auth_services_auth_api_resendtwofactorcode",
       "community": 67,
-      "community_name": "useTwoFactor.js",
+      "community_name": "useAppSelector",
       "norm_label": "resendtwofactorcode()"
     },
     {
@@ -14338,7 +14410,7 @@
       "_origin": "ast",
       "id": "frontend_src_features_auth_services_auth_api_verifytwofactorcode",
       "community": 67,
-      "community_name": "useTwoFactor.js",
+      "community_name": "useAppSelector",
       "norm_label": "verifytwofactorcode()"
     },
     {
@@ -19034,100 +19106,28 @@
       "norm_label": "testdatabaseconnection()"
     },
     {
-      "label": "NotificationPanel()",
+      "label": "useTeamManagement()",
       "file_type": "code",
-      "source_file": "frontend/src/features/notifications/components/NotificationPanel.jsx",
-      "source_location": "L54",
+      "source_file": "frontend/src/features/organizations/hooks/useTeamManagement.js",
+      "source_location": "L14",
       "_callable": true,
       "_origin": "ast",
-      "id": "frontend_src_features_notifications_components_notificationpanel_notificationpanel",
+      "id": "frontend_src_features_organizations_hooks_useteammanagement_useteammanagement",
       "community": 88,
-      "community_name": "Header.jsx",
-      "norm_label": "notificationpanel()"
+      "community_name": "teamManagement.api.js",
+      "norm_label": "useteammanagement()"
     },
     {
-      "label": "NotificationSkeleton()",
+      "label": "getTeamManagement()",
       "file_type": "code",
-      "source_file": "frontend/src/features/notifications/components/NotificationPanel.jsx",
-      "source_location": "L294",
+      "source_file": "frontend/src/features/organizations/services/teamManagement.api.js",
+      "source_location": "L102",
       "_callable": true,
       "_origin": "ast",
-      "id": "frontend_src_features_notifications_components_notificationpanel_notificationskeleton",
+      "id": "frontend_src_features_organizations_services_teammanagement_api_getteammanagement",
       "community": 88,
-      "community_name": "Header.jsx",
-      "norm_label": "notificationskeleton()"
-    },
-    {
-      "label": "MenuItem()",
-      "file_type": "code",
-      "source_file": "frontend/src/features/shell/components/UserProfileMenu.jsx",
-      "source_location": "L258",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "frontend_src_features_shell_components_userprofilemenu_menuitem",
-      "community": 88,
-      "community_name": "Header.jsx",
-      "norm_label": "menuitem()"
-    },
-    {
-      "label": "UserProfileMenu()",
-      "file_type": "code",
-      "source_file": "frontend/src/features/shell/components/UserProfileMenu.jsx",
-      "source_location": "L49",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "frontend_src_features_shell_components_userprofilemenu_userprofilemenu",
-      "community": 88,
-      "community_name": "Header.jsx",
-      "norm_label": "userprofilemenu()"
-    },
-    {
-      "label": "getFocusable()",
-      "file_type": "code",
-      "source_file": "frontend/src/features/shell/components/UserProfileMenu.jsx",
-      "source_location": "L60",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "frontend_src_features_shell_components_userprofilemenu_userprofilemenu_getfocusable",
-      "community": 88,
-      "community_name": "Header.jsx",
-      "norm_label": "getfocusable()"
-    },
-    {
-      "label": "goTo()",
-      "file_type": "code",
-      "source_file": "frontend/src/features/shell/components/UserProfileMenu.jsx",
-      "source_location": "L104",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "frontend_src_features_shell_components_userprofilemenu_userprofilemenu_goto",
-      "community": 88,
-      "community_name": "Header.jsx",
-      "norm_label": "goto()"
-    },
-    {
-      "label": "handleKeyDown()",
-      "file_type": "code",
-      "source_file": "frontend/src/features/shell/components/UserProfileMenu.jsx",
-      "source_location": "L75",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "frontend_src_features_shell_components_userprofilemenu_userprofilemenu_handlekeydown",
-      "community": 88,
-      "community_name": "Header.jsx",
-      "norm_label": "handlekeydown()"
-    },
-    {
-      "label": "handlePointerDown()",
-      "file_type": "code",
-      "source_file": "frontend/src/features/shell/components/UserProfileMenu.jsx",
-      "source_location": "L70",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "frontend_src_features_shell_components_userprofilemenu_userprofilemenu_handlepointerdown",
-      "community": 88,
-      "community_name": "Header.jsx",
-      "norm_label": "handlepointerdown()"
+      "community_name": "teamManagement.api.js",
+      "norm_label": "getteammanagement()"
     },
     {
       "label": "ActionBar()",
@@ -21458,17 +21458,6 @@
       "norm_label": "validate()"
     },
     {
-      "label": "useTeamManagement.js",
-      "file_type": "code",
-      "source_file": "frontend/src/features/organizations/hooks/useTeamManagement.js",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "frontend_src_features_organizations_hooks_useteammanagement",
-      "community": 0,
-      "community_name": "TeamManagementScreen.jsx",
-      "norm_label": "useteammanagement.js"
-    },
-    {
       "label": "TeamManagementScreen.jsx",
       "file_type": "code",
       "source_file": "frontend/src/features/organizations/pages/TeamManagementScreen.jsx",
@@ -22486,8 +22475,19 @@
       "_origin": "ast",
       "id": "frontend_src_features_destinations_hooks_usedestinationhealthmonitoring",
       "community": 109,
-      "community_name": "apiFetch",
+      "community_name": "readJson",
       "norm_label": "usedestinationhealthmonitoring.js"
+    },
+    {
+      "label": "DestinationHealthMonitoringScreen.jsx",
+      "file_type": "code",
+      "source_file": "frontend/src/features/destinations/pages/DestinationHealthMonitoringScreen.jsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "frontend_src_features_destinations_pages_destinationhealthmonitoringscreen",
+      "community": 109,
+      "community_name": "readJson",
+      "norm_label": "destinationhealthmonitoringscreen.jsx"
     },
     {
       "label": "destinationHealthMonitoring.api.js",
@@ -22497,7 +22497,7 @@
       "_origin": "ast",
       "id": "frontend_src_features_destinations_services_destinationhealthmonitoring_api",
       "community": 109,
-      "community_name": "apiFetch",
+      "community_name": "readJson",
       "norm_label": "destinationhealthmonitoring.api.js"
     },
     {
@@ -22508,7 +22508,7 @@
       "_origin": "ast",
       "id": "frontend_src_features_destinations_services_destinationhealthmonitoring_api_default_destination_health_data",
       "community": 109,
-      "community_name": "apiFetch",
+      "community_name": "readJson",
       "norm_label": "default_destination_health_data"
     },
     {
@@ -22519,7 +22519,7 @@
       "_origin": "ast",
       "id": "frontend_src_features_destinations_services_destinationhealthmonitoring_api_health_status_options",
       "community": 109,
-      "community_name": "apiFetch",
+      "community_name": "readJson",
       "norm_label": "health_status_options"
     },
     {
@@ -22530,7 +22530,7 @@
       "_origin": "ast",
       "id": "frontend_src_features_destinations_services_destinationhealthmonitoring_api_org_id",
       "community": 109,
-      "community_name": "apiFetch",
+      "community_name": "readJson",
       "norm_label": "org_id"
     },
     {
@@ -22697,28 +22697,6 @@
       "community": 112,
       "community_name": "OrganizationListScreen.jsx",
       "norm_label": "status_tone"
-    },
-    {
-      "label": "organizationList.api.js",
-      "file_type": "code",
-      "source_file": "frontend/src/features/organizations/services/organizationList.api.js",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "frontend_src_features_organizations_services_organizationlist_api",
-      "community": 112,
-      "community_name": "OrganizationListScreen.jsx",
-      "norm_label": "organizationlist.api.js"
-    },
-    {
-      "label": "MOCK_ORGANIZATION_LIST",
-      "file_type": "code",
-      "source_file": "frontend/src/features/organizations/services/organizationList.api.js",
-      "source_location": "L37",
-      "_origin": "ast",
-      "id": "frontend_src_features_organizations_services_organizationlist_api_mock_organization_list",
-      "community": 112,
-      "community_name": "OrganizationListScreen.jsx",
-      "norm_label": "mock_organization_list"
     },
     {
       "label": "useDestinationHistory.js",
@@ -23007,15 +22985,15 @@
       "norm_label": "time_range_options"
     },
     {
-      "label": "useAppSelector",
+      "label": "useAppDispatch",
       "file_type": "code",
       "source_file": "frontend/src/app/hooks.js",
-      "source_location": "L4",
+      "source_location": "L3",
       "_origin": "ast",
-      "id": "frontend_src_app_hooks_useappselector",
+      "id": "frontend_src_app_hooks_useappdispatch",
       "community": 118,
-      "community_name": "useAppSelector",
-      "norm_label": "useappselector"
+      "community_name": "useAppDispatch",
+      "norm_label": "useappdispatch"
     },
     {
       "label": "useLogout.js",
@@ -23025,7 +23003,7 @@
       "_origin": "ast",
       "id": "frontend_src_features_auth_hooks_uselogout",
       "community": 118,
-      "community_name": "useAppSelector",
+      "community_name": "useAppDispatch",
       "norm_label": "uselogout.js"
     },
     {
@@ -23036,7 +23014,7 @@
       "_origin": "ast",
       "id": "frontend_src_features_auth_pages_logoutscreen",
       "community": 118,
-      "community_name": "useAppSelector",
+      "community_name": "useAppDispatch",
       "norm_label": "logoutscreen.jsx"
     },
     {
@@ -23056,7 +23034,7 @@
       "file_type": "document",
       "node_kind": "heading",
       "source_file": "docs/modules/module-plan.md",
-      "source_location": "L86",
+      "source_location": "L87",
       "_origin": "ast",
       "id": "docs_modules_module_plan_acceptance_criteria_per_module",
       "community": 12,
@@ -23104,7 +23082,7 @@
       "file_type": "document",
       "node_kind": "heading",
       "source_file": "docs/modules/module-plan.md",
-      "source_location": "L98",
+      "source_location": "L99",
       "_origin": "ast",
       "id": "docs_modules_module_plan_global_build_risks",
       "community": 12,
@@ -23212,7 +23190,7 @@
       "file_type": "document",
       "node_kind": "heading",
       "source_file": "docs/modules/module-plan.md",
-      "source_location": "L78",
+      "source_location": "L79",
       "_origin": "ast",
       "id": "docs_modules_module_plan_mod_009",
       "community": 12,
@@ -23224,7 +23202,7 @@
       "file_type": "document",
       "node_kind": "heading",
       "source_file": "docs/modules/module-plan.md",
-      "source_location": "L82",
+      "source_location": "L83",
       "_origin": "ast",
       "id": "docs_modules_module_plan_mod_010",
       "community": 12,
@@ -23256,6 +23234,171 @@
       "norm_label": "module matrix"
     },
     {
+      "label": "NotificationPanel.jsx",
+      "file_type": "code",
+      "source_file": "frontend/src/features/notifications/components/NotificationPanel.jsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "frontend_src_features_notifications_components_notificationpanel",
+      "community": 121,
+      "community_name": "AppShell.jsx",
+      "norm_label": "notificationpanel.jsx"
+    },
+    {
+      "label": "ICONS",
+      "file_type": "code",
+      "source_file": "frontend/src/features/notifications/components/NotificationPanel.jsx",
+      "source_location": "L10",
+      "_origin": "ast",
+      "id": "frontend_src_features_notifications_components_notificationpanel_icons",
+      "community": 121,
+      "community_name": "AppShell.jsx",
+      "norm_label": "icons"
+    },
+    {
+      "label": "SEVERITY_BADGE",
+      "file_type": "code",
+      "source_file": "frontend/src/features/notifications/components/NotificationPanel.jsx",
+      "source_location": "L26",
+      "_origin": "ast",
+      "id": "frontend_src_features_notifications_components_notificationpanel_severity_badge",
+      "community": 121,
+      "community_name": "AppShell.jsx",
+      "norm_label": "severity_badge"
+    },
+    {
+      "label": "SEVERITY_WASH",
+      "file_type": "code",
+      "source_file": "frontend/src/features/notifications/components/NotificationPanel.jsx",
+      "source_location": "L19",
+      "_origin": "ast",
+      "id": "frontend_src_features_notifications_components_notificationpanel_severity_wash",
+      "community": 121,
+      "community_name": "AppShell.jsx",
+      "norm_label": "severity_wash"
+    },
+    {
+      "label": "TABS",
+      "file_type": "code",
+      "source_file": "frontend/src/features/notifications/components/NotificationPanel.jsx",
+      "source_location": "L33",
+      "_origin": "ast",
+      "id": "frontend_src_features_notifications_components_notificationpanel_tabs",
+      "community": 121,
+      "community_name": "AppShell.jsx",
+      "norm_label": "tabs"
+    },
+    {
+      "label": "AppShell.jsx",
+      "file_type": "code",
+      "source_file": "frontend/src/features/shell/components/AppShell.jsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "frontend_src_features_shell_components_appshell",
+      "community": 121,
+      "community_name": "AppShell.jsx",
+      "norm_label": "appshell.jsx"
+    },
+    {
+      "label": "Footer.jsx",
+      "file_type": "code",
+      "source_file": "frontend/src/features/shell/components/Footer.jsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "frontend_src_features_shell_components_footer",
+      "community": 121,
+      "community_name": "AppShell.jsx",
+      "norm_label": "footer.jsx"
+    },
+    {
+      "label": "DEFAULT_STATS",
+      "file_type": "code",
+      "source_file": "frontend/src/features/shell/components/Footer.jsx",
+      "source_location": "L14",
+      "_origin": "ast",
+      "id": "frontend_src_features_shell_components_footer_default_stats",
+      "community": 121,
+      "community_name": "AppShell.jsx",
+      "norm_label": "default_stats"
+    },
+    {
+      "label": "Header.jsx",
+      "file_type": "code",
+      "source_file": "frontend/src/features/shell/components/Header.jsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "frontend_src_features_shell_components_header",
+      "community": 121,
+      "community_name": "AppShell.jsx",
+      "norm_label": "header.jsx"
+    },
+    {
+      "label": "navIcons.js",
+      "file_type": "code",
+      "source_file": "frontend/src/features/shell/components/navIcons.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "frontend_src_features_shell_components_navicons",
+      "community": 121,
+      "community_name": "AppShell.jsx",
+      "norm_label": "navicons.js"
+    },
+    {
+      "label": "NAV_ICONS",
+      "file_type": "code",
+      "source_file": "frontend/src/features/shell/components/navIcons.js",
+      "source_location": "L17",
+      "_origin": "ast",
+      "id": "frontend_src_features_shell_components_navicons_nav_icons",
+      "community": 121,
+      "community_name": "AppShell.jsx",
+      "norm_label": "nav_icons"
+    },
+    {
+      "label": "Sidebar.jsx",
+      "file_type": "code",
+      "source_file": "frontend/src/features/shell/components/Sidebar.jsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "frontend_src_features_shell_components_sidebar",
+      "community": 121,
+      "community_name": "AppShell.jsx",
+      "norm_label": "sidebar.jsx"
+    },
+    {
+      "label": "DEFAULT_BADGES",
+      "file_type": "code",
+      "source_file": "frontend/src/features/shell/components/Sidebar.jsx",
+      "source_location": "L31",
+      "_origin": "ast",
+      "id": "frontend_src_features_shell_components_sidebar_default_badges",
+      "community": 121,
+      "community_name": "AppShell.jsx",
+      "norm_label": "default_badges"
+    },
+    {
+      "label": "SidebarToggleIcon.jsx",
+      "file_type": "code",
+      "source_file": "frontend/src/features/shell/components/SidebarToggleIcon.jsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "frontend_src_features_shell_components_sidebartoggleicon",
+      "community": 121,
+      "community_name": "AppShell.jsx",
+      "norm_label": "sidebartoggleicon.jsx"
+    },
+    {
+      "label": "UserProfileMenu.jsx",
+      "file_type": "code",
+      "source_file": "frontend/src/features/shell/components/UserProfileMenu.jsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "frontend_src_features_shell_components_userprofilemenu",
+      "community": 121,
+      "community_name": "AppShell.jsx",
+      "norm_label": "userprofilemenu.jsx"
+    },
+    {
       "label": "navConfig.js",
       "file_type": "code",
       "source_file": "frontend/src/features/shell/rbac/navConfig.js",
@@ -23263,7 +23406,7 @@
       "_origin": "ast",
       "id": "frontend_src_features_shell_rbac_navconfig",
       "community": 121,
-      "community_name": "permissions.js",
+      "community_name": "AppShell.jsx",
       "norm_label": "navconfig.js"
     },
     {
@@ -23274,7 +23417,7 @@
       "_origin": "ast",
       "id": "frontend_src_features_shell_rbac_navconfig_nav_tree",
       "community": 121,
-      "community_name": "permissions.js",
+      "community_name": "AppShell.jsx",
       "norm_label": "nav_tree"
     },
     {
@@ -23285,7 +23428,7 @@
       "_origin": "ast",
       "id": "frontend_src_features_shell_rbac_permissions",
       "community": 121,
-      "community_name": "permissions.js",
+      "community_name": "AppShell.jsx",
       "norm_label": "permissions.js"
     },
     {
@@ -23296,7 +23439,7 @@
       "_origin": "ast",
       "id": "frontend_src_features_shell_rbac_permissions_all_permissions",
       "community": 121,
-      "community_name": "permissions.js",
+      "community_name": "AppShell.jsx",
       "norm_label": "all_permissions"
     },
     {
@@ -23307,7 +23450,7 @@
       "_origin": "ast",
       "id": "frontend_src_features_shell_rbac_permissions_data_etl_engineer_permissions",
       "community": 121,
-      "community_name": "permissions.js",
+      "community_name": "AppShell.jsx",
       "norm_label": "data_etl_engineer_permissions"
     },
     {
@@ -23318,7 +23461,7 @@
       "_origin": "ast",
       "id": "frontend_src_features_shell_rbac_permissions_permissions",
       "community": 121,
-      "community_name": "permissions.js",
+      "community_name": "AppShell.jsx",
       "norm_label": "permissions"
     },
     {
@@ -23329,7 +23472,7 @@
       "_origin": "ast",
       "id": "frontend_src_features_shell_rbac_permissions_role_labels",
       "community": 121,
-      "community_name": "permissions.js",
+      "community_name": "AppShell.jsx",
       "norm_label": "role_labels"
     },
     {
@@ -23340,7 +23483,7 @@
       "_origin": "ast",
       "id": "frontend_src_features_shell_rbac_permissions_role_permissions",
       "community": 121,
-      "community_name": "permissions.js",
+      "community_name": "AppShell.jsx",
       "norm_label": "role_permissions"
     },
     {
@@ -23351,7 +23494,7 @@
       "_origin": "ast",
       "id": "frontend_src_features_shell_rbac_permissions_roles",
       "community": 121,
-      "community_name": "permissions.js",
+      "community_name": "AppShell.jsx",
       "norm_label": "roles"
     },
     {
@@ -23362,7 +23505,7 @@
       "_origin": "ast",
       "id": "frontend_src_features_shell_rbac_permissions_viewer_permissions",
       "community": 121,
-      "community_name": "permissions.js",
+      "community_name": "AppShell.jsx",
       "norm_label": "viewer_permissions"
     },
     {
@@ -23373,7 +23516,7 @@
       "_origin": "ast",
       "id": "frontend_src_features_shell_rbac_usevisiblenav",
       "community": 121,
-      "community_name": "permissions.js",
+      "community_name": "AppShell.jsx",
       "norm_label": "usevisiblenav.js"
     },
     {
@@ -23384,7 +23527,7 @@
       "_origin": "ast",
       "id": "frontend_src_features_shell_state_sessionslice",
       "community": 121,
-      "community_name": "permissions.js",
+      "community_name": "AppShell.jsx",
       "norm_label": "sessionslice.js"
     },
     {
@@ -23395,7 +23538,7 @@
       "_origin": "ast",
       "id": "frontend_src_features_shell_state_sessionslice_initialstate",
       "community": 121,
-      "community_name": "permissions.js",
+      "community_name": "AppShell.jsx",
       "norm_label": "initialstate"
     },
     {
@@ -23406,7 +23549,7 @@
       "_origin": "ast",
       "id": "frontend_src_features_shell_state_sessionslice_sessionslice",
       "community": 121,
-      "community_name": "permissions.js",
+      "community_name": "AppShell.jsx",
       "norm_label": "sessionslice"
     },
     {
@@ -24392,103 +24535,26 @@
       "norm_label": "agent operating rules"
     },
     {
-      "label": "CreatePipelineScreen.jsx",
+      "label": "dashboard.api.js",
       "file_type": "code",
-      "source_file": "frontend/src/features/pipelines/pages/CreatePipelineScreen.jsx",
+      "source_file": "frontend/src/features/dashboard/services/dashboard.api.js",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "frontend_src_features_pipelines_pages_createpipelinescreen",
+      "id": "frontend_src_features_dashboard_services_dashboard_api",
       "community": 137,
-      "community_name": "CreatePipelineScreen.jsx",
-      "norm_label": "createpipelinescreen.jsx"
+      "community_name": "dashboard.api.js",
+      "norm_label": "dashboard.api.js"
     },
     {
-      "label": "createPipeline.api.js",
+      "label": "MOCK_SUMMARY",
       "file_type": "code",
-      "source_file": "frontend/src/features/pipelines/services/createPipeline.api.js",
-      "source_location": "L1",
+      "source_file": "frontend/src/features/dashboard/services/dashboard.api.js",
+      "source_location": "L22",
       "_origin": "ast",
-      "id": "frontend_src_features_pipelines_services_createpipeline_api",
+      "id": "frontend_src_features_dashboard_services_dashboard_api_mock_summary",
       "community": 137,
-      "community_name": "CreatePipelineScreen.jsx",
-      "norm_label": "createpipeline.api.js"
-    },
-    {
-      "label": "BUSINESS_DOMAINS",
-      "file_type": "code",
-      "source_file": "frontend/src/features/pipelines/services/createPipeline.api.js",
-      "source_location": "L20",
-      "_origin": "ast",
-      "id": "frontend_src_features_pipelines_services_createpipeline_api_business_domains",
-      "community": 137,
-      "community_name": "CreatePipelineScreen.jsx",
-      "norm_label": "business_domains"
-    },
-    {
-      "label": "CATEGORIES",
-      "file_type": "code",
-      "source_file": "frontend/src/features/pipelines/services/createPipeline.api.js",
-      "source_location": "L9",
-      "_origin": "ast",
-      "id": "frontend_src_features_pipelines_services_createpipeline_api_categories",
-      "community": 137,
-      "community_name": "CreatePipelineScreen.jsx",
-      "norm_label": "categories"
-    },
-    {
-      "label": "ENVIRONMENTS",
-      "file_type": "code",
-      "source_file": "frontend/src/features/pipelines/services/createPipeline.api.js",
-      "source_location": "L3",
-      "_origin": "ast",
-      "id": "frontend_src_features_pipelines_services_createpipeline_api_environments",
-      "community": 137,
-      "community_name": "CreatePipelineScreen.jsx",
-      "norm_label": "environments"
-    },
-    {
-      "label": "INITIAL_PIPELINE_FORM",
-      "file_type": "code",
-      "source_file": "frontend/src/features/pipelines/services/createPipeline.api.js",
-      "source_location": "L145",
-      "_origin": "ast",
-      "id": "frontend_src_features_pipelines_services_createpipeline_api_initial_pipeline_form",
-      "community": 137,
-      "community_name": "CreatePipelineScreen.jsx",
-      "norm_label": "initial_pipeline_form"
-    },
-    {
-      "label": "TEAMS",
-      "file_type": "code",
-      "source_file": "frontend/src/features/pipelines/services/createPipeline.api.js",
-      "source_location": "L29",
-      "_origin": "ast",
-      "id": "frontend_src_features_pipelines_services_createpipeline_api_teams",
-      "community": 137,
-      "community_name": "CreatePipelineScreen.jsx",
-      "norm_label": "teams"
-    },
-    {
-      "label": "TEMPLATES",
-      "file_type": "code",
-      "source_file": "frontend/src/features/pipelines/services/createPipeline.api.js",
-      "source_location": "L37",
-      "_origin": "ast",
-      "id": "frontend_src_features_pipelines_services_createpipeline_api_templates",
-      "community": 137,
-      "community_name": "CreatePipelineScreen.jsx",
-      "norm_label": "templates"
-    },
-    {
-      "label": "WIZARD_STEPS",
-      "file_type": "code",
-      "source_file": "frontend/src/features/pipelines/services/createPipeline.api.js",
-      "source_location": "L100",
-      "_origin": "ast",
-      "id": "frontend_src_features_pipelines_services_createpipeline_api_wizard_steps",
-      "community": 137,
-      "community_name": "CreatePipelineScreen.jsx",
-      "norm_label": "wizard_steps"
+      "community_name": "dashboard.api.js",
+      "norm_label": "mock_summary"
     },
     {
       "label": "useNotifications.js",
@@ -24695,28 +24761,6 @@
       "norm_label": "selection logic"
     },
     {
-      "label": "systemHealth.api.js",
-      "file_type": "code",
-      "source_file": "frontend/src/features/dashboard/services/systemHealth.api.js",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "frontend_src_features_dashboard_services_systemhealth_api",
-      "community": 140,
-      "community_name": "readJson",
-      "norm_label": "systemhealth.api.js"
-    },
-    {
-      "label": "MOCK_SYSTEM_HEALTH",
-      "file_type": "code",
-      "source_file": "frontend/src/features/dashboard/services/systemHealth.api.js",
-      "source_location": "L25",
-      "_origin": "ast",
-      "id": "frontend_src_features_dashboard_services_systemhealth_api_mock_system_health",
-      "community": 140,
-      "community_name": "readJson",
-      "norm_label": "mock_system_health"
-    },
-    {
       "label": "usePipelineList.js",
       "file_type": "code",
       "source_file": "frontend/src/features/pipelines/hooks/usePipelineList.js",
@@ -24724,129 +24768,162 @@
       "_origin": "ast",
       "id": "frontend_src_features_pipelines_hooks_usepipelinelist",
       "community": 140,
-      "community_name": "readJson",
+      "community_name": "apiFetch",
       "norm_label": "usepipelinelist.js"
     },
     {
-      "label": "parse_scr063.cjs",
+      "label": "useResetPasswordRequest.js",
       "file_type": "code",
-      "source_file": "parse_scr063.cjs",
+      "source_file": "frontend/src/features/auth/hooks/useResetPasswordRequest.js",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "parse_scr063",
-      "community": 144,
-      "community_name": "parse_scr063.cjs",
-      "norm_label": "parse_scr063.cjs"
+      "id": "frontend_src_features_auth_hooks_useresetpasswordrequest",
+      "community": 143,
+      "community_name": "react",
+      "norm_label": "useresetpasswordrequest.js"
     },
     {
-      "label": "blocks",
+      "label": "LoginScreen.jsx",
       "file_type": "code",
-      "source_file": "parse_scr063.cjs",
-      "source_location": "L34",
-      "_origin": "ast",
-      "id": "parse_scr063_blocks",
-      "community": 144,
-      "community_name": "parse_scr063.cjs",
-      "norm_label": "blocks"
-    },
-    {
-      "label": "fs",
-      "file_type": "code",
-      "source_file": "parse_scr063.cjs",
+      "source_file": "frontend/src/features/auth/pages/LoginScreen.jsx",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "parse_scr063_fs",
-      "community": 144,
-      "community_name": "parse_scr063.cjs",
-      "norm_label": "fs"
+      "id": "frontend_src_features_auth_pages_loginscreen",
+      "community": 143,
+      "community_name": "react",
+      "norm_label": "loginscreen.jsx"
     },
     {
-      "label": "nodes",
+      "label": "ResetPasswordScreen.jsx",
       "file_type": "code",
-      "source_file": "parse_scr063.cjs",
+      "source_file": "frontend/src/features/auth/pages/ResetPasswordScreen.jsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "frontend_src_features_auth_pages_resetpasswordscreen",
+      "community": 143,
+      "community_name": "react",
+      "norm_label": "resetpasswordscreen.jsx"
+    },
+    {
+      "label": "formStyles.js",
+      "file_type": "code",
+      "source_file": "frontend/src/utils/formStyles.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "frontend_src_utils_formstyles",
+      "community": 143,
+      "community_name": "react",
+      "norm_label": "formstyles.js"
+    },
+    {
+      "label": "inputBase",
+      "file_type": "code",
+      "source_file": "frontend/src/utils/formStyles.js",
       "source_location": "L7",
       "_origin": "ast",
-      "id": "parse_scr063_nodes",
-      "community": 144,
-      "community_name": "parse_scr063.cjs",
-      "norm_label": "nodes"
+      "id": "frontend_src_utils_formstyles_inputbase",
+      "community": 143,
+      "community_name": "react",
+      "norm_label": "inputbase"
     },
     {
-      "label": "texts",
-      "file_type": "code",
-      "source_file": "parse_scr063.cjs",
-      "source_location": "L28",
+      "label": "react",
+      "file_type": "concept",
+      "source_file": "frontend/.oxlintrc.json",
+      "source_location": "L3",
       "_origin": "ast",
-      "id": "parse_scr063_texts",
-      "community": 144,
-      "community_name": "parse_scr063.cjs",
-      "norm_label": "texts"
+      "id": "ref_react",
+      "community": 143,
+      "community_name": "react",
+      "norm_label": "react"
     },
     {
-      "label": "xml",
+      "label": "dataQuality.api.js",
       "file_type": "code",
-      "source_file": "parse_scr063.cjs",
-      "source_location": "L2",
-      "_origin": "ast",
-      "id": "parse_scr063_xml",
-      "community": 144,
-      "community_name": "parse_scr063.cjs",
-      "norm_label": "xml"
-    },
-    {
-      "label": "navIcons.js",
-      "file_type": "code",
-      "source_file": "frontend/src/features/shell/components/navIcons.js",
+      "source_file": "frontend/src/features/dashboard/services/dataQuality.api.js",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "frontend_src_features_shell_components_navicons",
-      "community": 149,
-      "community_name": "Sidebar.jsx",
-      "norm_label": "navicons.js"
+      "id": "frontend_src_features_dashboard_services_dataquality_api",
+      "community": 144,
+      "community_name": "dataQuality.api.js",
+      "norm_label": "dataquality.api.js"
     },
     {
-      "label": "NAV_ICONS",
+      "label": "MOCK_DATA_QUALITY",
       "file_type": "code",
-      "source_file": "frontend/src/features/shell/components/navIcons.js",
-      "source_location": "L17",
+      "source_file": "frontend/src/features/dashboard/services/dataQuality.api.js",
+      "source_location": "L25",
       "_origin": "ast",
-      "id": "frontend_src_features_shell_components_navicons_nav_icons",
-      "community": 149,
-      "community_name": "Sidebar.jsx",
-      "norm_label": "nav_icons"
+      "id": "frontend_src_features_dashboard_services_dataquality_api_mock_data_quality",
+      "community": 144,
+      "community_name": "dataQuality.api.js",
+      "norm_label": "mock_data_quality"
     },
     {
-      "label": "Sidebar.jsx",
+      "label": "destinationHealth.api.js",
       "file_type": "code",
-      "source_file": "frontend/src/features/shell/components/Sidebar.jsx",
+      "source_file": "frontend/src/features/dashboard/services/destinationHealth.api.js",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "frontend_src_features_shell_components_sidebar",
-      "community": 149,
-      "community_name": "Sidebar.jsx",
-      "norm_label": "sidebar.jsx"
+      "id": "frontend_src_features_dashboard_services_destinationhealth_api",
+      "community": 146,
+      "community_name": "destinationHealth.api.js",
+      "norm_label": "destinationhealth.api.js"
     },
     {
-      "label": "DEFAULT_BADGES",
+      "label": "MOCK_DESTINATION_HEALTH",
       "file_type": "code",
-      "source_file": "frontend/src/features/shell/components/Sidebar.jsx",
+      "source_file": "frontend/src/features/dashboard/services/destinationHealth.api.js",
+      "source_location": "L40",
+      "_origin": "ast",
+      "id": "frontend_src_features_dashboard_services_destinationhealth_api_mock_destination_health",
+      "community": 146,
+      "community_name": "destinationHealth.api.js",
+      "norm_label": "mock_destination_health"
+    },
+    {
+      "label": "errorAnalytics.api.js",
+      "file_type": "code",
+      "source_file": "frontend/src/features/dashboard/services/errorAnalytics.api.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "frontend_src_features_dashboard_services_erroranalytics_api",
+      "community": 147,
+      "community_name": "errorAnalytics.api.js",
+      "norm_label": "erroranalytics.api.js"
+    },
+    {
+      "label": "MOCK_ERROR_ANALYTICS",
+      "file_type": "code",
+      "source_file": "frontend/src/features/dashboard/services/errorAnalytics.api.js",
       "source_location": "L31",
       "_origin": "ast",
-      "id": "frontend_src_features_shell_components_sidebar_default_badges",
-      "community": 149,
-      "community_name": "Sidebar.jsx",
-      "norm_label": "default_badges"
+      "id": "frontend_src_features_dashboard_services_erroranalytics_api_mock_error_analytics",
+      "community": 147,
+      "community_name": "errorAnalytics.api.js",
+      "norm_label": "mock_error_analytics"
     },
     {
-      "label": "SidebarToggleIcon.jsx",
+      "label": "organizationActivity.api.js",
       "file_type": "code",
-      "source_file": "frontend/src/features/shell/components/SidebarToggleIcon.jsx",
+      "source_file": "frontend/src/features/organizations/services/organizationActivity.api.js",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "frontend_src_features_shell_components_sidebartoggleicon",
+      "id": "frontend_src_features_organizations_services_organizationactivity_api",
       "community": 149,
-      "community_name": "Sidebar.jsx",
-      "norm_label": "sidebartoggleicon.jsx"
+      "community_name": "organizationActivity.api.js",
+      "norm_label": "organizationactivity.api.js"
+    },
+    {
+      "label": "MOCK_ORGANIZATION_ACTIVITY",
+      "file_type": "code",
+      "source_file": "frontend/src/features/organizations/services/organizationActivity.api.js",
+      "source_location": "L43",
+      "_origin": "ast",
+      "id": "frontend_src_features_organizations_services_organizationactivity_api_mock_organization_activity",
+      "community": 149,
+      "community_name": "organizationActivity.api.js",
+      "norm_label": "mock_organization_activity"
     },
     {
       "label": "dashboard/hooks/useSourceHealth.js",
@@ -24970,125 +25047,48 @@
       "norm_label": "trend_tone"
     },
     {
-      "label": "sourceHealth.api.js",
+      "label": "organizationList.api.js",
       "file_type": "code",
-      "source_file": "frontend/src/features/dashboard/services/sourceHealth.api.js",
+      "source_file": "frontend/src/features/organizations/services/organizationList.api.js",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "frontend_src_features_dashboard_services_sourcehealth_api",
-      "community": 15,
-      "community_name": "SourceHealthScreen.jsx",
-      "norm_label": "sourcehealth.api.js"
-    },
-    {
-      "label": "MOCK_SOURCE_HEALTH",
-      "file_type": "code",
-      "source_file": "frontend/src/features/dashboard/services/sourceHealth.api.js",
-      "source_location": "L27",
-      "_origin": "ast",
-      "id": "frontend_src_features_dashboard_services_sourcehealth_api_mock_source_health",
-      "community": 15,
-      "community_name": "SourceHealthScreen.jsx",
-      "norm_label": "mock_source_health"
-    },
-    {
-      "label": "DestinationHealthMonitoringScreen.jsx",
-      "file_type": "code",
-      "source_file": "frontend/src/features/destinations/pages/DestinationHealthMonitoringScreen.jsx",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "frontend_src_features_destinations_pages_destinationhealthmonitoringscreen",
+      "id": "frontend_src_features_organizations_services_organizationlist_api",
       "community": 150,
-      "community_name": "AppShell.jsx",
-      "norm_label": "destinationhealthmonitoringscreen.jsx"
+      "community_name": "organizationList.api.js",
+      "norm_label": "organizationlist.api.js"
     },
     {
-      "label": "AppShell.jsx",
+      "label": "MOCK_ORGANIZATION_LIST",
       "file_type": "code",
-      "source_file": "frontend/src/features/shell/components/AppShell.jsx",
-      "source_location": "L1",
+      "source_file": "frontend/src/features/organizations/services/organizationList.api.js",
+      "source_location": "L37",
       "_origin": "ast",
-      "id": "frontend_src_features_shell_components_appshell",
+      "id": "frontend_src_features_organizations_services_organizationlist_api_mock_organization_list",
       "community": 150,
-      "community_name": "AppShell.jsx",
-      "norm_label": "appshell.jsx"
+      "community_name": "organizationList.api.js",
+      "norm_label": "mock_organization_list"
     },
     {
-      "label": "Footer.jsx",
+      "label": "userList.api.js",
       "file_type": "code",
-      "source_file": "frontend/src/features/shell/components/Footer.jsx",
+      "source_file": "frontend/src/features/users/services/userList.api.js",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "frontend_src_features_shell_components_footer",
-      "community": 150,
-      "community_name": "AppShell.jsx",
-      "norm_label": "footer.jsx"
+      "id": "frontend_src_features_users_services_userlist_api",
+      "community": 151,
+      "community_name": "userList.api.js",
+      "norm_label": "userlist.api.js"
     },
     {
-      "label": "DEFAULT_STATS",
+      "label": "MOCK_USER_LIST",
       "file_type": "code",
-      "source_file": "frontend/src/features/shell/components/Footer.jsx",
-      "source_location": "L14",
+      "source_file": "frontend/src/features/users/services/userList.api.js",
+      "source_location": "L49",
       "_origin": "ast",
-      "id": "frontend_src_features_shell_components_footer_default_stats",
-      "community": 150,
-      "community_name": "AppShell.jsx",
-      "norm_label": "default_stats"
-    },
-    {
-      "label": "LoginScreen.jsx",
-      "file_type": "code",
-      "source_file": "frontend/src/features/auth/pages/LoginScreen.jsx",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "frontend_src_features_auth_pages_loginscreen",
-      "community": 154,
-      "community_name": "react",
-      "norm_label": "loginscreen.jsx"
-    },
-    {
-      "label": "ResetPasswordScreen.jsx",
-      "file_type": "code",
-      "source_file": "frontend/src/features/auth/pages/ResetPasswordScreen.jsx",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "frontend_src_features_auth_pages_resetpasswordscreen",
-      "community": 154,
-      "community_name": "react",
-      "norm_label": "resetpasswordscreen.jsx"
-    },
-    {
-      "label": "formStyles.js",
-      "file_type": "code",
-      "source_file": "frontend/src/utils/formStyles.js",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "frontend_src_utils_formstyles",
-      "community": 154,
-      "community_name": "react",
-      "norm_label": "formstyles.js"
-    },
-    {
-      "label": "inputBase",
-      "file_type": "code",
-      "source_file": "frontend/src/utils/formStyles.js",
-      "source_location": "L7",
-      "_origin": "ast",
-      "id": "frontend_src_utils_formstyles_inputbase",
-      "community": 154,
-      "community_name": "react",
-      "norm_label": "inputbase"
-    },
-    {
-      "label": "react",
-      "file_type": "concept",
-      "source_file": "frontend/.oxlintrc.json",
-      "source_location": "L3",
-      "_origin": "ast",
-      "id": "ref_react",
-      "community": 154,
-      "community_name": "react",
-      "norm_label": "react"
+      "id": "frontend_src_features_users_services_userlist_api_mock_user_list",
+      "community": 151,
+      "community_name": "userList.api.js",
+      "norm_label": "mock_user_list"
     },
     {
       "label": "figma-project-audit/SKILL.md",
@@ -25744,28 +25744,6 @@
       "norm_label": "trend_tone"
     },
     {
-      "label": "errorAnalytics.api.js",
-      "file_type": "code",
-      "source_file": "frontend/src/features/dashboard/services/errorAnalytics.api.js",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "frontend_src_features_dashboard_services_erroranalytics_api",
-      "community": 2,
-      "community_name": "ErrorAnalyticsScreen.jsx",
-      "norm_label": "erroranalytics.api.js"
-    },
-    {
-      "label": "MOCK_ERROR_ANALYTICS",
-      "file_type": "code",
-      "source_file": "frontend/src/features/dashboard/services/errorAnalytics.api.js",
-      "source_location": "L31",
-      "_origin": "ast",
-      "id": "frontend_src_features_dashboard_services_erroranalytics_api_mock_error_analytics",
-      "community": 2,
-      "community_name": "ErrorAnalyticsScreen.jsx",
-      "norm_label": "mock_error_analytics"
-    },
-    {
       "label": "ui-reviewer.md",
       "file_type": "document",
       "node_kind": "page",
@@ -26417,6 +26395,28 @@
       "community": 25,
       "community_name": "PerformanceAnalyticsScreen.jsx",
       "norm_label": "trend_tone"
+    },
+    {
+      "label": "performanceAnalytics.api.js",
+      "file_type": "code",
+      "source_file": "frontend/src/features/dashboard/services/performanceAnalytics.api.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "frontend_src_features_dashboard_services_performanceanalytics_api",
+      "community": 25,
+      "community_name": "PerformanceAnalyticsScreen.jsx",
+      "norm_label": "performanceanalytics.api.js"
+    },
+    {
+      "label": "MOCK_PERFORMANCE_ANALYTICS",
+      "file_type": "code",
+      "source_file": "frontend/src/features/dashboard/services/performanceAnalytics.api.js",
+      "source_location": "L33",
+      "_origin": "ast",
+      "id": "frontend_src_features_dashboard_services_performanceanalytics_api_mock_performance_analytics",
+      "community": 25,
+      "community_name": "PerformanceAnalyticsScreen.jsx",
+      "norm_label": "mock_performance_analytics"
     },
     {
       "label": "coverage-report.md",
@@ -28403,28 +28403,6 @@
       "norm_label": "util_tone"
     },
     {
-      "label": "realTimeMonitoring.api.js",
-      "file_type": "code",
-      "source_file": "frontend/src/features/dashboard/services/realTimeMonitoring.api.js",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "frontend_src_features_dashboard_services_realtimemonitoring_api",
-      "community": 47,
-      "community_name": "RealTimeMonitoringScreen.jsx",
-      "norm_label": "realtimemonitoring.api.js"
-    },
-    {
-      "label": "MOCK_REAL_TIME_MONITORING",
-      "file_type": "code",
-      "source_file": "frontend/src/features/dashboard/services/realTimeMonitoring.api.js",
-      "source_location": "L39",
-      "_origin": "ast",
-      "id": "frontend_src_features_dashboard_services_realtimemonitoring_api_mock_real_time_monitoring",
-      "community": 47,
-      "community_name": "RealTimeMonitoringScreen.jsx",
-      "norm_label": "mock_real_time_monitoring"
-    },
-    {
       "label": ".oxlintrc.json",
       "file_type": "code",
       "source_file": "frontend/.oxlintrc.json",
@@ -29624,28 +29602,6 @@
       "norm_label": "trend_tone"
     },
     {
-      "label": "executiveDashboard.api.js",
-      "file_type": "code",
-      "source_file": "frontend/src/features/dashboard/services/executiveDashboard.api.js",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "frontend_src_features_dashboard_services_executivedashboard_api",
-      "community": 6,
-      "community_name": "ExecutiveDashboardScreen.jsx",
-      "norm_label": "executivedashboard.api.js"
-    },
-    {
-      "label": "MOCK_EXECUTIVE_DASHBOARD",
-      "file_type": "code",
-      "source_file": "frontend/src/features/dashboard/services/executiveDashboard.api.js",
-      "source_location": "L26",
-      "_origin": "ast",
-      "id": "frontend_src_features_dashboard_services_executivedashboard_api_mock_executive_dashboard",
-      "community": 6,
-      "community_name": "ExecutiveDashboardScreen.jsx",
-      "norm_label": "mock_executive_dashboard"
-    },
-    {
       "label": "env.js",
       "file_type": "code",
       "source_file": "frontend/src/config/env.js",
@@ -29666,72 +29622,6 @@
       "community": 61,
       "community_name": "client.js",
       "norm_label": "env"
-    },
-    {
-      "label": "dashboard.api.js",
-      "file_type": "code",
-      "source_file": "frontend/src/features/dashboard/services/dashboard.api.js",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "frontend_src_features_dashboard_services_dashboard_api",
-      "community": 61,
-      "community_name": "client.js",
-      "norm_label": "dashboard.api.js"
-    },
-    {
-      "label": "MOCK_SUMMARY",
-      "file_type": "code",
-      "source_file": "frontend/src/features/dashboard/services/dashboard.api.js",
-      "source_location": "L22",
-      "_origin": "ast",
-      "id": "frontend_src_features_dashboard_services_dashboard_api_mock_summary",
-      "community": 61,
-      "community_name": "client.js",
-      "norm_label": "mock_summary"
-    },
-    {
-      "label": "dataQuality.api.js",
-      "file_type": "code",
-      "source_file": "frontend/src/features/dashboard/services/dataQuality.api.js",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "frontend_src_features_dashboard_services_dataquality_api",
-      "community": 61,
-      "community_name": "client.js",
-      "norm_label": "dataquality.api.js"
-    },
-    {
-      "label": "MOCK_DATA_QUALITY",
-      "file_type": "code",
-      "source_file": "frontend/src/features/dashboard/services/dataQuality.api.js",
-      "source_location": "L25",
-      "_origin": "ast",
-      "id": "frontend_src_features_dashboard_services_dataquality_api_mock_data_quality",
-      "community": 61,
-      "community_name": "client.js",
-      "norm_label": "mock_data_quality"
-    },
-    {
-      "label": "destinationHealth.api.js",
-      "file_type": "code",
-      "source_file": "frontend/src/features/dashboard/services/destinationHealth.api.js",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "frontend_src_features_dashboard_services_destinationhealth_api",
-      "community": 61,
-      "community_name": "client.js",
-      "norm_label": "destinationhealth.api.js"
-    },
-    {
-      "label": "MOCK_DESTINATION_HEALTH",
-      "file_type": "code",
-      "source_file": "frontend/src/features/dashboard/services/destinationHealth.api.js",
-      "source_location": "L40",
-      "_origin": "ast",
-      "id": "frontend_src_features_dashboard_services_destinationhealth_api_mock_destination_health",
-      "community": 61,
-      "community_name": "client.js",
-      "norm_label": "mock_destination_health"
     },
     {
       "label": "executionStatistics.api.js",
@@ -29756,26 +29646,26 @@
       "norm_label": "mock_execution_statistics"
     },
     {
-      "label": "performanceAnalytics.api.js",
+      "label": "executiveDashboard.api.js",
       "file_type": "code",
-      "source_file": "frontend/src/features/dashboard/services/performanceAnalytics.api.js",
+      "source_file": "frontend/src/features/dashboard/services/executiveDashboard.api.js",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "frontend_src_features_dashboard_services_performanceanalytics_api",
+      "id": "frontend_src_features_dashboard_services_executivedashboard_api",
       "community": 61,
       "community_name": "client.js",
-      "norm_label": "performanceanalytics.api.js"
+      "norm_label": "executivedashboard.api.js"
     },
     {
-      "label": "MOCK_PERFORMANCE_ANALYTICS",
+      "label": "MOCK_EXECUTIVE_DASHBOARD",
       "file_type": "code",
-      "source_file": "frontend/src/features/dashboard/services/performanceAnalytics.api.js",
-      "source_location": "L33",
+      "source_file": "frontend/src/features/dashboard/services/executiveDashboard.api.js",
+      "source_location": "L26",
       "_origin": "ast",
-      "id": "frontend_src_features_dashboard_services_performanceanalytics_api_mock_performance_analytics",
+      "id": "frontend_src_features_dashboard_services_executivedashboard_api_mock_executive_dashboard",
       "community": 61,
       "community_name": "client.js",
-      "norm_label": "mock_performance_analytics"
+      "norm_label": "mock_executive_dashboard"
     },
     {
       "label": "pipelineOverview.api.js",
@@ -29800,6 +29690,72 @@
       "norm_label": "mock_pipeline_overview"
     },
     {
+      "label": "realTimeMonitoring.api.js",
+      "file_type": "code",
+      "source_file": "frontend/src/features/dashboard/services/realTimeMonitoring.api.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "frontend_src_features_dashboard_services_realtimemonitoring_api",
+      "community": 61,
+      "community_name": "client.js",
+      "norm_label": "realtimemonitoring.api.js"
+    },
+    {
+      "label": "MOCK_REAL_TIME_MONITORING",
+      "file_type": "code",
+      "source_file": "frontend/src/features/dashboard/services/realTimeMonitoring.api.js",
+      "source_location": "L39",
+      "_origin": "ast",
+      "id": "frontend_src_features_dashboard_services_realtimemonitoring_api_mock_real_time_monitoring",
+      "community": 61,
+      "community_name": "client.js",
+      "norm_label": "mock_real_time_monitoring"
+    },
+    {
+      "label": "sourceHealth.api.js",
+      "file_type": "code",
+      "source_file": "frontend/src/features/dashboard/services/sourceHealth.api.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "frontend_src_features_dashboard_services_sourcehealth_api",
+      "community": 61,
+      "community_name": "client.js",
+      "norm_label": "sourcehealth.api.js"
+    },
+    {
+      "label": "MOCK_SOURCE_HEALTH",
+      "file_type": "code",
+      "source_file": "frontend/src/features/dashboard/services/sourceHealth.api.js",
+      "source_location": "L27",
+      "_origin": "ast",
+      "id": "frontend_src_features_dashboard_services_sourcehealth_api_mock_source_health",
+      "community": 61,
+      "community_name": "client.js",
+      "norm_label": "mock_source_health"
+    },
+    {
+      "label": "systemHealth.api.js",
+      "file_type": "code",
+      "source_file": "frontend/src/features/dashboard/services/systemHealth.api.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "frontend_src_features_dashboard_services_systemhealth_api",
+      "community": 61,
+      "community_name": "client.js",
+      "norm_label": "systemhealth.api.js"
+    },
+    {
+      "label": "MOCK_SYSTEM_HEALTH",
+      "file_type": "code",
+      "source_file": "frontend/src/features/dashboard/services/systemHealth.api.js",
+      "source_location": "L25",
+      "_origin": "ast",
+      "id": "frontend_src_features_dashboard_services_systemhealth_api_mock_system_health",
+      "community": 61,
+      "community_name": "client.js",
+      "norm_label": "mock_system_health"
+    },
+    {
       "label": "departmentManagement.api.js",
       "file_type": "code",
       "source_file": "frontend/src/features/organizations/services/departmentManagement.api.js",
@@ -29820,72 +29776,6 @@
       "community": 61,
       "community_name": "client.js",
       "norm_label": "mock_department_management"
-    },
-    {
-      "label": "organizationActivity.api.js",
-      "file_type": "code",
-      "source_file": "frontend/src/features/organizations/services/organizationActivity.api.js",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "frontend_src_features_organizations_services_organizationactivity_api",
-      "community": 61,
-      "community_name": "client.js",
-      "norm_label": "organizationactivity.api.js"
-    },
-    {
-      "label": "MOCK_ORGANIZATION_ACTIVITY",
-      "file_type": "code",
-      "source_file": "frontend/src/features/organizations/services/organizationActivity.api.js",
-      "source_location": "L43",
-      "_origin": "ast",
-      "id": "frontend_src_features_organizations_services_organizationactivity_api_mock_organization_activity",
-      "community": 61,
-      "community_name": "client.js",
-      "norm_label": "mock_organization_activity"
-    },
-    {
-      "label": "teamManagement.api.js",
-      "file_type": "code",
-      "source_file": "frontend/src/features/organizations/services/teamManagement.api.js",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "frontend_src_features_organizations_services_teammanagement_api",
-      "community": 61,
-      "community_name": "client.js",
-      "norm_label": "teammanagement.api.js"
-    },
-    {
-      "label": "MOCK_TEAM_MANAGEMENT",
-      "file_type": "code",
-      "source_file": "frontend/src/features/organizations/services/teamManagement.api.js",
-      "source_location": "L47",
-      "_origin": "ast",
-      "id": "frontend_src_features_organizations_services_teammanagement_api_mock_team_management",
-      "community": 61,
-      "community_name": "client.js",
-      "norm_label": "mock_team_management"
-    },
-    {
-      "label": "userList.api.js",
-      "file_type": "code",
-      "source_file": "frontend/src/features/users/services/userList.api.js",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "frontend_src_features_users_services_userlist_api",
-      "community": 61,
-      "community_name": "client.js",
-      "norm_label": "userlist.api.js"
-    },
-    {
-      "label": "MOCK_USER_LIST",
-      "file_type": "code",
-      "source_file": "frontend/src/features/users/services/userList.api.js",
-      "source_location": "L49",
-      "_origin": "ast",
-      "id": "frontend_src_features_users_services_userlist_api_mock_user_list",
-      "community": 61,
-      "community_name": "client.js",
-      "norm_label": "mock_user_list"
     },
     {
       "label": "client.js",
@@ -30005,7 +29895,7 @@
       "_origin": "ast",
       "id": "frontend_src_features_destinations_pages_adddestinationscreen",
       "community": 66,
-      "community_name": "AddDestinationScreen.jsx",
+      "community_name": "AppShell",
       "norm_label": "adddestinationscreen.jsx"
     },
     {
@@ -30016,7 +29906,7 @@
       "_origin": "ast",
       "id": "frontend_src_features_destinations_pages_adddestinationscreen_destination_types",
       "community": 66,
-      "community_name": "AddDestinationScreen.jsx",
+      "community_name": "AppShell",
       "norm_label": "destination_types"
     },
     {
@@ -30027,7 +29917,7 @@
       "_origin": "ast",
       "id": "frontend_src_features_destinations_pages_adddestinationscreen_initial_form",
       "community": 66,
-      "community_name": "AddDestinationScreen.jsx",
+      "community_name": "AppShell",
       "norm_label": "initial_form"
     },
     {
@@ -30038,7 +29928,7 @@
       "_origin": "ast",
       "id": "frontend_src_features_destinations_services_adddestination_api",
       "community": 66,
-      "community_name": "AddDestinationScreen.jsx",
+      "community_name": "AppShell",
       "norm_label": "adddestination.api.js"
     },
     {
@@ -30049,8 +29939,129 @@
       "_origin": "ast",
       "id": "frontend_src_features_destinations_services_adddestination_api_org_id",
       "community": 66,
-      "community_name": "AddDestinationScreen.jsx",
+      "community_name": "AppShell",
       "norm_label": "org_id"
+    },
+    {
+      "label": "CreatePipelineScreen.jsx",
+      "file_type": "code",
+      "source_file": "frontend/src/features/pipelines/pages/CreatePipelineScreen.jsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "frontend_src_features_pipelines_pages_createpipelinescreen",
+      "community": 66,
+      "community_name": "AppShell",
+      "norm_label": "createpipelinescreen.jsx"
+    },
+    {
+      "label": "createPipeline.api.js",
+      "file_type": "code",
+      "source_file": "frontend/src/features/pipelines/services/createPipeline.api.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "frontend_src_features_pipelines_services_createpipeline_api",
+      "community": 66,
+      "community_name": "AppShell",
+      "norm_label": "createpipeline.api.js"
+    },
+    {
+      "label": "BUSINESS_DOMAINS",
+      "file_type": "code",
+      "source_file": "frontend/src/features/pipelines/services/createPipeline.api.js",
+      "source_location": "L20",
+      "_origin": "ast",
+      "id": "frontend_src_features_pipelines_services_createpipeline_api_business_domains",
+      "community": 66,
+      "community_name": "AppShell",
+      "norm_label": "business_domains"
+    },
+    {
+      "label": "CATEGORIES",
+      "file_type": "code",
+      "source_file": "frontend/src/features/pipelines/services/createPipeline.api.js",
+      "source_location": "L9",
+      "_origin": "ast",
+      "id": "frontend_src_features_pipelines_services_createpipeline_api_categories",
+      "community": 66,
+      "community_name": "AppShell",
+      "norm_label": "categories"
+    },
+    {
+      "label": "ENVIRONMENTS",
+      "file_type": "code",
+      "source_file": "frontend/src/features/pipelines/services/createPipeline.api.js",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "frontend_src_features_pipelines_services_createpipeline_api_environments",
+      "community": 66,
+      "community_name": "AppShell",
+      "norm_label": "environments"
+    },
+    {
+      "label": "INITIAL_PIPELINE_FORM",
+      "file_type": "code",
+      "source_file": "frontend/src/features/pipelines/services/createPipeline.api.js",
+      "source_location": "L145",
+      "_origin": "ast",
+      "id": "frontend_src_features_pipelines_services_createpipeline_api_initial_pipeline_form",
+      "community": 66,
+      "community_name": "AppShell",
+      "norm_label": "initial_pipeline_form"
+    },
+    {
+      "label": "TEAMS",
+      "file_type": "code",
+      "source_file": "frontend/src/features/pipelines/services/createPipeline.api.js",
+      "source_location": "L29",
+      "_origin": "ast",
+      "id": "frontend_src_features_pipelines_services_createpipeline_api_teams",
+      "community": 66,
+      "community_name": "AppShell",
+      "norm_label": "teams"
+    },
+    {
+      "label": "TEMPLATES",
+      "file_type": "code",
+      "source_file": "frontend/src/features/pipelines/services/createPipeline.api.js",
+      "source_location": "L37",
+      "_origin": "ast",
+      "id": "frontend_src_features_pipelines_services_createpipeline_api_templates",
+      "community": 66,
+      "community_name": "AppShell",
+      "norm_label": "templates"
+    },
+    {
+      "label": "WIZARD_STEPS",
+      "file_type": "code",
+      "source_file": "frontend/src/features/pipelines/services/createPipeline.api.js",
+      "source_location": "L100",
+      "_origin": "ast",
+      "id": "frontend_src_features_pipelines_services_createpipeline_api_wizard_steps",
+      "community": 66,
+      "community_name": "AppShell",
+      "norm_label": "wizard_steps"
+    },
+    {
+      "label": "hooks.js",
+      "file_type": "code",
+      "source_file": "frontend/src/app/hooks.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "frontend_src_app_hooks",
+      "community": 67,
+      "community_name": "useAppSelector",
+      "norm_label": "hooks.js"
+    },
+    {
+      "label": "useAppSelector",
+      "file_type": "code",
+      "source_file": "frontend/src/app/hooks.js",
+      "source_location": "L4",
+      "_origin": "ast",
+      "id": "frontend_src_app_hooks_useappselector",
+      "community": 67,
+      "community_name": "useAppSelector",
+      "norm_label": "useappselector"
     },
     {
       "label": "useTwoFactor.js",
@@ -30060,7 +30071,7 @@
       "_origin": "ast",
       "id": "frontend_src_features_auth_hooks_usetwofactor",
       "community": 67,
-      "community_name": "useTwoFactor.js",
+      "community_name": "useAppSelector",
       "norm_label": "usetwofactor.js"
     },
     {
@@ -30071,7 +30082,7 @@
       "_origin": "ast",
       "id": "frontend_src_features_auth_pages_twofactorauthenticationscreen",
       "community": 67,
-      "community_name": "useTwoFactor.js",
+      "community_name": "useAppSelector",
       "norm_label": "twofactorauthenticationscreen.jsx"
     },
     {
@@ -30977,28 +30988,6 @@
       "norm_label": "trend_tone"
     },
     {
-      "label": "hooks.js",
-      "file_type": "code",
-      "source_file": "frontend/src/app/hooks.js",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "frontend_src_app_hooks",
-      "community": 78,
-      "community_name": "auth.api.js",
-      "norm_label": "hooks.js"
-    },
-    {
-      "label": "useAppDispatch",
-      "file_type": "code",
-      "source_file": "frontend/src/app/hooks.js",
-      "source_location": "L3",
-      "_origin": "ast",
-      "id": "frontend_src_app_hooks_useappdispatch",
-      "community": 78,
-      "community_name": "auth.api.js",
-      "norm_label": "useappdispatch"
-    },
-    {
       "label": "useEmailVerification.js",
       "file_type": "code",
       "source_file": "frontend/src/features/auth/hooks/useEmailVerification.js",
@@ -31019,17 +31008,6 @@
       "community": 78,
       "community_name": "auth.api.js",
       "norm_label": "uselogin.js"
-    },
-    {
-      "label": "useResetPasswordRequest.js",
-      "file_type": "code",
-      "source_file": "frontend/src/features/auth/hooks/useResetPasswordRequest.js",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "frontend_src_features_auth_hooks_useresetpasswordrequest",
-      "community": 78,
-      "community_name": "auth.api.js",
-      "norm_label": "useresetpasswordrequest.js"
     },
     {
       "label": "EmailVerificationScreen.jsx",
@@ -31262,7 +31240,7 @@
       "file_type": "document",
       "node_kind": "heading",
       "source_file": "docs/figma/screen-inventory.md",
-      "source_location": "L379",
+      "source_location": "L385",
       "_origin": "ast",
       "id": "docs_figma_screen_inventory_missing_or_inaccessible_figma_information",
       "community": 8,
@@ -31616,6 +31594,18 @@
       "community": 8,
       "community_name": "Screen Matrix",
       "norm_label": "scr-061 build notes (2026-09-08)"
+    },
+    {
+      "label": "SCR-063 build notes (2026-09-08)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "source_file": "docs/figma/screen-inventory.md",
+      "source_location": "L379",
+      "_origin": "ast",
+      "id": "docs_figma_screen_inventory_scr_063_build_notes_2026_09_08",
+      "community": 8,
+      "community_name": "Screen Matrix",
+      "norm_label": "scr-063 build notes (2026-09-08)"
     },
     {
       "label": "Screen Matrix",
@@ -32237,81 +32227,37 @@
       "norm_label": "simulated_versions"
     },
     {
-      "label": "NotificationPanel.jsx",
+      "label": "useTeamManagement.js",
       "file_type": "code",
-      "source_file": "frontend/src/features/notifications/components/NotificationPanel.jsx",
+      "source_file": "frontend/src/features/organizations/hooks/useTeamManagement.js",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "frontend_src_features_notifications_components_notificationpanel",
+      "id": "frontend_src_features_organizations_hooks_useteammanagement",
       "community": 88,
-      "community_name": "Header.jsx",
-      "norm_label": "notificationpanel.jsx"
+      "community_name": "teamManagement.api.js",
+      "norm_label": "useteammanagement.js"
     },
     {
-      "label": "ICONS",
+      "label": "teamManagement.api.js",
       "file_type": "code",
-      "source_file": "frontend/src/features/notifications/components/NotificationPanel.jsx",
-      "source_location": "L10",
-      "_origin": "ast",
-      "id": "frontend_src_features_notifications_components_notificationpanel_icons",
-      "community": 88,
-      "community_name": "Header.jsx",
-      "norm_label": "icons"
-    },
-    {
-      "label": "SEVERITY_BADGE",
-      "file_type": "code",
-      "source_file": "frontend/src/features/notifications/components/NotificationPanel.jsx",
-      "source_location": "L26",
-      "_origin": "ast",
-      "id": "frontend_src_features_notifications_components_notificationpanel_severity_badge",
-      "community": 88,
-      "community_name": "Header.jsx",
-      "norm_label": "severity_badge"
-    },
-    {
-      "label": "SEVERITY_WASH",
-      "file_type": "code",
-      "source_file": "frontend/src/features/notifications/components/NotificationPanel.jsx",
-      "source_location": "L19",
-      "_origin": "ast",
-      "id": "frontend_src_features_notifications_components_notificationpanel_severity_wash",
-      "community": 88,
-      "community_name": "Header.jsx",
-      "norm_label": "severity_wash"
-    },
-    {
-      "label": "TABS",
-      "file_type": "code",
-      "source_file": "frontend/src/features/notifications/components/NotificationPanel.jsx",
-      "source_location": "L33",
-      "_origin": "ast",
-      "id": "frontend_src_features_notifications_components_notificationpanel_tabs",
-      "community": 88,
-      "community_name": "Header.jsx",
-      "norm_label": "tabs"
-    },
-    {
-      "label": "Header.jsx",
-      "file_type": "code",
-      "source_file": "frontend/src/features/shell/components/Header.jsx",
+      "source_file": "frontend/src/features/organizations/services/teamManagement.api.js",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "frontend_src_features_shell_components_header",
+      "id": "frontend_src_features_organizations_services_teammanagement_api",
       "community": 88,
-      "community_name": "Header.jsx",
-      "norm_label": "header.jsx"
+      "community_name": "teamManagement.api.js",
+      "norm_label": "teammanagement.api.js"
     },
     {
-      "label": "UserProfileMenu.jsx",
+      "label": "MOCK_TEAM_MANAGEMENT",
       "file_type": "code",
-      "source_file": "frontend/src/features/shell/components/UserProfileMenu.jsx",
-      "source_location": "L1",
+      "source_file": "frontend/src/features/organizations/services/teamManagement.api.js",
+      "source_location": "L47",
       "_origin": "ast",
-      "id": "frontend_src_features_shell_components_userprofilemenu",
+      "id": "frontend_src_features_organizations_services_teammanagement_api_mock_team_management",
       "community": 88,
-      "community_name": "Header.jsx",
-      "norm_label": "userprofilemenu.jsx"
+      "community_name": "teamManagement.api.js",
+      "norm_label": "mock_team_management"
     },
     {
       "label": "SourceConnectionSetupScreen.jsx",
@@ -59105,6 +59051,17 @@
       "weight": 1.0,
       "_origin": "ast",
       "source": "docs_figma_screen_inventory_figma_notes_272",
+      "target": "docs_figma_screen_inventory_scr_063_build_notes_2026_09_08",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/figma/screen-inventory.md",
+      "source_location": "L385",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_figma_screen_inventory_figma_notes_272",
       "target": "docs_figma_screen_inventory_missing_or_inaccessible_figma_information",
       "confidence_score": 1.0
     },
@@ -59431,7 +59388,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/modules/module-plan.md",
-      "source_location": "L78",
+      "source_location": "L79",
       "weight": 1.0,
       "_origin": "ast",
       "source": "docs_modules_module_plan_dependency_notes",
@@ -59442,7 +59399,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/modules/module-plan.md",
-      "source_location": "L82",
+      "source_location": "L83",
       "weight": 1.0,
       "_origin": "ast",
       "source": "docs_modules_module_plan_dependency_notes",
@@ -59497,7 +59454,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/modules/module-plan.md",
-      "source_location": "L86",
+      "source_location": "L87",
       "weight": 1.0,
       "_origin": "ast",
       "source": "docs_modules_module_plan_module_build_plan",
@@ -59508,7 +59465,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/modules/module-plan.md",
-      "source_location": "L98",
+      "source_location": "L99",
       "weight": 1.0,
       "_origin": "ast",
       "source": "docs_modules_module_plan_module_build_plan",
@@ -84461,61 +84418,6 @@
       "_origin": "ast",
       "source": "frontend_src_utils_formstyles",
       "target": "frontend_src_utils_formstyles_inputbase",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "parse_scr063.cjs",
-      "source_location": "L1",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "parse_scr063",
-      "target": "parse_scr063_fs",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "parse_scr063.cjs",
-      "source_location": "L2",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "parse_scr063",
-      "target": "parse_scr063_xml",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "parse_scr063.cjs",
-      "source_location": "L28",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "parse_scr063",
-      "target": "parse_scr063_texts",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "parse_scr063.cjs",
-      "source_location": "L34",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "parse_scr063",
-      "target": "parse_scr063_blocks",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "parse_scr063.cjs",
-      "source_location": "L7",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "parse_scr063",
-      "target": "parse_scr063_nodes",
       "confidence_score": 1.0
     },
     {

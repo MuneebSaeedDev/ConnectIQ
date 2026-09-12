@@ -1,0 +1,519 @@
+[1] (170:1546): Pipeline Builder
+[2] (170:1550): customer-etl-pipeline
+[3] (170:1554): Mapping Node
+[4] (170:1558): Configuration
+[5] (170:1562): customer-etl-pipeline
+[6] (170:1565): DE
+[7] (170:1575): Mapping Node Configuration
+[8] (170:1578): Draft
+[9] (170:1580): v2.4.1
+[10] (170:1582): Map source fields to target fields and apply transformations before data reaches the next pipeline stage.
+[11] (170:1585): Cancel
+[12] (170:1587): Reset
+[13] (170:1589): Duplicate Node
+[14] (170:1592): Validate Mapping
+[15] (170:1594): Save Configuration
+[16] (170:1602): 01
+[17] (170:1604): General Information
+[18] (170:1607): Node Type: MAPPING
+[19] (170:1609): Version: 2.4.1
+[20] (170:1611): Created by: alice.chen@corp.io
+[21] (170:1613): Modified: 2026-08-07 14:32
+[22] (170:1617): Node Name *
+[23] (170:1620): customer_field_mapper
+[24] (170:1623): Display Name
+[25] (170:1626): Customer Field Mapper
+[26] (170:1629): Owner
+[27] (170:1632): data-engineering-team
+[28] (170:1635): Description
+[29] (170:1638): Maps and transforms customer source fields to the unified CRM target schema. Handles type coercions and conditional routing for international records.
+[30] (170:1641): Tags
+[31] (170:1644): customer
+[32] (170:1646): crm
+[33] (170:1648): pii-sensitive
+[34] (170:1650): v2
+[35] (170:1656): 02
+[36] (170:1658): Input Schema
+[37] (170:1660): SOURCE
+[38] (170:1662): ↻ Refresh
+[39] (170:1666): Source Node
+[40] (170:1668): filter_node_02
+[41] (170:1671): Dataset
+[42] (170:1673): customers_raw
+[43] (170:1676): Schema Version
+[44] (170:1678): 3.1.0
+[45] (170:1681): Total Fields
+[46] (170:1683): 18
+[47] (170:1686): Est. Records
+[48] (170:1688): 4.2M
+[49] (170:1691): Last Refreshed
+[50] (170:1693): 08:14 UTC
+[51] (170:1697): Search fields…
+[52] (170:1700): All Types
+[53] (170:1702): Unmapped Only
+[54] (170:1706): Field Name
+[55] (170:1708): Type
+[56] (170:1710): Null
+[57] (170:1712): Sample
+[58] (170:1718): customer_id
+[59] (170:1721): INTEGER
+[60] (170:1723): NO
+[61] (170:1725): 100421
+[62] (170:1730): first_name
+[63] (170:1733): STRING
+[64] (170:1735): YES
+[65] (170:1737): Alice
+[66] (170:1742): last_name
+[67] (170:1745): STRING
+[68] (170:1747): YES
+[69] (170:1749): Chen
+[70] (170:1754): email_address
+[71] (170:1757): STRING
+[72] (170:1759): NO
+[73] (170:1761): alice@corp.io
+[74] (170:1766): created_at
+[75] (170:1769): TIMESTAMP
+[76] (170:1771): NO
+[77] (170:1773): 2024-01-15T09:00Z
+[78] (170:1778): account_balance
+[79] (170:1781): DECIMAL
+[80] (170:1783): YES
+[81] (170:1785): 1240.50
+[82] (170:1790): country_code
+[83] (170:1793): STRING
+[84] (170:1795): YES
+[85] (170:1797): US
+[86] (170:1802): is_active
+[87] (170:1805): BOOLEAN
+[88] (170:1807): NO
+[89] (170:1809): true
+[90] (170:1814): 03
+[91] (170:1816): Target Schema
+[92] (170:1818): TARGET
+[93] (170:1820): ↻ Refresh
+[94] (170:1824): Target Node
+[95] (170:1826): crm_loader_01
+[96] (170:1829): Dataset
+[97] (170:1831): customers_unified
+[98] (170:1834): Schema Version
+[99] (170:1836): 1.8.2
+[100] (170:1839): Total Fields
+[101] (170:1841): 14
+[102] (170:1844): Required Fields
+[103] (170:1846): 9
+[104] (170:1849): Schema Mode
+[105] (170:1851): STRICT
+[106] (170:1855): Search fields…
+[107] (170:1857): Required Only
+[108] (170:1859): Unmapped Only
+[109] (170:1863): Field Name
+[110] (170:1865): Type
+[111] (170:1867): Req
+[112] (170:1869): Default
+[113] (170:1875): customer_id
+[114] (170:1878): INTEGER
+[115] (170:1880): YES
+[116] (170:1882): —
+[117] (170:1887): full_name
+[118] (170:1890): STRING
+[119] (170:1892): YES
+[120] (170:1894): —
+[121] (170:1899): email
+[122] (170:1902): STRING
+[123] (170:1904): YES
+[124] (170:1906): —
+[125] (170:1911): created_date
+[126] (170:1914): DATE
+[127] (170:1916): YES
+[128] (170:1918): —
+[129] (170:1923): balance_usd
+[130] (170:1926): DECIMAL
+[131] (170:1928): no
+[132] (170:1930): 0.00
+[133] (170:1935): region
+[134] (170:1938): STRING
+[135] (170:1940): no
+[136] (170:1942): UNKNOWN
+[137] (170:1947): status
+[138] (170:1950): STRING
+[139] (170:1952): YES
+[140] (170:1954): —
+[141] (170:1959): tier
+[142] (170:1962): STRING
+[143] (170:1964): no
+[144] (170:1966): standard
+[145] (170:1971): 05
+[146] (170:1973): Auto Mapping
+[147] (170:1975): — Intelligent field matching
+[148] (170:1979): Match by:
+[149] (170:1983): Field Name
+[150] (170:1987): Similar Name
+[151] (170:1991): Data Type
+[152] (170:1995): Source Path
+[153] (170:1999): 8 matches found · 2 conflicts
+[154] (170:2001): Preview Matches
+[155] (170:2003): Review Unmatched
+[156] (170:2005): Apply Matches
+[157] (170:2010): 04
+[158] (170:2012): Mapping Workspace
+[159] (170:2015): 6 mapped
+[160] (170:2018): 1 warning
+[161] (170:2021): 1 error
+[162] (170:2024): + Add Mapping
+[163] (170:2026): Auto Map
+[164] (170:2028): Clear All
+[165] (170:2032): Source Field
+[166] (170:2034): Src Type
+[167] (170:2036): Mapping
+[168] (170:2038): Transformation
+[169] (170:2040): Target Field
+[170] (170:2042): Tgt Type
+[171] (170:2044): Validation
+[172] (170:2046): Actions
+[173] (170:2052): customer_id
+[174] (170:2055): INTEGER
+[175] (170:2058): Direct
+[176] (170:2060): —
+[177] (170:2062): customer_id
+[178] (170:2065): INTEGER
+[179] (170:2067): ✓ Pass
+[180] (170:2070): ✎
+[181] (170:2072): ⧉
+[182] (170:2074): ✕
+[183] (170:2079): first_name, last_name
+[184] (170:2082): STRING
+[185] (170:2085): Expression
+[186] (170:2087): CONCAT(first_name, &#39; &#39;, last_name)
+[187] (170:2089): full_name
+[188] (170:2092): STRING
+[189] (170:2094): ✓ Pass
+[190] (170:2097): ✎
+[191] (170:2099): ⧉
+[192] (170:2101): ✕
+[193] (170:2106): email_address
+[194] (170:2109): STRING
+[195] (170:2112): Rename
+[196] (170:2114): LOWER(TRIM(email_address))
+[197] (170:2116): email
+[198] (170:2119): STRING
+[199] (170:2121): ✓ Pass
+[200] (170:2124): ✎
+[201] (170:2126): ⧉
+[202] (170:2128): ✕
+[203] (170:2133): created_at
+[204] (170:2136): TIMESTAMP
+[205] (170:2139): Cast
+[206] (170:2141): DATE_FORMAT(created_at, &#39;YYYY-MM-DD&#39;)
+[207] (170:2143): created_date
+[208] (170:2146): DATE
+[209] (170:2148): ✓ Pass
+[210] (170:2151): ✎
+[211] (170:2153): ⧉
+[212] (170:2155): ✕
+[213] (170:2160): account_balance
+[214] (170:2163): DECIMAL
+[215] (170:2166): Cast
+[216] (170:2168): CAST(account_balance AS DECIMAL(10,2))
+[217] (170:2170): balance_usd
+[218] (170:2173): DECIMAL
+[219] (170:2175): ⚠ Precision
+[220] (170:2178): ✎
+[221] (170:2180): ⧉
+[222] (170:2182): ✕
+[223] (170:2187): country_code
+[224] (170:2190): STRING
+[225] (170:2193): Conditional
+[226] (170:2195): IF(country_code IS NULL, &#39;UNKNOWN&#39;, country_code)
+[227] (170:2197): region
+[228] (170:2200): STRING
+[229] (170:2202): ✓ Pass
+[230] (170:2205): ✎
+[231] (170:2207): ⧉
+[232] (170:2209): ✕
+[233] (170:2214): —
+[234] (170:2217): —
+[235] (170:2220): —
+[236] (170:2222): —
+[237] (170:2224): status
+[238] (170:2227): STRING
+[239] (170:2229): ✗ Missing
+[240] (170:2232): ✎
+[241] (170:2234): ⧉
+[242] (170:2236): ✕
+[243] (170:2241): is_active
+[244] (170:2244): BOOLEAN
+[245] (170:2247): —
+[246] (170:2249): —
+[247] (170:2251): —
+[248] (170:2254): —
+[249] (170:2256): — Unmapped
+[250] (170:2259): ✎
+[251] (170:2261): ⧉
+[252] (170:2263): ✕
+[253] (170:2268): 06
+[254] (170:2270): Transformation Configuration
+[255] (170:2272): — Selected: first_name → full_name
+[256] (170:2277): Transformation Type
+[257] (170:2280): Expression
+[258] (170:2283): Output Type
+[259] (170:2286): STRING
+[260] (170:2289): Input Fields
+[261] (170:2292): first_name
+[262] (170:2294): last_name
+[263] (170:2297): Null Handling
+[264] (170:2300): Replace With Default
+[265] (170:2303): Default Value
+[266] (170:2306): UNKNOWN
+[267] (170:2310): Expression Editor
+[268] (170:2313): Format
+[269] (170:2315): Validate
+[270] (170:2317): Functions
+[271] (170:2321): expression
+[272] (170:2324): Syntax OK
+[273] (170:2329): 1
+[274] (170:2331): CONCAT
+[275] (170:2333): (
+[276] (170:2337): 2
+[277] (170:2340): first_name
+[278] (170:2342): ,
+[279] (170:2346): 3
+[280] (170:2349): &#39; &#39;
+[281] (170:2351): ,
+[282] (170:2355): 4
+[283] (170:2358): last_name
+[284] (170:2362): 5
+[285] (170:2364): )
+[286] (170:2367): Functions:
+[287] (170:2369): String
+[288] (170:2371): Numeric
+[289] (170:2373): Date/Time
+[290] (170:2375): Logical
+[291] (170:2377): Null Handling
+[292] (170:2379): Conversion
+[293] (170:2381): Conditional
+[294] (170:2383): Custom
+[295] (170:2386): CONCAT(a, b)
+[296] (170:2388): TRIM(s)
+[297] (170:2390): UPPER(s)
+[298] (170:2392): LOWER(s)
+[299] (170:2394): SUBSTR(s,i,n)
+[300] (170:2396): REPLACE(s,a,b)
+[301] (170:2398): LENGTH(s)
+[302] (170:2400): COALESCE(a,b)
+[303] (170:2404): 08
+[304] (170:2406): Data Type Conversion
+[305] (170:2410): Source Type
+[306] (170:2413): DECIMAL
+[307] (170:2416): Target Type
+[308] (170:2419): DECIMAL
+[309] (170:2422): Conversion Rule
+[310] (170:2425): CAST(x AS DECIMAL(10,2))
+[311] (170:2428): Invalid Value Handling
+[312] (170:2431): Use Default
+[313] (170:2434): Default Value
+[314] (170:2437): 0.00
+[315] (170:2441): Precision warning: Source DECIMAL may have higher precision than target DECIMAL(10,2). Values will be rounded. Verify with sample data.
+[316] (170:2445): 09
+[317] (170:2447): Null &amp; Default Handling
+[318] (170:2451): Null Handling Strategy
+[319] (170:2456): Preserve Null
+[320] (170:2461): Replace With Default
+[321] (170:2465): Reject Record
+[322] (170:2469): Skip Field
+[323] (170:2473): Default Value
+[324] (170:2476): UNKNOWN
+[325] (170:2479): Default Expression
+[326] (170:2482): COALESCE(country_code, &#39;UNKNOWN&#39;)
+[327] (170:2487): 12
+[328] (170:2489): Data Preview
+[329] (170:2493): 10 records
+[330] (170:2495): ↻ Refresh
+[331] (170:2497): ▶ Preview
+[332] (170:2500): Source Data
+[333] (170:2502): Mapped Data
+[334] (170:2504): Differences
+[335] (170:2508): Records Previewed
+[336] (170:2510): 10
+[337] (170:2513): Successful Mappings
+[338] (170:2515): 9
+[339] (170:2518): Failed Transformations
+[340] (170:2520): 1
+[341] (170:2523): Null Values
+[342] (170:2525): 3
+[343] (170:2528): Rejected Records
+[344] (170:2530): 0
+[345] (170:2534): #
+[346] (170:2536): customer_id
+[347] (170:2538): full_name
+[348] (170:2540): email
+[349] (170:2542): created_date
+[350] (170:2544): balance_usd
+[351] (170:2546): region
+[352] (170:2548): status
+[353] (170:2552): 1
+[354] (170:2554): 100421
+[355] (170:2556): Alice Chen
+[356] (170:2558): alice@corp.io
+[357] (170:2560): 2024-01-15
+[358] (170:2562): 1240.50
+[359] (170:2564): US
+[360] (170:2566): NULL
+[361] (170:2569): 2
+[362] (170:2571): 100422
+[363] (170:2573): Bob Martinez
+[364] (170:2575): bob.m@corp.io
+[365] (170:2577): 2024-02-03
+[366] (170:2579): 540.00
+[367] (170:2581): MX
+[368] (170:2583): NULL
+[369] (170:2586): 3
+[370] (170:2588): 100423
+[371] (170:2590): Chen Wei
+[372] (170:2592): cwei@corp.io
+[373] (170:2594): 2024-02-18
+[374] (170:2596): 3870.25
+[375] (170:2598): CN
+[376] (170:2600): NULL
+[377] (170:2603): 4
+[378] (170:2605): 100424
+[379] (170:2607): Diana Ross
+[380] (170:2609): d.ross@corp.io
+[381] (170:2611): 2024-03-07
+[382] (170:2613): 0.00
+[383] (170:2615): UK
+[384] (170:2617): NULL
+[385] (170:2621): 13
+[386] (170:2623): Runtime Configuration
+[387] (170:2627): Batch Size
+[388] (170:2630): 5000
+[389] (170:2633): Parallelism
+[390] (170:2636): 4
+[391] (170:2639): Timeout (s)
+[392] (170:2642): 300
+[393] (170:2645): Error Handling
+[394] (170:2648): Skip Invalid Records
+[395] (170:2651): Retry Policy
+[396] (170:2654): Exponential Backoff (3x)
+[397] (170:2658): 14
+[398] (170:2660): Monitoring
+[399] (170:2664): Options
+[400] (170:2669): Enable Mapping Metrics
+[401] (170:2673): Enable Transformation Logs
+[402] (170:2677): Track Rejected Records
+[403] (170:2681): Track Transformation Errors
+[404] (170:2685): Alert on Mapping Failures
+[405] (170:2689): Records Processed
+[406] (170:2691): 4,200,000
+[407] (170:2694): Records Mapped
+[408] (170:2696): 4,183,421
+[409] (170:2699): Records Rejected
+[410] (170:2701): 16,579
+[411] (170:2704): Transform Errors
+[412] (170:2706): 142
+[413] (170:2709): Processing Duration
+[414] (170:2711): 8m 24s
+[415] (170:2716): 15
+[416] (170:2718): Advanced Configuration
+[417] (170:2720): — Runtime variables, schema overrides, custom functions
+[418] (170:2722): +
+[419] (170:2728): Validation
+[420] (170:2731): Preview
+[421] (170:2734): Logs
+[422] (170:2738): 6 passed
+[423] (170:2741): 1 warning
+[424] (170:2744): 1 error
+[425] (170:2749): ✗
+[426] (170:2751): ERROR
+[427] (170:2753): status
+[428] (170:2755): Required target field has no source mapping.
+[429] (170:2757): Map a source field or provide a default expression.
+[430] (170:2761): !
+[431] (170:2763): WARN
+[432] (170:2765): balance_usd → balance_usd
+[433] (170:2767): Precision loss possible: source DECIMAL may exceed DECIMAL(10,2).
+[434] (170:2769): Verify sample data or increase target precision.
+[435] (170:2773): ✓
+[436] (170:2775): PASS
+[437] (170:2777): customer_id
+[438] (170:2779): Direct mapping validated successfully.
+[439] (170:2781): —
+[440] (170:2785): ✓
+[441] (170:2787): PASS
+[442] (170:2789): full_name
+[443] (170:2791): CONCAT expression is syntactically valid.
+[444] (170:2793): —
+[445] (170:2797): ✓
+[446] (170:2799): PASS
+[447] (170:2801): email
+[448] (170:2803): LOWER(TRIM()) expression validated.
+[449] (170:2805): —
+[450] (170:2809): ✓
+[451] (170:2811): PASS
+[452] (170:2813): created_date
+[453] (170:2815): DATE_FORMAT transformation validated.
+[454] (170:2817): —
+[455] (170:2820): Node Summary
+[456] (170:2823): Configuration Status
+[457] (170:2827): Draft
+[458] (170:2829): Mapping incomplete. 1 required target field missing.
+[459] (170:2832): Mapping Completeness
+[460] (170:2836): Overall completion
+[461] (170:2838): 75%
+[462] (170:2844): Total Source Fields
+[463] (170:2846): 18
+[464] (170:2849): Mapped Fields
+[465] (170:2851): 6
+[466] (170:2854): Unmapped Fields
+[467] (170:2856): 2
+[468] (170:2859): Total Target Fields
+[469] (170:2861): 14
+[470] (170:2864): Required Fields Mapped
+[471] (170:2866): 5 / 6
+[472] (170:2869): Transformations
+[473] (170:2871): 4
+[474] (170:2874): Validation Errors
+[475] (170:2876): 1
+[476] (170:2879): Schema Summary
+[477] (170:2883): Source Fields
+[478] (170:2885): 18
+[479] (170:2888): Target Fields
+[480] (170:2890): 14
+[481] (170:2893): Required Fields
+[482] (170:2895): 9
+[483] (170:2898): Transformation Summary
+[484] (170:2902): Direct Mappings
+[485] (170:2904): 2
+[486] (170:2907): Transformations
+[487] (170:2909): 3
+[488] (170:2912): Type Conversions
+[489] (170:2914): 1
+[490] (170:2917): Validation Summary
+[491] (170:2922): Passed
+[492] (170:2924): 6
+[493] (170:2928): Warnings
+[494] (170:2930): 1
+[495] (170:2934): Errors
+[496] (170:2936): 1
+[497] (170:2938): Run Validation
+[498] (170:2941): Mapping Status
+[499] (170:2945): Total Mappings
+[500] (170:2947): 8
+[501] (170:2950): Complete
+[502] (170:2952): 6
+[503] (170:2955): Incomplete
+[504] (170:2957): 1
+[505] (170:2960): Invalid
+[506] (170:2962): 1
+[507] (170:2967): Node ID:
+[508] (170:2968): map_node_0041
+[509] (170:2970): Pipeline:
+[510] (170:2971): customer-etl-v2
+[511] (170:2973): Stage:
+[512] (170:2974): 3 of 7
+[513] (170:2979): Unsaved changes
+[514] (170:2981): Last saved: 2026-08-08 14:32 UTC
+[515] (170:2984): Cancel
+[516] (170:2986): Save Draft
+[517] (170:2988): Validate
+[518] (170:2990): ▶ Preview
+[519] (170:2992): Apply Configuration

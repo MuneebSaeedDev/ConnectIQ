@@ -1,0 +1,497 @@
+[220:6010] Transformation Node Configuration
+[220:6012] Draft
+[220:6014] Configure transformation rules, expressions, type conversions, cleaning operations, and reusable logic.
+[220:6017] Cancel
+[220:6019] Reset
+[220:6021] Duplicate Node
+[220:6023] ⚡ Test Transformation
+[220:6025] Save Configuration
+[220:6033] General Information
+[220:6035] Node identity and metadata
+[220:6040] Node Name
+[220:6041] *
+[220:6044] e.g. clean_customer_records
+[220:6047] Display Name
+[220:6050] e.g. Clean Customer Records
+[220:6053] Description
+[220:6056] Describe what this transformation node does…
+[220:6059] Transformation Category
+[220:6060] *
+[220:6063] Data Cleaning
+[220:6065] ▼
+[220:6068] Owner
+[220:6071] D. Engineer
+[220:6073] ▼
+[220:6076] Tags
+[220:6079] e.g. cleaning, customer, prod
+[220:6083] Node Type
+[220:6085] Transformation
+[220:6088] Version
+[220:6090] v1.0.0
+[220:6093] Created By
+[220:6095] D. Engineer
+[220:6098] Last Modified
+[220:6100] 2 min ago
+[220:6105] Input Dataset
+[220:6107] Schema inherited from the upstream node
+[220:6110] ↻ Refresh Schema
+[220:6112] View Input Data
+[220:6117] Previous Node
+[220:6119] Filter: Valid Orders
+[220:6122] Dataset
+[220:6124] orders_filtered
+[220:6127] Schema Version
+[220:6129] v3.2
+[220:6132] Total Fields
+[220:6134] 14 fields
+[220:6137] Estimated Records
+[220:6139] 284,590
+[220:6142] Last Schema Refresh
+[220:6144] 4 min ago
+[220:6148] Field Name
+[220:6150] Data Type
+[220:6152] Nullable
+[220:6154] Sample Value
+[220:6156] Source Path
+[220:6159] customer_id
+[220:6162] String
+[220:6164] No
+[220:6166] CUS-00482910
+[220:6168] orders.customer_id
+[220:6171] order_date
+[220:6174] String
+[220:6176] No
+[220:6178] 2024-01-15T08:32:00Z
+[220:6180] orders.created_at
+[220:6183] email
+[220:6186] String
+[220:6188] Yes
+[220:6190] alice@example.com
+[220:6192] orders.customer.email
+[220:6195] total_amount
+[220:6198] String
+[220:6200] No
+[220:6202] &quot;1499.99&quot;
+[220:6204] orders.total
+[220:6207] status
+[220:6210] String
+[220:6212] No
+[220:6214] COMPLETED
+[220:6216] orders.status
+[220:6221] Transformation Mode
+[220:6223] Select the active transformation strategy
+[220:6226] Rule-Based Transformation
+[220:6228] Expression
+[220:6230] Data Cleaning
+[220:6232] Type Conversion
+[220:6234] Date Formatting
+[220:6236] Duplicate Removal
+[220:6238] Lookup
+[220:6240] Custom Transformation
+[220:6245] Transformation Rules
+[220:6247] Structured rule builder
+[220:6249] + Add Rule
+[220:6254] Input Field
+[220:6256] Transformation
+[220:6258] Parameters
+[220:6260] Output Field
+[220:6262] Output Type
+[220:6264] Status
+[220:6266] Actions
+[220:6271] email
+[220:6273] Normalize Case
+[220:6275] lowercase
+[220:6277] email_clean
+[220:6280] String
+[220:6283] Active
+[220:6286] ⋯
+[220:6291] total_amount
+[220:6293] String → Decimal
+[220:6295] format: &quot;0.00&quot;
+[220:6297] amount
+[220:6300] Decimal
+[220:6303] Active
+[220:6306] ⋯
+[220:6311] order_date
+[220:6313] Parse Timestamp
+[220:6315] src: &quot;ISO8601&quot;, tz: &quot;UTC&quot;
+[220:6317] order_ts
+[220:6320] Timestamp
+[220:6323] Active
+[220:6326] ⋯
+[220:6331] customer_id
+[220:6333] Trim Whitespace
+[220:6335] —
+[220:6337] customer_id
+[220:6340] String
+[220:6343] Disabled
+[220:6346] ⋯
+[220:6351] status
+[220:6353] Lookup
+[220:6355] table: status_map
+[220:6357] status_label
+[220:6360] String
+[220:6363] Invalid
+[220:6366] ⋯
+[220:6371] Data Cleaning
+[220:6373] Cleaning operations applied to input fields
+[220:6378] Input Field
+[220:6381] email
+[220:6383] ▼
+[220:6386] Cleaning Operation
+[220:6389] Normalize Case
+[220:6391] ▼
+[220:6394] Parameters
+[220:6397] e.g. lowercase
+[220:6400] Output Field
+[220:6403] e.g. email_clean
+[220:6406] Invalid Value Handling
+[220:6409] Set to Null
+[220:6411] ▼
+[220:6414] Available Operations
+[220:6417] Trim Whitespace
+[220:6419] Remove Extra Spaces
+[220:6421] Normalize Case
+[220:6423] Remove Special Characters
+[220:6425] Replace Values
+[220:6427] Standardize Values
+[220:6429] Handle Nulls
+[220:6431] Remove Empty Values
+[220:6433] Normalize Text
+[220:6435] Clean Numeric Values
+[220:6440] Type Conversion
+[220:6442] Explicit type conversion with format control
+[220:6447] Source Field
+[220:6450] total_amount
+[220:6452] ▼
+[220:6455] Source Type
+[220:6458] String
+[220:6460] ▼
+[220:6463] Target Type
+[220:6466] Decimal
+[220:6468] ▼
+[220:6471] Conversion Format
+[220:6474] e.g. &quot;0.00&quot;
+[220:6477] Invalid Value Handling
+[220:6480] Use Default
+[220:6482] ▼
+[220:6485] Default Value
+[220:6488] e.g. 0.00
+[220:6491] ✓
+[220:6493] Conversion valid: String → Decimal with format &quot;0.00&quot;
+[220:6498] Date Formatting
+[220:6500] Parse, format, and convert date/time fields
+[220:6505] Input Field
+[220:6508] order_date
+[220:6510] ▼
+[220:6513] Source Format
+[220:6516] ISO 8601
+[220:6518] ▼
+[220:6521] Target Format
+[220:6524] yyyy-MM-dd
+[220:6526] ▼
+[220:6529] Time Zone
+[220:6532] UTC
+[220:6534] ▼
+[220:6537] Locale
+[220:6540] en-US
+[220:6542] ▼
+[220:6545] Output Field
+[220:6548] e.g. order_date_clean
+[220:6552] Input Sample
+[220:6554] 2024-01-15T08:32:00Z
+[220:6557] Output Preview
+[220:6559] 2024-01-15
+[220:6564] Duplicate Removal
+[220:6566] Deterministic duplicate detection and removal
+[220:6571] Fields Used for Duplicate Detection
+[220:6574] customer_id
+[220:6576] ✕
+[220:6578] email
+[220:6580] ✕
+[220:6582] order_date
+[220:6584] ✕
+[220:6586] + Add
+[220:6589] Matching Strategy
+[220:6592] Exact Match
+[220:6594] ▼
+[220:6597] Keep Strategy
+[220:6600] First Record
+[220:6602] ▼
+[220:6605] Null Handling
+[220:6608] Treat as Distinct
+[220:6610] ▼
+[220:6614] Estimated Duplicates
+[220:6616] 3,241
+[220:6618] 1.14% of input records
+[220:6621] Estimated Unique
+[220:6623] 281,349
+[220:6625] 98.86% retained
+[220:6630] Lookup Transformation
+[220:6632] Enrich records using lookup tables or datasets
+[220:6637] Lookup Source
+[220:6640] Internal Dataset
+[220:6642] ▼
+[220:6645] Lookup Dataset
+[220:6648] status_map_v2
+[220:6650] ▼
+[220:6653] Lookup Key
+[220:6656] code
+[220:6658] ▼
+[220:6661] Input Key
+[220:6664] status
+[220:6666] ▼
+[220:6669] Output Field
+[220:6672] e.g. status_label
+[220:6675] Match Strategy
+[220:6678] Exact Match
+[220:6680] ▼
+[220:6683] Default Value
+[220:6686] e.g. UNKNOWN
+[220:6689] ✕
+[220:6691] Lookup dataset status_map_v2 is unavailable. Validate lookup before saving.
+[220:6696] Expression Editor
+[220:6698] Custom expression with field autocomplete and syntax validation
+[220:6703] Output Field
+[220:6704] *
+[220:6707] e.g. full_name
+[220:6710] Output Type
+[220:6713] String
+[220:6715] ▼
+[220:6719] Expression
+[220:6721] String
+[220:6723] Numeric
+[220:6725] Date / Time
+[220:6727] Logical
+[220:6729] Null
+[220:6731] Conversion
+[220:6733] Conditional
+[220:6736] Format
+[220:6739] // Full name from first + last
+[220:6741] output_field = CONCAT(TRIM(first_name), &quot; &quot;, UPPER(last_name))
+[220:6744] ✓
+[220:6746] Expression valid · Output type: String
+[220:6750] Input Sample
+[220:6752] first_name=&quot;alice&quot;, last_name=&quot;smith&quot;
+[220:6755] Evaluated Output
+[220:6757] &quot;alice SMITH&quot;
+[220:6762] Transformation Preview
+[220:6764] Before-and-after record comparison
+[220:6768] Input Data
+[220:6770] Transformed Data
+[220:6772] Differences
+[220:6774] ↻ Refresh
+[220:6779] 500
+[220:6781] Records Tested
+[220:6784] 498
+[220:6786] Transformed
+[220:6789] 1
+[220:6791] Unchanged
+[220:6794] 1
+[220:6796] Errors
+[220:6799] 0
+[220:6801] Null Results
+[220:6805] Input Value
+[220:6807] Transformation Applied
+[220:6809] Output Value
+[220:6811] Validation
+[220:6814] COMPLETED
+[220:6816] Lookup → status_map
+[220:6818] Order Completed
+[220:6820] ✓
+[220:6823] &quot;1499.99&quot;
+[220:6825] String → Decimal
+[220:6827] 1499.99
+[220:6829] ✓
+[220:6832] alice@example.com
+[220:6834] Normalize Case
+[220:6836] alice@example.com
+[220:6838] ✓
+[220:6841] NULL
+[220:6843] Trim → Handle Null
+[220:6845] null
+[220:6847] !
+[220:6850] INVALID_CODE
+[220:6852] Lookup → status_map
+[220:6854] UNKNOWN
+[220:6856] ✕
+[220:6861] Transformation Testing
+[220:6863] Test individual rules or the full transformation node
+[220:6866] Individual Rule
+[220:6868] Selected Rules
+[220:6870] ⚡ Run All Tests
+[220:6875] Test Input
+[220:6877] Expected Output
+[220:6879] Actual Output
+[220:6881] Status
+[220:6883] Duration
+[220:6886] email = ALICE@TEST.COM
+[220:6888] email_clean = alice@test.com
+[220:6890] alice@test.com
+[220:6893] Passed
+[220:6895] 2ms
+[220:6898] total = &quot;1299.00&quot;
+[220:6900] amount = 1299.00
+[220:6902] 1299.00
+[220:6905] Passed
+[220:6907] 1ms
+[220:6910] order_date = 2024-01-15T08:32:00Z
+[220:6912] order_ts = 2024-01-15
+[220:6914] 2024-01-15
+[220:6917] Passed
+[220:6919] 3ms
+[220:6922] status = INVALID_CODE
+[220:6924] status_label = UNKNOWN
+[220:6926] null
+[220:6929] Failed
+[220:6931] 4ms
+[220:6934] Transformation tests do not modify production data.
+[220:6939] Validation
+[220:6941] Continuous configuration validation
+[220:6945] ✕
+[220:6947] Lookup: status
+[220:6948] Lookup dataset &#39;status_map_v2&#39; is unavailable
+[220:6950] ↳ Verify dataset exists and re-validate
+[220:6953] !
+[220:6955] Rule #4: customer_id
+[220:6956] Rule is disabled and has no effect
+[220:6958] ↳ Enable rule or remove it
+[220:6961] ✓
+[220:6963] Type Conversion: total_amount
+[220:6964] String → Decimal conversion valid
+[220:6967] ✓
+[220:6969] Date Formatting: order_date
+[220:6970] Source format ISO 8601 parsed correctly
+[220:6973] ✓
+[220:6975] Expression: full_name
+[220:6976] Expression syntax valid, output type confirmed
+[220:6981] Runtime Configuration
+[220:6983] Execution behavior and error handling
+[220:6987] Batch Size
+[220:6990] 10000
+[220:6993] Parallelism
+[220:6996] 4
+[220:6999] Timeout (sec)
+[220:7002] 60
+[220:7005] Retry Policy
+[220:7008] Exponential Backoff
+[220:7010] ▼
+[220:7013] Error Handling
+[220:7016] Send Invalid Records to Error Output
+[220:7018] ▼
+[220:7023] Monitoring
+[220:7025] Operational visibility and alerting
+[220:7030] Enable Transformation Metrics
+[220:7035] Enable Transformation Logs
+[220:7040] Track Transformation Errors
+[220:7045] Track Rejected Records
+[220:7050] Track Processing Time
+[220:7055] Alert on High Error Rate
+[220:7061] Records Processed
+[220:7063] —
+[220:7066] Records Transformed
+[220:7068] —
+[220:7071] Records Rejected
+[220:7073] —
+[220:7076] Transformation Errors
+[220:7078] —
+[220:7081] Processing Duration
+[220:7083] —
+[220:7086] Throughput
+[220:7088] —
+[220:7093] Advanced Configuration
+[220:7095] Runtime variables, custom functions, lookup cache, schema overrides
+[220:7097] ▼
+[220:7102] Configuration Status
+[220:7106] Draft
+[220:7108] Not yet saved
+[220:7112] Validation
+[220:7114] 60%
+[220:7120] Transformation Summary
+[220:7124] Total Rules
+[220:7126] 5
+[220:7129] Active Rules
+[220:7131] 4
+[220:7134] Disabled Rules
+[220:7136] 1
+[220:7139] Fields Transformed
+[220:7141] 5
+[220:7144] Type Conversions
+[220:7146] 1
+[220:7149] Cleaning Ops
+[220:7151] 2
+[220:7154] Lookup Ops
+[220:7156] 1
+[220:7159] Expression Rules
+[220:7161] 1
+[220:7164] Validation Errors
+[220:7166] 1
+[220:7170] Operation Breakdown
+[220:7175] Cleaning
+[220:7177] 2
+[220:7183] Type Conversion
+[220:7185] 1
+[220:7191] Date Formatting
+[220:7193] 1
+[220:7199] Deduplication
+[220:7201] 0
+[220:7206] Lookup
+[220:7208] 1
+[220:7214] Expressions
+[220:7216] 1
+[220:7222] Test Summary
+[220:7227] 3
+[220:7229] Passed
+[220:7232] 1
+[220:7234] Failed
+[220:7237] 0
+[220:7239] Warn
+[220:7241] Last test: 2 min ago
+[220:7245] Validation Summary
+[220:7250] ✓
+[220:7252] Passed
+[220:7254] 3
+[220:7258] !
+[220:7260] Warnings
+[220:7262] 1
+[220:7266] ✕
+[220:7268] Errors
+[220:7270] 1
+[220:7273] Transformation Summary
+[220:7277] 5
+[220:7279] Total Rules
+[220:7282] 4
+[220:7284] Active Rules
+[220:7287] 1
+[220:7289] Disabled
+[220:7292] 5
+[220:7294] Fields Transformed
+[220:7297] 1
+[220:7299] Type Conversions
+[220:7302] 2
+[220:7304] Cleaning Ops
+[220:7307] 1
+[220:7309] Lookup Ops
+[220:7312] 1
+[220:7314] Expressions
+[220:7317] 1
+[220:7319] Validation Errors
+[220:7323] Validation
+[220:7325] Test Results
+[220:7327] Logs
+[220:7331] Severity
+[220:7333] Field / Rule
+[220:7335] Description
+[220:7337] Suggested Resolution
+[220:7341] Error
+[220:7343] Lookup: status_map_v2
+[220:7345] Lookup dataset unavailable or inaccessible
+[220:7347] Verify dataset exists and re-validate lookup
+[220:7351] Warning
+[220:7353] Rule #4: customer_id
+[220:7355] Rule is disabled and has no effect on output
+[220:7357] Enable rule or remove it to reduce confusion
+[220:7361] Info
+[220:7363] Expression: full_name
+[220:7365] Output field does not exist in upstream schema — will be created
+[220:7367] Confirm field creation is intended

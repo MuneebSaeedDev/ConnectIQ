@@ -1,0 +1,2034 @@
+<frame id="151:9778" name="Node Library Screen" x="4003" y="63127" width="1920" height="1410">
+  <frame id="151:9801" name="div" x="0" y="0" width="1920" height="1410">
+    <frame id="151:9802" name="nav" x="0" y="0" width="52" height="1410">
+      <frame id="151:9803" name="div:margin" x="9.5" y="12" width="32" height="44">
+        <frame id="151:9804" name="div" x="0" y="0" width="32" height="32">
+          <instance id="151:9805" name="Component 1" x="8" y="8" width="16" height="16" />
+        </frame>
+      </frame>
+      <frame id="151:9806" name="div" x="7.5" y="58" width="36" height="36">
+        <instance id="151:9807" name="Component 1" x="10" y="10" width="16" height="16" />
+      </frame>
+      <frame id="151:9808" name="div" x="7.5" y="96" width="36" height="36">
+        <instance id="151:9809" name="Component 1" x="10" y="10" width="16" height="16" />
+      </frame>
+      <frame id="151:9810" name="div" x="7.5" y="134" width="36" height="36">
+        <instance id="151:9811" name="Component 1" x="10" y="10" width="16" height="16" />
+      </frame>
+      <frame id="151:9812" name="div" x="7.5" y="172" width="36" height="36">
+        <instance id="151:9813" name="Component 1" x="10" y="10" width="16" height="16" />
+      </frame>
+      <frame id="151:9814" name="div" x="7.5" y="210" width="36" height="36">
+        <instance id="151:9815" name="Component 1" x="10" y="10" width="16" height="16" />
+      </frame>
+      <frame id="151:9816" name="div" x="7.5" y="248" width="36" height="36">
+        <instance id="151:9817" name="Component 1" x="10" y="10" width="16" height="16" />
+      </frame>
+      <frame id="151:9818" name="div" x="7.5" y="286" width="36" height="36">
+        <instance id="151:9819" name="Component 1" x="10" y="10" width="16" height="16" />
+      </frame>
+      <frame id="151:9820" name="div" x="10.5" y="1322" width="30" height="30">
+        <frame id="151:9821" name="span" x="5.5" y="6.5" width="19" height="17">
+          <text id="151:9822" name="MC" x="0" y="0" width="19" height="17" />
+        </frame>
+      </frame>
+    </frame>
+    <frame id="151:9823" name="aside" x="52" y="0" width="216" height="1410">
+      <frame id="151:9824" name="div" x="0" y="0" width="215" height="71">
+        <frame id="151:9825" name="div" x="12" y="12" width="191" height="15">
+          <text id="151:9826" name="Categories" x="0" y="0" width="191" height="15" />
+        </frame>
+        <frame id="151:9827" name="div" x="12" y="35" width="191" height="27">
+          <instance id="151:9828" name="Component 1" x="9" y="8" width="11" height="11" />
+          <frame id="151:9829" name="span" x="26" y="5" width="104" height="17">
+            <text id="151:9830" name="Search categories…" x="0" y="0" width="104" height="17" />
+          </frame>
+        </frame>
+      </frame>
+      <frame id="151:9831" name="div" x="0" y="71" width="215" height="1339">
+        <frame id="151:9832" name="div" x="0" y="6" width="215" height="29.25">
+          <instance id="151:9833" name="Component 1" x="14" y="8.625" width="12" height="12" />
+          <frame id="151:9834" name="span" x="34" y="6" width="143" height="17.25">
+            <text id="151:9835" name="All Nodes" x="0" y="-1" width="53.683502197265625" height="18" />
+          </frame>
+          <frame id="151:9836" name="span" x="185" y="7.125" width="18" height="15">
+            <text id="151:9837" name="284" x="0" y="0" width="18" height="15" />
+          </frame>
+        </frame>
+        <frame id="151:9838" name="div" x="0" y="35.25" width="215" height="332.25">
+          <frame id="151:9839" name="div" x="0" y="0" width="215" height="29.25">
+            <instance id="151:9840" name="Component 1" x="14" y="8.625" width="12" height="12" />
+            <frame id="151:9841" name="span" x="34" y="6" width="130" height="17.25">
+              <text id="151:9842" name="Sources" x="0" y="-1" width="46.00959396362305" height="18" />
+            </frame>
+            <frame id="151:9843" name="span" x="172" y="7.125" width="12" height="15">
+              <text id="151:9844" name="86" x="0" y="0" width="12" height="15" />
+            </frame>
+            <instance id="151:9845" name="Component 1" x="192" y="9.125" width="11" height="11" />
+          </frame>
+          <frame id="151:9846" name="div" x="0" y="29.25" width="215" height="25.25">
+            <text id="151:9847" name="Relational Databases" x="32" y="3" width="114" height="18" />
+          </frame>
+          <frame id="151:9848" name="div" x="0" y="54.5" width="215" height="25.25">
+            <text id="151:9849" name="NoSQL Databases" x="32" y="3" width="100" height="18" />
+          </frame>
+          <frame id="151:9850" name="div" x="0" y="79.75" width="215" height="25.25">
+            <text id="151:9851" name="Data Warehouses" x="32" y="3" width="96" height="18" />
+          </frame>
+          <frame id="151:9852" name="div" x="0" y="105" width="215" height="25.25">
+            <text id="151:9853" name="Cloud Storage" x="32" y="3" width="78" height="18" />
+          </frame>
+          <frame id="151:9854" name="div" x="0" y="130.25" width="215" height="25.25">
+            <text id="151:9855" name="REST APIs" x="32" y="3" width="57" height="18" />
+          </frame>
+          <frame id="151:9856" name="div" x="0" y="155.5" width="215" height="25.25">
+            <text id="151:9857" name="GraphQL" x="32" y="3" width="49" height="18" />
+          </frame>
+          <frame id="151:9858" name="div" x="0" y="180.75" width="215" height="25.25">
+            <text id="151:9859" name="SOAP" x="32" y="3" width="31" height="18" />
+          </frame>
+          <frame id="151:9860" name="div" x="0" y="206" width="215" height="25.25">
+            <text id="151:9861" name="FTP / SFTP" x="32" y="3" width="61" height="18" />
+          </frame>
+          <frame id="151:9862" name="div" x="0" y="231.25" width="215" height="25.25">
+            <text id="151:9863" name="Kafka" x="32" y="3" width="31" height="18" />
+          </frame>
+          <frame id="151:9864" name="div" x="0" y="256.5" width="215" height="25.25">
+            <text id="151:9865" name="Streaming" x="32" y="3" width="56" height="18" />
+          </frame>
+          <frame id="151:9866" name="div" x="0" y="281.75" width="215" height="25.25">
+            <text id="151:9867" name="File Systems" x="32" y="3" width="69" height="18" />
+          </frame>
+          <frame id="151:9868" name="div" x="0" y="307" width="215" height="25.25">
+            <text id="151:9869" name="SaaS Connectors" x="32" y="3" width="94" height="18" />
+          </frame>
+        </frame>
+        <frame id="151:9870" name="div" x="0" y="367.5" width="215" height="29.25">
+          <instance id="151:9871" name="Component 1" x="14" y="8.625" width="12" height="12" />
+          <frame id="151:9872" name="span" x="34" y="6" width="130" height="17.25">
+            <text id="151:9873" name="Transformations" x="0" y="-1" width="91.98162078857422" height="18" />
+          </frame>
+          <frame id="151:9874" name="span" x="172" y="7.125" width="12" height="15">
+            <text id="151:9875" name="94" x="0" y="0" width="12" height="15" />
+          </frame>
+          <instance id="151:9876" name="Component 1" x="192" y="9.125" width="11" height="11" />
+        </frame>
+        <frame id="151:9877" name="div" x="0" y="396.75" width="215" height="29.25">
+          <instance id="151:9878" name="Component 1" x="14" y="8.625" width="12" height="12" />
+          <frame id="151:9879" name="span" x="34" y="6" width="130" height="17.25">
+            <text id="151:9880" name="Validation" x="0" y="-1" width="55.6094970703125" height="18" />
+          </frame>
+          <frame id="151:9881" name="span" x="172" y="7.125" width="12" height="15">
+            <text id="151:9882" name="23" x="0" y="0" width="12" height="15" />
+          </frame>
+          <instance id="151:9883" name="Component 1" x="192" y="9.125" width="11" height="11" />
+        </frame>
+        <frame id="151:9884" name="div" x="0" y="426" width="215" height="29.25">
+          <instance id="151:9885" name="Component 1" x="14" y="8.625" width="12" height="12" />
+          <frame id="151:9886" name="span" x="34" y="6" width="130" height="17.25">
+            <text id="151:9887" name="Destinations" x="0" y="-1" width="70.19856262207031" height="18" />
+          </frame>
+          <frame id="151:9888" name="span" x="172" y="7.125" width="12" height="15">
+            <text id="151:9889" name="52" x="0" y="0" width="12" height="15" />
+          </frame>
+          <instance id="151:9890" name="Component 1" x="192" y="9.125" width="11" height="11" />
+        </frame>
+        <frame id="151:9891" name="div" x="0" y="455.25" width="215" height="29.25">
+          <instance id="151:9892" name="Component 1" x="14" y="8.625" width="12" height="12" />
+          <frame id="151:9893" name="span" x="34" y="6" width="130" height="17.25">
+            <text id="151:9894" name="Utilities" x="0" y="-1" width="42.342124938964844" height="18" />
+          </frame>
+          <frame id="151:9895" name="span" x="172" y="7.125" width="12" height="15">
+            <text id="151:9896" name="38" x="0" y="0" width="12" height="15" />
+          </frame>
+          <instance id="151:9897" name="Component 1" x="192" y="9.125" width="11" height="11" />
+        </frame>
+        <frame id="151:9898" name="div" x="12" y="484.5" width="191" height="161">
+          <frame id="151:9899" name="div" x="0" y="17" width="191" height="15">
+            <text id="151:9900" name="Quick Filters" x="0" y="0" width="191" height="15" />
+          </frame>
+          <frame id="151:9901" name="div" x="0" y="32" width="191" height="29">
+            <instance id="151:9902" name="Component 1" x="0" y="11" width="11" height="11" />
+            <text id="151:9903" name="Favorites" x="17" y="8" width="48" height="17" />
+          </frame>
+          <frame id="151:9904" name="div" x="0" y="61" width="191" height="25">
+            <instance id="151:9905" name="Component 1" x="0" y="7" width="11" height="11" />
+            <text id="151:9906" name="Recently Used" x="17" y="4" width="76" height="17" />
+          </frame>
+          <frame id="151:9907" name="div" x="0" y="86" width="191" height="25">
+            <instance id="151:9908" name="Component 1" x="0" y="7" width="11" height="11" />
+            <text id="151:9909" name="Custom Nodes" x="17" y="4" width="78" height="17" />
+          </frame>
+          <frame id="151:9910" name="div" x="0" y="111" width="191" height="25">
+            <instance id="151:9911" name="Component 1" x="0" y="7" width="11" height="11" />
+            <text id="151:9912" name="Enterprise Nodes" x="17" y="4" width="90" height="17" />
+          </frame>
+          <frame id="151:9913" name="div" x="0" y="136" width="191" height="25">
+            <instance id="151:9914" name="Component 1" x="0" y="7" width="11" height="11" />
+            <text id="151:9915" name="Most Used" x="17" y="4" width="57" height="17" />
+          </frame>
+        </frame>
+      </frame>
+    </frame>
+    <frame id="151:9916" name="main" x="268" y="0" width="1332" height="1410">
+      <frame id="151:9917" name="div" x="0" y="0" width="1332" height="89.58999633789062">
+        <frame id="151:9918" name="div" x="20" y="14" width="1292" height="58.59000015258789">
+          <frame id="151:9919" name="div" x="0" y="0" width="563.47998046875" height="58.59000015258789">
+            <frame id="151:9920" name="h1" x="0" y="0" width="563.47998046875" height="22">
+              <text id="151:9921" name="Node Library" x="0" y="0" width="113" height="22" />
+            </frame>
+            <frame id="151:9922" name="p" x="0" y="23.899999618530273" width="563.47998046875" height="34.689998626708984">
+              <text id="151:9923" name="Browse, organize, and manage reusable pipeline components for building enterprise ETL workflows." x="0" y="0" width="501" height="34" />
+            </frame>
+          </frame>
+          <frame id="151:9924" name="div" x="568" y="5.295000076293945" width="724" height="48">
+            <frame id="151:9925" name="button" x="0" y="9" width="85" height="30">
+              <instance id="151:9926" name="Component 1" x="11" y="8.5" width="13" height="13" />
+              <text id="151:9927" name="Refresh" x="29" y="6" width="45" height="18" />
+            </frame>
+            <frame id="151:9928" name="button" x="93" y="0" width="124.55999755859375" height="48">
+              <instance id="151:9929" name="Component 1" x="11" y="17.5" width="13" height="13" />
+              <text id="151:9930" name="Export Catalog" x="48.790000915527344" y="6" width="45" height="36" />
+            </frame>
+            <frame id="151:9931" name="button" x="225.55999755859375" y="0" width="151.02000427246094" height="48">
+              <instance id="151:9932" name="Component 1" x="11" y="17.5" width="13" height="13" />
+              <text id="151:9933" name="Manage Categories" x="53" y="6" width="63" height="36" />
+            </frame>
+            <rounded-rectangle id="151:9934" name="div" x="384.58001708984375" y="13" width="0.9800000190734863" height="22" />
+            <frame id="151:9935" name="button" x="393.5600280761719" y="0" width="162.99000549316406" height="48">
+              <instance id="151:9936" name="Component 1" x="11" y="17.5" width="13" height="13" />
+              <text id="151:9937" name="Import Node Package" x="54.48999786376953" y="6" width="72" height="36" />
+            </frame>
+            <frame id="151:9938" name="button" x="564.550048828125" y="0" width="159.4499969482422" height="48">
+              <instance id="151:9939" name="Component 1" x="11" y="17.5" width="13" height="13" />
+              <text id="151:9940" name="Create Custom Node" x="45.220001220703125" y="6" width="87" height="36" />
+            </frame>
+          </frame>
+        </frame>
+      </frame>
+      <frame id="151:9941" name="div" x="0" y="89.19000244140625" width="1332" height="78.75">
+        <frame id="151:9942" name="div" x="20" y="8" width="1292" height="61.75">
+          <frame id="151:9943" name="div" x="0" y="0" width="220" height="29.25">
+            <instance id="151:9944" name="Component 1" x="11" y="8.125" width="13" height="13" />
+            <frame id="151:9945" name="span" x="30" y="6" width="84.83999633789062" height="17.25">
+              <text id="151:9946" name="Search nodes…" x="0" y="-1" width="84.13912200927734" height="18" />
+            </frame>
+          </frame>
+          <frame id="151:9947" name="div" x="228" y="0.3700000047683716" width="114" height="29">
+            <frame id="151:9948" name="span" x="9" y="6" width="80" height="17">
+              <text id="151:9949" name="Node Category" x="0" y="0" width="80" height="17" />
+            </frame>
+            <instance id="151:9950" name="Component 1" x="94" y="9" width="11" height="11" />
+          </frame>
+          <frame id="151:9951" name="div" x="349.0899963378906" y="0.3700000047683716" width="118" height="29">
+            <frame id="151:9952" name="span" x="9" y="6" width="84" height="17">
+              <text id="151:9953" name="Connector Type" x="0" y="0" width="84" height="17" />
+            </frame>
+            <instance id="151:9954" name="Component 1" x="98" y="9" width="11" height="11" />
+          </frame>
+          <frame id="151:9955" name="div" x="474.5" y="0.3700000047683716" width="68" height="29">
+            <frame id="151:9956" name="span" x="9" y="6" width="34" height="17">
+              <text id="151:9957" name="Status" x="0" y="0" width="34" height="17" />
+            </frame>
+            <instance id="151:9958" name="Component 1" x="48" y="9" width="11" height="11" />
+          </frame>
+          <frame id="151:9959" name="div" x="549.2999877929688" y="0.3700000047683716" width="103" height="29">
+            <frame id="151:9960" name="span" x="9" y="6" width="69" height="17">
+              <text id="151:9961" name="Compatibility" x="0" y="0" width="69" height="17" />
+            </frame>
+            <instance id="151:9962" name="Component 1" x="83" y="9" width="11" height="11" />
+          </frame>
+          <frame id="151:9963" name="div" x="659.5800170898438" y="0.3700000047683716" width="72.98999786376953" height="29">
+            <frame id="151:9964" name="span" x="9" y="6" width="39" height="17">
+              <text id="151:9965" name="Version" x="0" y="0" width="39" height="17" />
+            </frame>
+            <instance id="151:9966" name="Component 1" x="52.98999786376953" y="9" width="11" height="11" />
+          </frame>
+          <frame id="151:9967" name="div" x="740.72998046875" y="0.3700000047683716" width="69" height="29">
+            <frame id="151:9968" name="span" x="9" y="6" width="35" height="17">
+              <text id="151:9969" name="Owner" x="0" y="0" width="35" height="17" />
+            </frame>
+            <instance id="151:9970" name="Component 1" x="49" y="9" width="11" height="11" />
+          </frame>
+          <frame id="151:9971" name="div" x="817.2000122070312" y="0.3700000047683716" width="99" height="29">
+            <frame id="151:9972" name="span" x="9" y="6" width="65" height="17">
+              <text id="151:9973" name="Certification" x="0" y="0" width="65" height="17" />
+            </frame>
+            <instance id="151:9974" name="Component 1" x="79" y="9" width="11" height="11" />
+          </frame>
+          <frame id="151:9975" name="div" x="0" y="35.25" width="392" height="27">
+            <frame id="151:9976" name="button" x="0" y="0" width="68" height="27">
+              <text id="151:9977" name="Favorites" x="10" y="5" width="48" height="17" />
+            </frame>
+            <frame id="151:9978" name="button" x="72" y="0" width="96" height="27">
+              <text id="151:9979" name="Recently Used" x="10" y="5" width="76" height="17" />
+            </frame>
+            <frame id="151:9980" name="button" x="172" y="0" width="61" height="27">
+              <text id="151:9981" name="Custom" x="10" y="5" width="41" height="17" />
+            </frame>
+            <frame id="151:9982" name="button" x="237" y="0" width="73" height="27">
+              <text id="151:9983" name="Enterprise" x="10" y="5" width="53" height="17" />
+            </frame>
+            <frame id="151:9984" name="button" x="314" y="0" width="78" height="27">
+              <text id="151:9985" name="Most Used" x="10" y="5" width="58" height="17" />
+            </frame>
+          </frame>
+          <rounded-rectangle id="151:9986" name="div" x="397.0299987792969" y="39.5" width="1" height="18" />
+          <frame id="151:9987" name="div" x="406.0299987792969" y="40.25" width="173" height="17">
+            <frame id="151:9988" name="span" x="0" y="0" width="57" height="17">
+              <text id="151:9989" name="284 nodes" x="0" y="0" width="57" height="17" />
+            </frame>
+            <frame id="151:9990" name="span" x="63" y="0" width="4" height="17">
+              <text id="151:9991" name="·" x="0" y="0" width="4" height="17" />
+            </frame>
+            <frame id="151:9992" name="span" x="73" y="0" width="100" height="17">
+              <text id="151:9993" name="Updated 3 min ago" x="0" y="0" width="100" height="17" />
+            </frame>
+          </frame>
+          <frame id="151:9994" name="div" x="584.77001953125" y="37" width="89" height="23">
+            <frame id="151:9995" name="button" x="0" y="0" width="27" height="23">
+              <instance id="151:9996" name="Component 1" x="7" y="5" width="13" height="13" />
+            </frame>
+            <frame id="151:9997" name="button" x="31" y="0" width="27" height="23">
+              <instance id="151:9998" name="Component 1" x="7" y="5" width="13" height="13" />
+            </frame>
+            <frame id="151:9999" name="button" x="62" y="0" width="27" height="23">
+              <instance id="151:10000" name="Component 1" x="7" y="5" width="13" height="13" />
+            </frame>
+          </frame>
+        </frame>
+      </frame>
+      <frame id="151:10001" name="div" x="0" y="167.94000244140625" width="1332" height="1397.5">
+        <frame id="151:10002" name="div" x="20" y="16" width="1292" height="108.25">
+          <frame id="151:10003" name="div" x="0" y="0" width="154.5" height="108.25">
+            <frame id="151:10004" name="div" x="13" y="13" width="128.5" height="24">
+              <frame id="151:10005" name="div" x="0" y="0" width="24" height="24">
+                <instance id="151:10006" name="Component 1" x="6" y="6" width="12" height="12" />
+              </frame>
+            </frame>
+            <frame id="151:10007" name="div" x="13" y="40" width="128.5" height="21">
+              <text id="151:10008" name="284" x="0" y="3" width="128.5" height="18" />
+            </frame>
+            <frame id="151:10009" name="div" x="13" y="64" width="128.5" height="15">
+              <text id="151:10010" name="Total Nodes" x="0" y="0" width="128.5" height="15" />
+            </frame>
+            <frame id="151:10011" name="div" x="13" y="82" width="128.5" height="15.25">
+              <frame id="151:10012" name="span" x="0" y="1" width="22.809999465942383" height="14.25">
+                <text id="151:10013" name="↑+12" x="0" y="-1" width="23" height="15" />
+              </frame>
+              <frame id="151:10014" name="span" x="26.809999465942383" y="1" width="93.86000061035156" height="14.25">
+                <text id="151:10015" name="Across all categories" x="0" y="-1" width="94.14556121826172" height="15" />
+              </frame>
+            </frame>
+          </frame>
+          <frame id="151:10016" name="div" x="162.5" y="0" width="154.5" height="108.25">
+            <frame id="151:10017" name="div" x="13" y="13" width="128.5" height="24">
+              <frame id="151:10018" name="div" x="0" y="0" width="24" height="24">
+                <instance id="151:10019" name="Component 1" x="6" y="6" width="12" height="12" />
+              </frame>
+            </frame>
+            <frame id="151:10020" name="div" x="13" y="40" width="128.5" height="21">
+              <text id="151:10021" name="86" x="0" y="3" width="128.5" height="18" />
+            </frame>
+            <frame id="151:10022" name="div" x="13" y="64" width="128.5" height="15">
+              <text id="151:10023" name="Source Nodes" x="0" y="0" width="128.5" height="15" />
+            </frame>
+            <frame id="151:10024" name="div" x="13" y="82" width="128.5" height="15.25">
+              <frame id="151:10025" name="span" x="0" y="1" width="17.110000610351562" height="14.25">
+                <text id="151:10026" name="↑+4" x="0" y="-1" width="18" height="15" />
+              </frame>
+              <frame id="151:10027" name="span" x="21.110000610351562" y="1" width="85.61000061035156" height="14.25">
+                <text id="151:10028" name="12 connector types" x="0" y="-1" width="87.12290954589844" height="15" />
+              </frame>
+            </frame>
+          </frame>
+          <frame id="151:10029" name="div" x="325" y="0" width="154.5" height="108.25">
+            <frame id="151:10030" name="div" x="13" y="13" width="128.5" height="24">
+              <frame id="151:10031" name="div" x="0" y="0" width="24" height="24">
+                <instance id="151:10032" name="Component 1" x="6" y="6" width="12" height="12" />
+              </frame>
+            </frame>
+            <frame id="151:10033" name="div" x="13" y="40" width="128.5" height="21">
+              <text id="151:10034" name="94" x="0" y="3" width="128.5" height="18" />
+            </frame>
+            <frame id="151:10035" name="div" x="13" y="64" width="128.5" height="15">
+              <text id="151:10036" name="Transformations" x="0" y="0" width="128.5" height="15" />
+            </frame>
+            <frame id="151:10037" name="div" x="13" y="82" width="128.5" height="15.25">
+              <frame id="151:10038" name="span" x="0" y="1" width="17.110000610351562" height="14.25">
+                <text id="151:10039" name="↑+6" x="0" y="-1" width="18" height="15" />
+              </frame>
+              <frame id="151:10040" name="span" x="21.110000610351562" y="1" width="83.4800033569336" height="14.25">
+                <text id="151:10041" name="15 transform types" x="0" y="-1" width="85.11856079101562" height="15" />
+              </frame>
+            </frame>
+          </frame>
+          <frame id="151:10042" name="div" x="487.5" y="0" width="154.5" height="108.25">
+            <frame id="151:10043" name="div" x="13" y="13" width="128.5" height="24">
+              <frame id="151:10044" name="div" x="0" y="0" width="24" height="24">
+                <instance id="151:10045" name="Component 1" x="6" y="6" width="12" height="12" />
+              </frame>
+            </frame>
+            <frame id="151:10046" name="div" x="13" y="40" width="128.5" height="21">
+              <text id="151:10047" name="52" x="0" y="3" width="128.5" height="18" />
+            </frame>
+            <frame id="151:10048" name="div" x="13" y="64" width="128.5" height="15">
+              <text id="151:10049" name="Destinations" x="0" y="0" width="128.5" height="15" />
+            </frame>
+            <frame id="151:10050" name="div" x="13" y="82" width="128.5" height="15.25">
+              <frame id="151:10051" name="span" x="0" y="1" width="17.110000610351562" height="14.25">
+                <text id="151:10052" name="↑+2" x="0" y="-1" width="18" height="15" />
+              </frame>
+              <frame id="151:10053" name="span" x="21.110000610351562" y="1" width="54.380001068115234" height="14.25">
+                <text id="151:10054" name="8 sink types" x="0" y="-1" width="55.16025161743164" height="15" />
+              </frame>
+            </frame>
+          </frame>
+          <frame id="151:10055" name="div" x="650" y="0" width="154.5" height="108.25">
+            <frame id="151:10056" name="div" x="13" y="13" width="128.5" height="24">
+              <frame id="151:10057" name="div" x="0" y="0" width="24" height="24">
+                <instance id="151:10058" name="Component 1" x="6" y="6" width="12" height="12" />
+              </frame>
+            </frame>
+            <frame id="151:10059" name="div" x="13" y="40" width="128.5" height="21">
+              <text id="151:10060" name="38" x="0" y="3" width="128.5" height="18" />
+            </frame>
+            <frame id="151:10061" name="div" x="13" y="64" width="128.5" height="15">
+              <text id="151:10062" name="Utility Nodes" x="0" y="0" width="128.5" height="15" />
+            </frame>
+            <frame id="151:10063" name="div" x="13" y="82" width="128.5" height="15.25">
+              <frame id="151:10064" name="span" x="0" y="1" width="17.110000610351562" height="14.25">
+                <text id="151:10065" name="↑+1" x="0" y="-1" width="18" height="15" />
+              </frame>
+              <frame id="151:10066" name="span" x="21.110000610351562" y="1" width="60.5" height="14.25">
+                <text id="151:10067" name="9 utility types" x="0" y="-1" width="61.181251525878906" height="15" />
+              </frame>
+            </frame>
+          </frame>
+          <frame id="151:10068" name="div" x="812.5" y="0" width="154.5" height="108.25">
+            <frame id="151:10069" name="div" x="13" y="13" width="128.5" height="24">
+              <frame id="151:10070" name="div" x="0" y="0" width="24" height="24">
+                <instance id="151:10071" name="Component 1" x="6" y="6" width="12" height="12" />
+              </frame>
+            </frame>
+            <frame id="151:10072" name="div" x="13" y="40" width="128.5" height="21">
+              <text id="151:10073" name="14" x="0" y="3" width="128.5" height="18" />
+            </frame>
+            <frame id="151:10074" name="div" x="13" y="64" width="128.5" height="15">
+              <text id="151:10075" name="Custom Nodes" x="0" y="0" width="128.5" height="15" />
+            </frame>
+            <frame id="151:10076" name="div" x="13" y="82" width="128.5" height="15.25">
+              <frame id="151:10077" name="span" x="0" y="0.125" width="128.5" height="15">
+                <text id="151:10078" name="Enterprise-built" x="0" y="0" width="128.5" height="15" />
+              </frame>
+            </frame>
+          </frame>
+          <frame id="151:10079" name="div" x="975" y="0" width="154.5" height="108.25">
+            <frame id="151:10080" name="div" x="13" y="13" width="128.5" height="24">
+              <frame id="151:10081" name="div" x="0" y="0" width="24" height="24">
+                <instance id="151:10082" name="Component 1" x="6" y="6" width="12" height="12" />
+              </frame>
+            </frame>
+            <frame id="151:10083" name="div" x="13" y="40" width="128.5" height="21">
+              <text id="151:10084" name="7" x="0" y="3" width="128.5" height="18" />
+            </frame>
+            <frame id="151:10085" name="div" x="13" y="64" width="128.5" height="15">
+              <text id="151:10086" name="Deprecated" x="0" y="0" width="128.5" height="15" />
+            </frame>
+            <frame id="151:10087" name="div" x="13" y="82" width="128.5" height="15.25">
+              <frame id="151:10088" name="span" x="0" y="1" width="17.110000610351562" height="14.25">
+                <text id="151:10089" name="↑+1" x="0" y="-1" width="18" height="15" />
+              </frame>
+              <frame id="151:10090" name="span" x="21.110000610351562" y="1" width="86.16999816894531" height="14.25">
+                <text id="151:10091" name="Scheduled removal" x="0" y="-1" width="86.13597106933594" height="15" />
+              </frame>
+            </frame>
+          </frame>
+          <frame id="151:10092" name="div" x="1137.5" y="0" width="154.5" height="108.25">
+            <frame id="151:10093" name="div" x="13" y="13" width="128.5" height="24">
+              <frame id="151:10094" name="div" x="0" y="0" width="24" height="24">
+                <instance id="151:10095" name="Component 1" x="6" y="6" width="12" height="12" />
+              </frame>
+            </frame>
+            <frame id="151:10096" name="div" x="13" y="40" width="128.5" height="21">
+              <text id="151:10097" name="PostgreSQL" x="0" y="3" width="128.5" height="18" />
+            </frame>
+            <frame id="151:10098" name="div" x="13" y="64" width="128.5" height="15">
+              <text id="151:10099" name="Most Used" x="0" y="0" width="128.5" height="15" />
+            </frame>
+            <frame id="151:10100" name="div" x="13" y="82" width="128.5" height="15.25">
+              <frame id="151:10101" name="span" x="0" y="0.125" width="128.5" height="15">
+                <text id="151:10102" name="1,248 pipeline uses" x="0" y="0" width="128.5" height="15" />
+              </frame>
+            </frame>
+          </frame>
+        </frame>
+        <frame id="151:10103" name="div" x="20" y="140.25" width="1292" height="1025.25">
+          <frame id="151:10104" name="div" x="0" y="0" width="1016" height="1021.5">
+            <frame id="151:10105" name="div" x="0" y="0" width="1016" height="19">
+              <frame id="151:10106" name="div" x="0" y="0" width="154" height="19">
+                <frame id="151:10107" name="span" x="0" y="0.5" width="80" height="18">
+                  <text id="151:10108" name="Node Catalog" x="0" y="0" width="80" height="18" />
+                </frame>
+                <frame id="151:10109" name="span" x="86" y="0" width="68" height="19">
+                  <text id="151:10110" name="12 of 284" x="7" y="2" width="54" height="15" />
+                </frame>
+              </frame>
+              <frame id="151:10111" name="div" x="905" y="1" width="111" height="17">
+                <frame id="151:10112" name="span" x="0" y="0" width="41" height="17">
+                  <text id="151:10113" name="Sort by:" x="0" y="0" width="41" height="17" />
+                </frame>
+                <frame id="151:10114" name="span" x="47" y="0" width="64" height="17">
+                  <text id="151:10115" name="Most Used ▾" x="0" y="0" width="64" height="17" />
+                </frame>
+              </frame>
+            </frame>
+            <frame id="151:10116" name="div" x="0" y="29" width="1016" height="834.3800048828125">
+              <frame id="151:10117" name="div" x="0" y="0" width="332" height="202.83999633789062">
+                <frame id="151:10118" name="div" x="14" y="16" width="304" height="39.75">
+                  <frame id="151:10119" name="div" x="0" y="4.875" width="30" height="30">
+                    <instance id="151:10120" name="Component 1" x="8" y="8" width="14" height="14" />
+                  </frame>
+                  <frame id="151:10121" name="div" x="38" y="0" width="241" height="39.75">
+                    <frame id="151:10122" name="div" x="0" y="0" width="241" height="18.75">
+                      <text id="151:10123" name="PostgreSQL Source" x="0" y="-1" width="117.80191040039062" height="19" />
+                    </frame>
+                    <frame id="151:10124" name="div" x="0" y="20.75" width="241" height="19">
+                      <frame id="151:10125" name="span" x="0" y="0" width="59" height="19">
+                        <text id="151:10126" name="Source" x="7" y="2" width="45" height="15" />
+                      </frame>
+                      <frame id="151:10127" name="span" x="63" y="0" width="92" height="19">
+                        <instance id="151:10128" name="Component 1" x="7" y="5" width="9" height="9" />
+                        <text id="151:10129" name="Enterprise" x="19" y="2" width="66" height="15" />
+                      </frame>
+                    </frame>
+                  </frame>
+                  <frame id="151:10130" name="button" x="287" y="11.375" width="17" height="17">
+                    <instance id="151:10131" name="Component 1" x="2" y="2" width="13" height="13" />
+                  </frame>
+                </frame>
+                <frame id="151:10132" name="p" x="14" y="63.75" width="304" height="34.09000015258789">
+                  <text id="151:10133" name="Read from PostgreSQL relational databases with full query support, CDC, and batch modes." x="0" y="-0.9800000190734863" width="303.1600036621094" height="35" />
+                </frame>
+                <frame id="151:10134" name="div" x="14" y="105.83999633789062" width="304" height="15">
+                  <frame id="151:10135" name="span" x="0" y="0" width="36" height="15">
+                    <text id="151:10136" name="v3.2.1" x="0" y="0" width="36" height="15" />
+                  </frame>
+                  <frame id="151:10137" name="span" x="48" y="0" width="30" height="15">
+                    <text id="151:10138" name="v4.x+" x="0" y="0" width="30" height="15" />
+                  </frame>
+                  <frame id="151:10139" name="span" x="90" y="0" width="60" height="15">
+                    <text id="151:10140" name="1,248 uses" x="0" y="0" width="60" height="15" />
+                  </frame>
+                  <frame id="151:10141" name="span" x="162" y="0" width="60" height="15">
+                    <text id="151:10142" name="2026-07-14" x="0" y="0" width="60" height="15" />
+                  </frame>
+                </frame>
+                <frame id="151:10143" name="div" x="14" y="128.83999633789062" width="304" height="19">
+                  <frame id="151:10144" name="span" x="0" y="0" width="54" height="19">
+                    <text id="151:10145" name="Active" x="7" y="2" width="40" height="15" />
+                  </frame>
+                  <frame id="151:10146" name="div" x="244" y="2" width="60" height="15">
+                    <frame id="151:10147" name="div" x="0" y="4.5" width="38" height="6">
+                      <rounded-rectangle id="151:10148" name="div" x="0" y="0" width="6" height="6" />
+                      <rounded-rectangle id="151:10149" name="div" x="8" y="0" width="6" height="6" />
+                      <rounded-rectangle id="151:10150" name="div" x="16" y="0" width="6" height="6" />
+                      <rounded-rectangle id="151:10151" name="div" x="24" y="0" width="6" height="6" />
+                      <rounded-rectangle id="151:10152" name="div" x="32" y="0" width="6" height="6" />
+                    </frame>
+                    <frame id="151:10153" name="span" x="42" y="0" width="18" height="15">
+                      <text id="151:10154" name="98%" x="0" y="0" width="18" height="15" />
+                    </frame>
+                  </frame>
+                </frame>
+                <frame id="151:10155" name="div" x="14" y="155.83999633789062" width="304" height="33">
+                  <frame id="151:10156" name="span" x="0" y="13.5" width="120" height="15">
+                    <text id="151:10157" name="Platform Team · Data Eng" x="0" y="0" width="120" height="15" />
+                  </frame>
+                  <frame id="151:10158" name="div" x="239" y="9" width="65" height="24">
+                    <frame id="151:10159" name="button" x="0" y="5" width="14" height="14">
+                      <instance id="151:10160" name="Component 1" x="1" y="1" width="12" height="12" />
+                    </frame>
+                    <frame id="151:10161" name="button" x="18" y="0" width="47" height="24">
+                      <text id="151:10162" name="+ Add" x="8" y="4" width="31" height="16" />
+                    </frame>
+                  </frame>
+                </frame>
+                <rounded-rectangle id="151:10163" name="div" x="2" y="2" width="328" height="3" />
+              </frame>
+              <frame id="151:10164" name="div" x="342" y="0" width="332" height="202.83999633789062">
+                <frame id="151:10165" name="div" x="13" y="15" width="306" height="39.75">
+                  <frame id="151:10166" name="div" x="0" y="4.875" width="30" height="30">
+                    <instance id="151:10167" name="Component 1" x="8" y="8" width="14" height="14" />
+                  </frame>
+                  <frame id="151:10168" name="div" x="38" y="0" width="243" height="39.75">
+                    <frame id="151:10169" name="div" x="0" y="0" width="243" height="18.75">
+                      <text id="151:10170" name="Kafka Stream Reader" x="0" y="-1" width="127.84757995605469" height="19" />
+                    </frame>
+                    <frame id="151:10171" name="div" x="0" y="20.75" width="243" height="19">
+                      <frame id="151:10172" name="span" x="0" y="0" width="59" height="19">
+                        <text id="151:10173" name="Source" x="7" y="2" width="45" height="15" />
+                      </frame>
+                      <frame id="151:10174" name="span" x="63" y="0" width="92" height="19">
+                        <instance id="151:10175" name="Component 1" x="7" y="5" width="9" height="9" />
+                        <text id="151:10176" name="Enterprise" x="19" y="2" width="66" height="15" />
+                      </frame>
+                    </frame>
+                  </frame>
+                  <frame id="151:10177" name="button" x="289" y="11.375" width="17" height="17">
+                    <instance id="151:10178" name="Component 1" x="2" y="2" width="13" height="13" />
+                  </frame>
+                </frame>
+                <frame id="151:10179" name="p" x="13" y="62.75" width="306" height="34.09000015258789">
+                  <text id="151:10180" name="Consume from Apache Kafka topics with consumer group management and offset tracking." x="0" y="-0.9800000190734863" width="301.04998779296875" height="35" />
+                </frame>
+                <frame id="151:10181" name="div" x="13" y="104.83999633789062" width="306" height="15">
+                  <frame id="151:10182" name="span" x="0" y="0" width="36" height="15">
+                    <text id="151:10183" name="v2.4.0" x="0" y="0" width="36" height="15" />
+                  </frame>
+                  <frame id="151:10184" name="span" x="48" y="0" width="30" height="15">
+                    <text id="151:10185" name="v4.x+" x="0" y="0" width="30" height="15" />
+                  </frame>
+                  <frame id="151:10186" name="span" x="90" y="0" width="48" height="15">
+                    <text id="151:10187" name="876 uses" x="0" y="0" width="48" height="15" />
+                  </frame>
+                  <frame id="151:10188" name="span" x="150" y="0" width="60" height="15">
+                    <text id="151:10189" name="2026-07-22" x="0" y="0" width="60" height="15" />
+                  </frame>
+                </frame>
+                <frame id="151:10190" name="div" x="13" y="127.83999633789062" width="306" height="19">
+                  <frame id="151:10191" name="span" x="0" y="0" width="54" height="19">
+                    <text id="151:10192" name="Active" x="7" y="2" width="40" height="15" />
+                  </frame>
+                  <frame id="151:10193" name="div" x="246" y="2" width="60" height="15">
+                    <frame id="151:10194" name="div" x="0" y="4.5" width="38" height="6">
+                      <rounded-rectangle id="151:10195" name="div" x="0" y="0" width="6" height="6" />
+                      <rounded-rectangle id="151:10196" name="div" x="8" y="0" width="6" height="6" />
+                      <rounded-rectangle id="151:10197" name="div" x="16" y="0" width="6" height="6" />
+                      <rounded-rectangle id="151:10198" name="div" x="24" y="0" width="6" height="6" />
+                      <rounded-rectangle id="151:10199" name="div" x="32" y="0" width="6" height="6" />
+                    </frame>
+                    <frame id="151:10200" name="span" x="42" y="0" width="18" height="15">
+                      <text id="151:10201" name="96%" x="0" y="0" width="18" height="15" />
+                    </frame>
+                  </frame>
+                </frame>
+                <frame id="151:10202" name="div" x="13" y="154.83999633789062" width="306" height="33">
+                  <frame id="151:10203" name="span" x="0" y="13.5" width="107" height="15">
+                    <text id="151:10204" name="Streaming Team · Infra" x="0" y="0" width="107" height="15" />
+                  </frame>
+                  <frame id="151:10205" name="div" x="241" y="9" width="65" height="24">
+                    <frame id="151:10206" name="button" x="0" y="5" width="14" height="14">
+                      <instance id="151:10207" name="Component 1" x="1" y="1" width="12" height="12" />
+                    </frame>
+                    <frame id="151:10208" name="button" x="18" y="0" width="47" height="24">
+                      <text id="151:10209" name="+ Add" x="8" y="4" width="31" height="16" />
+                    </frame>
+                  </frame>
+                </frame>
+                <rounded-rectangle id="151:10210" name="div" x="1" y="1" width="330" height="3" />
+              </frame>
+              <frame id="151:10211" name="div" x="684" y="0" width="332" height="202.83999633789062">
+                <frame id="151:10212" name="div" x="13" y="15" width="306" height="39.75">
+                  <frame id="151:10213" name="div" x="0" y="4.875" width="30" height="30">
+                    <instance id="151:10214" name="Component 1" x="8" y="8" width="14" height="14" />
+                  </frame>
+                  <frame id="151:10215" name="div" x="38" y="0" width="243" height="39.75">
+                    <frame id="151:10216" name="div" x="0" y="0" width="243" height="18.75">
+                      <text id="151:10217" name="REST API Connector" x="0" y="-1" width="122.99000549316406" height="19" />
+                    </frame>
+                    <frame id="151:10218" name="div" x="0" y="20.75" width="243" height="19">
+                      <frame id="151:10219" name="span" x="0" y="0" width="59" height="19">
+                        <text id="151:10220" name="Source" x="7" y="2" width="45" height="15" />
+                      </frame>
+                      <frame id="151:10221" name="span" x="63" y="0" width="80" height="19">
+                        <instance id="151:10222" name="Component 1" x="7" y="5" width="9" height="9" />
+                        <text id="151:10223" name="Internal" x="19" y="2" width="54" height="15" />
+                      </frame>
+                    </frame>
+                  </frame>
+                  <frame id="151:10224" name="button" x="289" y="11.375" width="17" height="17">
+                    <instance id="151:10225" name="Component 1" x="2" y="2" width="13" height="13" />
+                  </frame>
+                </frame>
+                <frame id="151:10226" name="p" x="13" y="62.75" width="306" height="34.09000015258789">
+                  <text id="151:10227" name="HTTP/HTTPS source with OAuth 2.0, API key auth, pagination, rate-limit handling." x="0" y="-0.9800000190734863" width="262.3800048828125" height="35" />
+                </frame>
+                <frame id="151:10228" name="div" x="13" y="104.83999633789062" width="306" height="15">
+                  <frame id="151:10229" name="span" x="0" y="0" width="36" height="15">
+                    <text id="151:10230" name="v1.8.3" x="0" y="0" width="36" height="15" />
+                  </frame>
+                  <frame id="151:10231" name="span" x="48" y="0" width="30" height="15">
+                    <text id="151:10232" name="v3.5+" x="0" y="0" width="30" height="15" />
+                  </frame>
+                  <frame id="151:10233" name="span" x="90" y="0" width="48" height="15">
+                    <text id="151:10234" name="654 uses" x="0" y="0" width="48" height="15" />
+                  </frame>
+                  <frame id="151:10235" name="span" x="150" y="0" width="60" height="15">
+                    <text id="151:10236" name="2026-06-30" x="0" y="0" width="60" height="15" />
+                  </frame>
+                </frame>
+                <frame id="151:10237" name="div" x="13" y="127.83999633789062" width="306" height="19">
+                  <frame id="151:10238" name="span" x="0" y="0" width="54" height="19">
+                    <text id="151:10239" name="Active" x="7" y="2" width="40" height="15" />
+                  </frame>
+                  <frame id="151:10240" name="div" x="246" y="2" width="60" height="15">
+                    <frame id="151:10241" name="div" x="0" y="4.5" width="38" height="6">
+                      <rounded-rectangle id="151:10242" name="div" x="0" y="0" width="6" height="6" />
+                      <rounded-rectangle id="151:10243" name="div" x="8" y="0" width="6" height="6" />
+                      <rounded-rectangle id="151:10244" name="div" x="16" y="0" width="6" height="6" />
+                      <rounded-rectangle id="151:10245" name="div" x="24" y="0" width="6" height="6" />
+                      <rounded-rectangle id="151:10246" name="div" x="32" y="0" width="6" height="6" />
+                    </frame>
+                    <frame id="151:10247" name="span" x="42" y="0" width="18" height="15">
+                      <text id="151:10248" name="91%" x="0" y="0" width="18" height="15" />
+                    </frame>
+                  </frame>
+                </frame>
+                <frame id="151:10249" name="div" x="13" y="154.83999633789062" width="306" height="33">
+                  <frame id="151:10250" name="span" x="0" y="13.5" width="131" height="15">
+                    <text id="151:10251" name="Integration Team · Data Eng" x="0" y="0" width="131" height="15" />
+                  </frame>
+                  <frame id="151:10252" name="div" x="241" y="9" width="65" height="24">
+                    <frame id="151:10253" name="button" x="0" y="5" width="14" height="14">
+                      <instance id="151:10254" name="Component 1" x="1" y="1" width="12" height="12" />
+                    </frame>
+                    <frame id="151:10255" name="button" x="18" y="0" width="47" height="24">
+                      <text id="151:10256" name="+ Add" x="8" y="4" width="31" height="16" />
+                    </frame>
+                  </frame>
+                </frame>
+                <rounded-rectangle id="151:10257" name="div" x="1" y="1" width="330" height="3" />
+              </frame>
+              <frame id="151:10258" name="div" x="0" y="212.593994140625" width="332" height="200.8300018310547">
+                <frame id="151:10259" name="div" x="13" y="15" width="306" height="39.75">
+                  <frame id="151:10260" name="div" x="0" y="4.875" width="30" height="30">
+                    <instance id="151:10261" name="Component 1" x="8" y="8" width="14" height="14" />
+                  </frame>
+                  <frame id="151:10262" name="div" x="38" y="0" width="243" height="39.75">
+                    <frame id="151:10263" name="div" x="0" y="0" width="243" height="18.75">
+                      <text id="151:10264" name="Field Mapper" x="0" y="-1" width="79.24175262451172" height="19" />
+                    </frame>
+                    <frame id="151:10265" name="div" x="0" y="20.75" width="243" height="19">
+                      <frame id="151:10266" name="span" x="0" y="0" width="82" height="19">
+                        <text id="151:10267" name="Transform" x="7" y="2" width="68" height="15" />
+                      </frame>
+                      <frame id="151:10268" name="span" x="86" y="0" width="92" height="19">
+                        <instance id="151:10269" name="Component 1" x="7" y="5" width="9" height="9" />
+                        <text id="151:10270" name="Enterprise" x="19" y="2" width="66" height="15" />
+                      </frame>
+                    </frame>
+                  </frame>
+                  <frame id="151:10271" name="button" x="289" y="11.375" width="17" height="17">
+                    <instance id="151:10272" name="Component 1" x="2" y="2" width="13" height="13" />
+                  </frame>
+                </frame>
+                <frame id="151:10273" name="p" x="13" y="62.75" width="306" height="34.09000015258789">
+                  <text id="151:10274" name="Map, rename, cast, and drop fields with visual schema editor and expression support." x="0" y="-0.9750000238418579" width="282.7699890136719" height="35" />
+                </frame>
+                <frame id="151:10275" name="div" x="13" y="104.83999633789062" width="306" height="15">
+                  <frame id="151:10276" name="span" x="0" y="0" width="36" height="15">
+                    <text id="151:10277" name="v2.1.0" x="0" y="0" width="36" height="15" />
+                  </frame>
+                  <frame id="151:10278" name="span" x="48" y="0" width="30" height="15">
+                    <text id="151:10279" name="v4.x+" x="0" y="0" width="30" height="15" />
+                  </frame>
+                  <frame id="151:10280" name="span" x="90" y="0" width="60" height="15">
+                    <text id="151:10281" name="2,041 uses" x="0" y="0" width="60" height="15" />
+                  </frame>
+                  <frame id="151:10282" name="span" x="162" y="0" width="60" height="15">
+                    <text id="151:10283" name="2026-07-01" x="0" y="0" width="60" height="15" />
+                  </frame>
+                </frame>
+                <frame id="151:10284" name="div" x="13" y="127.83999633789062" width="306" height="19">
+                  <frame id="151:10285" name="span" x="0" y="0" width="54" height="19">
+                    <text id="151:10286" name="Active" x="7" y="2" width="40" height="15" />
+                  </frame>
+                  <frame id="151:10287" name="div" x="246" y="2" width="60" height="15">
+                    <frame id="151:10288" name="div" x="0" y="4.5" width="38" height="6">
+                      <rounded-rectangle id="151:10289" name="div" x="0" y="0" width="6" height="6" />
+                      <rounded-rectangle id="151:10290" name="div" x="8" y="0" width="6" height="6" />
+                      <rounded-rectangle id="151:10291" name="div" x="16" y="0" width="6" height="6" />
+                      <rounded-rectangle id="151:10292" name="div" x="24" y="0" width="6" height="6" />
+                      <rounded-rectangle id="151:10293" name="div" x="32" y="0" width="6" height="6" />
+                    </frame>
+                    <frame id="151:10294" name="span" x="42" y="0" width="18" height="15">
+                      <text id="151:10295" name="99%" x="0" y="0" width="18" height="15" />
+                    </frame>
+                  </frame>
+                </frame>
+                <frame id="151:10296" name="div" x="13" y="154.83999633789062" width="306" height="33">
+                  <frame id="151:10297" name="span" x="0" y="13.5" width="100" height="15">
+                    <text id="151:10298" name="Core Team · Platform" x="0" y="0" width="100" height="15" />
+                  </frame>
+                  <frame id="151:10299" name="div" x="241" y="9" width="65" height="24">
+                    <frame id="151:10300" name="button" x="0" y="5" width="14" height="14">
+                      <instance id="151:10301" name="Component 1" x="1" y="1" width="12" height="12" />
+                    </frame>
+                    <frame id="151:10302" name="button" x="18" y="0" width="47" height="24">
+                      <text id="151:10303" name="+ Add" x="8" y="4" width="31" height="16" />
+                    </frame>
+                  </frame>
+                </frame>
+                <rounded-rectangle id="151:10304" name="div" x="1" y="1" width="330" height="3" />
+              </frame>
+              <frame id="151:10305" name="div" x="342" y="212.593994140625" width="332" height="200.8300018310547">
+                <frame id="151:10306" name="div" x="13" y="15" width="306" height="39.75">
+                  <frame id="151:10307" name="div" x="0" y="4.875" width="30" height="30">
+                    <instance id="151:10308" name="Component 1" x="8" y="8" width="14" height="14" />
+                  </frame>
+                  <frame id="151:10309" name="div" x="38" y="0" width="243" height="39.75">
+                    <frame id="151:10310" name="div" x="0" y="0" width="243" height="18.75">
+                      <text id="151:10311" name="Python Script" x="0" y="-1" width="82.39666748046875" height="19" />
+                    </frame>
+                    <frame id="151:10312" name="div" x="0" y="20.75" width="243" height="19">
+                      <frame id="151:10313" name="span" x="0" y="0" width="82" height="19">
+                        <text id="151:10314" name="Transform" x="7" y="2" width="68" height="15" />
+                      </frame>
+                      <frame id="151:10315" name="span" x="86" y="0" width="80" height="19">
+                        <instance id="151:10316" name="Component 1" x="7" y="5" width="9" height="9" />
+                        <text id="151:10317" name="Internal" x="19" y="2" width="54" height="15" />
+                      </frame>
+                    </frame>
+                  </frame>
+                  <frame id="151:10318" name="button" x="289" y="11.375" width="17" height="17">
+                    <instance id="151:10319" name="Component 1" x="2" y="2" width="13" height="13" />
+                  </frame>
+                </frame>
+                <frame id="151:10320" name="p" x="13" y="62.75" width="306" height="34.09000015258789">
+                  <text id="151:10321" name="Execute arbitrary Python 3.11 transformations in sandboxed execution environment." x="0" y="-0.9750000238418579" width="248.29473876953125" height="35" />
+                </frame>
+                <frame id="151:10322" name="div" x="13" y="104.83999633789062" width="306" height="15">
+                  <frame id="151:10323" name="span" x="0" y="0" width="36" height="15">
+                    <text id="151:10324" name="v1.5.2" x="0" y="0" width="36" height="15" />
+                  </frame>
+                  <frame id="151:10325" name="span" x="48" y="0" width="30" height="15">
+                    <text id="151:10326" name="v4.2+" x="0" y="0" width="30" height="15" />
+                  </frame>
+                  <frame id="151:10327" name="span" x="90" y="0" width="48" height="15">
+                    <text id="151:10328" name="312 uses" x="0" y="0" width="48" height="15" />
+                  </frame>
+                  <frame id="151:10329" name="span" x="150" y="0" width="60" height="15">
+                    <text id="151:10330" name="2026-07-18" x="0" y="0" width="60" height="15" />
+                  </frame>
+                </frame>
+                <frame id="151:10331" name="div" x="13" y="127.83999633789062" width="306" height="19">
+                  <frame id="151:10332" name="span" x="0" y="0" width="42" height="19">
+                    <text id="151:10333" name="Beta" x="7" y="2" width="28" height="15" />
+                  </frame>
+                  <frame id="151:10334" name="div" x="246" y="2" width="60" height="15">
+                    <frame id="151:10335" name="div" x="0" y="4.5" width="38" height="6">
+                      <rounded-rectangle id="151:10336" name="div" x="0" y="0" width="6" height="6" />
+                      <rounded-rectangle id="151:10337" name="div" x="8" y="0" width="6" height="6" />
+                      <rounded-rectangle id="151:10338" name="div" x="16" y="0" width="6" height="6" />
+                      <rounded-rectangle id="151:10339" name="div" x="24" y="0" width="6" height="6" />
+                      <rounded-rectangle id="151:10340" name="div" x="32" y="0" width="6" height="6" />
+                    </frame>
+                    <frame id="151:10341" name="span" x="42" y="0" width="18" height="15">
+                      <text id="151:10342" name="87%" x="0" y="0" width="18" height="15" />
+                    </frame>
+                  </frame>
+                </frame>
+                <frame id="151:10343" name="div" x="13" y="154.83999633789062" width="306" height="33">
+                  <frame id="151:10344" name="span" x="0" y="13.5" width="86" height="15">
+                    <text id="151:10345" name="Data Science · ML" x="0" y="0" width="86" height="15" />
+                  </frame>
+                  <frame id="151:10346" name="div" x="241" y="9" width="65" height="24">
+                    <frame id="151:10347" name="button" x="0" y="5" width="14" height="14">
+                      <instance id="151:10348" name="Component 1" x="1" y="1" width="12" height="12" />
+                    </frame>
+                    <frame id="151:10349" name="button" x="18" y="0" width="47" height="24">
+                      <text id="151:10350" name="+ Add" x="8" y="4" width="31" height="16" />
+                    </frame>
+                  </frame>
+                </frame>
+                <rounded-rectangle id="151:10351" name="div" x="1" y="1" width="330" height="3" />
+              </frame>
+              <frame id="151:10352" name="div" x="684" y="212.593994140625" width="332" height="200.8300018310547">
+                <frame id="151:10353" name="div" x="13" y="15" width="306" height="39.75">
+                  <frame id="151:10354" name="div" x="0" y="4.875" width="30" height="30">
+                    <instance id="151:10355" name="Component 1" x="8" y="8" width="14" height="14" />
+                  </frame>
+                  <frame id="151:10356" name="div" x="38" y="0" width="243" height="39.75">
+                    <frame id="151:10357" name="div" x="0" y="0" width="243" height="18.75">
+                      <text id="151:10358" name="Stream Join" x="0" y="-1" width="72.43112182617188" height="19" />
+                    </frame>
+                    <frame id="151:10359" name="div" x="0" y="20.75" width="243" height="19">
+                      <frame id="151:10360" name="span" x="0" y="0" width="82" height="19">
+                        <text id="151:10361" name="Transform" x="7" y="2" width="68" height="15" />
+                      </frame>
+                      <frame id="151:10362" name="span" x="86" y="0" width="92" height="19">
+                        <instance id="151:10363" name="Component 1" x="7" y="5" width="9" height="9" />
+                        <text id="151:10364" name="Enterprise" x="19" y="2" width="66" height="15" />
+                      </frame>
+                    </frame>
+                  </frame>
+                  <frame id="151:10365" name="button" x="289" y="11.375" width="17" height="17">
+                    <instance id="151:10366" name="Component 1" x="2" y="2" width="13" height="13" />
+                  </frame>
+                </frame>
+                <frame id="151:10367" name="p" x="13" y="62.75" width="306" height="34.09000015258789">
+                  <text id="151:10368" name="Time-windowed stream join for combining multiple data streams on a shared key." x="0" y="-0.9750000238418579" width="289.6199951171875" height="35" />
+                </frame>
+                <frame id="151:10369" name="div" x="13" y="104.83999633789062" width="306" height="15">
+                  <frame id="151:10370" name="span" x="0" y="0" width="36" height="15">
+                    <text id="151:10371" name="v2.0.0" x="0" y="0" width="36" height="15" />
+                  </frame>
+                  <frame id="151:10372" name="span" x="48" y="0" width="30" height="15">
+                    <text id="151:10373" name="v4.x+" x="0" y="0" width="30" height="15" />
+                  </frame>
+                  <frame id="151:10374" name="span" x="90" y="0" width="48" height="15">
+                    <text id="151:10375" name="418 uses" x="0" y="0" width="48" height="15" />
+                  </frame>
+                  <frame id="151:10376" name="span" x="150" y="0" width="60" height="15">
+                    <text id="151:10377" name="2026-07-10" x="0" y="0" width="60" height="15" />
+                  </frame>
+                </frame>
+                <frame id="151:10378" name="div" x="13" y="127.83999633789062" width="306" height="19">
+                  <frame id="151:10379" name="span" x="0" y="0" width="54" height="19">
+                    <text id="151:10380" name="Active" x="7" y="2" width="40" height="15" />
+                  </frame>
+                  <frame id="151:10381" name="div" x="246" y="2" width="60" height="15">
+                    <frame id="151:10382" name="div" x="0" y="4.5" width="38" height="6">
+                      <rounded-rectangle id="151:10383" name="div" x="0" y="0" width="6" height="6" />
+                      <rounded-rectangle id="151:10384" name="div" x="8" y="0" width="6" height="6" />
+                      <rounded-rectangle id="151:10385" name="div" x="16" y="0" width="6" height="6" />
+                      <rounded-rectangle id="151:10386" name="div" x="24" y="0" width="6" height="6" />
+                      <rounded-rectangle id="151:10387" name="div" x="32" y="0" width="6" height="6" />
+                    </frame>
+                    <frame id="151:10388" name="span" x="42" y="0" width="18" height="15">
+                      <text id="151:10389" name="94%" x="0" y="0" width="18" height="15" />
+                    </frame>
+                  </frame>
+                </frame>
+                <frame id="151:10390" name="div" x="13" y="154.83999633789062" width="306" height="33">
+                  <frame id="151:10391" name="span" x="0" y="13.5" width="107" height="15">
+                    <text id="151:10392" name="Streaming Team · Infra" x="0" y="0" width="107" height="15" />
+                  </frame>
+                  <frame id="151:10393" name="div" x="241" y="9" width="65" height="24">
+                    <frame id="151:10394" name="button" x="0" y="5" width="14" height="14">
+                      <instance id="151:10395" name="Component 1" x="1" y="1" width="12" height="12" />
+                    </frame>
+                    <frame id="151:10396" name="button" x="18" y="0" width="47" height="24">
+                      <text id="151:10397" name="+ Add" x="8" y="4" width="31" height="16" />
+                    </frame>
+                  </frame>
+                </frame>
+                <rounded-rectangle id="151:10398" name="div" x="1" y="1" width="330" height="3" />
+              </frame>
+              <frame id="151:10399" name="div" x="0" y="423.18798828125" width="332" height="200.83999633789062">
+                <frame id="151:10400" name="div" x="13" y="15" width="306" height="39.75">
+                  <frame id="151:10401" name="div" x="0" y="4.875" width="30" height="30">
+                    <instance id="151:10402" name="Component 1" x="8" y="8" width="14" height="14" />
+                  </frame>
+                  <frame id="151:10403" name="div" x="38" y="0" width="243" height="39.75">
+                    <frame id="151:10404" name="div" x="0" y="0" width="243" height="18.75">
+                      <text id="151:10405" name="Schema Validator" x="0" y="-1" width="106.37407684326172" height="19" />
+                    </frame>
+                    <frame id="151:10406" name="div" x="0" y="20.75" width="243" height="19">
+                      <frame id="151:10407" name="span" x="0" y="0" width="79" height="19">
+                        <text id="151:10408" name="Validation" x="7" y="2" width="65" height="15" />
+                      </frame>
+                      <frame id="151:10409" name="span" x="83" y="0" width="92" height="19">
+                        <instance id="151:10410" name="Component 1" x="7" y="5" width="9" height="9" />
+                        <text id="151:10411" name="Enterprise" x="19" y="2" width="66" height="15" />
+                      </frame>
+                    </frame>
+                  </frame>
+                  <frame id="151:10412" name="button" x="289" y="11.375" width="17" height="17">
+                    <instance id="151:10413" name="Component 1" x="2" y="2" width="13" height="13" />
+                  </frame>
+                </frame>
+                <frame id="151:10414" name="p" x="13" y="62.75" width="306" height="34.09000015258789">
+                  <text id="151:10415" name="Validate records against JSON Schema v7 with configurable fail / warn / skip modes." x="0" y="-0.9800000190734863" width="243.83999633789062" height="35" />
+                </frame>
+                <frame id="151:10416" name="div" x="13" y="104.83999633789062" width="306" height="15">
+                  <frame id="151:10417" name="span" x="0" y="0" width="36" height="15">
+                    <text id="151:10418" name="v2.3.1" x="0" y="0" width="36" height="15" />
+                  </frame>
+                  <frame id="151:10419" name="span" x="48" y="0" width="30" height="15">
+                    <text id="151:10420" name="v3.5+" x="0" y="0" width="30" height="15" />
+                  </frame>
+                  <frame id="151:10421" name="span" x="90" y="0" width="48" height="15">
+                    <text id="151:10422" name="934 uses" x="0" y="0" width="48" height="15" />
+                  </frame>
+                  <frame id="151:10423" name="span" x="150" y="0" width="60" height="15">
+                    <text id="151:10424" name="2026-07-20" x="0" y="0" width="60" height="15" />
+                  </frame>
+                </frame>
+                <frame id="151:10425" name="div" x="13" y="127.83999633789062" width="306" height="19">
+                  <frame id="151:10426" name="span" x="0" y="0" width="54" height="19">
+                    <text id="151:10427" name="Active" x="7" y="2" width="40" height="15" />
+                  </frame>
+                  <frame id="151:10428" name="div" x="246" y="2" width="60" height="15">
+                    <frame id="151:10429" name="div" x="0" y="4.5" width="38" height="6">
+                      <rounded-rectangle id="151:10430" name="div" x="0" y="0" width="6" height="6" />
+                      <rounded-rectangle id="151:10431" name="div" x="8" y="0" width="6" height="6" />
+                      <rounded-rectangle id="151:10432" name="div" x="16" y="0" width="6" height="6" />
+                      <rounded-rectangle id="151:10433" name="div" x="24" y="0" width="6" height="6" />
+                      <rounded-rectangle id="151:10434" name="div" x="32" y="0" width="6" height="6" />
+                    </frame>
+                    <frame id="151:10435" name="span" x="42" y="0" width="18" height="15">
+                      <text id="151:10436" name="97%" x="0" y="0" width="18" height="15" />
+                    </frame>
+                  </frame>
+                </frame>
+                <frame id="151:10437" name="div" x="13" y="154.83999633789062" width="306" height="33">
+                  <frame id="151:10438" name="span" x="0" y="13.5" width="113" height="15">
+                    <text id="151:10439" name="Quality Team · Data Eng" x="0" y="0" width="113" height="15" />
+                  </frame>
+                  <frame id="151:10440" name="div" x="241" y="9" width="65" height="24">
+                    <frame id="151:10441" name="button" x="0" y="5" width="14" height="14">
+                      <instance id="151:10442" name="Component 1" x="1" y="1" width="12" height="12" />
+                    </frame>
+                    <frame id="151:10443" name="button" x="18" y="0" width="47" height="24">
+                      <text id="151:10444" name="+ Add" x="8" y="4" width="31" height="16" />
+                    </frame>
+                  </frame>
+                </frame>
+                <rounded-rectangle id="151:10445" name="div" x="1" y="1" width="330" height="3" />
+              </frame>
+              <frame id="151:10446" name="div" x="342" y="423.18798828125" width="332" height="200.83999633789062">
+                <frame id="151:10447" name="div" x="13" y="15" width="306" height="39.75">
+                  <frame id="151:10448" name="div" x="0" y="4.875" width="30" height="30">
+                    <instance id="151:10449" name="Component 1" x="8" y="8" width="14" height="14" />
+                  </frame>
+                  <frame id="151:10450" name="div" x="38" y="0" width="243" height="39.75">
+                    <frame id="151:10451" name="div" x="0" y="0" width="243" height="18.75">
+                      <text id="151:10452" name="BigQuery Sink" x="0" y="-1" width="86.2226333618164" height="19" />
+                    </frame>
+                    <frame id="151:10453" name="div" x="0" y="20.75" width="243" height="19">
+                      <frame id="151:10454" name="span" x="0" y="0" width="87" height="19">
+                        <text id="151:10455" name="Destination" x="7" y="2" width="73" height="15" />
+                      </frame>
+                      <frame id="151:10456" name="span" x="91" y="0" width="92" height="19">
+                        <instance id="151:10457" name="Component 1" x="7" y="5" width="9" height="9" />
+                        <text id="151:10458" name="Enterprise" x="19" y="2" width="66" height="15" />
+                      </frame>
+                    </frame>
+                  </frame>
+                  <frame id="151:10459" name="button" x="289" y="11.375" width="17" height="17">
+                    <instance id="151:10460" name="Component 1" x="2" y="2" width="13" height="13" />
+                  </frame>
+                </frame>
+                <frame id="151:10461" name="p" x="13" y="62.75" width="306" height="34.09000015258789">
+                  <text id="151:10462" name="Load data to Google BigQuery with streaming inserts, batch load, and partition control." x="0" y="-0.9800000190734863" width="278.37811279296875" height="35" />
+                </frame>
+                <frame id="151:10463" name="div" x="13" y="104.83999633789062" width="306" height="15">
+                  <frame id="151:10464" name="span" x="0" y="0" width="36" height="15">
+                    <text id="151:10465" name="v2.6.0" x="0" y="0" width="36" height="15" />
+                  </frame>
+                  <frame id="151:10466" name="span" x="48" y="0" width="30" height="15">
+                    <text id="151:10467" name="v4.x+" x="0" y="0" width="30" height="15" />
+                  </frame>
+                  <frame id="151:10468" name="span" x="90" y="0" width="48" height="15">
+                    <text id="151:10469" name="782 uses" x="0" y="0" width="48" height="15" />
+                  </frame>
+                  <frame id="151:10470" name="span" x="150" y="0" width="60" height="15">
+                    <text id="151:10471" name="2026-07-19" x="0" y="0" width="60" height="15" />
+                  </frame>
+                </frame>
+                <frame id="151:10472" name="div" x="13" y="127.83999633789062" width="306" height="19">
+                  <frame id="151:10473" name="span" x="0" y="0" width="54" height="19">
+                    <text id="151:10474" name="Active" x="7" y="2" width="40" height="15" />
+                  </frame>
+                  <frame id="151:10475" name="div" x="246" y="2" width="60" height="15">
+                    <frame id="151:10476" name="div" x="0" y="4.5" width="38" height="6">
+                      <rounded-rectangle id="151:10477" name="div" x="0" y="0" width="6" height="6" />
+                      <rounded-rectangle id="151:10478" name="div" x="8" y="0" width="6" height="6" />
+                      <rounded-rectangle id="151:10479" name="div" x="16" y="0" width="6" height="6" />
+                      <rounded-rectangle id="151:10480" name="div" x="24" y="0" width="6" height="6" />
+                      <rounded-rectangle id="151:10481" name="div" x="32" y="0" width="6" height="6" />
+                    </frame>
+                    <frame id="151:10482" name="span" x="42" y="0" width="18" height="15">
+                      <text id="151:10483" name="95%" x="0" y="0" width="18" height="15" />
+                    </frame>
+                  </frame>
+                </frame>
+                <frame id="151:10484" name="div" x="13" y="154.83999633789062" width="306" height="33">
+                  <frame id="151:10485" name="span" x="0" y="13.5" width="87" height="15">
+                    <text id="151:10486" name="Cloud Team · Infra" x="0" y="0" width="87" height="15" />
+                  </frame>
+                  <frame id="151:10487" name="div" x="241" y="9" width="65" height="24">
+                    <frame id="151:10488" name="button" x="0" y="5" width="14" height="14">
+                      <instance id="151:10489" name="Component 1" x="1" y="1" width="12" height="12" />
+                    </frame>
+                    <frame id="151:10490" name="button" x="18" y="0" width="47" height="24">
+                      <text id="151:10491" name="+ Add" x="8" y="4" width="31" height="16" />
+                    </frame>
+                  </frame>
+                </frame>
+                <rounded-rectangle id="151:10492" name="div" x="1" y="1" width="330" height="3" />
+              </frame>
+              <frame id="151:10493" name="div" x="684" y="423.18798828125" width="332" height="200.83999633789062">
+                <frame id="151:10494" name="div" x="13" y="15" width="306" height="39.75">
+                  <frame id="151:10495" name="div" x="0" y="4.875" width="30" height="30">
+                    <instance id="151:10496" name="Component 1" x="8" y="8" width="14" height="14" />
+                  </frame>
+                  <frame id="151:10497" name="div" x="38" y="0" width="243" height="39.75">
+                    <frame id="151:10498" name="div" x="0" y="0" width="243" height="18.75">
+                      <text id="151:10499" name="Error Handler" x="0" y="-1" width="80.97444915771484" height="19" />
+                    </frame>
+                    <frame id="151:10500" name="div" x="0" y="20.75" width="243" height="19">
+                      <frame id="151:10501" name="span" x="0" y="0" width="56" height="19">
+                        <text id="151:10502" name="Utility" x="7" y="2" width="42" height="15" />
+                      </frame>
+                      <frame id="151:10503" name="span" x="60" y="0" width="80" height="19">
+                        <instance id="151:10504" name="Component 1" x="7" y="5" width="9" height="9" />
+                        <text id="151:10505" name="Internal" x="19" y="2" width="54" height="15" />
+                      </frame>
+                    </frame>
+                  </frame>
+                  <frame id="151:10506" name="button" x="289" y="11.375" width="17" height="17">
+                    <instance id="151:10507" name="Component 1" x="2" y="2" width="13" height="13" />
+                  </frame>
+                </frame>
+                <frame id="151:10508" name="p" x="13" y="62.75" width="306" height="34.09000015258789">
+                  <text id="151:10509" name="Catch, route, and log pipeline errors with dead-letter queue and retry strategies." x="0" y="-0.9800000190734863" width="273.45660400390625" height="35" />
+                </frame>
+                <frame id="151:10510" name="div" x="13" y="104.83999633789062" width="306" height="15">
+                  <frame id="151:10511" name="span" x="0" y="0" width="36" height="15">
+                    <text id="151:10512" name="v1.2.0" x="0" y="0" width="36" height="15" />
+                  </frame>
+                  <frame id="151:10513" name="span" x="48" y="0" width="30" height="15">
+                    <text id="151:10514" name="v4.x+" x="0" y="0" width="30" height="15" />
+                  </frame>
+                  <frame id="151:10515" name="span" x="90" y="0" width="60" height="15">
+                    <text id="151:10516" name="1,104 uses" x="0" y="0" width="60" height="15" />
+                  </frame>
+                  <frame id="151:10517" name="span" x="162" y="0" width="60" height="15">
+                    <text id="151:10518" name="2026-06-15" x="0" y="0" width="60" height="15" />
+                  </frame>
+                </frame>
+                <frame id="151:10519" name="div" x="13" y="127.83999633789062" width="306" height="19">
+                  <frame id="151:10520" name="span" x="0" y="0" width="54" height="19">
+                    <text id="151:10521" name="Active" x="7" y="2" width="40" height="15" />
+                  </frame>
+                  <frame id="151:10522" name="div" x="246" y="2" width="60" height="15">
+                    <frame id="151:10523" name="div" x="0" y="4.5" width="38" height="6">
+                      <rounded-rectangle id="151:10524" name="div" x="0" y="0" width="6" height="6" />
+                      <rounded-rectangle id="151:10525" name="div" x="8" y="0" width="6" height="6" />
+                      <rounded-rectangle id="151:10526" name="div" x="16" y="0" width="6" height="6" />
+                      <rounded-rectangle id="151:10527" name="div" x="24" y="0" width="6" height="6" />
+                      <rounded-rectangle id="151:10528" name="div" x="32" y="0" width="6" height="6" />
+                    </frame>
+                    <frame id="151:10529" name="span" x="42" y="0" width="18" height="15">
+                      <text id="151:10530" name="92%" x="0" y="0" width="18" height="15" />
+                    </frame>
+                  </frame>
+                </frame>
+                <frame id="151:10531" name="div" x="13" y="154.83999633789062" width="306" height="33">
+                  <frame id="151:10532" name="span" x="0" y="13.5" width="117" height="15">
+                    <text id="151:10533" name="Platform Team · Platform" x="0" y="0" width="117" height="15" />
+                  </frame>
+                  <frame id="151:10534" name="div" x="241" y="9" width="65" height="24">
+                    <frame id="151:10535" name="button" x="0" y="5" width="14" height="14">
+                      <instance id="151:10536" name="Component 1" x="1" y="1" width="12" height="12" />
+                    </frame>
+                    <frame id="151:10537" name="button" x="18" y="0" width="47" height="24">
+                      <text id="151:10538" name="+ Add" x="8" y="4" width="31" height="16" />
+                    </frame>
+                  </frame>
+                </frame>
+                <rounded-rectangle id="151:10539" name="div" x="1" y="1" width="330" height="3" />
+              </frame>
+              <frame id="151:10540" name="div" x="0" y="633.781982421875" width="332" height="200.83999633789062">
+                <frame id="151:10541" name="div" x="13" y="15" width="306" height="39.75">
+                  <frame id="151:10542" name="div" x="0" y="4.875" width="30" height="30">
+                    <instance id="151:10543" name="Component 1" x="8" y="8" width="14" height="14" />
+                  </frame>
+                  <frame id="151:10544" name="div" x="38" y="0" width="243" height="39.75">
+                    <frame id="151:10545" name="div" x="0" y="0" width="243" height="18.75">
+                      <text id="151:10546" name="S3 Storage Reader" x="0" y="-1" width="113.05846405029297" height="19" />
+                    </frame>
+                    <frame id="151:10547" name="div" x="0" y="20.75" width="243" height="19">
+                      <frame id="151:10548" name="span" x="0" y="0" width="59" height="19">
+                        <text id="151:10549" name="Source" x="7" y="2" width="45" height="15" />
+                      </frame>
+                      <frame id="151:10550" name="span" x="63" y="0" width="92" height="19">
+                        <instance id="151:10551" name="Component 1" x="7" y="5" width="9" height="9" />
+                        <text id="151:10552" name="Enterprise" x="19" y="2" width="66" height="15" />
+                      </frame>
+                    </frame>
+                  </frame>
+                  <frame id="151:10553" name="button" x="289" y="11.375" width="17" height="17">
+                    <instance id="151:10554" name="Component 1" x="2" y="2" width="13" height="13" />
+                  </frame>
+                </frame>
+                <frame id="151:10555" name="p" x="13" y="62.75" width="306" height="34.09000015258789">
+                  <text id="151:10556" name="Read CSV, JSON, Parquet, and ORC files from Amazon S3 with glob patterns and partitioning." x="0" y="-0.9750000238418579" width="301.07000732421875" height="35" />
+                </frame>
+                <frame id="151:10557" name="div" x="13" y="104.83999633789062" width="306" height="15">
+                  <frame id="151:10558" name="span" x="0" y="0" width="36" height="15">
+                    <text id="151:10559" name="v3.0.2" x="0" y="0" width="36" height="15" />
+                  </frame>
+                  <frame id="151:10560" name="span" x="48" y="0" width="30" height="15">
+                    <text id="151:10561" name="v4.x+" x="0" y="0" width="30" height="15" />
+                  </frame>
+                  <frame id="151:10562" name="span" x="90" y="0" width="48" height="15">
+                    <text id="151:10563" name="567 uses" x="0" y="0" width="48" height="15" />
+                  </frame>
+                  <frame id="151:10564" name="span" x="150" y="0" width="60" height="15">
+                    <text id="151:10565" name="2026-07-11" x="0" y="0" width="60" height="15" />
+                  </frame>
+                </frame>
+                <frame id="151:10566" name="div" x="13" y="127.83999633789062" width="306" height="19">
+                  <frame id="151:10567" name="span" x="0" y="0" width="54" height="19">
+                    <text id="151:10568" name="Active" x="7" y="2" width="40" height="15" />
+                  </frame>
+                  <frame id="151:10569" name="div" x="246" y="2" width="60" height="15">
+                    <frame id="151:10570" name="div" x="0" y="4.5" width="38" height="6">
+                      <rounded-rectangle id="151:10571" name="div" x="0" y="0" width="6" height="6" />
+                      <rounded-rectangle id="151:10572" name="div" x="8" y="0" width="6" height="6" />
+                      <rounded-rectangle id="151:10573" name="div" x="16" y="0" width="6" height="6" />
+                      <rounded-rectangle id="151:10574" name="div" x="24" y="0" width="6" height="6" />
+                      <rounded-rectangle id="151:10575" name="div" x="32" y="0" width="6" height="6" />
+                    </frame>
+                    <frame id="151:10576" name="span" x="42" y="0" width="18" height="15">
+                      <text id="151:10577" name="93%" x="0" y="0" width="18" height="15" />
+                    </frame>
+                  </frame>
+                </frame>
+                <frame id="151:10578" name="div" x="13" y="154.83999633789062" width="306" height="33">
+                  <frame id="151:10579" name="span" x="0" y="13.5" width="87" height="15">
+                    <text id="151:10580" name="Cloud Team · Infra" x="0" y="0" width="87" height="15" />
+                  </frame>
+                  <frame id="151:10581" name="div" x="241" y="9" width="65" height="24">
+                    <frame id="151:10582" name="button" x="0" y="5" width="14" height="14">
+                      <instance id="151:10583" name="Component 1" x="1" y="1" width="12" height="12" />
+                    </frame>
+                    <frame id="151:10584" name="button" x="18" y="0" width="47" height="24">
+                      <text id="151:10585" name="+ Add" x="8" y="4" width="31" height="16" />
+                    </frame>
+                  </frame>
+                </frame>
+                <rounded-rectangle id="151:10586" name="div" x="1" y="1" width="330" height="3" />
+              </frame>
+              <frame id="151:10587" name="div" x="342" y="633.781982421875" width="332" height="200.83999633789062">
+                <frame id="151:10588" name="div" x="13" y="15" width="306" height="39.75">
+                  <frame id="151:10589" name="div" x="0" y="4.875" width="30" height="30">
+                    <instance id="151:10590" name="Component 1" x="8" y="8" width="14" height="14" />
+                  </frame>
+                  <frame id="151:10591" name="div" x="38" y="0" width="243" height="39.75">
+                    <frame id="151:10592" name="div" x="0" y="0" width="243" height="18.75">
+                      <text id="151:10593" name="Aggregate Node" x="0" y="-1" width="99.11274719238281" height="19" />
+                    </frame>
+                    <frame id="151:10594" name="div" x="0" y="20.75" width="243" height="19">
+                      <frame id="151:10595" name="span" x="0" y="0" width="82" height="19">
+                        <text id="151:10596" name="Transform" x="7" y="2" width="68" height="15" />
+                      </frame>
+                      <frame id="151:10597" name="span" x="86" y="0" width="92" height="19">
+                        <instance id="151:10598" name="Component 1" x="7" y="5" width="9" height="9" />
+                        <text id="151:10599" name="Enterprise" x="19" y="2" width="66" height="15" />
+                      </frame>
+                    </frame>
+                  </frame>
+                  <frame id="151:10600" name="button" x="289" y="11.375" width="17" height="17">
+                    <instance id="151:10601" name="Component 1" x="2" y="2" width="13" height="13" />
+                  </frame>
+                </frame>
+                <frame id="151:10602" name="p" x="13" y="62.75" width="306" height="34.09000015258789">
+                  <text id="151:10603" name="GROUP BY aggregations: SUM, AVG, COUNT, MIN, MAX with tumbling and sliding windows." x="0" y="-0.9750000238418579" width="292.7099914550781" height="35" />
+                </frame>
+                <frame id="151:10604" name="div" x="13" y="104.83999633789062" width="306" height="15">
+                  <frame id="151:10605" name="span" x="0" y="0" width="36" height="15">
+                    <text id="151:10606" name="v1.9.1" x="0" y="0" width="36" height="15" />
+                  </frame>
+                  <frame id="151:10607" name="span" x="48" y="0" width="30" height="15">
+                    <text id="151:10608" name="v4.x+" x="0" y="0" width="30" height="15" />
+                  </frame>
+                  <frame id="151:10609" name="span" x="90" y="0" width="48" height="15">
+                    <text id="151:10610" name="445 uses" x="0" y="0" width="48" height="15" />
+                  </frame>
+                  <frame id="151:10611" name="span" x="150" y="0" width="60" height="15">
+                    <text id="151:10612" name="2026-07-05" x="0" y="0" width="60" height="15" />
+                  </frame>
+                </frame>
+                <frame id="151:10613" name="div" x="13" y="127.83999633789062" width="306" height="19">
+                  <frame id="151:10614" name="span" x="0" y="0" width="54" height="19">
+                    <text id="151:10615" name="Active" x="7" y="2" width="40" height="15" />
+                  </frame>
+                  <frame id="151:10616" name="div" x="246" y="2" width="60" height="15">
+                    <frame id="151:10617" name="div" x="0" y="4.5" width="38" height="6">
+                      <rounded-rectangle id="151:10618" name="div" x="0" y="0" width="6" height="6" />
+                      <rounded-rectangle id="151:10619" name="div" x="8" y="0" width="6" height="6" />
+                      <rounded-rectangle id="151:10620" name="div" x="16" y="0" width="6" height="6" />
+                      <rounded-rectangle id="151:10621" name="div" x="24" y="0" width="6" height="6" />
+                      <rounded-rectangle id="151:10622" name="div" x="32" y="0" width="6" height="6" />
+                    </frame>
+                    <frame id="151:10623" name="span" x="42" y="0" width="18" height="15">
+                      <text id="151:10624" name="90%" x="0" y="0" width="18" height="15" />
+                    </frame>
+                  </frame>
+                </frame>
+                <frame id="151:10625" name="div" x="13" y="154.83999633789062" width="306" height="33">
+                  <frame id="151:10626" name="span" x="0" y="13.5" width="100" height="15">
+                    <text id="151:10627" name="Core Team · Platform" x="0" y="0" width="100" height="15" />
+                  </frame>
+                  <frame id="151:10628" name="div" x="241" y="9" width="65" height="24">
+                    <frame id="151:10629" name="button" x="0" y="5" width="14" height="14">
+                      <instance id="151:10630" name="Component 1" x="1" y="1" width="12" height="12" />
+                    </frame>
+                    <frame id="151:10631" name="button" x="18" y="0" width="47" height="24">
+                      <text id="151:10632" name="+ Add" x="8" y="4" width="31" height="16" />
+                    </frame>
+                  </frame>
+                </frame>
+                <rounded-rectangle id="151:10633" name="div" x="1" y="1" width="330" height="3" />
+              </frame>
+              <frame id="151:10634" name="div" x="684" y="633.781982421875" width="332" height="200.83999633789062">
+                <frame id="151:10635" name="div" x="13" y="15" width="306" height="39.75">
+                  <frame id="151:10636" name="div" x="0" y="4.875" width="30" height="30">
+                    <instance id="151:10637" name="Component 1" x="8" y="8" width="14" height="14" />
+                  </frame>
+                  <frame id="151:10638" name="div" x="38" y="0" width="243" height="39.75">
+                    <frame id="151:10639" name="div" x="0" y="0" width="243" height="18.75">
+                      <text id="151:10640" name="Snowflake Connector" x="0" y="-1" width="130.3408203125" height="19" />
+                    </frame>
+                    <frame id="151:10641" name="div" x="0" y="20.75" width="243" height="19">
+                      <frame id="151:10642" name="span" x="0" y="0" width="59" height="19">
+                        <text id="151:10643" name="Source" x="7" y="2" width="45" height="15" />
+                      </frame>
+                      <frame id="151:10644" name="span" x="63" y="0" width="95" height="19">
+                        <instance id="151:10645" name="Component 1" x="7" y="5" width="9" height="9" />
+                        <text id="151:10646" name="Community" x="19" y="2" width="69" height="15" />
+                      </frame>
+                    </frame>
+                  </frame>
+                  <frame id="151:10647" name="button" x="289" y="11.375" width="17" height="17">
+                    <instance id="151:10648" name="Component 1" x="2" y="2" width="13" height="13" />
+                  </frame>
+                </frame>
+                <frame id="151:10649" name="p" x="13" y="62.75" width="306" height="34.09000015258789">
+                  <text id="151:10650" name="Query Snowflake Data Cloud with auto-scaling, cluster key awareness, and result caching." x="0" y="-0.9750000238418579" width="305.42999267578125" height="35" />
+                </frame>
+                <frame id="151:10651" name="div" x="13" y="104.83999633789062" width="306" height="15">
+                  <frame id="151:10652" name="span" x="0" y="0" width="36" height="15">
+                    <text id="151:10653" name="v1.4.0" x="0" y="0" width="36" height="15" />
+                  </frame>
+                  <frame id="151:10654" name="span" x="48" y="0" width="30" height="15">
+                    <text id="151:10655" name="v4.2+" x="0" y="0" width="30" height="15" />
+                  </frame>
+                  <frame id="151:10656" name="span" x="90" y="0" width="42" height="15">
+                    <text id="151:10657" name="89 uses" x="0" y="0" width="42" height="15" />
+                  </frame>
+                  <frame id="151:10658" name="span" x="144" y="0" width="60" height="15">
+                    <text id="151:10659" name="2026-07-24" x="0" y="0" width="60" height="15" />
+                  </frame>
+                </frame>
+                <frame id="151:10660" name="div" x="13" y="127.83999633789062" width="306" height="19">
+                  <frame id="151:10661" name="span" x="0" y="0" width="96" height="19">
+                    <text id="151:10662" name="Experimental" x="7" y="2" width="82" height="15" />
+                  </frame>
+                  <frame id="151:10663" name="div" x="246" y="2" width="60" height="15">
+                    <frame id="151:10664" name="div" x="0" y="4.5" width="38" height="6">
+                      <rounded-rectangle id="151:10665" name="div" x="0" y="0" width="6" height="6" />
+                      <rounded-rectangle id="151:10666" name="div" x="8" y="0" width="6" height="6" />
+                      <rounded-rectangle id="151:10667" name="div" x="16" y="0" width="6" height="6" />
+                      <rounded-rectangle id="151:10668" name="div" x="24" y="0" width="6" height="6" />
+                      <rounded-rectangle id="151:10669" name="div" x="32" y="0" width="6" height="6" />
+                    </frame>
+                    <frame id="151:10670" name="span" x="42" y="0" width="18" height="15">
+                      <text id="151:10671" name="78%" x="0" y="0" width="18" height="15" />
+                    </frame>
+                  </frame>
+                </frame>
+                <frame id="151:10672" name="div" x="13" y="154.83999633789062" width="306" height="33">
+                  <frame id="151:10673" name="span" x="0" y="13.5" width="87" height="15">
+                    <text id="151:10674" name="Cloud Team · Infra" x="0" y="0" width="87" height="15" />
+                  </frame>
+                  <frame id="151:10675" name="div" x="241" y="9" width="65" height="24">
+                    <frame id="151:10676" name="button" x="0" y="5" width="14" height="14">
+                      <instance id="151:10677" name="Component 1" x="1" y="1" width="12" height="12" />
+                    </frame>
+                    <frame id="151:10678" name="button" x="18" y="0" width="47" height="24">
+                      <text id="151:10679" name="+ Add" x="8" y="4" width="31" height="16" />
+                    </frame>
+                  </frame>
+                </frame>
+                <rounded-rectangle id="151:10680" name="div" x="1" y="1" width="330" height="3" />
+              </frame>
+            </frame>
+          </frame>
+          <frame id="151:10681" name="div" x="1032" y="0" width="260" height="1025.25">
+            <frame id="151:10682" name="div" x="0" y="0" width="260" height="204">
+              <frame id="151:10683" name="div" x="1" y="1" width="258" height="55">
+                <frame id="151:10684" name="div" x="14" y="9" width="230" height="18">
+                  <text id="151:10685" name="Most Used Nodes" x="0" y="0" width="230" height="18" />
+                </frame>
+                <frame id="151:10686" name="div" x="14" y="29" width="230" height="15">
+                  <text id="151:10687" name="Last 30 days · by pipeline count" x="0" y="0" width="230" height="15" />
+                </frame>
+              </frame>
+              <frame id="151:10688" name="div" x="1" y="56" width="258" height="147">
+                <frame id="151:10689" name="div" x="14" y="10" width="230" height="19">
+                  <frame id="151:10690" name="div" x="0" y="0" width="230" height="16">
+                    <frame id="151:10691" name="span" x="0" y="0" width="66" height="16">
+                      <text id="151:10692" name="Field Mapper" x="0" y="0" width="66" height="16" />
+                    </frame>
+                    <frame id="151:10693" name="span" x="206" y="0.5" width="24" height="15">
+                      <text id="151:10694" name="2041" x="0" y="0" width="24" height="15" />
+                    </frame>
+                  </frame>
+                </frame>
+                <frame id="151:10695" name="div" x="14" y="37" width="230" height="19">
+                  <frame id="151:10696" name="div" x="0" y="0" width="230" height="16">
+                    <frame id="151:10697" name="span" x="0" y="0" width="98" height="16">
+                      <text id="151:10698" name="PostgreSQL Source" x="0" y="0" width="98" height="16" />
+                    </frame>
+                    <frame id="151:10699" name="span" x="206" y="0.5" width="24" height="15">
+                      <text id="151:10700" name="1248" x="0" y="0" width="24" height="15" />
+                    </frame>
+                  </frame>
+                </frame>
+                <frame id="151:10701" name="div" x="14" y="64" width="230" height="19">
+                  <frame id="151:10702" name="div" x="0" y="0" width="230" height="16">
+                    <frame id="151:10703" name="span" x="0" y="0" width="67" height="16">
+                      <text id="151:10704" name="Error Handler" x="0" y="0" width="67" height="16" />
+                    </frame>
+                    <frame id="151:10705" name="span" x="206" y="0.5" width="24" height="15">
+                      <text id="151:10706" name="1104" x="0" y="0" width="24" height="15" />
+                    </frame>
+                  </frame>
+                </frame>
+                <frame id="151:10707" name="div" x="14" y="91" width="230" height="19">
+                  <frame id="151:10708" name="div" x="0" y="0" width="230" height="16">
+                    <frame id="151:10709" name="span" x="0" y="0" width="88" height="16">
+                      <text id="151:10710" name="Schema Validator" x="0" y="0" width="88" height="16" />
+                    </frame>
+                    <frame id="151:10711" name="span" x="212" y="0.5" width="18" height="15">
+                      <text id="151:10712" name="934" x="0" y="0" width="18" height="15" />
+                    </frame>
+                  </frame>
+                </frame>
+                <frame id="151:10713" name="div" x="14" y="118" width="230" height="19">
+                  <frame id="151:10714" name="div" x="0" y="0" width="230" height="16">
+                    <frame id="151:10715" name="span" x="0" y="0" width="71" height="16">
+                      <text id="151:10716" name="BigQuery Sink" x="0" y="0" width="71" height="16" />
+                    </frame>
+                    <frame id="151:10717" name="span" x="212" y="0.5" width="18" height="15">
+                      <text id="151:10718" name="782" x="0" y="0" width="18" height="15" />
+                    </frame>
+                  </frame>
+                </frame>
+              </frame>
+            </frame>
+            <frame id="151:10719" name="div" x="0" y="218" width="260" height="179">
+              <frame id="151:10720" name="div" x="1" y="1" width="258" height="38">
+                <frame id="151:10721" name="div" x="14" y="9" width="230" height="18">
+                  <text id="151:10722" name="Category Distribution" x="0" y="0" width="230" height="18" />
+                </frame>
+              </frame>
+              <frame id="151:10723" name="div" x="1" y="39" width="258" height="139">
+                <frame id="151:10724" name="div" x="14" y="10" width="230" height="19">
+                  <frame id="151:10725" name="div" x="0" y="0" width="230" height="16">
+                    <frame id="151:10726" name="div" x="0" y="0" width="53" height="16">
+                      <rounded-rectangle id="151:10727" name="div" x="0" y="4.5" width="7" height="7" />
+                      <frame id="151:10728" name="span" x="12" y="0" width="41" height="16">
+                        <text id="151:10729" name="Sources" x="0" y="0" width="41" height="16" />
+                      </frame>
+                    </frame>
+                    <frame id="151:10730" name="div" x="194" y="0.5" width="36" height="15">
+                      <frame id="151:10731" name="span" x="0" y="0" width="12" height="15">
+                        <text id="151:10732" name="86" x="0" y="0" width="12" height="15" />
+                      </frame>
+                      <frame id="151:10733" name="span" x="18" y="0" width="18" height="15">
+                        <text id="151:10734" name="30%" x="0" y="0" width="18" height="15" />
+                      </frame>
+                    </frame>
+                  </frame>
+                </frame>
+                <frame id="151:10735" name="div" x="14" y="35" width="230" height="19">
+                  <frame id="151:10736" name="div" x="0" y="0" width="230" height="16">
+                    <frame id="151:10737" name="div" x="0" y="0" width="68" height="16">
+                      <rounded-rectangle id="151:10738" name="div" x="0" y="4.5" width="7" height="7" />
+                      <frame id="151:10739" name="span" x="12" y="0" width="56" height="16">
+                        <text id="151:10740" name="Transforms" x="0" y="0" width="56" height="16" />
+                      </frame>
+                    </frame>
+                    <frame id="151:10741" name="div" x="194" y="0.5" width="36" height="15">
+                      <frame id="151:10742" name="span" x="0" y="0" width="12" height="15">
+                        <text id="151:10743" name="94" x="0" y="0" width="12" height="15" />
+                      </frame>
+                      <frame id="151:10744" name="span" x="18" y="0" width="18" height="15">
+                        <text id="151:10745" name="33%" x="0" y="0" width="18" height="15" />
+                      </frame>
+                    </frame>
+                  </frame>
+                </frame>
+                <frame id="151:10746" name="div" x="14" y="60" width="230" height="19">
+                  <frame id="151:10747" name="div" x="0" y="0" width="230" height="16">
+                    <frame id="151:10748" name="div" x="0" y="0" width="74" height="16">
+                      <rounded-rectangle id="151:10749" name="div" x="0" y="4.5" width="7" height="7" />
+                      <frame id="151:10750" name="span" x="12" y="0" width="62" height="16">
+                        <text id="151:10751" name="Destinations" x="0" y="0" width="62" height="16" />
+                      </frame>
+                    </frame>
+                    <frame id="151:10752" name="div" x="194" y="0.5" width="36" height="15">
+                      <frame id="151:10753" name="span" x="0" y="0" width="12" height="15">
+                        <text id="151:10754" name="52" x="0" y="0" width="12" height="15" />
+                      </frame>
+                      <frame id="151:10755" name="span" x="18" y="0" width="18" height="15">
+                        <text id="151:10756" name="18%" x="0" y="0" width="18" height="15" />
+                      </frame>
+                    </frame>
+                  </frame>
+                </frame>
+                <frame id="151:10757" name="div" x="14" y="85" width="230" height="19">
+                  <frame id="151:10758" name="div" x="0" y="0" width="230" height="16">
+                    <frame id="151:10759" name="div" x="0" y="0" width="61" height="16">
+                      <rounded-rectangle id="151:10760" name="div" x="0" y="4.5" width="7" height="7" />
+                      <frame id="151:10761" name="span" x="12" y="0" width="49" height="16">
+                        <text id="151:10762" name="Validation" x="0" y="0" width="49" height="16" />
+                      </frame>
+                    </frame>
+                    <frame id="151:10763" name="div" x="200" y="0.5" width="30" height="15">
+                      <frame id="151:10764" name="span" x="0" y="0" width="12" height="15">
+                        <text id="151:10765" name="23" x="0" y="0" width="12" height="15" />
+                      </frame>
+                      <frame id="151:10766" name="span" x="18" y="0" width="12" height="15">
+                        <text id="151:10767" name="8%" x="0" y="0" width="12" height="15" />
+                      </frame>
+                    </frame>
+                  </frame>
+                </frame>
+                <frame id="151:10768" name="div" x="14" y="110" width="230" height="19">
+                  <frame id="151:10769" name="div" x="0" y="0" width="230" height="16">
+                    <frame id="151:10770" name="div" x="0" y="0" width="49" height="16">
+                      <rounded-rectangle id="151:10771" name="div" x="0" y="4.5" width="7" height="7" />
+                      <frame id="151:10772" name="span" x="12" y="0" width="37" height="16">
+                        <text id="151:10773" name="Utilities" x="0" y="0" width="37" height="16" />
+                      </frame>
+                    </frame>
+                    <frame id="151:10774" name="div" x="194" y="0.5" width="36" height="15">
+                      <frame id="151:10775" name="span" x="0" y="0" width="12" height="15">
+                        <text id="151:10776" name="38" x="0" y="0" width="12" height="15" />
+                      </frame>
+                      <frame id="151:10777" name="span" x="18" y="0" width="18" height="15">
+                        <text id="151:10778" name="13%" x="0" y="0" width="18" height="15" />
+                      </frame>
+                    </frame>
+                  </frame>
+                </frame>
+              </frame>
+            </frame>
+            <frame id="151:10779" name="div" x="0" y="411" width="260" height="236">
+              <frame id="151:10780" name="div" x="1" y="1" width="258" height="38">
+                <frame id="151:10781" name="div" x="14" y="9" width="230" height="18">
+                  <text id="151:10782" name="Recently Used" x="0" y="0" width="230" height="18" />
+                </frame>
+              </frame>
+              <frame id="151:10783" name="div" x="1" y="39" width="258" height="196">
+                <frame id="151:10784" name="div" x="0" y="4" width="258" height="47">
+                  <frame id="151:10785" name="div" x="14" y="6" width="230" height="17">
+                    <frame id="151:10786" name="span" x="0" y="0" width="104" height="17">
+                      <text id="151:10787" name="PostgreSQL Source" x="0" y="0" width="104" height="17" />
+                    </frame>
+                    <frame id="151:10788" name="span" x="195.79998779296875" y="1.375" width="34.20000076293945" height="14.25">
+                      <text id="151:10789" name="2h ago" x="0" y="-1" width="35.188751220703125" height="15" />
+                    </frame>
+                  </frame>
+                  <frame id="151:10790" name="div" x="14" y="25" width="230" height="15">
+                    <frame id="151:10791" name="span" x="0" y="0" width="78" height="15">
+                      <text id="151:10792" name="orders-etl-v3" x="0" y="0" width="78" height="15" />
+                    </frame>
+                    <frame id="151:10793" name="span" x="207.80999755859375" y="0.375" width="22.190000534057617" height="14.25">
+                      <text id="151:10794" name="Daily" x="0" y="-1" width="22.144624710083008" height="15" />
+                    </frame>
+                  </frame>
+                </frame>
+                <frame id="151:10795" name="div" x="0" y="51" width="258" height="47">
+                  <frame id="151:10796" name="div" x="14" y="6" width="230" height="17">
+                    <frame id="151:10797" name="span" x="0" y="0" width="94" height="17">
+                      <text id="151:10798" name="Schema Validator" x="0" y="0" width="94" height="17" />
+                    </frame>
+                    <frame id="151:10799" name="span" x="195.79998779296875" y="1.375" width="34.20000076293945" height="14.25">
+                      <text id="151:10800" name="5h ago" x="0" y="-1" width="35.188751220703125" height="15" />
+                    </frame>
+                  </frame>
+                  <frame id="151:10801" name="div" x="14" y="25" width="230" height="15">
+                    <frame id="151:10802" name="span" x="0" y="0" width="84" height="15">
+                      <text id="151:10803" name="user-sync-prod" x="0" y="0" width="84" height="15" />
+                    </frame>
+                    <frame id="151:10804" name="span" x="200.1999969482422" y="0.375" width="29.799999237060547" height="14.25">
+                      <text id="151:10805" name="Hourly" x="0" y="-1" width="30.18000030517578" height="15" />
+                    </frame>
+                  </frame>
+                </frame>
+                <frame id="151:10806" name="div" x="0" y="98" width="258" height="47">
+                  <frame id="151:10807" name="div" x="14" y="6" width="230" height="17">
+                    <frame id="151:10808" name="span" x="0" y="0" width="76" height="17">
+                      <text id="151:10809" name="BigQuery Sink" x="0" y="0" width="76" height="17" />
+                    </frame>
+                    <frame id="151:10810" name="span" x="195.79998779296875" y="1.375" width="34.20000076293945" height="14.25">
+                      <text id="151:10811" name="1d ago" x="0" y="-1" width="35.188751220703125" height="15" />
+                    </frame>
+                  </frame>
+                  <frame id="151:10812" name="div" x="14" y="25" width="230" height="15">
+                    <frame id="151:10813" name="span" x="0" y="0" width="102" height="15">
+                      <text id="151:10814" name="reporting-nightly" x="0" y="0" width="102" height="15" />
+                    </frame>
+                    <frame id="151:10815" name="span" x="207.80999755859375" y="0.375" width="22.190000534057617" height="14.25">
+                      <text id="151:10816" name="Daily" x="0" y="-1" width="22.144624710083008" height="15" />
+                    </frame>
+                  </frame>
+                </frame>
+                <frame id="151:10817" name="div" x="0" y="145" width="258" height="47">
+                  <frame id="151:10818" name="div" x="14" y="6" width="230" height="17">
+                    <frame id="151:10819" name="span" x="0" y="0" width="70" height="17">
+                      <text id="151:10820" name="Field Mapper" x="0" y="0" width="70" height="17" />
+                    </frame>
+                    <frame id="151:10821" name="span" x="195.79998779296875" y="1.375" width="34.20000076293945" height="14.25">
+                      <text id="151:10822" name="2d ago" x="0" y="-1" width="35.188751220703125" height="15" />
+                    </frame>
+                  </frame>
+                  <frame id="151:10823" name="div" x="14" y="25" width="230" height="15">
+                    <frame id="151:10824" name="span" x="0" y="0" width="90" height="15">
+                      <text id="151:10825" name="product-catalog" x="0" y="0" width="90" height="15" />
+                    </frame>
+                    <frame id="151:10826" name="span" x="197.13999938964844" y="0.375" width="32.86000061035156" height="14.25">
+                      <text id="151:10827" name="Weekly" x="0" y="-1" width="33.10049819946289" height="15" />
+                    </frame>
+                  </frame>
+                </frame>
+              </frame>
+            </frame>
+            <frame id="151:10828" name="div" x="0" y="661" width="260" height="364.25">
+              <frame id="151:10829" name="div" x="1" y="1" width="258" height="54.25">
+                <frame id="151:10830" name="div" x="14" y="10" width="92.33999633789062" height="33.25">
+                  <frame id="151:10831" name="div" x="0" y="-1" width="92.33999633789062" height="18">
+                    <text id="151:10832" name="Version History" x="0" y="0" width="88" height="18" />
+                  </frame>
+                  <frame id="151:10833" name="div" x="0" y="18.25" width="92.33999633789062" height="15">
+                    <text id="151:10834" name="PostgreSQL Source" x="0" y="0" width="93" height="15" />
+                  </frame>
+                </frame>
+                <frame id="151:10835" name="button" x="186" y="15.125" width="58" height="23">
+                  <text id="151:10836" name="Compare" x="7" y="4" width="44" height="15" />
+                </frame>
+              </frame>
+              <frame id="151:10837" name="div" x="1" y="55.25" width="258" height="268">
+                <frame id="151:10838" name="div" x="0" y="0" width="258" height="67.25">
+                  <frame id="151:10839" name="div" x="14" y="7" width="230" height="19">
+                    <frame id="151:10840" name="div" x="0" y="0" width="100" height="19">
+                      <frame id="151:10841" name="span" x="0" y="1" width="40" height="17">
+                        <text id="151:10842" name="v3.2.1" x="0" y="0" width="40" height="17" />
+                      </frame>
+                      <frame id="151:10843" name="span" x="46" y="0" width="54" height="19">
+                        <text id="151:10844" name="Active" x="7" y="2" width="40" height="15" />
+                      </frame>
+                    </frame>
+                    <frame id="151:10845" name="span" x="172.97999572753906" y="2.375" width="57.02000045776367" height="14.25">
+                      <text id="151:10846" name="2026-07-14" x="0" y="-1" width="57.17850112915039" height="15" />
+                    </frame>
+                  </frame>
+                  <frame id="151:10847" name="div" x="14" y="28" width="230" height="15">
+                    <text id="151:10848" name="Fixed CDC offset tracking for large tables" x="0" y="0" width="230" height="15" />
+                  </frame>
+                  <frame id="151:10849" name="div" x="14" y="45" width="230" height="14.25">
+                    <frame id="151:10850" name="span" x="0" y="0" width="50.79999923706055" height="14.25">
+                      <text id="151:10851" name="Maya Chen" x="0" y="-1" width="51.15562438964844" height="15" />
+                    </frame>
+                    <frame id="151:10852" name="span" x="201.47999572753906" y="0" width="28.520000457763672" height="14.25">
+                      <text id="151:10853" name="v4.x+" x="0" y="-1" width="29.163249969482422" height="15" />
+                    </frame>
+                  </frame>
+                </frame>
+                <frame id="151:10854" name="div" x="0" y="67.25" width="258" height="67.25">
+                  <frame id="151:10855" name="div" x="14" y="7" width="230" height="19">
+                    <frame id="151:10856" name="div" x="0" y="0" width="100" height="19">
+                      <frame id="151:10857" name="span" x="0" y="1" width="40" height="17">
+                        <text id="151:10858" name="v3.2.0" x="0" y="0" width="40" height="17" />
+                      </frame>
+                      <frame id="151:10859" name="span" x="46" y="0" width="54" height="19">
+                        <text id="151:10860" name="Active" x="7" y="2" width="40" height="15" />
+                      </frame>
+                    </frame>
+                    <frame id="151:10861" name="span" x="172.97999572753906" y="2.375" width="57.02000045776367" height="14.25">
+                      <text id="151:10862" name="2026-06-28" x="0" y="-1" width="57.17850112915039" height="15" />
+                    </frame>
+                  </frame>
+                  <frame id="151:10863" name="div" x="14" y="28" width="230" height="15">
+                    <text id="151:10864" name="Added parallel partition reads, up to 32 threads" x="0" y="0" width="230" height="15" />
+                  </frame>
+                  <frame id="151:10865" name="div" x="14" y="45" width="230" height="14.25">
+                    <frame id="151:10866" name="span" x="0" y="0" width="42.38999938964844" height="14.25">
+                      <text id="151:10867" name="Alex Park" x="0" y="-1" width="42.1385612487793" height="15" />
+                    </frame>
+                    <frame id="151:10868" name="span" x="201.47999572753906" y="0" width="28.520000457763672" height="14.25">
+                      <text id="151:10869" name="v4.x+" x="0" y="-1" width="29.163249969482422" height="15" />
+                    </frame>
+                  </frame>
+                </frame>
+                <frame id="151:10870" name="div" x="0" y="134.5" width="258" height="67.25">
+                  <frame id="151:10871" name="div" x="14" y="7" width="230" height="19">
+                    <frame id="151:10872" name="div" x="0" y="0" width="100" height="19">
+                      <frame id="151:10873" name="span" x="0" y="1" width="40" height="17">
+                        <text id="151:10874" name="v3.1.2" x="0" y="0" width="40" height="17" />
+                      </frame>
+                      <frame id="151:10875" name="span" x="46" y="0" width="54" height="19">
+                        <text id="151:10876" name="Active" x="7" y="2" width="40" height="15" />
+                      </frame>
+                    </frame>
+                    <frame id="151:10877" name="span" x="172.97999572753906" y="2.375" width="57.02000045776367" height="14.25">
+                      <text id="151:10878" name="2026-05-15" x="0" y="-1" width="57.17850112915039" height="15" />
+                    </frame>
+                  </frame>
+                  <frame id="151:10879" name="div" x="14" y="28" width="230" height="15">
+                    <text id="151:10880" name="Security patch: CVE-2026-1234 resolved" x="0" y="0" width="230" height="15" />
+                  </frame>
+                  <frame id="151:10881" name="div" x="14" y="45" width="230" height="14.25">
+                    <frame id="151:10882" name="span" x="0" y="0" width="50.79999923706055" height="14.25">
+                      <text id="151:10883" name="Maya Chen" x="0" y="-1" width="51.15562438964844" height="15" />
+                    </frame>
+                    <frame id="151:10884" name="span" x="201.47999572753906" y="0" width="28.520000457763672" height="14.25">
+                      <text id="151:10885" name="v4.0+" x="0" y="-1" width="29.163249969482422" height="15" />
+                    </frame>
+                  </frame>
+                </frame>
+                <frame id="151:10886" name="div" x="0" y="201.75" width="258" height="66.25">
+                  <frame id="151:10887" name="div" x="14" y="7" width="230" height="19">
+                    <frame id="151:10888" name="div" x="0" y="0" width="131" height="19">
+                      <frame id="151:10889" name="span" x="0" y="1" width="40" height="17">
+                        <text id="151:10890" name="v3.0.0" x="0" y="0" width="40" height="17" />
+                      </frame>
+                      <frame id="151:10891" name="span" x="46" y="0" width="85" height="19">
+                        <text id="151:10892" name="Deprecated" x="7" y="2" width="71" height="15" />
+                      </frame>
+                    </frame>
+                    <frame id="151:10893" name="span" x="172.97999572753906" y="2.375" width="57.02000045776367" height="14.25">
+                      <text id="151:10894" name="2026-03-01" x="0" y="-1" width="57.17850112915039" height="15" />
+                    </frame>
+                  </frame>
+                  <frame id="151:10895" name="div" x="14" y="28" width="230" height="15">
+                    <text id="151:10896" name="Breaking: removed legacy JDBC fallback mode" x="0" y="0" width="230" height="15" />
+                  </frame>
+                  <frame id="151:10897" name="div" x="14" y="45" width="230" height="14.25">
+                    <frame id="151:10898" name="span" x="0" y="0" width="50.439998626708984" height="14.25">
+                      <text id="151:10899" name="Jordan Lee" x="0" y="-1" width="51.14887619018555" height="15" />
+                    </frame>
+                    <frame id="151:10900" name="span" x="201.47999572753906" y="0" width="28.520000457763672" height="14.25">
+                      <text id="151:10901" name="v4.0+" x="0" y="-1" width="29.163249969482422" height="15" />
+                    </frame>
+                  </frame>
+                </frame>
+              </frame>
+              <frame id="151:10902" name="div" x="1" y="323.25" width="258" height="40">
+                <frame id="151:10903" name="button" x="14" y="9" width="106" height="23">
+                  <instance id="151:10904" name="Component 1" x="7" y="6" width="11" height="11" />
+                  <text id="151:10905" name="Restore Version" x="23" y="4" width="76" height="15" />
+                </frame>
+                <frame id="151:10906" name="button" x="126" y="9" width="99" height="23">
+                  <instance id="151:10907" name="Component 1" x="7" y="6" width="11" height="11" />
+                  <text id="151:10908" name="Release Notes" x="23" y="4" width="69" height="15" />
+                </frame>
+              </frame>
+            </frame>
+          </frame>
+        </frame>
+        <frame id="151:10909" name="div" x="20" y="1181.5" width="1292" height="157.5">
+          <frame id="151:10910" name="div" x="1" y="1" width="1290" height="38">
+            <frame id="151:10911" name="div" x="16" y="9" width="128" height="18">
+              <text id="151:10912" name="Certification Overview" x="0" y="0" width="128" height="18" />
+            </frame>
+          </frame>
+          <frame id="151:10913" name="div" x="1" y="39" width="1290" height="117.5">
+            <frame id="151:10914" name="div" x="0" y="0" width="258.20001220703125" height="117.5">
+              <frame id="151:10915" name="div" x="16" y="12" width="225.20001220703125" height="16.5">
+                <instance id="151:10916" name="Component 1" x="0" y="1.75" width="13" height="13" />
+                <rounded-rectangle id="151:10917" name="span" x="19" y="0" width="105.66000366210938" height="16.5" />
+              </frame>
+            </frame>
+            <frame id="151:10918" name="div" x="258.20001220703125" y="0" width="258.20001220703125" height="117.5">
+              <frame id="151:10919" name="div" x="16" y="12" width="225.20001220703125" height="16.5">
+                <instance id="151:10920" name="Component 1" x="0" y="1.75" width="13" height="13" />
+                <rounded-rectangle id="151:10921" name="span" x="19" y="0" width="41.189998626708984" height="16.5" />
+              </frame>
+            </frame>
+            <frame id="151:10922" name="div" x="516.4000244140625" y="0" width="258.1999816894531" height="117.5">
+              <frame id="151:10923" name="div" x="16" y="12" width="225.19998168945312" height="16.5">
+                <instance id="151:10924" name="Component 1" x="0" y="1.75" width="13" height="13" />
+                <rounded-rectangle id="151:10925" name="span" x="19" y="0" width="62.54999923706055" height="16.5" />
+              </frame>
+            </frame>
+            <frame id="151:10926" name="div" x="774.5999755859375" y="0" width="258.1999816894531" height="117.5">
+              <frame id="151:10927" name="div" x="16" y="12" width="225.19998168945312" height="16.5">
+                <instance id="151:10928" name="Component 1" x="0" y="1.75" width="13" height="13" />
+                <rounded-rectangle id="151:10929" name="span" x="19" y="0" width="41.86000061035156" height="16.5" />
+              </frame>
+            </frame>
+            <frame id="151:10930" name="div" x="1032.7999267578125" y="0" width="257.20001220703125" height="117.5">
+              <frame id="151:10931" name="div" x="16" y="12" width="225.20001220703125" height="16.5">
+                <instance id="151:10932" name="Component 1" x="0" y="1.75" width="13" height="13" />
+                <rounded-rectangle id="151:10933" name="span" x="19" y="0" width="62.58000183105469" height="16.5" />
+              </frame>
+            </frame>
+          </frame>
+        </frame>
+      </frame>
+    </frame>
+    <frame id="151:10934" name="aside" x="1600" y="0" width="320" height="1410">
+      <frame id="151:10935" name="div" x="1" y="0" width="319" height="95.5">
+        <frame id="151:10936" name="div" x="14" y="12" width="291" height="41.5">
+          <frame id="151:10937" name="div" x="0" y="2.75" width="36" height="36">
+            <instance id="151:10938" name="Component 1" x="9.5" y="9.5" width="17" height="17" />
+          </frame>
+          <frame id="151:10939" name="div" x="46" y="0" width="215" height="41.5">
+            <frame id="151:10940" name="div" x="0" y="-1" width="215" height="20">
+              <text id="151:10941" name="PostgreSQL Source" x="0" y="0" width="124" height="20" />
+            </frame>
+            <frame id="151:10942" name="div" x="0" y="22.5" width="215" height="19">
+              <frame id="151:10943" name="span" x="0" y="0" width="59" height="19">
+                <text id="151:10944" name="Source" x="7" y="2" width="45" height="15" />
+              </frame>
+              <frame id="151:10945" name="span" x="63" y="2" width="36" height="15">
+                <text id="151:10946" name="v3.2.1" x="0" y="0" width="36" height="15" />
+              </frame>
+            </frame>
+          </frame>
+          <frame id="151:10947" name="button" x="271" y="10.75" width="20" height="20">
+            <instance id="151:10948" name="Component 1" x="3" y="3" width="14" height="14" />
+          </frame>
+        </frame>
+        <frame id="151:10949" name="div" x="14" y="61.5" width="291" height="19">
+          <frame id="151:10950" name="span" x="0" y="0" width="54" height="19">
+            <text id="151:10951" name="Active" x="7" y="2" width="40" height="15" />
+          </frame>
+          <frame id="151:10952" name="span" x="60" y="0" width="92" height="19">
+            <instance id="151:10953" name="Component 1" x="7" y="5" width="9" height="9" />
+            <text id="151:10954" name="Enterprise" x="19" y="2" width="66" height="15" />
+          </frame>
+          <frame id="151:10955" name="span" x="158" y="2" width="69" height="15">
+            <text id="151:10956" name="Platform Team" x="0" y="0" width="69" height="15" />
+          </frame>
+        </frame>
+      </frame>
+      <frame id="151:10957" name="div" x="1" y="95.5" width="319" height="33.5">
+        <frame id="151:10958" name="button" x="0" y="0" width="75" height="33">
+          <text id="151:10959" name="Overview" x="12" y="7" width="51" height="17" />
+        </frame>
+        <frame id="151:10960" name="button" x="74.66999816894531" y="0" width="59" height="33">
+          <text id="151:10961" name="Config" x="12" y="7" width="35" height="17" />
+        </frame>
+        <frame id="151:10962" name="button" x="133.3000030517578" y="0" width="40" height="33">
+          <text id="151:10963" name="I/O" x="12" y="7" width="16" height="17" />
+        </frame>
+        <frame id="151:10964" name="button" x="172.63999938964844" y="0" width="63" height="33">
+          <text id="151:10965" name="Metrics" x="12" y="7" width="39" height="17" />
+        </frame>
+        <frame id="151:10966" name="button" x="235.58999633789062" y="0" width="69" height="33">
+          <text id="151:10967" name="Versions" x="12" y="7" width="45" height="17" />
+        </frame>
+        <frame id="151:10968" name="button" x="304.55999755859375" y="0" width="51" height="33">
+          <text id="151:10969" name="Docs" x="12" y="7" width="27" height="17" />
+        </frame>
+      </frame>
+      <frame id="151:10970" name="div" x="1" y="129" width="319" height="1231">
+        <frame id="151:10971" name="p" x="14" y="13.484999656677246" width="291" height="38">
+          <text id="151:10972" name="Read from PostgreSQL relational databases with full query support, CDC, and batch modes." x="0" y="0" width="291" height="38" />
+        </frame>
+        <frame id="151:10973" name="div" x="14" y="65.48500061035156" width="291" height="132">
+          <frame id="151:10974" name="div" x="0" y="0" width="291" height="15">
+            <text id="151:10975" name="Node Preview" x="0" y="0" width="291" height="15" />
+          </frame>
+          <frame id="151:10976" name="div" x="0" y="23" width="291" height="109">
+            <frame id="151:10977" name="div" x="65.5" y="17" width="160" height="75">
+              <frame id="151:10978" name="div" x="0" y="0" width="160" height="75">
+                <rounded-rectangle id="151:10979" name="div" x="2" y="2" width="156" height="4" />
+                <frame id="151:10980" name="div" x="2" y="6" width="156" height="67">
+                  <frame id="151:10981" name="div" x="10" y="8" width="136" height="28">
+                    <frame id="151:10982" name="div" x="0" y="3" width="22" height="22">
+                      <instance id="151:10983" name="Component 1" x="5.5" y="5.5" width="11" height="11" />
+                    </frame>
+                    <frame id="151:10984" name="div" x="28" y="0" width="95" height="28">
+                      <frame id="151:10985" name="div" x="0" y="0" width="95" height="15">
+                        <text id="151:10986" name="PostgreSQL Source" x="0" y="0" width="95" height="15" />
+                      </frame>
+                      <frame id="151:10987" name="div" x="0" y="14" width="95" height="14">
+                        <text id="151:10988" name="prod-db-01" x="0" y="0" width="54" height="14" />
+                      </frame>
+                    </frame>
+                  </frame>
+                  <frame id="151:10989" name="div" x="10" y="40" width="136" height="19">
+                    <frame id="151:10990" name="span" x="0" y="0" width="59" height="19">
+                      <text id="151:10991" name="Source" x="7" y="2" width="45" height="15" />
+                    </frame>
+                    <frame id="151:10992" name="div" x="102" y="3" width="34" height="13">
+                      <rounded-rectangle id="151:10993" name="div" x="0" y="4" width="5" height="5" />
+                      <frame id="151:10994" name="span" x="8" y="0" width="26" height="13">
+                        <text id="151:10995" name="Active" x="0" y="0" width="26" height="13" />
+                      </frame>
+                    </frame>
+                  </frame>
+                </frame>
+              </frame>
+              <rounded-rectangle id="151:10996" name="div" x="-8" y="32.5" width="10" height="10" />
+              <rounded-rectangle id="151:10997" name="div" x="158" y="32.5" width="10" height="10" />
+            </frame>
+          </frame>
+        </frame>
+        <frame id="151:10998" name="div" x="14" y="211.48500061035156" width="291" height="127">
+          <frame id="151:10999" name="div" x="0" y="0" width="291" height="23">
+            <text id="151:11000" name="Compatibility" x="0" y="0" width="291" height="15" />
+          </frame>
+          <frame id="151:11001" name="div" x="0" y="23" width="291" height="26">
+            <frame id="151:11002" name="span" x="0" y="4" width="86" height="17">
+              <text id="151:11003" name="Platform Version" x="0" y="0" width="86" height="17" />
+            </frame>
+            <frame id="151:11004" name="span" x="259.5" y="4.625" width="31.5" height="15.75">
+              <text id="151:11005" name="v4.0+" x="0" y="-1" width="32.181251525878906" height="16" />
+            </frame>
+          </frame>
+          <frame id="151:11006" name="div" x="0" y="49" width="291" height="26">
+            <frame id="151:11007" name="span" x="0" y="4" width="43" height="17">
+              <text id="151:11008" name="Runtime" x="0" y="0" width="43" height="17" />
+            </frame>
+            <frame id="151:11009" name="span" x="165" y="4.625" width="126" height="15.75">
+              <text id="151:11010" name="JVM 17 / Python 3.11" x="0" y="-1" width="126.1968765258789" height="16" />
+            </frame>
+          </frame>
+          <frame id="151:11011" name="div" x="0" y="75" width="291" height="26">
+            <frame id="151:11012" name="span" x="0" y="4" width="101" height="17">
+              <text id="151:11013" name="Supported Sources" x="0" y="0" width="101" height="17" />
+            </frame>
+            <frame id="151:11014" name="span" x="177.58999633789062" y="4.625" width="113.41000366210938" height="15.75">
+              <text id="151:11015" name="12 connector types" x="0" y="-1" width="114.17259216308594" height="16" />
+            </frame>
+          </frame>
+          <frame id="151:11016" name="div" x="0" y="101" width="291" height="26">
+            <frame id="151:11017" name="span" x="0" y="4" width="123" height="17">
+              <text id="151:11018" name="Supported Destinations" x="0" y="0" width="123" height="17" />
+            </frame>
+            <frame id="151:11019" name="span" x="209.08999633789062" y="4.625" width="81.91000366210938" height="15.75">
+              <text id="151:11020" name="Any sink node" x="0" y="-1" width="82.12728118896484" height="16" />
+            </frame>
+          </frame>
+        </frame>
+        <frame id="151:11021" name="div" x="14" y="352.4849853515625" width="291" height="135">
+          <frame id="151:11022" name="div" x="0" y="0" width="291" height="23">
+            <text id="151:11023" name="Configuration" x="0" y="0" width="291" height="15" />
+          </frame>
+          <frame id="151:11024" name="div" x="0" y="23" width="291" height="28">
+            <frame id="151:11025" name="div" x="0" y="5" width="163" height="17">
+              <text id="151:11026" name="Authentication" x="0" y="0" width="78" height="17" />
+              <text id="151:11027" name="*" x="81" y="1" width="5" height="15" />
+            </frame>
+            <frame id="151:11028" name="span" x="171" y="6" width="120" height="15">
+              <text id="151:11029" name="OAuth 2.0 / Password" x="0" y="0" width="120" height="15" />
+            </frame>
+          </frame>
+          <frame id="151:11030" name="div" x="0" y="51" width="291" height="28">
+            <frame id="151:11031" name="div" x="0" y="5" width="145" height="17">
+              <text id="151:11032" name="Batch Size" x="0" y="0" width="145" height="17" />
+            </frame>
+            <frame id="151:11033" name="span" x="153" y="6" width="138" height="15">
+              <text id="151:11034" name="Integer (default: 5000)" x="0" y="0" width="138" height="15" />
+            </frame>
+          </frame>
+          <frame id="151:11035" name="div" x="0" y="79" width="291" height="28">
+            <frame id="151:11036" name="div" x="0" y="5" width="157" height="17">
+              <text id="151:11037" name="Query Timeout" x="0" y="0" width="157" height="17" />
+            </frame>
+            <frame id="151:11038" name="span" x="165" y="6" width="126" height="15">
+              <text id="151:11039" name="Seconds (default: 30)" x="0" y="0" width="126" height="15" />
+            </frame>
+          </frame>
+          <frame id="151:11040" name="div" x="0" y="107" width="291" height="28">
+            <frame id="151:11041" name="div" x="0" y="5" width="199" height="17">
+              <text id="151:11042" name="Parallelism" x="0" y="0" width="199" height="17" />
+            </frame>
+            <frame id="151:11043" name="span" x="207" y="6" width="84" height="15">
+              <text id="151:11044" name="Integer (1–32)" x="0" y="0" width="84" height="15" />
+            </frame>
+          </frame>
+        </frame>
+        <frame id="151:11045" name="div" x="14" y="501.4849853515625" width="291" height="150">
+          <frame id="151:11046" name="div" x="0" y="0" width="291" height="15">
+            <text id="151:11047" name="Operational Metrics" x="0" y="0" width="291" height="15" />
+          </frame>
+          <frame id="151:11048" name="div" x="0" y="23" width="291" height="127">
+            <frame id="151:11049" name="div" x="0" y="0" width="141.5" height="60">
+              <frame id="151:11050" name="div" x="11" y="9" width="119.5" height="14">
+                <text id="151:11051" name="Usage Count" x="0" y="0" width="119.5" height="14" />
+              </frame>
+              <frame id="151:11052" name="div" x="11" y="27" width="119.5" height="24">
+                <text id="151:11053" name="1,248" x="0" y="0" width="119.5" height="24" />
+              </frame>
+            </frame>
+            <frame id="151:11054" name="div" x="149.5" y="0" width="141.5" height="60">
+              <frame id="151:11055" name="div" x="11" y="9" width="119.5" height="14">
+                <text id="151:11056" name="Success Rate" x="0" y="0" width="119.5" height="14" />
+              </frame>
+              <frame id="151:11057" name="div" x="11" y="27" width="119.5" height="24">
+                <text id="151:11058" name="98.7%" x="0" y="0" width="119.5" height="24" />
+              </frame>
+            </frame>
+            <frame id="151:11059" name="div" x="0" y="67.5" width="141.5" height="60">
+              <frame id="151:11060" name="div" x="11" y="9" width="119.5" height="14">
+                <text id="151:11061" name="Failure Rate" x="0" y="0" width="119.5" height="14" />
+              </frame>
+              <frame id="151:11062" name="div" x="11" y="27" width="119.5" height="24">
+                <text id="151:11063" name="1.3%" x="0" y="0" width="119.5" height="24" />
+              </frame>
+            </frame>
+            <frame id="151:11064" name="div" x="149.5" y="67.5" width="141.5" height="60">
+              <frame id="151:11065" name="div" x="11" y="9" width="119.5" height="14">
+                <text id="151:11066" name="Avg Exec Time" x="0" y="0" width="119.5" height="14" />
+              </frame>
+              <frame id="151:11067" name="div" x="11" y="27" width="119.5" height="24">
+                <text id="151:11068" name="4.2 s" x="0" y="0" width="119.5" height="24" />
+              </frame>
+            </frame>
+          </frame>
+        </frame>
+        <frame id="151:11069" name="div" x="14" y="665.4849853515625" width="291" height="97.25">
+          <frame id="151:11070" name="div" x="0" y="0" width="291" height="23">
+            <text id="151:11071" name="Dependencies" x="0" y="0" width="291" height="15" />
+          </frame>
+          <frame id="151:11072" name="div" x="0" y="23" width="291" height="24.75">
+            <rounded-rectangle id="151:11073" name="div" x="0" y="8.375" width="7" height="7" />
+            <frame id="151:11074" name="span" x="15" y="4" width="225" height="15.75">
+              <text id="151:11075" name="postgresql-42.6.0.jar" x="0" y="-1" width="132.6226043701172" height="16" />
+            </frame>
+            <frame id="151:11076" name="span" x="248" y="4.375" width="43" height="15">
+              <text id="151:11077" name="Required" x="0" y="0" width="43" height="15" />
+            </frame>
+          </frame>
+          <frame id="151:11078" name="div" x="0" y="47.75" width="291" height="24.75">
+            <rounded-rectangle id="151:11079" name="div" x="0" y="8.375" width="7" height="7" />
+            <frame id="151:11080" name="span" x="15" y="4" width="225" height="15.75">
+              <text id="151:11081" name="hikari-pool 5.x" x="0" y="-1" width="94.85610961914062" height="16" />
+            </frame>
+            <frame id="151:11082" name="span" x="248" y="4.375" width="43" height="15">
+              <text id="151:11083" name="Required" x="0" y="0" width="43" height="15" />
+            </frame>
+          </frame>
+          <frame id="151:11084" name="div" x="0" y="72.5" width="291" height="24.75">
+            <rounded-rectangle id="151:11085" name="div" x="0" y="8.375" width="7" height="7" />
+            <frame id="151:11086" name="span" x="15" y="4" width="196" height="15.75">
+              <text id="151:11087" name="debezium-core 2.4" x="0" y="-1" width="107.48580932617188" height="16" />
+            </frame>
+            <frame id="151:11088" name="span" x="219" y="4.375" width="72" height="15">
+              <text id="151:11089" name="Optional (CDC)" x="0" y="0" width="72" height="15" />
+            </frame>
+          </frame>
+        </frame>
+      </frame>
+      <frame id="151:11090" name="div" x="1" y="1360" width="319" height="50">
+        <frame id="151:11091" name="button" x="14" y="11" width="180" height="29">
+          <instance id="151:11092" name="Component 1" x="41.5" y="8.5" width="12" height="12" />
+          <text id="151:11093" name="Add to Pipeline" x="58.5" y="6" width="80" height="17" />
+        </frame>
+        <frame id="151:11094" name="button" x="200" y="11" width="31" height="28.5">
+          <instance id="151:11095" name="Component 1" x="9" y="7.75" width="13" height="13" />
+        </frame>
+        <frame id="151:11096" name="button" x="237" y="11" width="31" height="28.5">
+          <instance id="151:11097" name="Component 1" x="9" y="7.75" width="13" height="13" />
+        </frame>
+        <frame id="151:11098" name="button" x="274" y="11" width="31" height="28.5">
+          <instance id="151:11099" name="Component 1" x="9" y="7.75" width="13" height="13" />
+        </frame>
+      </frame>
+    </frame>
+  </frame>
+</frame>

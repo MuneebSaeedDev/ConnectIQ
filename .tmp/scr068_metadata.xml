@@ -1,0 +1,1264 @@
+﻿<frame id="157:3693" name="Filter Node Configuration Screen" x="-324" y="66069" width="1920" height="2715">
+  <frame id="157:3694" name="div.bg-white" x="0" y="0" width="1920" height="95">
+    <frame id="157:3695" name="div.mb-2" x="24" y="12" width="1872" height="17">
+      <text id="157:3696" name="Pipeline BuilderÂ " x="0" y="0" width="84" height="17" />
+      <text id="157:3697" name="/" x="88" y="0" width="4" height="17" />
+      <text id="157:3698" name="Filter NodeÂ " x="96" y="0" width="61" height="17" />
+      <text id="157:3699" name="/" x="161" y="0" width="4" height="17" />
+      <text id="157:3700" name="Configuration" x="169" y="0" width="71" height="17" />
+    </frame>
+    <frame id="157:3701" name="div.flex" x="24" y="37" width="1872" height="45">
+      <frame id="157:3702" name="div" x="0" y="0" width="465" height="45">
+        <frame id="157:3703" name="div.flex" x="0" y="0" width="465" height="23">
+          <frame id="157:3704" name="h1.font-semibold" x="0" y="3.5" width="196" height="16">
+            <text id="157:3705" name="Filter Node Configuration" x="0" y="0" width="196" height="16" />
+          </frame>
+          <frame id="157:3706" name="span.inline-flex" x="208" y="0" width="87" height="23">
+            <rounded-rectangle id="157:3707" name="span.rounded-full" x="9" y="8.5" width="6" height="6" />
+            <text id="157:3708" name="Configured" x="19" y="3" width="59" height="17" />
+          </frame>
+        </frame>
+        <frame id="157:3709" name="p" x="0" y="27" width="465" height="18">
+          <text id="157:3710" name="Configure filtering rules to determine which records continue through the pipeline." x="0" y="0" width="465" height="18" />
+        </frame>
+      </frame>
+      <frame id="157:3711" name="div.flex" x="1341" y="0" width="531" height="32">
+        <frame id="157:3712" name="button.inline-flex" x="0" y="0" width="59" height="32">
+          <text id="157:3713" name="Reset" x="13" y="7" width="33" height="18" />
+        </frame>
+        <frame id="157:3714" name="button.inline-flex" x="67" y="0" width="115" height="32">
+          <text id="157:3715" name="Duplicate Node" x="13" y="7" width="89" height="18" />
+        </frame>
+        <frame id="157:3716" name="button.inline-flex" x="190" y="0" width="66" height="32">
+          <text id="157:3717" name="Cancel" x="13" y="7" width="40" height="18" />
+        </frame>
+        <frame id="157:3718" name="button.inline-flex" x="264" y="0" width="105" height="32">
+          <text id="157:3719" name="Validate Filter" x="13" y="7" width="79" height="18" />
+        </frame>
+        <frame id="157:3720" name="button.inline-flex" x="377" y="0" width="154" height="32">
+          <instance id="157:3721" name="Component 1" x="13" y="10" width="12" height="12" />
+          <text id="157:3722" name="Save Configuration" x="31" y="7" width="110" height="18" />
+        </frame>
+      </frame>
+    </frame>
+  </frame>
+  <frame id="157:3723" name="div.flex" x="0" y="-1421" width="1920" height="4079">
+    <frame id="157:3724" name="div.flex-1" x="0" y="1515" width="1664" height="2564">
+      <frame id="157:3725" name="div.bg-white" x="24" y="16" width="1616" height="351">
+        <frame id="157:3726" name="div.flex" x="1" y="1" width="1614" height="38">
+          <frame id="157:3727" name="span.font-semibold" x="16" y="10" width="141" height="17">
+            <text id="157:3728" name="General Information" x="0" y="0" width="141" height="17" />
+          </frame>
+          <frame id="157:3729" name="span.mono" x="1439" y="10" width="159" height="17">
+            <text id="157:3730" name="v2.4.1 Â· node_filter_007" x="0" y="0" width="159" height="17" />
+          </frame>
+        </frame>
+        <frame id="157:3731" name="div.grid" x="17" y="55" width="1582" height="279">
+          <frame id="157:3732" name="div" x="0" y="0" width="779" height="53">
+            <frame id="157:3733" name="label.block" x="0" y="0" width="779" height="17">
+              <text id="157:3734" name="Node Name *" x="0" y="0" width="779" height="17" />
+            </frame>
+            <frame id="157:3735" name="input.w-full" x="0" y="21" width="779" height="32">
+              <frame id="157:3736" name="div" x="11" y="7" width="757" height="18">
+                <text id="157:3737" name="revenue_country_filter" x="0" y="0" width="757" height="18" />
+              </frame>
+            </frame>
+          </frame>
+          <frame id="157:3738" name="div" x="803" y="0" width="779" height="53">
+            <frame id="157:3739" name="label.block" x="0" y="0" width="779" height="17">
+              <text id="157:3740" name="Display Name" x="0" y="0" width="779" height="17" />
+            </frame>
+            <frame id="157:3741" name="input.w-full" x="0" y="21" width="779" height="32">
+              <frame id="157:3742" name="div" x="11" y="7" width="757" height="18">
+                <text id="157:3743" name="Active Revenue Filter" x="0" y="0" width="757" height="18" />
+              </frame>
+            </frame>
+          </frame>
+          <frame id="157:3744" name="div.col-span-2" x="0" y="64.5" width="1582" height="76.5">
+            <frame id="157:3745" name="label.block" x="0" y="0" width="1582" height="17">
+              <text id="157:3746" name="Description" x="0" y="0" width="1582" height="17" />
+            </frame>
+            <frame id="157:3747" name="textarea.w-full" x="0" y="21" width="1582" height="50">
+              <frame id="157:3748" name="div" x="11" y="7" width="1560" height="18">
+                <text id="157:3749" name="Filters records to include only active customers with revenue above $1,000 from target markets." x="0" y="0" width="1560" height="18" />
+              </frame>
+            </frame>
+          </frame>
+          <frame id="157:3750" name="div" x="0" y="152.5" width="779" height="53">
+            <frame id="157:3751" name="label.block" x="0" y="0" width="779" height="17">
+              <text id="157:3752" name="Category" x="0" y="0" width="779" height="17" />
+            </frame>
+            <frame id="157:3753" name="select.w-full" x="0" y="21" width="779" height="31">
+              <frame id="157:3754" name="div" x="15" y="8.5" width="737" height="14">
+                <text id="157:3755" name="Data Quality" x="0" y="1" width="737" height="12" />
+              </frame>
+            </frame>
+          </frame>
+          <frame id="157:3756" name="div" x="803" y="152.5" width="779" height="53">
+            <frame id="157:3757" name="label.block" x="0" y="0" width="779" height="17">
+              <text id="157:3758" name="Owner" x="0" y="0" width="779" height="17" />
+            </frame>
+            <frame id="157:3759" name="input.w-full" x="0" y="21" width="779" height="32">
+              <frame id="157:3760" name="div" x="11" y="7" width="757" height="18">
+                <text id="157:3761" name="data-eng-team@acme.io" x="0" y="0" width="757" height="18" />
+              </frame>
+            </frame>
+          </frame>
+          <frame id="157:3762" name="div" x="0" y="217" width="779" height="63">
+            <frame id="157:3763" name="label.block" x="0" y="0" width="779" height="17">
+              <text id="157:3764" name="Tags" x="0" y="0" width="779" height="17" />
+            </frame>
+            <frame id="157:3765" name="div.flex" x="0" y="21" width="779" height="23">
+              <frame id="157:3766" name="span.inline-flex" x="0" y="0" width="71" height="23">
+                <text id="157:3767" name="revenue" x="9" y="3" width="42" height="17" />
+                <frame id="157:3768" name="span.opacity-60" x="55" y="4" width="7" height="15">
+                  <text id="157:3769" name="Ã—" x="0" y="0" width="7" height="15" />
+                </frame>
+              </frame>
+              <frame id="157:3770" name="span.inline-flex" x="75" y="0" width="120.01000213623047" height="23">
+                <text id="157:3771" name="active-customers" x="9" y="3" width="91" height="17" />
+                <frame id="157:3772" name="span.opacity-60" x="104.01000213623047" y="4" width="7" height="15">
+                  <text id="157:3773" name="Ã—" x="0" y="0" width="7" height="15" />
+                </frame>
+              </frame>
+              <frame id="157:3774" name="span.inline-flex" x="199.010009765625" y="0" width="78" height="23">
+                <text id="157:3775" name="geo-filter" x="9" y="3" width="49" height="17" />
+                <frame id="157:3776" name="span.opacity-60" x="62" y="4" width="7" height="15">
+                  <text id="157:3777" name="Ã—" x="0" y="0" width="7" height="15" />
+                </frame>
+              </frame>
+              <frame id="157:3778" name="button.px-2" x="281.010009765625" y="0" width="50" height="23">
+                <text id="157:3779" name="+ Add" x="9" y="3" width="32" height="17" />
+              </frame>
+            </frame>
+          </frame>
+          <frame id="157:3780" name="div.grid" x="803" y="217" width="779" height="62">
+            <frame id="157:3781" name="div.flex" x="0" y="0" width="381.5" height="31">
+              <frame id="157:3782" name="span.whitespace-nowrap" x="0" y="6.5" width="57" height="17">
+                <text id="157:3783" name="Node Type" x="0" y="0" width="57" height="17" />
+              </frame>
+              <frame id="157:3784" name="span.font-medium" x="337.5" y="6" width="44" height="18">
+                <text id="157:3785" name="FILTER" x="0" y="0" width="44" height="18" />
+              </frame>
+            </frame>
+            <frame id="157:3786" name="div.flex" x="397.5" y="0" width="381.5" height="31">
+              <frame id="157:3787" name="span.whitespace-nowrap" x="0" y="6.5" width="59" height="17">
+                <text id="157:3788" name="Created By" x="0" y="0" width="59" height="17" />
+              </frame>
+              <frame id="157:3789" name="span.font-medium" x="334.5" y="6" width="47" height="18">
+                <text id="157:3790" name="a.weber" x="0" y="0" width="47" height="18" />
+              </frame>
+            </frame>
+            <frame id="157:3791" name="div.flex" x="0" y="31" width="381.5" height="31">
+              <frame id="157:3792" name="span.whitespace-nowrap" x="0" y="6.5" width="39" height="17">
+                <text id="157:3793" name="Version" x="0" y="0" width="39" height="17" />
+              </frame>
+              <frame id="157:3794" name="span.font-medium" x="345.5" y="6" width="36" height="18">
+                <text id="157:3795" name="2.4.1" x="0" y="0" width="36" height="18" />
+              </frame>
+            </frame>
+            <frame id="157:3796" name="div.flex" x="397.5" y="31" width="381.5" height="31">
+              <frame id="157:3797" name="span.whitespace-nowrap" x="0" y="7" width="71" height="17">
+                <text id="157:3798" name="Last Modified" x="0" y="0" width="71" height="17" />
+              </frame>
+              <frame id="157:3799" name="span.font-medium" x="265.5" y="6.5" width="116" height="18">
+                <text id="157:3800" name="2026-08-06 14:22" x="0" y="0" width="116" height="18" />
+              </frame>
+            </frame>
+          </frame>
+        </frame>
+      </frame>
+      <frame id="157:3801" name="div.bg-white" x="24" y="379" width="1616" height="179">
+        <frame id="157:3802" name="div.flex" x="1" y="1" width="1614" height="53">
+          <frame id="157:3803" name="span.font-semibold" x="16" y="17.5" width="93" height="17">
+            <text id="157:3804" name="Input Dataset" x="0" y="0" width="93" height="17" />
+          </frame>
+          <frame id="157:3805" name="div.flex" x="1296" y="10" width="302" height="32">
+            <frame id="157:3806" name="button.inline-flex" x="0" y="0" width="146" height="32">
+              <instance id="157:3807" name="Component 1" x="13" y="10.5" width="11" height="11" />
+              <text id="157:3808" name="Refresh Metadata" x="30" y="7" width="103" height="18" />
+            </frame>
+            <frame id="157:3809" name="button.inline-flex" x="154" y="0" width="148" height="32">
+              <text id="157:3810" name="View Source Schema" x="13" y="7" width="122" height="18" />
+            </frame>
+          </frame>
+        </frame>
+        <frame id="157:3811" name="div.grid" x="17" y="70" width="1582" height="92">
+          <frame id="157:3812" name="div.flex" x="0" y="0" width="511.3333435058594" height="31">
+            <frame id="157:3813" name="span.whitespace-nowrap" x="0" y="6.5" width="76" height="17">
+              <text id="157:3814" name="Previous Node" x="0" y="0" width="76" height="17" />
+            </frame>
+            <frame id="157:3815" name="span.font-medium" x="417.3333435058594" y="6" width="94" height="18">
+              <text id="157:3816" name="crm_join_node" x="0" y="0" width="94" height="18" />
+            </frame>
+          </frame>
+          <frame id="157:3817" name="div.flex" x="535.3333740234375" y="0" width="511.3333435058594" height="31">
+            <frame id="157:3818" name="span.whitespace-nowrap" x="0" y="6.5" width="95" height="17">
+              <text id="157:3819" name="Source Connector" x="0" y="0" width="95" height="17" />
+            </frame>
+            <frame id="157:3820" name="span.font-medium" x="412.3333435058594" y="6" width="99" height="18">
+              <text id="157:3821" name="Snowflake (prod)" x="0" y="0" width="99" height="18" />
+            </frame>
+          </frame>
+          <frame id="157:3822" name="div.flex" x="1070.666748046875" y="0" width="511.3333435058594" height="31">
+            <frame id="157:3823" name="span.whitespace-nowrap" x="0" y="6.5" width="84" height="17">
+              <text id="157:3824" name="Schema Version" x="0" y="0" width="84" height="17" />
+            </frame>
+            <frame id="157:3825" name="span.font-medium" x="489.3333435058594" y="6" width="22" height="18">
+              <text id="157:3826" name="v14" x="0" y="0" width="22" height="18" />
+            </frame>
+          </frame>
+          <frame id="157:3827" name="div.flex" x="0" y="31" width="511.3333435058594" height="31">
+            <frame id="157:3828" name="span.whitespace-nowrap" x="0" y="6.5" width="74" height="17">
+              <text id="157:3829" name="Dataset Name" x="0" y="0" width="74" height="17" />
+            </frame>
+            <frame id="157:3830" name="span.font-medium" x="374.3333435058594" y="6" width="137" height="18">
+              <text id="157:3831" name="crm_orders_enriched" x="0" y="0" width="137" height="18" />
+            </frame>
+          </frame>
+          <frame id="157:3832" name="div.flex" x="535.3333740234375" y="31" width="511.3333435058594" height="31">
+            <frame id="157:3833" name="span.whitespace-nowrap" x="0" y="6.5" width="74" height="17">
+              <text id="157:3834" name="Total Columns" x="0" y="0" width="74" height="17" />
+            </frame>
+            <frame id="157:3835" name="span.font-medium" x="495.3333435058594" y="6" width="16" height="18">
+              <text id="157:3836" name="34" x="0" y="0" width="16" height="18" />
+            </frame>
+          </frame>
+          <frame id="157:3837" name="div.flex" x="1070.666748046875" y="31" width="511.3333435058594" height="31">
+            <frame id="157:3838" name="span.whitespace-nowrap" x="0" y="6.5" width="111" height="17">
+              <text id="157:3839" name="Last Schema Refresh" x="0" y="0" width="111" height="17" />
+            </frame>
+            <frame id="157:3840" name="span.font-medium" x="395.3333435058594" y="6" width="116" height="18">
+              <text id="157:3841" name="2026-08-07 09:00" x="0" y="0" width="116" height="18" />
+            </frame>
+          </frame>
+          <frame id="157:3842" name="div.flex" x="0" y="62" width="511.3333435058594" height="30">
+            <frame id="157:3843" name="span.whitespace-nowrap" x="0" y="6.5" width="98" height="17">
+              <text id="157:3844" name="Estimated Records" x="0" y="0" width="98" height="17" />
+            </frame>
+            <frame id="157:3845" name="span.font-medium" x="446.3333435058594" y="6" width="65" height="18">
+              <text id="157:3846" name="4,218,902" x="0" y="0" width="65" height="18" />
+            </frame>
+          </frame>
+        </frame>
+      </frame>
+      <frame id="157:3847" name="div.bg-white" x="24" y="570" width="1616" height="104">
+        <frame id="157:3848" name="div.flex" x="1" y="1" width="1614" height="38">
+          <frame id="157:3849" name="span.font-semibold" x="16" y="10" width="78" height="17">
+            <text id="157:3850" name="Filter Mode" x="0" y="0" width="78" height="17" />
+          </frame>
+        </frame>
+        <frame id="157:3851" name="div.flex" x="17" y="55" width="1582" height="32">
+          <frame id="157:3852" name="button.px-3" x="0" y="0" width="90" height="32">
+            <text id="157:3853" name="Basic Filter" x="13" y="7" width="64" height="18" />
+          </frame>
+          <frame id="157:3854" name="button.px-3" x="98" y="0" width="150" height="32">
+            <text id="157:3855" name="Advanced Expression" x="13" y="7" width="124" height="18" />
+          </frame>
+          <frame id="157:3856" name="button.px-3" x="256" y="0" width="139" height="32">
+            <text id="157:3857" name="SQL WHERE Clause" x="13" y="7" width="113" height="18" />
+          </frame>
+          <frame id="157:3858" name="button.px-3" x="403" y="0" width="108" height="32">
+            <text id="157:3859" name="Custom Script" x="13" y="7" width="82" height="18" />
+          </frame>
+        </frame>
+      </frame>
+      <frame id="157:3860" name="div.bg-white" x="24" y="686" width="1616" height="428">
+        <frame id="157:3861" name="div.flex" x="1" y="1" width="1614" height="53">
+          <frame id="157:3862" name="span.font-semibold" x="16" y="17.5" width="80" height="17">
+            <text id="157:3863" name="Filter Rules" x="0" y="0" width="80" height="17" />
+          </frame>
+          <frame id="157:3864" name="div.flex" x="1241" y="10" width="357" height="32">
+            <frame id="157:3865" name="span" x="0" y="7.5" width="32" height="17">
+              <text id="157:3866" name="Logic:" x="0" y="0" width="32" height="17" />
+            </frame>
+            <frame id="157:3867" name="button.font-semibold" x="40" y="4.5" width="47" height="23">
+              <text id="157:3868" name="AND" x="11" y="3" width="25" height="17" />
+            </frame>
+            <frame id="157:3869" name="button.font-semibold" x="95" y="4.5" width="38" height="23">
+              <text id="157:3870" name="OR" x="11" y="3" width="16" height="17" />
+            </frame>
+            <frame id="157:3871" name="span.w-px:margin" x="141" y="8" width="9" height="16">
+              <rounded-rectangle id="157:3872" name="span.w-px" x="4" y="0" width="1" height="16" />
+            </frame>
+            <frame id="157:3873" name="button.inline-flex" x="158" y="0" width="102" height="32">
+              <text id="157:3874" name="+ NOT Group" x="13" y="7" width="76" height="18" />
+            </frame>
+            <frame id="157:3875" name="button.inline-flex" x="268" y="0" width="89" height="32">
+              <text id="157:3876" name="+ Add Rule" x="13" y="7" width="63" height="18" />
+            </frame>
+          </frame>
+        </frame>
+        <frame id="157:3877" name="div.p-4" x="1" y="54" width="1614" height="373">
+          <frame id="157:3878" name="div.space-y-2" x="16" y="16" width="1582" height="271">
+            <frame id="157:3879" name="div.flex" x="0" y="0" width="1582" height="71">
+              <frame id="157:3880" name="span.w-5" x="11" y="27" width="20" height="17">
+                <text id="157:3881" name="â ¿" x="6" y="0" width="8" height="17" />
+              </frame>
+              <frame id="157:3882" name="div.flex-1" x="39" y="11" width="1480" height="49">
+                <frame id="157:3883" name="div" x="0" y="0.5" width="240" height="48">
+                  <frame id="157:3884" name="div" x="0" y="0" width="240" height="15">
+                    <text id="157:3885" name="Field" x="0" y="0" width="240" height="15" />
+                  </frame>
+                  <frame id="157:3886" name="select.w-full" x="0" y="17" width="240" height="31">
+                    <frame id="157:3887" name="div" x="15" y="8.5" width="198" height="14">
+                      <text id="157:3888" name="status" x="0" y="1" width="198" height="12" />
+                    </frame>
+                  </frame>
+                </frame>
+                <frame id="157:3889" name="div" x="248" y="0.5" width="240" height="48">
+                  <frame id="157:3890" name="div" x="0" y="0" width="240" height="15">
+                    <text id="157:3891" name="Operator" x="0" y="0" width="240" height="15" />
+                  </frame>
+                  <frame id="157:3892" name="select.w-full" x="0" y="17" width="240" height="31">
+                    <frame id="157:3893" name="div" x="15" y="8.5" width="198" height="14">
+                      <text id="157:3894" name="Equals" x="0" y="1" width="198" height="12" />
+                    </frame>
+                  </frame>
+                </frame>
+                <frame id="157:3895" name="div" x="496" y="0" width="240" height="49">
+                  <frame id="157:3896" name="div" x="0" y="0" width="240" height="15">
+                    <text id="157:3897" name="Value" x="0" y="0" width="240" height="15" />
+                  </frame>
+                  <frame id="157:3898" name="input.w-full" x="0" y="17" width="240" height="32">
+                    <frame id="157:3899" name="div" x="11" y="7" width="218" height="18">
+                      <text id="157:3900" name="active" x="0" y="0" width="218" height="18" />
+                    </frame>
+                  </frame>
+                </frame>
+                <frame id="157:3901" name="div" x="744" y="0.5" width="240" height="48">
+                  <frame id="157:3902" name="div" x="0" y="0" width="240" height="15">
+                    <text id="157:3903" name="Data Type" x="0" y="0" width="240" height="15" />
+                  </frame>
+                  <frame id="157:3904" name="select.w-full" x="0" y="17" width="240" height="31">
+                    <frame id="157:3905" name="div" x="15" y="8.5" width="198" height="14">
+                      <text id="157:3906" name="STRING" x="0" y="1" width="198" height="12" />
+                    </frame>
+                  </frame>
+                </frame>
+                <frame id="157:3907" name="div" x="992" y="0.5" width="240" height="48">
+                  <frame id="157:3908" name="div" x="0" y="0" width="240" height="15">
+                    <text id="157:3909" name="Null Handling" x="0" y="0" width="240" height="15" />
+                  </frame>
+                  <frame id="157:3910" name="select.w-full" x="0" y="17" width="240" height="31">
+                    <frame id="157:3911" name="div" x="15" y="8.5" width="198" height="14">
+                      <text id="157:3912" name="EXCLUDE" x="0" y="1" width="198" height="12" />
+                    </frame>
+                  </frame>
+                </frame>
+                <frame id="157:3913" name="div.flex" x="1240" y="8.5" width="240" height="32">
+                  <frame id="157:3914" name="div.flex" x="208" y="0" width="32" height="32">
+                    <frame id="157:3915" name="div.w-8" x="0" y="0" width="32" height="16">
+                      <frame id="157:3916" name="div.w-3" x="2" y="2" width="12" height="12">
+                        <rounded-rectangle id="157:3917" name="div.w-3:shadow" x="0" y="0" width="12" height="12" />
+                      </frame>
+                    </frame>
+                    <frame id="157:3918" name="span" x="5" y="18" width="22" height="14">
+                      <text id="157:3919" name="Case" x="0" y="0" width="22" height="14" />
+                    </frame>
+                  </frame>
+                </frame>
+              </frame>
+              <frame id="157:3920" name="div.flex" x="1527" y="25.5" width="44" height="20">
+                <frame id="157:3921" name="button.p-1" x="0" y="0" width="20" height="20">
+                  <instance id="157:3922" name="Component 1" x="4" y="4" width="12" height="12" />
+                </frame>
+                <frame id="157:3923" name="button.p-1" x="24" y="0" width="20" height="20">
+                  <instance id="157:3924" name="Component 1" x="4" y="4" width="12" height="12" />
+                </frame>
+              </frame>
+            </frame>
+            <frame id="157:3925" name="div" x="0" y="79" width="1582" height="92">
+              <frame id="157:3926" name="div.flex" x="0" y="0" width="1582" height="15">
+                <rounded-rectangle id="157:3927" name="div.h-px" x="0" y="7" width="774" height="1" />
+                <frame id="157:3928" name="span.font-semibold" x="782" y="0" width="18" height="15">
+                  <text id="157:3929" name="AND" x="0" y="0" width="18" height="15" />
+                </frame>
+                <rounded-rectangle id="157:3930" name="div.h-px" x="808" y="7" width="774" height="1" />
+              </frame>
+              <frame id="157:3931" name="div.flex" x="0" y="21" width="1582" height="71">
+                <frame id="157:3932" name="span.w-5" x="11" y="27" width="20" height="17">
+                  <text id="157:3933" name="â ¿" x="6" y="0" width="8" height="17" />
+                </frame>
+                <frame id="157:3934" name="div.flex-1" x="39" y="11" width="1480" height="49">
+                  <frame id="157:3935" name="div" x="0" y="0.5" width="240" height="48">
+                    <frame id="157:3936" name="div" x="0" y="0" width="240" height="15">
+                      <text id="157:3937" name="Field" x="0" y="0" width="240" height="15" />
+                    </frame>
+                    <frame id="157:3938" name="select.w-full" x="0" y="17" width="240" height="31">
+                      <frame id="157:3939" name="div" x="15" y="8.5" width="198" height="14">
+                        <text id="157:3940" name="revenue" x="0" y="1" width="198" height="12" />
+                      </frame>
+                    </frame>
+                  </frame>
+                  <frame id="157:3941" name="div" x="248" y="0.5" width="240" height="48">
+                    <frame id="157:3942" name="div" x="0" y="0" width="240" height="15">
+                      <text id="157:3943" name="Operator" x="0" y="0" width="240" height="15" />
+                    </frame>
+                    <frame id="157:3944" name="select.w-full" x="0" y="17" width="240" height="31">
+                      <frame id="157:3945" name="div" x="15" y="8.5" width="198" height="14">
+                        <text id="157:3946" name="Greater Than" x="0" y="1" width="198" height="12" />
+                      </frame>
+                    </frame>
+                  </frame>
+                  <frame id="157:3947" name="div" x="496" y="0" width="240" height="49">
+                    <frame id="157:3948" name="div" x="0" y="0" width="240" height="15">
+                      <text id="157:3949" name="Value" x="0" y="0" width="240" height="15" />
+                    </frame>
+                    <frame id="157:3950" name="input.w-full" x="0" y="17" width="240" height="32">
+                      <frame id="157:3951" name="div" x="11" y="7" width="218" height="18">
+                        <text id="157:3952" name="1000" x="0" y="0" width="218" height="18" />
+                      </frame>
+                    </frame>
+                  </frame>
+                  <frame id="157:3953" name="div" x="744" y="0.5" width="240" height="48">
+                    <frame id="157:3954" name="div" x="0" y="0" width="240" height="15">
+                      <text id="157:3955" name="Data Type" x="0" y="0" width="240" height="15" />
+                    </frame>
+                    <frame id="157:3956" name="select.w-full" x="0" y="17" width="240" height="31">
+                      <frame id="157:3957" name="div" x="15" y="8.5" width="198" height="14">
+                        <text id="157:3958" name="DECIMAL" x="0" y="1" width="198" height="12" />
+                      </frame>
+                    </frame>
+                  </frame>
+                  <frame id="157:3959" name="div" x="992" y="0.5" width="240" height="48">
+                    <frame id="157:3960" name="div" x="0" y="0" width="240" height="15">
+                      <text id="157:3961" name="Null Handling" x="0" y="0" width="240" height="15" />
+                    </frame>
+                    <frame id="157:3962" name="select.w-full" x="0" y="17" width="240" height="31">
+                      <frame id="157:3963" name="div" x="15" y="8.5" width="198" height="14">
+                        <text id="157:3964" name="EXCLUDE" x="0" y="1" width="198" height="12" />
+                      </frame>
+                    </frame>
+                  </frame>
+                  <frame id="157:3965" name="div.flex" x="1240" y="8.5" width="240" height="32">
+                    <frame id="157:3966" name="div.flex" x="208" y="0" width="32" height="32">
+                      <frame id="157:3967" name="div.w-8" x="0" y="0" width="32" height="16">
+                        <frame id="157:3968" name="div.w-3" x="2" y="2" width="12" height="12">
+                          <rounded-rectangle id="157:3969" name="div.w-3:shadow" x="0" y="0" width="12" height="12" />
+                        </frame>
+                      </frame>
+                      <frame id="157:3970" name="span" x="5" y="18" width="22" height="14">
+                        <text id="157:3971" name="Case" x="0" y="0" width="22" height="14" />
+                      </frame>
+                    </frame>
+                  </frame>
+                </frame>
+                <frame id="157:3972" name="div.flex" x="1527" y="25.5" width="44" height="20">
+                  <frame id="157:3973" name="button.p-1" x="0" y="0" width="20" height="20">
+                    <instance id="157:3974" name="Component 1" x="4" y="4" width="12" height="12" />
+                  </frame>
+                  <frame id="157:3975" name="button.p-1" x="24" y="0" width="20" height="20">
+                    <instance id="157:3976" name="Component 1" x="4" y="4" width="12" height="12" />
+                  </frame>
+                </frame>
+              </frame>
+            </frame>
+            <frame id="157:3977" name="div" x="0" y="179" width="1582" height="92">
+              <frame id="157:3978" name="div.flex" x="0" y="0" width="1582" height="15">
+                <rounded-rectangle id="157:3979" name="div.h-px" x="0" y="7" width="774" height="1" />
+                <frame id="157:3980" name="span.font-semibold" x="782" y="0" width="18" height="15">
+                  <text id="157:3981" name="AND" x="0" y="0" width="18" height="15" />
+                </frame>
+                <rounded-rectangle id="157:3982" name="div.h-px" x="808" y="7" width="774" height="1" />
+              </frame>
+              <frame id="157:3983" name="div.flex" x="0" y="21" width="1582" height="71">
+                <frame id="157:3984" name="span.w-5" x="11" y="27" width="20" height="17">
+                  <text id="157:3985" name="â ¿" x="6" y="0" width="8" height="17" />
+                </frame>
+                <frame id="157:3986" name="div.flex-1" x="39" y="11" width="1480" height="49">
+                  <frame id="157:3987" name="div" x="0" y="0.5" width="240" height="48">
+                    <frame id="157:3988" name="div" x="0" y="0" width="240" height="15">
+                      <text id="157:3989" name="Field" x="0" y="0" width="240" height="15" />
+                    </frame>
+                    <frame id="157:3990" name="select.w-full" x="0" y="17" width="240" height="31">
+                      <frame id="157:3991" name="div" x="15" y="8.5" width="198" height="14">
+                        <text id="157:3992" name="country_code" x="0" y="1" width="198" height="12" />
+                      </frame>
+                    </frame>
+                  </frame>
+                  <frame id="157:3993" name="div" x="248" y="0.5" width="240" height="48">
+                    <frame id="157:3994" name="div" x="0" y="0" width="240" height="15">
+                      <text id="157:3995" name="Operator" x="0" y="0" width="240" height="15" />
+                    </frame>
+                    <frame id="157:3996" name="select.w-full" x="0" y="17" width="240" height="31">
+                      <frame id="157:3997" name="div" x="15" y="8.5" width="198" height="14">
+                        <text id="157:3998" name="In List" x="0" y="1" width="198" height="12" />
+                      </frame>
+                    </frame>
+                  </frame>
+                  <frame id="157:3999" name="div" x="496" y="0" width="240" height="49">
+                    <frame id="157:4000" name="div" x="0" y="0" width="240" height="15">
+                      <text id="157:4001" name="Value" x="0" y="0" width="240" height="15" />
+                    </frame>
+                    <frame id="157:4002" name="input.w-full" x="0" y="17" width="240" height="32">
+                      <frame id="157:4003" name="div" x="11" y="7" width="218" height="18">
+                        <text id="157:4004" name="US,GB,DE,FR" x="0" y="0" width="218" height="18" />
+                      </frame>
+                    </frame>
+                  </frame>
+                  <frame id="157:4005" name="div" x="744" y="0.5" width="240" height="48">
+                    <frame id="157:4006" name="div" x="0" y="0" width="240" height="15">
+                      <text id="157:4007" name="Data Type" x="0" y="0" width="240" height="15" />
+                    </frame>
+                    <frame id="157:4008" name="select.w-full" x="0" y="17" width="240" height="31">
+                      <frame id="157:4009" name="div" x="15" y="8.5" width="198" height="14">
+                        <text id="157:4010" name="STRING" x="0" y="1" width="198" height="12" />
+                      </frame>
+                    </frame>
+                  </frame>
+                  <frame id="157:4011" name="div" x="992" y="0.5" width="240" height="48">
+                    <frame id="157:4012" name="div" x="0" y="0" width="240" height="15">
+                      <text id="157:4013" name="Null Handling" x="0" y="0" width="240" height="15" />
+                    </frame>
+                    <frame id="157:4014" name="select.w-full" x="0" y="17" width="240" height="31">
+                      <frame id="157:4015" name="div" x="15" y="8.5" width="198" height="14">
+                        <text id="157:4016" name="EXCLUDE" x="0" y="1" width="198" height="12" />
+                      </frame>
+                    </frame>
+                  </frame>
+                  <frame id="157:4017" name="div.flex" x="1240" y="8.5" width="240" height="32">
+                    <frame id="157:4018" name="div.flex" x="208" y="0" width="32" height="32">
+                      <frame id="157:4019" name="div.w-8" x="0" y="0" width="32" height="16">
+                        <frame id="157:4020" name="div.w-3" x="2" y="2" width="12" height="12">
+                          <rounded-rectangle id="157:4021" name="div.w-3:shadow" x="0" y="0" width="12" height="12" />
+                        </frame>
+                      </frame>
+                      <frame id="157:4022" name="span" x="5" y="18" width="22" height="14">
+                        <text id="157:4023" name="Case" x="0" y="0" width="22" height="14" />
+                      </frame>
+                    </frame>
+                  </frame>
+                </frame>
+                <frame id="157:4024" name="div.flex" x="1527" y="25.5" width="44" height="20">
+                  <frame id="157:4025" name="button.p-1" x="0" y="0" width="20" height="20">
+                    <instance id="157:4026" name="Component 1" x="4" y="4" width="12" height="12" />
+                  </frame>
+                  <frame id="157:4027" name="button.p-1" x="24" y="0" width="20" height="20">
+                    <instance id="157:4028" name="Component 1" x="4" y="4" width="12" height="12" />
+                  </frame>
+                </frame>
+              </frame>
+            </frame>
+          </frame>
+          <frame id="157:4029" name="div.mt-3" x="16" y="299" width="1582" height="58">
+            <frame id="157:4030" name="div.mb-1" x="11" y="11" width="1560" height="15">
+              <text id="157:4031" name="Generated Expression" x="0" y="0" width="1560" height="15" />
+            </frame>
+            <frame id="157:4032" name="div.mono" x="11" y="30" width="1560" height="17">
+              <text id="157:4033" name="(status = &quot;active&quot; AND revenue &gt; 1000 AND country_code IN (&quot;US&quot;,&quot;GB&quot;,&quot;DE&quot;,&quot;FR&quot;))" x="0" y="0" width="1560" height="17" />
+            </frame>
+          </frame>
+        </frame>
+      </frame>
+      <frame id="157:4034" name="div.bg-white" x="24" y="1126" width="1616" height="452.5">
+        <frame id="157:4035" name="div.flex" x="1" y="1" width="1614" height="53">
+          <frame id="157:4036" name="span.font-semibold" x="16" y="17.5" width="88" height="17">
+            <text id="157:4037" name="Data Preview" x="0" y="0" width="88" height="17" />
+          </frame>
+          <frame id="157:4038" name="div.flex" x="1399.8599853515625" y="10" width="198.13999938964844" height="32">
+            <frame id="157:4039" name="select.w-full" x="0" y="0.5" width="102.13999938964844" height="31">
+              <frame id="157:4040" name="div" x="15" y="8.5" width="60.13999938964844" height="14">
+                <text id="157:4041" name="100 rows" x="0" y="1" width="52" height="12" />
+              </frame>
+            </frame>
+            <frame id="157:4042" name="button.inline-flex" x="110.13999938964844" y="0" width="88" height="32">
+              <instance id="157:4043" name="Component 1" x="13" y="10.5" width="11" height="11" />
+              <text id="157:4044" name="Refresh" x="30" y="7" width="45" height="18" />
+            </frame>
+          </frame>
+        </frame>
+        <frame id="157:4045" name="div.p-4" x="1" y="54" width="1614" height="397.5">
+          <frame id="157:4046" name="div.grid" x="16" y="16" width="1582" height="76">
+            <frame id="157:4047" name="div.border" x="0" y="0" width="386.5" height="76">
+              <frame id="157:4048" name="div.mb-1" x="11" y="11" width="364.5" height="15">
+                <text id="157:4049" name="Total Records" x="0" y="0" width="364.5" height="15" />
+              </frame>
+              <frame id="157:4050" name="div.font-semibold" x="11" y="28" width="364.5" height="20">
+                <text id="157:4051" name="100" x="0" y="2" width="364.5" height="18" />
+              </frame>
+              <frame id="157:4052" name="div" x="11" y="50" width="364.5" height="15">
+                <text id="157:4053" name="sample" x="0" y="0" width="364.5" height="15" />
+              </frame>
+            </frame>
+            <frame id="157:4054" name="div.border" x="398.5" y="0" width="386.5" height="76">
+              <frame id="157:4055" name="div.mb-1" x="11" y="11" width="364.5" height="15">
+                <text id="157:4056" name="Matching Records" x="0" y="0" width="364.5" height="15" />
+              </frame>
+              <frame id="157:4057" name="div.font-semibold" x="11" y="28" width="364.5" height="20">
+                <text id="157:4058" name="4" x="0" y="2" width="364.5" height="18" />
+              </frame>
+              <frame id="157:4059" name="div" x="11" y="50" width="364.5" height="15">
+                <text id="157:4060" name="67% match" x="0" y="0" width="364.5" height="15" />
+              </frame>
+            </frame>
+            <frame id="157:4061" name="div.border" x="797" y="0" width="386.5" height="76">
+              <frame id="157:4062" name="div.mb-1" x="11" y="11" width="364.5" height="15">
+                <text id="157:4063" name="Excluded Records" x="0" y="0" width="364.5" height="15" />
+              </frame>
+              <frame id="157:4064" name="div.font-semibold" x="11" y="28" width="364.5" height="20">
+                <text id="157:4065" name="2" x="0" y="2" width="364.5" height="18" />
+              </frame>
+              <frame id="157:4066" name="div" x="11" y="50" width="364.5" height="15">
+                <text id="157:4067" name="33% rejected" x="0" y="0" width="364.5" height="15" />
+              </frame>
+            </frame>
+            <frame id="157:4068" name="div.border" x="1195.5" y="0" width="386.5" height="76">
+              <frame id="157:4069" name="div.mb-1" x="11" y="11" width="364.5" height="15">
+                <text id="157:4070" name="Match Percentage" x="0" y="0" width="364.5" height="15" />
+              </frame>
+              <frame id="157:4071" name="div.font-semibold" x="11" y="28" width="364.5" height="20">
+                <text id="157:4072" name="67%" x="0" y="2" width="364.5" height="18" />
+              </frame>
+              <frame id="157:4073" name="div" x="11" y="50" width="364.5" height="15">
+                <text id="157:4074" name="of sample" x="0" y="0" width="364.5" height="15" />
+              </frame>
+            </frame>
+          </frame>
+          <frame id="157:4075" name="div.flex" x="16" y="100" width="1582" height="31">
+            <frame id="157:4076" name="button.px-3" x="0" y="4" width="91" height="27">
+              <text id="157:4077" name="Before Filter" x="13" y="5" width="65" height="17" />
+            </frame>
+            <frame id="157:4078" name="button.px-3" x="95" y="4" width="82" height="27">
+              <text id="157:4079" name="After Filter" x="13" y="5" width="56" height="17" />
+            </frame>
+            <frame id="157:4080" name="button.px-3" x="181" y="4" width="87" height="27">
+              <text id="157:4081" name="Differences" x="13" y="5" width="61" height="17" />
+            </frame>
+          </frame>
+          <frame id="157:4082" name="div.overflow-x-auto" x="16" y="139" width="1582" height="242.5">
+            <frame id="157:4083" name="table.w-full" x="1" y="1" width="1580" height="240.5">
+              <frame id="157:4084" name="tr.border-b" x="0" y="0" width="1580" height="32">
+                <frame id="157:4085" name="th.px-3" x="0" y="0" width="201.91000366210938" height="31">
+                  <text id="157:4086" name="Order ID" x="12" y="8" width="51" height="15" />
+                </frame>
+                <frame id="157:4087" name="th.px-3" x="201.91000366210938" y="0" width="317.6400146484375" height="31">
+                  <text id="157:4088" name="Customer" x="12" y="8" width="61" height="15" />
+                </frame>
+                <frame id="157:4089" name="th.px-3" x="519.5499877929688" y="0" width="243.80999755859375" height="31">
+                  <text id="157:4090" name="Date" x="12" y="8" width="28" height="15" />
+                </frame>
+                <frame id="157:4091" name="th.px-3" x="763.3599853515625" y="0" width="225.9499969482422" height="31">
+                  <text id="157:4092" name="Revenue" x="12" y="8" width="50" height="15" />
+                </frame>
+                <frame id="157:4093" name="th.px-3" x="989.3099975585938" y="0" width="209.9499969482422" height="31">
+                  <text id="157:4094" name="Country" x="12" y="8" width="53" height="15" />
+                </frame>
+                <frame id="157:4095" name="th.px-3" x="1199.260009765625" y="0" width="198.69000244140625" height="31">
+                  <text id="157:4096" name="Status" x="12" y="8" width="42" height="15" />
+                </frame>
+                <frame id="157:4097" name="th.px-3" x="1397.949951171875" y="0" width="182.0500030517578" height="31">
+                  <text id="157:4098" name="Match" x="12" y="8" width="39" height="15" />
+                </frame>
+              </frame>
+              <frame id="157:4099" name="tbody" x="0" y="31" width="1580" height="209.5">
+                <frame id="157:4100" name="tr.border-b" x="0" y="0" width="1580" height="36">
+                  <frame id="157:4101" name="td.px-3" x="0" y="0" width="201.91000366210938" height="35">
+                    <text id="157:4102" name="10042" x="12" y="8.75" width="33" height="17" />
+                  </frame>
+                  <frame id="157:4103" name="td.px-3" x="201.91000366210938" y="0" width="317.6400146484375" height="35">
+                    <text id="157:4104" name="Hartmann &amp; Co" x="12" y="8" width="87" height="18" />
+                  </frame>
+                  <frame id="157:4105" name="td.px-3" x="519.5499877929688" y="0" width="243.80999755859375" height="35">
+                    <text id="157:4106" name="2026-07-14" x="12" y="8.75" width="66" height="17" />
+                  </frame>
+                  <frame id="157:4107" name="td.px-3" x="763.3599853515625" y="0" width="225.9499969482422" height="35">
+                    <text id="157:4108" name="$4,210.00" x="12" y="8.75" width="60" height="17" />
+                  </frame>
+                  <frame id="157:4109" name="td.px-3" x="989.3099975585938" y="0" width="209.9499969482422" height="35">
+                    <text id="157:4110" name="US" x="12" y="8.75" width="14" height="17" />
+                  </frame>
+                  <frame id="157:4111" name="td.px-3" x="1199.260009765625" y="0" width="198.69000244140625" height="35">
+                    <frame id="157:4112" name="span.rounded" x="12" y="9.5" width="41" height="16">
+                      <text id="157:4113" name="active" x="6" y="0.5" width="29" height="15" />
+                    </frame>
+                  </frame>
+                  <frame id="157:4114" name="td.px-3" x="1397.949951171875" y="0" width="182.0500030517578" height="35">
+                    <frame id="157:4115" name="span.inline-flex" x="12" y="9" width="42" height="17">
+                      <frame id="157:4116" name="span" x="0" y="0" width="10" height="17">
+                        <text id="157:4117" name="âœ“" x="0" y="0" width="10" height="17" />
+                      </frame>
+                      <text id="157:4118" name="PASS" x="14" y="0" width="28" height="17" />
+                    </frame>
+                  </frame>
+                </frame>
+                <frame id="157:4119" name="tr.border-b" x="0" y="35" width="1580" height="36">
+                  <frame id="157:4120" name="td.px-3" x="0" y="0" width="201.91000366210938" height="35">
+                    <text id="157:4121" name="10043" x="12" y="8.75" width="33" height="17" />
+                  </frame>
+                  <frame id="157:4122" name="td.px-3" x="201.91000366210938" y="0" width="317.6400146484375" height="35">
+                    <text id="157:4123" name="Voss Industries" x="12" y="8" width="87" height="18" />
+                  </frame>
+                  <frame id="157:4124" name="td.px-3" x="519.5499877929688" y="0" width="243.80999755859375" height="35">
+                    <text id="157:4125" name="2026-07-14" x="12" y="8.75" width="66" height="17" />
+                  </frame>
+                  <frame id="157:4126" name="td.px-3" x="763.3599853515625" y="0" width="225.9499969482422" height="35">
+                    <text id="157:4127" name="$892.50" x="12" y="8.75" width="47" height="17" />
+                  </frame>
+                  <frame id="157:4128" name="td.px-3" x="989.3099975585938" y="0" width="209.9499969482422" height="35">
+                    <text id="157:4129" name="GB" x="12" y="8.75" width="14" height="17" />
+                  </frame>
+                  <frame id="157:4130" name="td.px-3" x="1199.260009765625" y="0" width="198.69000244140625" height="35">
+                    <frame id="157:4131" name="span.rounded" x="12" y="9.5" width="41" height="16">
+                      <text id="157:4132" name="active" x="6" y="0.5" width="29" height="15" />
+                    </frame>
+                  </frame>
+                  <frame id="157:4133" name="td.px-3" x="1397.949951171875" y="0" width="182.0500030517578" height="35">
+                    <frame id="157:4134" name="span.inline-flex" x="12" y="9" width="37" height="17">
+                      <frame id="157:4135" name="span" x="0" y="0" width="10" height="17">
+                        <text id="157:4136" name="âœ—" x="0" y="0" width="10" height="17" />
+                      </frame>
+                      <text id="157:4137" name="FAIL" x="14" y="0" width="23" height="17" />
+                    </frame>
+                  </frame>
+                </frame>
+                <frame id="157:4138" name="tr.border-b" x="0" y="70" width="1580" height="36">
+                  <frame id="157:4139" name="td.px-3" x="0" y="0" width="201.91000366210938" height="35">
+                    <text id="157:4140" name="10044" x="12" y="8.75" width="33" height="17" />
+                  </frame>
+                  <frame id="157:4141" name="td.px-3" x="201.91000366210938" y="0" width="317.6400146484375" height="35">
+                    <text id="157:4142" name="Reinhardt GmbH" x="12" y="8" width="94" height="18" />
+                  </frame>
+                  <frame id="157:4143" name="td.px-3" x="519.5499877929688" y="0" width="243.80999755859375" height="35">
+                    <text id="157:4144" name="2026-07-15" x="12" y="8.75" width="66" height="17" />
+                  </frame>
+                  <frame id="157:4145" name="td.px-3" x="763.3599853515625" y="0" width="225.9499969482422" height="35">
+                    <text id="157:4146" name="$3,150.00" x="12" y="8.75" width="60" height="17" />
+                  </frame>
+                  <frame id="157:4147" name="td.px-3" x="989.3099975585938" y="0" width="209.9499969482422" height="35">
+                    <text id="157:4148" name="DE" x="12" y="8.75" width="14" height="17" />
+                  </frame>
+                  <frame id="157:4149" name="td.px-3" x="1199.260009765625" y="0" width="198.69000244140625" height="35">
+                    <frame id="157:4150" name="span.rounded" x="12" y="9.5" width="41" height="16">
+                      <text id="157:4151" name="active" x="6" y="0.5" width="29" height="15" />
+                    </frame>
+                  </frame>
+                  <frame id="157:4152" name="td.px-3" x="1397.949951171875" y="0" width="182.0500030517578" height="35">
+                    <frame id="157:4153" name="span.inline-flex" x="12" y="9" width="42" height="17">
+                      <frame id="157:4154" name="span" x="0" y="0" width="10" height="17">
+                        <text id="157:4155" name="âœ“" x="0" y="0" width="10" height="17" />
+                      </frame>
+                      <text id="157:4156" name="PASS" x="14" y="0" width="28" height="17" />
+                    </frame>
+                  </frame>
+                </frame>
+                <frame id="157:4157" name="tr.border-b" x="0" y="105" width="1580" height="36">
+                  <frame id="157:4158" name="td.px-3" x="0" y="0" width="201.91000366210938" height="35">
+                    <text id="157:4159" name="10045" x="12" y="8.75" width="33" height="17" />
+                  </frame>
+                  <frame id="157:4160" name="td.px-3" x="201.91000366210938" y="0" width="317.6400146484375" height="35">
+                    <text id="157:4161" name="Dumont SAS" x="12" y="8" width="72" height="18" />
+                  </frame>
+                  <frame id="157:4162" name="td.px-3" x="519.5499877929688" y="0" width="243.80999755859375" height="35">
+                    <text id="157:4163" name="2026-07-15" x="12" y="8.75" width="66" height="17" />
+                  </frame>
+                  <frame id="157:4164" name="td.px-3" x="763.3599853515625" y="0" width="225.9499969482422" height="35">
+                    <text id="157:4165" name="$1,780.00" x="12" y="8.75" width="60" height="17" />
+                  </frame>
+                  <frame id="157:4166" name="td.px-3" x="989.3099975585938" y="0" width="209.9499969482422" height="35">
+                    <text id="157:4167" name="FR" x="12" y="8.75" width="14" height="17" />
+                  </frame>
+                  <frame id="157:4168" name="td.px-3" x="1199.260009765625" y="0" width="198.69000244140625" height="35">
+                    <frame id="157:4169" name="span.rounded" x="12" y="9.5" width="50" height="16">
+                      <text id="157:4170" name="inactive" x="6" y="0.5" width="38" height="15" />
+                    </frame>
+                  </frame>
+                  <frame id="157:4171" name="td.px-3" x="1397.949951171875" y="0" width="182.0500030517578" height="35">
+                    <frame id="157:4172" name="span.inline-flex" x="12" y="9" width="37" height="17">
+                      <frame id="157:4173" name="span" x="0" y="0" width="10" height="17">
+                        <text id="157:4174" name="âœ—" x="0" y="0" width="10" height="17" />
+                      </frame>
+                      <text id="157:4175" name="FAIL" x="14" y="0" width="23" height="17" />
+                    </frame>
+                  </frame>
+                </frame>
+                <frame id="157:4176" name="tr.border-b" x="0" y="140" width="1580" height="36">
+                  <frame id="157:4177" name="td.px-3" x="0" y="0" width="201.91000366210938" height="35">
+                    <text id="157:4178" name="10046" x="12" y="8.75" width="33" height="17" />
+                  </frame>
+                  <frame id="157:4179" name="td.px-3" x="201.91000366210938" y="0" width="317.6400146484375" height="35">
+                    <text id="157:4180" name="Atlas Corp" x="12" y="8" width="60" height="18" />
+                  </frame>
+                  <frame id="157:4181" name="td.px-3" x="519.5499877929688" y="0" width="243.80999755859375" height="35">
+                    <text id="157:4182" name="2026-07-16" x="12" y="8.75" width="66" height="17" />
+                  </frame>
+                  <frame id="157:4183" name="td.px-3" x="763.3599853515625" y="0" width="225.9499969482422" height="35">
+                    <text id="157:4184" name="$6,400.00" x="12" y="8.75" width="60" height="17" />
+                  </frame>
+                  <frame id="157:4185" name="td.px-3" x="989.3099975585938" y="0" width="209.9499969482422" height="35">
+                    <text id="157:4186" name="US" x="12" y="8.75" width="14" height="17" />
+                  </frame>
+                  <frame id="157:4187" name="td.px-3" x="1199.260009765625" y="0" width="198.69000244140625" height="35">
+                    <frame id="157:4188" name="span.rounded" x="12" y="9.5" width="41" height="16">
+                      <text id="157:4189" name="active" x="6" y="0.5" width="29" height="15" />
+                    </frame>
+                  </frame>
+                  <frame id="157:4190" name="td.px-3" x="1397.949951171875" y="0" width="182.0500030517578" height="35">
+                    <frame id="157:4191" name="span.inline-flex" x="12" y="9" width="42" height="17">
+                      <frame id="157:4192" name="span" x="0" y="0" width="10" height="17">
+                        <text id="157:4193" name="âœ“" x="0" y="0" width="10" height="17" />
+                      </frame>
+                      <text id="157:4194" name="PASS" x="14" y="0" width="28" height="17" />
+                    </frame>
+                  </frame>
+                </frame>
+                <frame id="157:4195" name="tr.border-b" x="0" y="175" width="1580" height="34.5">
+                  <frame id="157:4196" name="td.px-3" x="0" y="0" width="201.91000366210938" height="34.5">
+                    <text id="157:4197" name="10047" x="12" y="8.75" width="33" height="17" />
+                  </frame>
+                  <frame id="157:4198" name="td.px-3" x="201.91000366210938" y="0" width="317.6400146484375" height="34">
+                    <text id="157:4199" name="Nexigen Ltd" x="12" y="8" width="69" height="18" />
+                  </frame>
+                  <frame id="157:4200" name="td.px-3" x="519.5499877929688" y="0" width="243.80999755859375" height="34.5">
+                    <text id="157:4201" name="2026-07-16" x="12" y="8.75" width="66" height="17" />
+                  </frame>
+                  <frame id="157:4202" name="td.px-3" x="763.3599853515625" y="0" width="225.9499969482422" height="34.5">
+                    <text id="157:4203" name="$2,100.00" x="12" y="8.75" width="60" height="17" />
+                  </frame>
+                  <frame id="157:4204" name="td.px-3" x="989.3099975585938" y="0" width="209.9499969482422" height="34.5">
+                    <text id="157:4205" name="GB" x="12" y="8.75" width="14" height="17" />
+                  </frame>
+                  <frame id="157:4206" name="td.px-3" x="1199.260009765625" y="0" width="198.69000244140625" height="34.5">
+                    <frame id="157:4207" name="span.rounded" x="12" y="9.5" width="41" height="16">
+                      <text id="157:4208" name="active" x="6" y="0.5" width="29" height="15" />
+                    </frame>
+                  </frame>
+                  <frame id="157:4209" name="td.px-3" x="1397.949951171875" y="0" width="182.0500030517578" height="34.5">
+                    <frame id="157:4210" name="span.inline-flex" x="12" y="9" width="42" height="17">
+                      <frame id="157:4211" name="span" x="0" y="0" width="10" height="17">
+                        <text id="157:4212" name="âœ“" x="0" y="0" width="10" height="17" />
+                      </frame>
+                      <text id="157:4213" name="PASS" x="14" y="0" width="28" height="17" />
+                    </frame>
+                  </frame>
+                </frame>
+              </frame>
+            </frame>
+          </frame>
+        </frame>
+      </frame>
+      <frame id="157:4214" name="div.bg-white" x="24" y="1590.5" width="1616" height="181">
+        <frame id="157:4215" name="div.flex" x="1" y="1" width="1614" height="38">
+          <frame id="157:4216" name="span.font-semibold" x="16" y="10" width="180" height="17">
+            <text id="157:4217" name="Performance Optimization" x="0" y="0" width="180" height="17" />
+          </frame>
+          <frame id="157:4218" name="span" x="1474" y="10" width="124" height="17">
+            <text id="157:4219" name="Estimated cost: 2.4 CU" x="0" y="0" width="124" height="17" />
+          </frame>
+        </frame>
+        <frame id="157:4220" name="div.grid" x="17" y="55" width="1582" height="109">
+          <frame id="157:4221" name="div.flex" x="0" y="0" width="779" height="31">
+            <frame id="157:4222" name="span" x="0" y="6" width="117" height="18">
+              <text id="157:4223" name="Predicate Pushdown" x="0" y="0" width="117" height="18" />
+            </frame>
+            <frame id="157:4224" name="div.w-8" x="747" y="7" width="32" height="16">
+              <frame id="157:4225" name="div.w-3" x="18" y="2" width="12" height="12">
+                <rounded-rectangle id="157:4226" name="div.w-3:shadow" x="0" y="0" width="12" height="12" />
+              </frame>
+            </frame>
+          </frame>
+          <frame id="157:4227" name="div.flex" x="803" y="0" width="779" height="31">
+            <frame id="157:4228" name="span" x="0" y="6" width="71" height="18">
+              <text id="157:4229" name="Index Usage" x="0" y="0" width="71" height="18" />
+            </frame>
+            <frame id="157:4230" name="div.w-8" x="747" y="7" width="32" height="16">
+              <frame id="157:4231" name="div.w-3" x="18" y="2" width="12" height="12">
+                <rounded-rectangle id="157:4232" name="div.w-3:shadow" x="0" y="0" width="12" height="12" />
+              </frame>
+            </frame>
+          </frame>
+          <frame id="157:4233" name="div.flex" x="0" y="39" width="779" height="31">
+            <frame id="157:4234" name="span" x="0" y="6" width="103" height="18">
+              <text id="157:4235" name="Parallel Evaluation" x="0" y="0" width="103" height="18" />
+            </frame>
+            <frame id="157:4236" name="div.w-8" x="747" y="7" width="32" height="16">
+              <frame id="157:4237" name="div.w-3" x="18" y="2" width="12" height="12">
+                <rounded-rectangle id="157:4238" name="div.w-3:shadow" x="0" y="0" width="12" height="12" />
+              </frame>
+            </frame>
+          </frame>
+          <frame id="157:4239" name="div.flex" x="803" y="39" width="779" height="31">
+            <frame id="157:4240" name="span" x="0" y="6" width="122" height="18">
+              <text id="157:4241" name="Memory Optimization" x="0" y="0" width="122" height="18" />
+            </frame>
+            <frame id="157:4242" name="div.w-8" x="747" y="7" width="32" height="16">
+              <frame id="157:4243" name="div.w-3" x="2" y="2" width="12" height="12">
+                <rounded-rectangle id="157:4244" name="div.w-3:shadow" x="0" y="0" width="12" height="12" />
+              </frame>
+            </frame>
+          </frame>
+          <frame id="157:4245" name="div.flex" x="0" y="78" width="779" height="31">
+            <frame id="157:4246" name="span" x="0" y="6" width="95" height="18">
+              <text id="157:4247" name="Batch Evaluation" x="0" y="0" width="95" height="18" />
+            </frame>
+            <frame id="157:4248" name="div.w-8" x="747" y="7" width="32" height="16">
+              <frame id="157:4249" name="div.w-3" x="2" y="2" width="12" height="12">
+                <rounded-rectangle id="157:4250" name="div.w-3:shadow" x="0" y="0" width="12" height="12" />
+              </frame>
+            </frame>
+          </frame>
+        </frame>
+      </frame>
+      <frame id="157:4251" name="div.bg-white" x="24" y="1783.5" width="1616" height="188">
+        <frame id="157:4252" name="div.flex" x="1" y="1" width="1614" height="38">
+          <frame id="157:4253" name="span.font-semibold" x="16" y="10" width="156" height="17">
+            <text id="157:4254" name="Runtime Configuration" x="0" y="0" width="156" height="17" />
+          </frame>
+        </frame>
+        <frame id="157:4255" name="div.grid" x="17" y="55" width="1582" height="116">
+          <frame id="157:4256" name="div" x="0" y="0" width="511.3333435058594" height="53">
+            <frame id="157:4257" name="label.block" x="0" y="0" width="511.3333435058594" height="17">
+              <text id="157:4258" name="Timeout (seconds)" x="0" y="0" width="511.3333435058594" height="17" />
+            </frame>
+            <frame id="157:4259" name="input.w-full" x="0" y="21" width="511.3333435058594" height="32">
+              <frame id="157:4260" name="div" x="11" y="7" width="489.3333435058594" height="18">
+                <text id="157:4261" name="300" x="0" y="0" width="489.3333435058594" height="18" />
+              </frame>
+            </frame>
+          </frame>
+          <frame id="157:4262" name="div" x="535.3333740234375" y="0" width="511.3333435058594" height="53">
+            <frame id="157:4263" name="label.block" x="0" y="0" width="511.3333435058594" height="17">
+              <text id="157:4264" name="Parallelism" x="0" y="0" width="511.3333435058594" height="17" />
+            </frame>
+            <frame id="157:4265" name="input.w-full" x="0" y="21" width="511.3333435058594" height="32">
+              <frame id="157:4266" name="div" x="11" y="7" width="489.3333435058594" height="18">
+                <text id="157:4267" name="8" x="0" y="0" width="489.3333435058594" height="18" />
+              </frame>
+            </frame>
+          </frame>
+          <frame id="157:4268" name="div" x="1070.666748046875" y="0" width="511.3333435058594" height="53">
+            <frame id="157:4269" name="label.block" x="0" y="0" width="511.3333435058594" height="17">
+              <text id="157:4270" name="Batch Size" x="0" y="0" width="511.3333435058594" height="17" />
+            </frame>
+            <frame id="157:4271" name="input.w-full" x="0" y="21" width="511.3333435058594" height="32">
+              <frame id="157:4272" name="div" x="11" y="7" width="489.3333435058594" height="18">
+                <text id="157:4273" name="10000" x="0" y="0" width="489.3333435058594" height="18" />
+              </frame>
+            </frame>
+          </frame>
+          <frame id="157:4274" name="div" x="0" y="64.5" width="511.3333435058594" height="52">
+            <frame id="157:4275" name="label.block" x="0" y="0" width="511.3333435058594" height="17">
+              <text id="157:4276" name="Retry Policy" x="0" y="0" width="511.3333435058594" height="17" />
+            </frame>
+            <frame id="157:4277" name="select.w-full" x="0" y="21" width="511.3333435058594" height="31">
+              <frame id="157:4278" name="div" x="15" y="8.5" width="469.3333435058594" height="14">
+                <text id="157:4279" name="3 retries, exponential backoff" x="0" y="1" width="469.3333435058594" height="12" />
+              </frame>
+            </frame>
+          </frame>
+          <frame id="157:4280" name="div" x="535.3333740234375" y="64.5" width="511.3333435058594" height="52">
+            <frame id="157:4281" name="label.block" x="0" y="0" width="511.3333435058594" height="17">
+              <text id="157:4282" name="Error Handling" x="0" y="0" width="511.3333435058594" height="17" />
+            </frame>
+            <frame id="157:4283" name="select.w-full" x="0" y="21" width="511.3333435058594" height="31">
+              <frame id="157:4284" name="div" x="15" y="8.5" width="469.3333435058594" height="14">
+                <text id="157:4285" name="Skip Invalid Records" x="0" y="1" width="469.3333435058594" height="12" />
+              </frame>
+            </frame>
+          </frame>
+        </frame>
+      </frame>
+      <frame id="157:4286" name="div.bg-white" x="24" y="1983.5" width="1616" height="40">
+        <frame id="157:4287" name="button.w-full" x="1" y="1" width="1614" height="38">
+          <frame id="157:4288" name="span.font-semibold" x="16" y="10" width="137" height="17">
+            <text id="157:4289" name="Monitoring &amp; Alerts" x="0" y="0" width="137" height="17" />
+          </frame>
+          <instance id="157:4290" name="Component 1" x="1586" y="12.5" width="12" height="12" />
+        </frame>
+      </frame>
+      <frame id="157:4291" name="div.bg-white" x="24" y="2035.5" width="1616" height="40">
+        <frame id="157:4292" name="button.w-full" x="1" y="1" width="1614" height="38">
+          <frame id="157:4293" name="span.font-semibold" x="16" y="10" width="168" height="17">
+            <text id="157:4294" name="Advanced Configuration" x="0" y="0" width="168" height="17" />
+          </frame>
+          <instance id="157:4295" name="Component 1" x="1586" y="12.5" width="12" height="12" />
+        </frame>
+      </frame>
+      <frame id="157:4296" name="div.bg-white" x="24" y="2087.5" width="1616" height="391">
+        <frame id="157:4297" name="div.flex" x="1" y="1" width="1614" height="38">
+          <frame id="157:4298" name="span.font-semibold" x="16" y="10" width="112" height="17">
+            <text id="157:4299" name="Validation Panel" x="0" y="0" width="112" height="17" />
+          </frame>
+        </frame>
+        <frame id="157:4300" name="div" x="17" y="55" width="1582" height="319">
+          <frame id="157:4301" name="div.flex" x="0" y="0" width="1582" height="59">
+            <frame id="157:4302" name="div.shrink-0:margin" x="11" y="11" width="14" height="16">
+              <instance id="157:4303" name="Component 1" x="0" y="2" width="14" height="14" />
+            </frame>
+            <frame id="157:4304" name="div.flex-1" x="37" y="11" width="1534" height="37">
+              <frame id="157:4305" name="div.font-medium" x="0" y="0" width="1534" height="18">
+                <text id="157:4306" name="Expression Validation" x="0" y="0" width="1534" height="18" />
+              </frame>
+              <frame id="157:4307" name="div" x="0" y="20" width="1534" height="17">
+                <text id="157:4308" name="All expressions are syntactically valid" x="0" y="0" width="1534" height="17" />
+              </frame>
+            </frame>
+          </frame>
+          <frame id="157:4309" name="div.flex" x="0" y="65" width="1582" height="59">
+            <frame id="157:4310" name="div.shrink-0:margin" x="11" y="11" width="14" height="16">
+              <instance id="157:4311" name="Component 1" x="0" y="2" width="14" height="14" />
+            </frame>
+            <frame id="157:4312" name="div.flex-1" x="37" y="11" width="1534" height="37">
+              <frame id="157:4313" name="div.font-medium" x="0" y="0" width="1534" height="18">
+                <text id="157:4314" name="Schema Validation" x="0" y="0" width="1534" height="18" />
+              </frame>
+              <frame id="157:4315" name="div" x="0" y="20" width="1534" height="17">
+                <text id="157:4316" name="All referenced fields exist in source schema" x="0" y="0" width="1534" height="17" />
+              </frame>
+            </frame>
+          </frame>
+          <frame id="157:4317" name="div.flex" x="0" y="130" width="1582" height="59">
+            <frame id="157:4318" name="div.shrink-0:margin" x="11" y="11" width="14" height="16">
+              <instance id="157:4319" name="Component 1" x="0" y="2" width="14" height="14" />
+            </frame>
+            <frame id="157:4320" name="div.flex-1" x="37" y="11" width="1493" height="37">
+              <frame id="157:4321" name="div.font-medium" x="0" y="0" width="1493" height="18">
+                <text id="157:4322" name="Performance Validation" x="0" y="0" width="1493" height="18" />
+              </frame>
+              <frame id="157:4323" name="div" x="0" y="20" width="1493" height="17">
+                <text id="157:4324" name="Field &#39;email&#39; lacks an index â€” predicate pushdown unavailable" x="0" y="0" width="1493" height="17" />
+              </frame>
+            </frame>
+            <frame id="157:4325" name="button.shrink-0" x="1542" y="11" width="29" height="17">
+              <text id="157:4326" name="Fix â†’" x="0" y="0" width="29" height="17" />
+            </frame>
+          </frame>
+          <frame id="157:4327" name="div.flex" x="0" y="195" width="1582" height="59">
+            <frame id="157:4328" name="div.shrink-0:margin" x="11" y="11" width="14" height="16">
+              <instance id="157:4329" name="Component 1" x="0" y="2" width="14" height="14" />
+            </frame>
+            <frame id="157:4330" name="div.flex-1" x="37" y="11" width="1534" height="37">
+              <frame id="157:4331" name="div.font-medium" x="0" y="0" width="1534" height="18">
+                <text id="157:4332" name="Runtime Validation" x="0" y="0" width="1534" height="18" />
+              </frame>
+              <frame id="157:4333" name="div" x="0" y="20" width="1534" height="17">
+                <text id="157:4334" name="Timeout and parallelism settings are within bounds" x="0" y="0" width="1534" height="17" />
+              </frame>
+            </frame>
+          </frame>
+          <frame id="157:4335" name="div.flex" x="0" y="260" width="1582" height="59">
+            <frame id="157:4336" name="div.shrink-0:margin" x="11" y="11" width="14" height="16">
+              <instance id="157:4337" name="Component 1" x="0" y="2" width="14" height="14" />
+            </frame>
+            <frame id="157:4338" name="div.flex-1" x="37" y="11" width="1493" height="37">
+              <frame id="157:4339" name="div.font-medium" x="0" y="0" width="1493" height="18">
+                <text id="157:4340" name="Preview Validation" x="0" y="0" width="1493" height="18" />
+              </frame>
+              <frame id="157:4341" name="div" x="0" y="20" width="1493" height="17">
+                <text id="157:4342" name="Sample size exceeds memory threshold for real-time preview" x="0" y="0" width="1493" height="17" />
+              </frame>
+            </frame>
+            <frame id="157:4343" name="button.shrink-0" x="1542" y="11" width="29" height="17">
+              <text id="157:4344" name="Fix â†’" x="0" y="0" width="29" height="17" />
+            </frame>
+          </frame>
+        </frame>
+      </frame>
+    </frame>
+    <frame id="157:4345" name="div.w-64" x="1664" y="1515" width="256" height="2564">
+      <frame id="157:4346" name="div.px-4" x="1" y="0" width="255" height="42">
+        <frame id="157:4347" name="div.font-semibold" x="16" y="12" width="223" height="17">
+          <text id="157:4348" name="Node Summary" x="0" y="0" width="223" height="17" />
+        </frame>
+      </frame>
+      <frame id="157:4349" name="div.p-4" x="1" y="42" width="255" height="773">
+        <frame id="157:4350" name="div" x="16" y="16" width="223" height="52">
+          <frame id="157:4351" name="div.font-semibold" x="0" y="0" width="223" height="17">
+            <text id="157:4352" name="Configuration Status" x="0" y="0" width="223" height="17" />
+          </frame>
+          <frame id="157:4353" name="span.inline-flex" x="0" y="29" width="87" height="23">
+            <rounded-rectangle id="157:4354" name="span.rounded-full" x="9" y="8.5" width="6" height="6" />
+            <text id="157:4355" name="Configured" x="19" y="3" width="59" height="17" />
+          </frame>
+        </frame>
+        <frame id="157:4356" name="div.border-t" x="16" y="84" width="223" height="165">
+          <frame id="157:4357" name="div.font-semibold" x="0" y="13" width="223" height="17">
+            <text id="157:4358" name="Filter Summary" x="0" y="0" width="223" height="17" />
+          </frame>
+          <frame id="157:4359" name="div.space-y-0" x="0" y="42" width="223" height="123">
+            <frame id="157:4360" name="div.flex" x="0" y="0" width="223" height="31">
+              <frame id="157:4361" name="span.whitespace-nowrap" x="0" y="6.5" width="59" height="17">
+                <text id="157:4362" name="Filter Mode" x="0" y="0" width="59" height="17" />
+              </frame>
+              <frame id="157:4363" name="span.font-medium" x="159" y="6" width="64" height="18">
+                <text id="157:4364" name="Basic Filter" x="0" y="0" width="64" height="18" />
+              </frame>
+            </frame>
+            <frame id="157:4365" name="div.flex" x="0" y="31" width="223" height="31">
+              <frame id="157:4366" name="span.whitespace-nowrap" x="0" y="6.5" width="57" height="17">
+                <text id="157:4367" name="Total Rules" x="0" y="0" width="57" height="17" />
+              </frame>
+              <frame id="157:4368" name="span.font-medium" x="215" y="6" width="8" height="18">
+                <text id="157:4369" name="3" x="0" y="0" width="8" height="18" />
+              </frame>
+            </frame>
+            <frame id="157:4370" name="div.flex" x="0" y="62" width="223" height="31">
+              <frame id="157:4371" name="span.whitespace-nowrap" x="0" y="6.5" width="91" height="17">
+                <text id="157:4372" name="Condition Groups" x="0" y="0" width="91" height="17" />
+              </frame>
+              <frame id="157:4373" name="span.font-medium" x="172" y="6" width="51" height="18">
+                <text id="157:4374" name="1 (AND)" x="0" y="0" width="51" height="18" />
+              </frame>
+            </frame>
+            <frame id="157:4375" name="div.flex" x="0" y="93" width="223" height="30">
+              <frame id="157:4376" name="span.whitespace-nowrap" x="0" y="6.5" width="86" height="17">
+                <text id="157:4377" name="Active Functions" x="0" y="0" width="86" height="17" />
+              </frame>
+              <frame id="157:4378" name="span.font-medium" x="215" y="6" width="8" height="18">
+                <text id="157:4379" name="0" x="0" y="0" width="8" height="18" />
+              </frame>
+            </frame>
+          </frame>
+        </frame>
+        <frame id="157:4380" name="div.border-t" x="16" y="265" width="223" height="198">
+          <frame id="157:4381" name="div.font-semibold" x="0" y="13" width="223" height="17">
+            <text id="157:4382" name="Data Impact" x="0" y="0" width="223" height="17" />
+          </frame>
+          <frame id="157:4383" name="div.space-y-0" x="0" y="38" width="223" height="127">
+            <frame id="157:4384" name="div.flex" x="0" y="4" width="223" height="31">
+              <frame id="157:4385" name="span.whitespace-nowrap" x="0" y="6.5" width="73" height="17">
+                <text id="157:4386" name="Input Records" x="0" y="0" width="73" height="17" />
+              </frame>
+              <frame id="157:4387" name="span.font-medium" x="158" y="6" width="65" height="18">
+                <text id="157:4388" name="4,218,902" x="0" y="0" width="65" height="18" />
+              </frame>
+            </frame>
+            <frame id="157:4389" name="div.flex" x="0" y="35" width="223" height="31">
+              <frame id="157:4390" name="span.whitespace-nowrap" x="0" y="6.5" width="104" height="17">
+                <text id="157:4391" name="Est. Output Records" x="0" y="0" width="104" height="17" />
+              </frame>
+              <frame id="157:4392" name="span.font-medium" x="151" y="6" width="72" height="18">
+                <text id="157:4393" name="~1,486,702" x="0" y="0" width="72" height="18" />
+              </frame>
+            </frame>
+            <frame id="157:4394" name="div.flex" x="0" y="66" width="223" height="31">
+              <frame id="157:4395" name="span.whitespace-nowrap" x="0" y="6.5" width="89" height="17">
+                <text id="157:4396" name="Filter Percentage" x="0" y="0" width="89" height="17" />
+              </frame>
+              <frame id="157:4397" name="span.font-medium" x="187" y="6" width="36" height="18">
+                <text id="157:4398" name="35.2%" x="0" y="0" width="36" height="18" />
+              </frame>
+            </frame>
+            <frame id="157:4399" name="div.flex" x="0" y="97" width="223" height="30">
+              <frame id="157:4400" name="span.whitespace-nowrap" x="0" y="6.5" width="80" height="17">
+                <text id="157:4401" name="Est. Processing" x="0" y="0" width="80" height="17" />
+              </frame>
+              <frame id="157:4402" name="span.font-medium" x="179" y="6" width="44" height="18">
+                <text id="157:4403" name="4m 12s" x="0" y="0" width="44" height="18" />
+              </frame>
+            </frame>
+          </frame>
+          <frame id="157:4404" name="div.mt-2" x="0" y="173" width="223" height="25">
+            <frame id="157:4405" name="div.flex" x="0" y="0" width="223" height="15">
+              <frame id="157:4406" name="span" x="0" y="0" width="44" height="15">
+                <text id="157:4407" name="Pass rate" x="0" y="0" width="44" height="15" />
+              </frame>
+              <frame id="157:4408" name="span.mono" x="193" y="0" width="30" height="15">
+                <text id="157:4409" name="35.2%" x="0" y="0" width="30" height="15" />
+              </frame>
+            </frame>
+            <frame id="157:4410" name="div.rounded-full" x="0" y="19" width="223" height="6" />
+          </frame>
+        </frame>
+        <frame id="157:4412" name="div.border-t" x="16" y="479" width="223" height="134">
+          <frame id="157:4413" name="div.font-semibold" x="0" y="13" width="223" height="17">
+            <text id="157:4414" name="Runtime Summary" x="0" y="0" width="223" height="17" />
+          </frame>
+          <frame id="157:4415" name="div.space-y-0" x="0" y="42" width="223" height="92">
+            <frame id="157:4416" name="div.flex" x="0" y="0" width="223" height="31">
+              <frame id="157:4417" name="span.whitespace-nowrap" x="0" y="6.5" width="56" height="17">
+                <text id="157:4418" name="Parallelism" x="0" y="0" width="56" height="17" />
+              </frame>
+              <frame id="157:4419" name="span.font-medium" x="158" y="6" width="65" height="18">
+                <text id="157:4420" name="8 threads" x="0" y="0" width="65" height="18" />
+              </frame>
+            </frame>
+            <frame id="157:4421" name="div.flex" x="0" y="31" width="223" height="31">
+              <frame id="157:4422" name="span.whitespace-nowrap" x="0" y="6.5" width="43" height="17">
+                <text id="157:4423" name="Timeout" x="0" y="0" width="43" height="17" />
+              </frame>
+              <frame id="157:4424" name="span.font-medium" x="194" y="6" width="29" height="18">
+                <text id="157:4425" name="300s" x="0" y="0" width="29" height="18" />
+              </frame>
+            </frame>
+            <frame id="157:4426" name="div.flex" x="0" y="62" width="223" height="30">
+              <frame id="157:4427" name="span.whitespace-nowrap" x="0" y="6.5" width="62" height="17">
+                <text id="157:4428" name="Retry Policy" x="0" y="0" width="62" height="17" />
+              </frame>
+              <frame id="157:4429" name="span.font-medium" x="115" y="6" width="108" height="18">
+                <text id="157:4430" name="3Ã— exp. backoff" x="0" y="0" width="108" height="18" />
+              </frame>
+            </frame>
+          </frame>
+        </frame>
+        <frame id="157:4431" name="div.border-t" x="16" y="629" width="223" height="128">
+          <frame id="157:4432" name="div.font-semibold" x="0" y="13" width="223" height="17">
+            <text id="157:4433" name="Validation Summary" x="0" y="0" width="223" height="17" />
+          </frame>
+          <frame id="157:4434" name="div.space-y-1" x="0" y="42" width="223" height="86">
+            <frame id="157:4435" name="div.flex" x="0" y="0" width="223" height="26">
+              <frame id="157:4436" name="span.flex" x="0" y="4" width="56" height="18">
+                <rounded-rectangle id="157:4437" name="span.w-2" x="0" y="5" width="8" height="8" />
+                <text id="157:4438" name="Passed" x="14" y="0" width="42" height="18" />
+              </frame>
+              <frame id="157:4439" name="span.mono" x="215" y="4" width="8" height="18">
+                <text id="157:4440" name="3" x="0" y="0" width="8" height="18" />
+              </frame>
+            </frame>
+            <frame id="157:4441" name="div.flex" x="0" y="30" width="223" height="26">
+              <frame id="157:4442" name="span.flex" x="0" y="4" width="67" height="18">
+                <rounded-rectangle id="157:4443" name="span.w-2" x="0" y="5" width="8" height="8" />
+                <text id="157:4444" name="Warnings" x="14" y="0" width="53" height="18" />
+              </frame>
+              <frame id="157:4445" name="span.mono" x="215" y="4" width="8" height="18">
+                <text id="157:4446" name="1" x="0" y="0" width="8" height="18" />
+              </frame>
+            </frame>
+            <frame id="157:4447" name="div.flex" x="0" y="60" width="223" height="26">
+              <frame id="157:4448" name="span.flex" x="0" y="4" width="48" height="18">
+                <rounded-rectangle id="157:4449" name="span.w-2" x="0" y="5" width="8" height="8" />
+                <text id="157:4450" name="Errors" x="14" y="0" width="34" height="18" />
+              </frame>
+              <frame id="157:4451" name="span.mono" x="215" y="4" width="8" height="18">
+                <text id="157:4452" name="1" x="0" y="0" width="8" height="18" />
+              </frame>
+            </frame>
+          </frame>
+        </frame>
+      </frame>
+    </frame>
+  </frame>
+  <frame id="157:4453" name="div.sticky" x="0" y="1143" width="1920" height="57">
+    <frame id="157:4454" name="div.flex" x="24" y="20" width="306" height="18">
+      <frame id="157:4455" name="div.flex" x="0" y="0" width="115" height="18">
+        <rounded-rectangle id="157:4456" name="div.rounded-full" x="0" y="6" width="6" height="6" />
+        <frame id="157:4457" name="span.font-medium" x="12" y="0" width="103" height="18">
+          <text id="157:4458" name="Unsaved changes" x="0" y="0" width="103" height="18" />
+        </frame>
+      </frame>
+      <frame id="157:4459" name="span" x="131" y="0.5" width="175" height="17">
+        <text id="157:4460" name="Last saved: 2026-08-07 14:22:04" x="0" y="0" width="175" height="17" />
+      </frame>
+    </frame>
+    <frame id="157:4461" name="div.flex" x="1344" y="13" width="552" height="32">
+      <frame id="157:4462" name="button.inline-flex" x="0" y="0" width="66" height="32">
+        <text id="157:4463" name="Cancel" x="13" y="7" width="40" height="18" />
+      </frame>
+      <frame id="157:4464" name="button.inline-flex" x="74" y="0" width="87" height="32">
+        <text id="157:4465" name="Save Draft" x="13" y="7" width="61" height="18" />
+      </frame>
+      <frame id="157:4466" name="button.inline-flex" x="169" y="0" width="90" height="32">
+        <instance id="157:4467" name="Component 1" x="13" y="10.5" width="11" height="11" />
+        <text id="157:4468" name="Validate" x="30" y="7" width="47" height="18" />
+      </frame>
+      <frame id="157:4469" name="button.inline-flex" x="267" y="0" width="119" height="32">
+        <instance id="157:4470" name="Component 1" x="13" y="10.5" width="11" height="11" />
+        <text id="157:4471" name="Preview Data" x="30" y="7" width="76" height="18" />
+      </frame>
+      <frame id="157:4472" name="button.inline-flex" x="394" y="0" width="158" height="32">
+        <instance id="157:4473" name="Component 1" x="13" y="10.5" width="11" height="11" />
+        <text id="157:4474" name="Apply Configuration" x="30" y="7" width="115" height="18" />
+      </frame>
+    </frame>
+  </frame>
+</frame>

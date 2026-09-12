@@ -31,7 +31,7 @@ import { ROLE_LABELS } from '../rbac/permissions';
  * (`sidebarCollapsed`, unchanged) since that's real, deliberately
  * saved session state, not something the mobile drawer should affect.
  */
-export default function AppShell({ breadcrumb, children }) {
+export default function AppShell({ breadcrumb, children, fullBleed = false }) {
   const dispatch = useDispatch();
   const { currentUser, role, sidebarCollapsed } = useSelector((state) => state.session);
   const roleLabel = ROLE_LABELS[role] ?? role;
@@ -93,7 +93,13 @@ export default function AppShell({ breadcrumb, children }) {
             of expanding the shell; `overscroll-contain` stops wheel/
             trackpad scroll from chaining to the (locked) document once
             the top/bottom is reached. */}
-        <main className="min-h-0 min-w-0 flex-1 overflow-y-auto overscroll-contain px-token-5 py-token-6 sm:px-6 sm:py-7 lg:px-9 lg:py-8">
+        <main
+          className={
+            fullBleed
+              ? 'min-h-0 min-w-0 flex-1 flex flex-col overflow-hidden relative'
+              : 'min-h-0 min-w-0 flex-1 overflow-y-auto overscroll-contain px-token-5 py-token-6 sm:px-6 sm:py-7 lg:px-9 lg:py-8'
+          }
+        >
           {children}
         </main>
         <Footer />

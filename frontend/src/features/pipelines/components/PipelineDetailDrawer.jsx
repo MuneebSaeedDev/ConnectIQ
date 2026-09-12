@@ -6,8 +6,8 @@ import {
   Pause,
   Copy,
   Activity,
-  History,
   Edit,
+  Workflow,
 } from 'lucide-react';
 
 const STATUS_CONFIG = {
@@ -258,6 +258,14 @@ export default function PipelineDetailDrawer({
       {/* Footer Actions */}
       <div className="p-4 border-t border-slate-200 bg-slate-50 grid grid-cols-3 gap-2 text-xs">
         <Link
+          to={`/pipelines/${pipeline.id}/builder`}
+          className="inline-flex items-center justify-center gap-1 px-3 py-2 rounded-lg font-medium text-blue-700 bg-blue-50 border border-blue-200 hover:bg-blue-100 transition shadow-sm"
+        >
+          <Workflow className="size-3.5 text-blue-600" />
+          <span>Builder</span>
+        </Link>
+
+        <Link
           to={`/pipelines/new?edit=${pipeline.id}`}
           className="inline-flex items-center justify-center gap-1 px-3 py-2 rounded-lg font-medium text-slate-700 bg-white border border-slate-300 hover:bg-slate-100 transition shadow-sm"
         >
@@ -298,14 +306,6 @@ export default function PipelineDetailDrawer({
         >
           <Activity className="size-3.5 text-emerald-500" />
           <span>Monitoring</span>
-        </Link>
-
-        <Link
-          to="/dashboard/executions"
-          className="inline-flex items-center justify-center gap-1 px-3 py-2 rounded-lg font-medium text-slate-700 bg-white border border-slate-300 hover:bg-slate-100 transition shadow-sm"
-        >
-          <History className="size-3.5 text-sky-500" />
-          <span>History</span>
         </Link>
       </div>
     </div>

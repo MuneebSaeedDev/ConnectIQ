@@ -1,0 +1,197 @@
+import React, { useState } from 'react';
+import { Tag, Plus, X, AlertCircle } from 'lucide-react';
+import { VALIDATION_CATEGORY_OPTIONS } from '../../services/validationNodeConfig.api';
+
+export default function GeneralInfoSection({
+  form,
+  updateField,
+  addTag,
+  removeTag,
+}) {
+  const [tagInput, setTagInput] = useState('');
+  const [tagInputVisible, setTagInputVisible] = useState(false);
+
+  const handleTagKeyDown = (e) => {
+    if (e.key === 'Enter' || e.key === ',') {
+      e.preventDefault();
+      if (tagInput.trim()) {
+        addTag(tagInput.trim());
+        setTagInput('');
+        setTagInputVisible(false);
+      }
+    } else if (e.key === 'Escape') {
+      setTagInputVisible(false);
+      setTagInput('');
+    }
+  };
+
+  const isNodeNameValid = !form.nodeName || /^[a-z0-9_]+$/.test(form.nodeName);
+
+  return (
+    <section
+      className="bg-white rounded-lg border border-slate-200 shadow-2xs overflow-hidden"
+      aria-labelledby="section-01-general-info"
+    >
+      {/* Section Header */}
+      <div className="px-5 py-3.5 bg-slate-50/70 border-b border-slate-200 flex items-center justify-between">
+        <div className="flex items-center gap-2.5">
+          <span className="flex items-center justify-center size-5 rounded-full bg-blue-100 text-blue-700 font-mono text-[11px] font-bold">
+            01
+          </span>
+          <h2 id="section-01-general-info" className="text-xs font-bold text-slate-900 tracking-wide uppercase">
+            General Information
+          </h2>
+        </div>
+        <div className="flex items-center gap-3 text-[11px] font-mono text-slate-500">
+          <span>Node Type: <strong className="text-slate-700 font-semibold">{form.nodeType || 'VALIDATION'}</strong></span>
+          <span className="text-slate-300">·</span>
+          <span>Version: <strong className="text-slate-700 font-semibold">{form.version || '1.2.0'}</strong></span>
+          <span className="text-slate-300">·</span>
+          <span>Created By: <strong className="text-slate-700">{form.createdBy || '[EMAIL_REDACTED]'}</strong></span>
+          <span className="text-slate-300">·</span>
+          <span>Modified: <strong className="text-slate-700">{form.lastModified || '2026-08-09 11:18'}</strong></span>
+        </div>
+      </div>
+
+      <div className="p-5 space-y-4">
+        {/* Row 1: Node Name & Display Name */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="space-y-1.5">
+            <label htmlFor="nodeName" className="block text-xs font-semibold text-slate-700">
+              Node Name <span className="text-rose-500">*</span>
+            </label>
+            <input
+              type="text"
+              id="nodeName"
+              value={form.nodeName || ''}
+              onChange={(e) => updateField('nodeName', e.target.value.toLowerCase().replace(/[^a-z0-9_]/g, ''))}
+              placeholder="e.g. customer_validator"
+              className={`w-full px-3 py-1.5 text-xs font-mono text-slate-900 bg-white border rounded-md shadow-2xs focus:outline-hidden focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition ${
+                !isNodeNameValid ? 'border-rose-400 bg-rose-50/30' : 'border-slate-300'
+              }`}
+            />
+            {!isNodeNameValid && (
+              <p className="text-[11px] text-rose-600 flex items-center gap-1">
+                <AlertCircle className="size-3" />
+                Only lowercase alphanumeric and underscores allowed.
+              </p>
+            )}
+          </div>
+
+          <div className="space-y-1.5">
+            <label htmlFor="displayName" className="block text-xs font-semibold text-slate-700">
+              Display Name
+            </label>
+            <input
+              type="text"
+              id="displayName"
+              value={form.displayName || ''}
+              onChange={(e) => updateField('displayName', e.target.value)}
+              placeholder="Customer Data Validator"
+              className="w-full px-3 py-1.5 text-xs text-slate-900 bg-white border border-slate-300 rounded-md shadow-2xs focus:outline-hidden focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition"
+            />
+          </div>
+        </div>
+
+        {/* Row 2: Owner & Validation Category */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="space-y-1.5">
+            <label htmlFor="owner" className="block text-xs font-semibold text-slate-700">
+              Owner
+            </label>
+            <input
+              type="text"
+              id="owner"
+              value={form.owner || ''}
+              onChange={(e) => updateField('owner', e.target.value)}
+              placeholder="data-quality-team"
+              className="w-full px-3 py-1.5 text-xs font-mono text-slate-900 bg-white border border-slate-300 rounded-md shadow-2xs focus:outline-hidden focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition"
+            />
+          </div>
+
+          <div className="space-y-1.5">
+            <label htmlFor="category" className="block text-xs font-semibold text-slate-700">
+              Validation Category
+            </label>
+            <select
+              id="category"
+              value={form.category || 'Schema Validation'}
+              onChange={(e) => updateField('category', e.target.value)}
+              className="w-full px-3 py-1.5 text-xs text-slate-900 bg-white border border-slate-300 rounded-md shadow-2xs focus:outline-hidden focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition cursor-pointer"
+            >
+              {VALIDATION_CATEGORY_OPTIONS.map((cat) => (
+                <option key={cat} value={cat}>
+                  {cat}
+                </option>
+              ))}
+            </select>
+          </div>
+        </div>
+
+        {/* Row 3: Description */}
+        <div className="space-y-1.5">
+          <label htmlFor="description" className="block text-xs font-semibold text-slate-700">
+            Description
+          </label>
+          <textarea
+            id="description"
+            rows={2}
+            value={form.description || ''}
+            onChange={(e) => updateField('description', e.target.value)}
+            placeholder="Validates incoming records against schema requirements..."
+            className="w-full px-3 py-2 text-xs text-slate-900 bg-white border border-slate-300 rounded-md shadow-2xs focus:outline-hidden focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition resize-y"
+          />
+        </div>
+
+        {/* Row 4: Tags */}
+        <div className="space-y-1.5">
+          <label className="block text-xs font-semibold text-slate-700">Tags</label>
+          <div className="flex flex-wrap items-center gap-1.5 p-2 bg-slate-50 border border-slate-200 rounded-md min-h-[36px]">
+            {(form.tags || []).map((tag) => (
+              <span
+                key={tag}
+                className="inline-flex items-center gap-1 px-2 py-0.5 rounded text-[11px] font-mono font-medium bg-white text-slate-700 border border-slate-300 shadow-2xs"
+              >
+                <Tag className="size-2.5 text-slate-400" />
+                {tag}
+                <button
+                  type="button"
+                  onClick={() => removeTag(tag)}
+                  className="text-slate-400 hover:text-rose-500 transition cursor-pointer"
+                  aria-label={`Remove tag ${tag}`}
+                >
+                  <X className="size-3" />
+                </button>
+              </span>
+            ))}
+            {tagInputVisible ? (
+              <input
+                type="text"
+                value={tagInput}
+                onChange={(e) => setTagInput(e.target.value)}
+                onKeyDown={handleTagKeyDown}
+                onBlur={() => {
+                  if (tagInput.trim()) addTag(tagInput.trim());
+                  setTagInput('');
+                  setTagInputVisible(false);
+                }}
+                placeholder="tag name..."
+                autoFocus
+                className="px-2 py-0.5 text-[11px] font-mono text-slate-900 bg-white border border-blue-400 rounded focus:outline-hidden"
+              />
+            ) : (
+              <button
+                type="button"
+                onClick={() => setTagInputVisible(true)}
+                className="inline-flex items-center gap-1 px-2 py-0.5 text-[11px] font-medium text-blue-600 hover:text-blue-700 hover:bg-blue-50/50 rounded transition cursor-pointer"
+              >
+                <Plus className="size-3" />
+                Add tag
+              </button>
+            )}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
