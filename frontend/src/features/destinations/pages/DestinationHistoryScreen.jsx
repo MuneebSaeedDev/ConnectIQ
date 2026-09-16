@@ -1670,7 +1670,7 @@ export default function DestinationHistoryScreen() {
                 <GitBranch className="w-4 h-4 text-primary" />
                 <h2 className="text-sm font-bold text-text-primary">Related Pipelines</h2>
               </div>
-              <Link to="/dashboard/pipelines" className="text-xs text-primary hover:underline font-medium">
+              <Link to="/pipelines" className="text-xs text-primary hover:underline font-medium">
                 View All Pipelines →
               </Link>
             </div>
@@ -1713,7 +1713,7 @@ export default function DestinationHistoryScreen() {
                       </td>
                       <td className="p-3 text-right">
                         <Link
-                          to={`/pipelines`}
+                          to={`/pipelines/${encodeURIComponent(p.id)}`}
                           className="text-xs text-primary hover:underline font-medium"
                         >
                           View Pipeline
