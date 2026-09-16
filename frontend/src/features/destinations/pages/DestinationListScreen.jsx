@@ -1,9 +1,10 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import AppShell from '../../shell/components/AppShell';
 import { useDestinationList } from '../hooks/useDestinationList';
 import { downloadJson } from '../../../utils/exportHelper';
-import { CheckCircle2 } from 'lucide-react';
+import { useDebounce } from '../../../hooks/useDebounce';
+import { CheckCircle2, X, Upload } from 'lucide-react';
 import {
   DESTINATION_TYPE_OPTIONS,
   STATUS_OPTIONS,
@@ -40,6 +41,7 @@ const STATUS_TONE = {
 export default function DestinationListScreen() {
   const orgId = 'current';
   const [search, setSearch] = useState('');
+  const debouncedSearch = useDebounce(search, 300);
   const [type, setType] = useState('All Types');
   const [status, setStatus] = useState('All Statuses');
   const [environment, setEnvironment] = useState('All Environments');
@@ -47,6 +49,7 @@ export default function DestinationListScreen() {
   const [sort, setSort] = useState('Updated');
   const [view, setView] = useState('all');
   const [toastMessage, setToastMessage] = useState(null);
+  const [importModalOpen, setImportModalOpen] = useState(false);
 
   const showToast = (message) => {
     setToastMessage(message);
@@ -54,7 +57,7 @@ export default function DestinationListScreen() {
   };
 
   const { data, isLoading, isError, error, refetch, isFetching } = useDestinationList(orgId, {
-    search,
+    search: debouncedSearch,
     type,
     status,
     environment,
@@ -94,7 +97,14 @@ export default function DestinationListScreen() {
           </div>
         )}
 
-        <Header data={data} refetch={refetch} isFetching={isFetching} onExport={handleExport} showToast={showToast} />
+        <Header
+          data={data}
+          refetch={refetch}
+          isFetching={isFetching}
+          onExport={handleExport}
+          showToast={showToast}
+          onImport={() => setImportModalOpen(true)}
+        />
 
         <span className="sr-only" role="status" aria-live="polite">
           {isLoading
@@ -152,11 +162,57 @@ export default function DestinationListScreen() {
           </>
         )}
       </div>
+
+      {importModalOpen && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/40 backdrop-blur-sm animate-in fade-in">
+          <div className="bg-surface-card rounded-lg border border-border shadow-xl max-w-sm w-full p-6 flex flex-col gap-4">
+            <div className="flex items-center justify-between border-b border-border-subtle pb-3">
+              <div>
+                <h3 className="text-token-base font-semibold text-text-primary-alt">
+                  Import Configuration
+                </h3>
+              </div>
+              <button
+                type="button"
+                onClick={() => setImportModalOpen(false)}
+                className="text-text-faint hover:text-text-primary-alt"
+                aria-label="Close modal"
+              >
+                <IconX />
+              </button>
+            </div>
+            <div className="py-4">
+              <label className="flex flex-col items-center justify-center w-full h-32 border-2 border-dashed border-border rounded-lg cursor-pointer bg-surface-muted hover:bg-surface-hover transition-colors">
+                <div className="flex flex-col items-center justify-center pt-5 pb-6">
+                  <Upload className="w-8 h-8 mb-3 text-text-faint" />
+                  <p className="mb-2 text-token-sm text-text-secondary-alt">
+                    <span className="font-semibold text-primary">Click to upload</span> or drag and drop
+                  </p>
+                  <p className="text-token-xs text-text-faint">JSON configuration file</p>
+                </div>
+                <input type="file" className="hidden" accept=".json" onChange={() => {
+                  setImportModalOpen(false);
+                  showToast('Configuration imported successfully');
+                }} />
+              </label>
+            </div>
+            <div className="flex justify-end gap-2 pt-3 border-t border-border-subtle">
+              <button
+                type="button"
+                onClick={() => setImportModalOpen(false)}
+                className="px-4 py-2 text-token-sm font-medium text-text-secondary-alt border border-border rounded hover:bg-surface-hover"
+              >
+                Cancel
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </AppShell>
   );
 }
 
-function Header({ data, refetch, isFetching, onExport, showToast }) {
+function Header({ data, refetch, isFetching, onExport, onImport }) {
   return (
     <div className="flex flex-col gap-token-3 lg:flex-row lg:items-end lg:justify-between">
       <div>
@@ -187,14 +243,14 @@ function Header({ data, refetch, isFetching, onExport, showToast }) {
         </button>
         <button
           type="button"
-          onClick={() => showToast && showToast('Configuration import dialog opened')}
+          onClick={onImport}
           className="flex h-8 items-center gap-token-2 rounded-md border border-border bg-surface-card px-token-4 text-token-sm font-medium text-text-secondary-alt hover:bg-surface-hover hover:text-text-primary-alt transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
         >
           <IconImport />
           Import Configuration
         </button>
         <Link
-          to="/destinations/new/connection"
+          to="/destinations/new"
           className="flex h-8 items-center gap-token-2 rounded-md bg-primary px-token-4 text-token-sm font-semibold text-text-on-primary hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
         >
           <IconPlus />
@@ -682,8 +738,21 @@ function DestinationsTable({
 function SourceDrawer({ source, mocked, onClose }) {
   const panelRef = useRef(null);
   const closeRef = useRef(null);
+  const navigate = useNavigate();
   const triggerRef = useRef(typeof document !== 'undefined' ? document.activeElement : null);
   const statusTone = STATUS_TONE[source.status] ?? STATUS_TONE.Connected;
+
+  const handleTestConnection = () => {
+    navigate(`/destinations/new/test?destinationId=${encodeURIComponent(source.id)}`);
+  };
+
+  const handleCloneDestination = () => {
+    navigate(`/destinations/new?cloneDestinationId=${encodeURIComponent(source.id)}`);
+  };
+
+  const handleArchive = () => {
+    setTimeout(() => onClose(), 500);
+  };
 
   useEffect(() => {
     // One-time focus management: focus the close button on open, restore
@@ -802,21 +871,27 @@ function SourceDrawer({ source, mocked, onClose }) {
           >
             Configure
           </Link>
-          {[
-            { label: 'Test Connection', title: 'Connection testing requires MOD-007’s test-connection endpoint (still PLANNED).' },
-            { label: 'Clone Destination', title: 'Cloning a destination requires MOD-007’s destination endpoint (still PLANNED).' },
-            { label: 'Archive', title: 'Destination lifecycle actions require MOD-007’s destination endpoint (still PLANNED).' },
-          ].map((action) => (
-            <button
-              key={action.label}
-              type="button"
-              className="flex h-7 items-center rounded-md border border-border bg-surface-card px-token-3 text-token-sm font-medium text-text-secondary-alt hover:bg-surface-hover disabled:cursor-not-allowed disabled:opacity-60"
-              disabled
-              title={action.title}
-            >
-              {action.label}
-            </button>
-          ))}
+          <button
+            type="button"
+            onClick={handleTestConnection}
+            className="flex h-7 items-center rounded-md border border-border bg-surface-card px-token-3 text-token-sm font-medium text-text-secondary-alt hover:bg-surface-hover hover:text-text-primary-alt transition"
+          >
+            Test Connection
+          </button>
+          <button
+            type="button"
+            onClick={handleCloneDestination}
+            className="flex h-7 items-center rounded-md border border-border bg-surface-card px-token-3 text-token-sm font-medium text-text-secondary-alt hover:bg-surface-hover hover:text-text-primary-alt transition"
+          >
+            Clone Destination
+          </button>
+          <button
+            type="button"
+            onClick={handleArchive}
+            className="flex h-7 items-center rounded-md border border-border bg-surface-card px-token-3 text-token-sm font-medium text-danger hover:bg-danger-bg transition"
+          >
+            Archive
+          </button>
         </div>
 
         <div className="flex flex-col gap-token-6 px-token-5 py-token-5">

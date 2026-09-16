@@ -692,14 +692,8 @@ function SourceDrawer({ source, mocked, onClose }) {
     navigate(`/data-sources/new?cloneSourceId=${encodeURIComponent(source.id)}`);
   };
 
-  const [toastMessage, setToastMessage] = useState(null);
-  const showToast = (message) => {
-    setToastMessage(message);
-    setTimeout(() => setToastMessage(null), 3500);
-  };
   const handleArchive = () => {
-    showToast('Source archived successfully');
-    setTimeout(() => onClose(), 1000);
+    setTimeout(() => onClose(), 500);
   };
 
   useEffect(() => {
