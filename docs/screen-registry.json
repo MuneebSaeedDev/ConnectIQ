@@ -1,0 +1,794 @@
+[
+  {
+    "id": 72,
+    "name": "Merge Node Configuration",
+    "status": "completed",
+    "owner": "agent-1789472658638-nhnb2rx",
+    "claimedAt": "2026-09-15T11:44:18.638Z",
+    "completedAt": "2026-09-15T12:14:21.188Z",
+    "attempt": 1
+  },
+  {
+    "id": 73,
+    "name": "Destination Node Configuration",
+    "status": "completed",
+    "owner": "agent-connectiq-73-1789490491300",
+    "claimedAt": "2026-09-15T16:41:31.301Z",
+    "completedAt": "2026-09-15T16:59:42.378Z",
+    "attempt": 1
+  },
+  {
+    "id": 74,
+    "name": "Pipeline Settings",
+    "status": "completed",
+    "owner": "agent-connectiq-74-1789491928295",
+    "claimedAt": "2026-09-15T17:05:28.295Z",
+    "completedAt": "2026-09-15T17:14:55.743Z",
+    "attempt": 1
+  },
+  {
+    "id": 75,
+    "name": "Pipeline Version History",
+    "status": "completed",
+    "owner": "agent-connectiq-75-1789492776800",
+    "claimedAt": "2026-09-15T17:19:36.800Z",
+    "completedAt": "2026-09-15T17:28:01.110Z",
+    "attempt": 1
+  },
+  {
+    "id": 76,
+    "name": "Pipeline Template Library",
+    "status": "completed",
+    "owner": "agent-connectiq-76-1789493493320",
+    "claimedAt": "2026-09-15T17:31:33.320Z",
+    "completedAt": "2026-09-15T17:36:17.755Z",
+    "attempt": 1
+  },
+  {
+    "id": 77,
+    "name": "Pipeline Test Execution",
+    "status": "completed",
+    "owner": "agent-connectiq-77-1789494119431",
+    "claimedAt": "2026-09-15T17:41:59.431Z",
+    "completedAt": "2026-09-15T17:48:30.249Z",
+    "attempt": 1
+  },
+  {
+    "id": 78,
+    "name": "Transformation Rules List",
+    "status": "unbuilt",
+    "owner": null,
+    "claimedAt": null,
+    "completedAt": null,
+    "attempt": 0
+  },
+  {
+    "id": 79,
+    "name": "Create Transformation Rule",
+    "status": "unbuilt",
+    "owner": null,
+    "claimedAt": null,
+    "completedAt": null,
+    "attempt": 0
+  },
+  {
+    "id": 80,
+    "name": "Field Mapping Screen",
+    "status": "unbuilt",
+    "owner": null,
+    "claimedAt": null,
+    "completedAt": null,
+    "attempt": 0
+  },
+  {
+    "id": 81,
+    "name": "Data Cleaning Rules",
+    "status": "unbuilt",
+    "owner": null,
+    "claimedAt": null,
+    "completedAt": null,
+    "attempt": 0
+  },
+  {
+    "id": 82,
+    "name": "Type Conversion Rules",
+    "status": "unbuilt",
+    "owner": null,
+    "claimedAt": null,
+    "completedAt": null,
+    "attempt": 0
+  },
+  {
+    "id": 83,
+    "name": "Date Formatting Rules",
+    "status": "unbuilt",
+    "owner": null,
+    "claimedAt": null,
+    "completedAt": null,
+    "attempt": 0
+  },
+  {
+    "id": 84,
+    "name": "Lookup Tables",
+    "status": "unbuilt",
+    "owner": null,
+    "claimedAt": null,
+    "completedAt": null,
+    "attempt": 0
+  },
+  {
+    "id": 85,
+    "name": "Custom Expression Builder",
+    "status": "unbuilt",
+    "owner": null,
+    "claimedAt": null,
+    "completedAt": null,
+    "attempt": 0
+  },
+  {
+    "id": 86,
+    "name": "Validation Rules List",
+    "status": "unbuilt",
+    "owner": null,
+    "claimedAt": null,
+    "completedAt": null,
+    "attempt": 0
+  },
+  {
+    "id": 87,
+    "name": "Create Validation Rule",
+    "status": "unbuilt",
+    "owner": null,
+    "claimedAt": null,
+    "completedAt": null,
+    "attempt": 0
+  },
+  {
+    "id": 88,
+    "name": "Required Field Validation",
+    "status": "unbuilt",
+    "owner": null,
+    "claimedAt": null,
+    "completedAt": null,
+    "attempt": 0
+  },
+  {
+    "id": 89,
+    "name": "Duplicate Detection",
+    "status": "unbuilt",
+    "owner": null,
+    "claimedAt": null,
+    "completedAt": null,
+    "attempt": 0
+  },
+  {
+    "id": 90,
+    "name": "Email Validation Rules",
+    "status": "unbuilt",
+    "owner": null,
+    "claimedAt": null,
+    "completedAt": null,
+    "attempt": 0
+  },
+  {
+    "id": 91,
+    "name": "Phone Validation Rules",
+    "status": "unbuilt",
+    "owner": null,
+    "claimedAt": null,
+    "completedAt": null,
+    "attempt": 0
+  },
+  {
+    "id": 92,
+    "name": "Foreign Key Validation",
+    "status": "unbuilt",
+    "owner": null,
+    "claimedAt": null,
+    "completedAt": null,
+    "attempt": 0
+  },
+  {
+    "id": 93,
+    "name": "Business Rules Validation",
+    "status": "unbuilt",
+    "owner": null,
+    "claimedAt": null,
+    "completedAt": null,
+    "attempt": 0
+  },
+  {
+    "id": 94,
+    "name": "Scheduler Dashboard",
+    "status": "unbuilt",
+    "owner": null,
+    "claimedAt": null,
+    "completedAt": null,
+    "attempt": 0
+  },
+  {
+    "id": 95,
+    "name": "Schedule List",
+    "status": "unbuilt",
+    "owner": null,
+    "claimedAt": null,
+    "completedAt": null,
+    "attempt": 0
+  },
+  {
+    "id": 96,
+    "name": "Create Schedule",
+    "status": "unbuilt",
+    "owner": null,
+    "claimedAt": null,
+    "completedAt": null,
+    "attempt": 0
+  },
+  {
+    "id": 97,
+    "name": "Edit Schedule",
+    "status": "unbuilt",
+    "owner": null,
+    "claimedAt": null,
+    "completedAt": null,
+    "attempt": 0
+  },
+  {
+    "id": 98,
+    "name": "Manual Pipeline Run",
+    "status": "unbuilt",
+    "owner": null,
+    "claimedAt": null,
+    "completedAt": null,
+    "attempt": 0
+  },
+  {
+    "id": 99,
+    "name": "Event Trigger Configuration",
+    "status": "unbuilt",
+    "owner": null,
+    "claimedAt": null,
+    "completedAt": null,
+    "attempt": 0
+  },
+  {
+    "id": 100,
+    "name": "Schedule History",
+    "status": "unbuilt",
+    "owner": null,
+    "claimedAt": null,
+    "completedAt": null,
+    "attempt": 0
+  },
+  {
+    "id": 101,
+    "name": "Running Pipelines",
+    "status": "unbuilt",
+    "owner": null,
+    "claimedAt": null,
+    "completedAt": null,
+    "attempt": 0
+  },
+  {
+    "id": 102,
+    "name": "Completed Pipelines",
+    "status": "unbuilt",
+    "owner": null,
+    "claimedAt": null,
+    "completedAt": null,
+    "attempt": 0
+  },
+  {
+    "id": 103,
+    "name": "Failed Pipelines",
+    "status": "unbuilt",
+    "owner": null,
+    "claimedAt": null,
+    "completedAt": null,
+    "attempt": 0
+  },
+  {
+    "id": 104,
+    "name": "Pipeline Execution Details",
+    "status": "unbuilt",
+    "owner": null,
+    "claimedAt": null,
+    "completedAt": null,
+    "attempt": 0
+  },
+  {
+    "id": 105,
+    "name": "Execution Timeline",
+    "status": "unbuilt",
+    "owner": null,
+    "claimedAt": null,
+    "completedAt": null,
+    "attempt": 0
+  },
+  {
+    "id": 106,
+    "name": "Live Pipeline Logs",
+    "status": "unbuilt",
+    "owner": null,
+    "claimedAt": null,
+    "completedAt": null,
+    "attempt": 0
+  },
+  {
+    "id": 107,
+    "name": "Record Processing Statistics",
+    "status": "unbuilt",
+    "owner": null,
+    "claimedAt": null,
+    "completedAt": null,
+    "attempt": 0
+  },
+  {
+    "id": 108,
+    "name": "Retry Management",
+    "status": "unbuilt",
+    "owner": null,
+    "claimedAt": null,
+    "completedAt": null,
+    "attempt": 0
+  },
+  {
+    "id": 109,
+    "name": "Pipeline Performance",
+    "status": "unbuilt",
+    "owner": null,
+    "claimedAt": null,
+    "completedAt": null,
+    "attempt": 0
+  },
+  {
+    "id": 110,
+    "name": "Pipeline State History",
+    "status": "unbuilt",
+    "owner": null,
+    "claimedAt": null,
+    "completedAt": null,
+    "attempt": 0
+  },
+  {
+    "id": 111,
+    "name": "Error Dashboard",
+    "status": "unbuilt",
+    "owner": null,
+    "claimedAt": null,
+    "completedAt": null,
+    "attempt": 0
+  },
+  {
+    "id": 112,
+    "name": "Error Log List",
+    "status": "unbuilt",
+    "owner": null,
+    "claimedAt": null,
+    "completedAt": null,
+    "attempt": 0
+  },
+  {
+    "id": 113,
+    "name": "Error Details",
+    "status": "unbuilt",
+    "owner": null,
+    "claimedAt": null,
+    "completedAt": null,
+    "attempt": 0
+  },
+  {
+    "id": 114,
+    "name": "Failed Record Preview",
+    "status": "unbuilt",
+    "owner": null,
+    "claimedAt": null,
+    "completedAt": null,
+    "attempt": 0
+  },
+  {
+    "id": 115,
+    "name": "Retry Failed Records",
+    "status": "unbuilt",
+    "owner": null,
+    "claimedAt": null,
+    "completedAt": null,
+    "attempt": 0
+  },
+  {
+    "id": 116,
+    "name": "Recovery Center",
+    "status": "unbuilt",
+    "owner": null,
+    "claimedAt": null,
+    "completedAt": null,
+    "attempt": 0
+  },
+  {
+    "id": 117,
+    "name": "Error Analytics",
+    "status": "unbuilt",
+    "owner": null,
+    "claimedAt": null,
+    "completedAt": null,
+    "attempt": 0
+  },
+  {
+    "id": 118,
+    "name": "Queue Dashboard",
+    "status": "unbuilt",
+    "owner": null,
+    "claimedAt": null,
+    "completedAt": null,
+    "attempt": 0
+  },
+  {
+    "id": 119,
+    "name": "Active Jobs",
+    "status": "unbuilt",
+    "owner": null,
+    "claimedAt": null,
+    "completedAt": null,
+    "attempt": 0
+  },
+  {
+    "id": 120,
+    "name": "Failed Jobs",
+    "status": "unbuilt",
+    "owner": null,
+    "claimedAt": null,
+    "completedAt": null,
+    "attempt": 0
+  },
+  {
+    "id": 121,
+    "name": "Completed Jobs",
+    "status": "unbuilt",
+    "owner": null,
+    "claimedAt": null,
+    "completedAt": null,
+    "attempt": 0
+  },
+  {
+    "id": 122,
+    "name": "Delayed Jobs",
+    "status": "unbuilt",
+    "owner": null,
+    "claimedAt": null,
+    "completedAt": null,
+    "attempt": 0
+  },
+  {
+    "id": 123,
+    "name": "Worker List",
+    "status": "unbuilt",
+    "owner": null,
+    "claimedAt": null,
+    "completedAt": null,
+    "attempt": 0
+  },
+  {
+    "id": 124,
+    "name": "Worker Details",
+    "status": "unbuilt",
+    "owner": null,
+    "claimedAt": null,
+    "completedAt": null,
+    "attempt": 0
+  },
+  {
+    "id": 125,
+    "name": "Worker Logs",
+    "status": "unbuilt",
+    "owner": null,
+    "claimedAt": null,
+    "completedAt": null,
+    "attempt": 0
+  },
+  {
+    "id": 126,
+    "name": "Reports Dashboard",
+    "status": "unbuilt",
+    "owner": null,
+    "claimedAt": null,
+    "completedAt": null,
+    "attempt": 0
+  },
+  {
+    "id": 127,
+    "name": "Pipeline Reports",
+    "status": "unbuilt",
+    "owner": null,
+    "claimedAt": null,
+    "completedAt": null,
+    "attempt": 0
+  },
+  {
+    "id": 128,
+    "name": "Data Quality Reports",
+    "status": "unbuilt",
+    "owner": null,
+    "claimedAt": null,
+    "completedAt": null,
+    "attempt": 0
+  },
+  {
+    "id": 129,
+    "name": "Execution Reports",
+    "status": "unbuilt",
+    "owner": null,
+    "claimedAt": null,
+    "completedAt": null,
+    "attempt": 0
+  },
+  {
+    "id": 130,
+    "name": "Error Reports",
+    "status": "unbuilt",
+    "owner": null,
+    "claimedAt": null,
+    "completedAt": null,
+    "attempt": 0
+  },
+  {
+    "id": 131,
+    "name": "Custom Report Builder",
+    "status": "unbuilt",
+    "owner": null,
+    "claimedAt": null,
+    "completedAt": null,
+    "attempt": 0
+  },
+  {
+    "id": 132,
+    "name": "Export Reports",
+    "status": "unbuilt",
+    "owner": null,
+    "claimedAt": null,
+    "completedAt": null,
+    "attempt": 0
+  },
+  {
+    "id": 133,
+    "name": "Scheduled Reports",
+    "status": "unbuilt",
+    "owner": null,
+    "claimedAt": null,
+    "completedAt": null,
+    "attempt": 0
+  },
+  {
+    "id": 134,
+    "name": "Notification Inbox",
+    "status": "unbuilt",
+    "owner": null,
+    "claimedAt": null,
+    "completedAt": null,
+    "attempt": 0
+  },
+  {
+    "id": 135,
+    "name": "Alert Rules",
+    "status": "unbuilt",
+    "owner": null,
+    "claimedAt": null,
+    "completedAt": null,
+    "attempt": 0
+  },
+  {
+    "id": 136,
+    "name": "Email Notification Settings",
+    "status": "unbuilt",
+    "owner": null,
+    "claimedAt": null,
+    "completedAt": null,
+    "attempt": 0
+  },
+  {
+    "id": 137,
+    "name": "Notification History",
+    "status": "unbuilt",
+    "owner": null,
+    "claimedAt": null,
+    "completedAt": null,
+    "attempt": 0
+  },
+  {
+    "id": 138,
+    "name": "Alert Configuration",
+    "status": "unbuilt",
+    "owner": null,
+    "claimedAt": null,
+    "completedAt": null,
+    "attempt": 0
+  },
+  {
+    "id": 139,
+    "name": "Audit Dashboard",
+    "status": "unbuilt",
+    "owner": null,
+    "claimedAt": null,
+    "completedAt": null,
+    "attempt": 0
+  },
+  {
+    "id": 140,
+    "name": "Audit Logs",
+    "status": "unbuilt",
+    "owner": null,
+    "claimedAt": null,
+    "completedAt": null,
+    "attempt": 0
+  },
+  {
+    "id": 141,
+    "name": "User Activity Logs",
+    "status": "unbuilt",
+    "owner": null,
+    "claimedAt": null,
+    "completedAt": null,
+    "attempt": 0
+  },
+  {
+    "id": 142,
+    "name": "Pipeline Change History",
+    "status": "unbuilt",
+    "owner": null,
+    "claimedAt": null,
+    "completedAt": null,
+    "attempt": 0
+  },
+  {
+    "id": 143,
+    "name": "Security Logs",
+    "status": "unbuilt",
+    "owner": null,
+    "claimedAt": null,
+    "completedAt": null,
+    "attempt": 0
+  },
+  {
+    "id": 144,
+    "name": "Compliance Reports",
+    "status": "unbuilt",
+    "owner": null,
+    "claimedAt": null,
+    "completedAt": null,
+    "attempt": 0
+  },
+  {
+    "id": 145,
+    "name": "General Settings",
+    "status": "unbuilt",
+    "owner": null,
+    "claimedAt": null,
+    "completedAt": null,
+    "attempt": 0
+  },
+  {
+    "id": 146,
+    "name": "Security Settings",
+    "status": "unbuilt",
+    "owner": null,
+    "claimedAt": null,
+    "completedAt": null,
+    "attempt": 0
+  },
+  {
+    "id": 147,
+    "name": "API Key Management",
+    "status": "unbuilt",
+    "owner": null,
+    "claimedAt": null,
+    "completedAt": null,
+    "attempt": 0
+  },
+  {
+    "id": 148,
+    "name": "Integration Settings",
+    "status": "unbuilt",
+    "owner": null,
+    "claimedAt": null,
+    "completedAt": null,
+    "attempt": 0
+  },
+  {
+    "id": 149,
+    "name": "SMTP Configuration",
+    "status": "unbuilt",
+    "owner": null,
+    "claimedAt": null,
+    "completedAt": null,
+    "attempt": 0
+  },
+  {
+    "id": 150,
+    "name": "Backup Management",
+    "status": "unbuilt",
+    "owner": null,
+    "claimedAt": null,
+    "completedAt": null,
+    "attempt": 0
+  },
+  {
+    "id": 151,
+    "name": "Restore Management",
+    "status": "unbuilt",
+    "owner": null,
+    "claimedAt": null,
+    "completedAt": null,
+    "attempt": 0
+  },
+  {
+    "id": 152,
+    "name": "Database Settings",
+    "status": "unbuilt",
+    "owner": null,
+    "claimedAt": null,
+    "completedAt": null,
+    "attempt": 0
+  },
+  {
+    "id": 153,
+    "name": "System Configuration",
+    "status": "unbuilt",
+    "owner": null,
+    "claimedAt": null,
+    "completedAt": null,
+    "attempt": 0
+  },
+  {
+    "id": 154,
+    "name": "Environment Settings",
+    "status": "unbuilt",
+    "owner": null,
+    "claimedAt": null,
+    "completedAt": null,
+    "attempt": 0
+  },
+  {
+    "id": 155,
+    "name": "Documentation",
+    "status": "unbuilt",
+    "owner": null,
+    "claimedAt": null,
+    "completedAt": null,
+    "attempt": 0
+  },
+  {
+    "id": 156,
+    "name": "API Documentation",
+    "status": "unbuilt",
+    "owner": null,
+    "claimedAt": null,
+    "completedAt": null,
+    "attempt": 0
+  },
+  {
+    "id": 157,
+    "name": "Tutorials",
+    "status": "unbuilt",
+    "owner": null,
+    "claimedAt": null,
+    "completedAt": null,
+    "attempt": 0
+  },
+  {
+    "id": 158,
+    "name": "FAQ",
+    "status": "unbuilt",
+    "owner": null,
+    "claimedAt": null,
+    "completedAt": null,
+    "attempt": 0
+  },
+  {
+    "id": 159,
+    "name": "Support Ticket",
+    "status": "unbuilt",
+    "owner": null,
+    "claimedAt": null,
+    "completedAt": null,
+    "attempt": 0
+  }
+]

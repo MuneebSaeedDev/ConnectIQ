@@ -1,11 +1,21 @@
 import { createBrowserRouter } from 'react-router-dom';
 import SplashScreen from '../features/bootstrap/pages/SplashScreen';
 import LoginScreen from '../features/auth/pages/LoginScreen';
+// import SignupScreen from '../features/auth/pages/SignupScreen';
 import ResetPasswordScreen from '../features/auth/pages/ResetPasswordScreen';
 import ForgetPasswordScreen from '../features/auth/pages/ForgetPasswordScreen';
 import EmailVerificationScreen from '../features/auth/pages/EmailVerificationScreen';
 import TwoFactorAuthenticationScreen from '../features/auth/pages/TwoFactorAuthenticationScreen';
 import ChangePasswordScreen from '../features/settings/pages/ChangePasswordScreen';
+import ProfileSettingsScreen from '../features/settings/pages/ProfileSettingsScreen';
+import PreferencesSettingsScreen from '../features/settings/pages/PreferencesSettingsScreen';
+import NotificationsSettingsScreen from '../features/settings/pages/NotificationsSettingsScreen';
+import TwoFactorSettingsScreen from '../features/settings/pages/TwoFactorSettingsScreen';
+import ActiveSessionsSettingsScreen from '../features/settings/pages/ActiveSessionsSettingsScreen';
+import TeamMembersSettingsScreen from '../features/settings/pages/TeamMembersSettingsScreen';
+import IntegrationsSettingsScreen from '../features/settings/pages/IntegrationsSettingsScreen';
+import ApiKeysSettingsScreen from '../features/settings/pages/ApiKeysSettingsScreen';
+import AuditLogsSettingsScreen from '../features/settings/pages/AuditLogsSettingsScreen';
 import LogoutScreen from '../features/auth/pages/LogoutScreen';
 import DashboardScreen from '../features/dashboard/pages/DashboardScreen';
 import ExecutiveDashboardScreen from '../features/dashboard/pages/ExecutiveDashboardScreen';
@@ -67,6 +77,12 @@ import FilterNodeConfigScreen from '../features/pipelines/pages/FilterNodeConfig
 import MappingNodeConfigScreen from '../features/pipelines/pages/MappingNodeConfigScreen';
 import TransformationNodeConfigScreen from '../features/pipelines/pages/TransformationNodeConfigScreen';
 import ValidationNodeConfigScreen from '../features/pipelines/pages/ValidationNodeConfigScreen';
+import MergeNodeConfigScreen from '../features/pipelines/pages/MergeNodeConfigScreen';
+import DestinationNodeConfigScreen from '../features/pipelines/pages/DestinationNodeConfigScreen';
+import PipelineSettingsScreen from '../features/pipelines/pages/PipelineSettingsScreen';
+import PipelineVersionHistoryScreen from '../features/pipelines/pages/PipelineVersionHistoryScreen';
+import PipelineTemplateLibraryScreen from '../features/pipelines/pages/PipelineTemplateLibraryScreen';
+import PipelineTestExecutionScreen from '../features/pipelines/pages/PipelineTestExecutionScreen';
 import AppShell from '../features/shell/components/AppShell.jsx';
 
 // Every route below renders inside the real shared AppShell (MOD-001
@@ -93,7 +109,16 @@ export const router = createBrowserRouter([
   { path: '/forgot-password', element: <ForgetPasswordScreen /> },
   { path: '/verify-email', element: <EmailVerificationScreen /> },
   { path: '/2fa', element: <TwoFactorAuthenticationScreen /> },
+  { path: '/account/profile', element: <ProfileSettingsScreen /> },
+  { path: '/account/preferences', element: <PreferencesSettingsScreen /> },
+  { path: '/account/notifications', element: <NotificationsSettingsScreen /> },
   { path: '/account/change-password', element: <ChangePasswordScreen /> },
+  { path: '/account/two-factor', element: <TwoFactorSettingsScreen /> },
+  { path: '/account/active-sessions', element: <ActiveSessionsSettingsScreen /> },
+  { path: '/account/team-members', element: <TeamMembersSettingsScreen /> },
+  { path: '/account/integrations', element: <IntegrationsSettingsScreen /> },
+  { path: '/account/api-keys', element: <ApiKeysSettingsScreen /> },
+  { path: '/account/audit-logs', element: <AuditLogsSettingsScreen /> },
   { path: '/logout', element: <LogoutScreen /> },
   { path: '/profile', element: <UserProfileScreen /> },
   { path: '/dashboard', element: <DashboardScreen /> },
@@ -122,6 +147,12 @@ export const router = createBrowserRouter([
   // Pipelines
   { path: '/pipelines', element: <PipelineListScreen /> },
   { path: '/pipelines/new', element: <CreatePipelineScreen /> },
+  { path: '/pipelines/:id/settings', element: <PipelineSettingsScreen /> },
+  { path: '/pipelines/settings', element: <PipelineSettingsScreen /> },
+  { path: '/pipelines/:id/history', element: <PipelineVersionHistoryScreen /> },
+  { path: '/pipelines/history', element: <PipelineVersionHistoryScreen /> },
+  { path: '/pipelines/templates', element: <PipelineTemplateLibraryScreen /> },
+  { path: '/pipelines/library/templates', element: <PipelineTemplateLibraryScreen /> },
   { path: '/pipelines/:id/builder', element: <VisualPipelineBuilderScreen /> },
   { path: '/pipelines/builder', element: <VisualPipelineBuilderScreen /> },
   { path: '/pipelines/nodes', element: <NodeLibraryScreen /> },
@@ -153,12 +184,23 @@ export const router = createBrowserRouter([
   { path: '/pipelines/:id/nodes/validation', element: <ValidationNodeConfigScreen /> },
   { path: '/pipelines/builder/nodes/validation', element: <ValidationNodeConfigScreen /> },
   { path: '/pipelines/builder/validation', element: <ValidationNodeConfigScreen /> },
-  { path: '/pipelines/new/destination', element: shellRoute('SCR-064', 'Pipeline Builder — Destination', ['ConnectIQ', 'Pipelines', 'Pipeline Builder', 'Destination']) },
+  { path: '/pipelines/new/merge', element: <MergeNodeConfigScreen /> },
+  { path: '/pipelines/nodes/merge', element: <MergeNodeConfigScreen /> },
+  { path: '/pipelines/:id/nodes/merge', element: <MergeNodeConfigScreen /> },
+  { path: '/pipelines/builder/nodes/merge', element: <MergeNodeConfigScreen /> },
+  { path: '/pipelines/builder/merge', element: <MergeNodeConfigScreen /> },
+  { path: '/pipelines/new/destination', element: <DestinationNodeConfigScreen /> },
+  { path: '/pipelines/nodes/destination', element: <DestinationNodeConfigScreen /> },
+  { path: '/pipelines/:id/nodes/destination', element: <DestinationNodeConfigScreen /> },
+  { path: '/pipelines/builder/nodes/destination', element: <DestinationNodeConfigScreen /> },
+  { path: '/pipelines/builder/destination', element: <DestinationNodeConfigScreen /> },
   { path: '/pipelines/new/transformations', element: <TransformationNodeConfigScreen /> },
   { path: '/pipelines/new/schedule', element: shellRoute('SCR-064', 'Pipeline Builder — Schedule', ['ConnectIQ', 'Pipelines', 'Pipeline Builder', 'Schedule']) },
   { path: '/pipelines/new/parameters', element: shellRoute('SCR-064', 'Pipeline Builder — Parameters', ['ConnectIQ', 'Pipelines', 'Pipeline Builder', 'Parameters']) },
   { path: '/pipelines/new/review', element: shellRoute('SCR-064', 'Pipeline Builder — Review', ['ConnectIQ', 'Pipelines', 'Pipeline Builder', 'Review']) },
-  { path: '/pipelines/new/run', element: shellRoute('SCR-064', 'Pipeline Builder — Run', ['ConnectIQ', 'Pipelines', 'Pipeline Builder', 'Run']) },
+  { path: '/pipelines/new/run', element: <PipelineTestExecutionScreen /> },
+  { path: '/pipelines/:id/test', element: <PipelineTestExecutionScreen /> },
+  { path: '/pipelines/test', element: <PipelineTestExecutionScreen /> },
   { path: '/dashboard/pipelines', element: <PipelineOverviewScreen /> },
   { path: '/dashboard/executions', element: <ExecutionStatisticsScreen /> },
   { path: '/dashboard/realtime', element: <RealTimeMonitoringScreen /> },

@@ -1,3 +1,5 @@
+import { apiFetch, readJson } from '../../../services/api/client';
+
 // For MOCK BOUNDARY
 export const ORG_ID = 'current';
 
@@ -86,6 +88,19 @@ export function validateTestConnection(form) {
  */
 
 export async function testConnection(form) {
+  try {
+    const res = await apiFetch(`/organizations/${encodeURIComponent(ORG_ID)}/destinations/test-connection`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(form)
+    });
+    if (res.ok && res.headers.get('content-type')?.includes('application/json')) {
+      const data = await readJson(res);
+      return { ...data, mocked: false };
+    }
+  } catch (err) {
+    console.debug('Fallback API error:', err.message);
+  }
   /*
     * FIGMA VERIFICATION
     * "Connection Status" check states are derived directly from the design text (e.g. "Run a connection test to validate configuration" / "Not Tested")
@@ -126,6 +141,19 @@ export async function testConnection(form) {
 }
 
 export async function createDestination(form) {
+  try {
+    const res = await apiFetch(`/organizations/${encodeURIComponent(ORG_ID)}/destinations`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(form)
+    });
+    if (res.ok && res.headers.get('content-type')?.includes('application/json')) {
+      const data = await readJson(res);
+      return { ...data, mocked: false };
+    }
+  } catch (err) {
+    console.debug('Fallback API error:', err.message);
+  }
   console.log(`[POST /organizations/${ORG_ID}/destinations]`, form);
 
   await new Promise((r) => setTimeout(r, 600));

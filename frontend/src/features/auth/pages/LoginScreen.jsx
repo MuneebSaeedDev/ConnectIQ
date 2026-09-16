@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { useLogin } from '../hooks/useLogin';
 import meridianLogomark from '../../../assets/brand/meridian-logomark.svg';
 import eyeIcon from '../../../assets/icons/eye.svg';
@@ -22,6 +22,14 @@ export default function LoginScreen() {
     error,
     submit,
   } = useLogin();
+
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.state?.prefillEmail && !email) {
+      setEmail(location.state.prefillEmail);
+    }
+  }, [location.state, email, setEmail]);
 
   async function handleSubmit(e) {
     e.preventDefault();

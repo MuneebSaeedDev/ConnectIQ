@@ -39,7 +39,7 @@ export function useNotifications() {
     },
   });
 
-  const items = query.data?.items ?? [];
+  const items = Array.isArray(query.data?.items) ? query.data.items : [];
   const unreadCount = items.filter((item) => item.unread).length;
 
   return {

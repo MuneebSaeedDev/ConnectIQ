@@ -440,7 +440,7 @@ function ActivityTable({ rows, totalFiltered, selectedId, onSelect, page, totalP
       </div>
 
       {rows.length === 0 ? (
-        <div className="flex flex-col items-center gap-token-2 px-token-6 py-token-10 text-center">
+        <div className="flex flex-col items-center gap-token-2 px-token-6 py-token-9 text-center">
           <p className="m-0 text-token-sm font-medium text-text-primary-alt">No activities match your filters</p>
           <p className="m-0 text-token-sm text-text-secondary-alt">Try broadening or clearing the filters above.</p>
           {hasFilters && (

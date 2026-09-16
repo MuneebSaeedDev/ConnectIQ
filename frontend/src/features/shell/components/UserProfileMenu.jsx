@@ -165,8 +165,8 @@ export default function UserProfileMenu({ currentUser, roleLabel, menuId, titleI
       </div>
 
       <div className="p-[5px]">
-        <MenuItem icon={icoUser} label="View Profile" onClick={() => goTo('/profile')} />
-        <MenuItem icon={icoSettings} label="Account Settings" onClick={() => goTo('/account/change-password')} />
+        <MenuItem icon={icoUser} label="View Profile" onClick={() => goTo('/account/profile')} />
+        <MenuItem icon={icoSettings} label="Account Settings" onClick={() => goTo('/account/profile')} />
         <MenuItem
           icon={icoShield}
           label="Security"
@@ -182,7 +182,7 @@ export default function UserProfileMenu({ currentUser, roleLabel, menuId, titleI
             </span>
           }
         />
-        <MenuItem icon={icoSliders} label="Preferences" onClick={() => goTo('/account/change-password')} />
+        <MenuItem icon={icoSliders} label="Preferences" onClick={() => goTo('/account/preferences')} />
       </div>
 
       <div className="border-t border-border-subtle p-[5px]">
