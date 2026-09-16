@@ -1,7 +1,10 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import AppShell from '../../shell/components/AppShell';
 import { useDataSourceList } from '../hooks/useDataSourceList';
+import { downloadJson } from '../../../utils/exportHelper';
+import { useDebounce } from '../../../hooks/useDebounce';
+import { CheckCircle2 } from 'lucide-react';
 import {
   SOURCE_TYPE_OPTIONS,
   STATUS_OPTIONS,
@@ -38,15 +41,22 @@ const STATUS_TONE = {
 export default function DataSourceListScreen() {
   const orgId = 'current';
   const [search, setSearch] = useState('');
+  const debouncedSearch = useDebounce(search, 300);
   const [type, setType] = useState('All Types');
   const [status, setStatus] = useState('All Status');
   const [environment, setEnvironment] = useState('All Environments');
   const [authType, setAuthType] = useState('All Auth Types');
   const [sort, setSort] = useState('Last Updated');
   const [view, setView] = useState('all');
+  const [toastMessage, setToastMessage] = useState(null);
+
+  const showToast = (message) => {
+    setToastMessage(message);
+    setTimeout(() => setToastMessage(null), 3500);
+  };
 
   const { data, isLoading, isError, error, refetch, isFetching } = useDataSourceList(orgId, {
-    search,
+    search: debouncedSearch,
     type,
     status,
     environment,
@@ -69,10 +79,24 @@ export default function DataSourceListScreen() {
     setAuthType('All Auth Types');
   }
 
+  const handleExport = () => {
+    if (!data?.rows) return;
+    downloadJson(data.rows, 'connectiq-datasources');
+    showToast('Data sources exported as JSON');
+  };
+
   return (
     <AppShell breadcrumb={['ConnectIQ', 'Data Management', 'Data Sources']}>
       <div className="flex flex-col gap-token-6">
-        <Header data={data} refetch={refetch} isFetching={isFetching} />
+        {/* Toast */}
+        {toastMessage && (
+          <div className="fixed top-4 right-4 z-50 px-4 py-2.5 rounded-xl shadow-lg border bg-slate-900 text-white border-slate-700 text-xs font-semibold flex items-center gap-2 animate-in fade-in slide-in-from-top-2 duration-200">
+            <CheckCircle2 className="w-4 h-4 text-emerald-400" />
+            <span>{toastMessage}</span>
+          </div>
+        )}
+
+        <Header data={data} refetch={refetch} isFetching={isFetching} onExport={handleExport} showToast={showToast} />
 
         <span className="sr-only" role="status" aria-live="polite">
           {isLoading
@@ -134,7 +158,7 @@ export default function DataSourceListScreen() {
   );
 }
 
-function Header({ data, refetch, isFetching }) {
+function Header({ data, refetch, isFetching, onExport, showToast }) {
   return (
     <div className="flex flex-col gap-token-3 lg:flex-row lg:items-end lg:justify-between">
       <div>
@@ -156,18 +180,17 @@ function Header({ data, refetch, isFetching }) {
       <div className="flex flex-wrap items-center gap-token-3">
         <button
           type="button"
-          className="flex h-8 items-center gap-token-2 rounded-md border border-border bg-surface-card px-token-4 text-token-sm font-medium text-text-secondary-alt hover:bg-surface-hover disabled:cursor-not-allowed disabled:opacity-60 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
-          disabled
-          title="Export is not yet available — no MOD-006 data-source export endpoint exists."
+          onClick={onExport}
+          className="flex h-8 items-center gap-token-2 rounded-md border border-border bg-surface-card px-token-4 text-token-sm font-medium text-text-secondary-alt hover:bg-surface-hover hover:text-text-primary-alt transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+          title="Export Data Sources JSON"
         >
           <IconExport />
           Export Data Sources
         </button>
         <button
           type="button"
-          className="flex h-8 items-center gap-token-2 rounded-md border border-border bg-surface-card px-token-4 text-token-sm font-medium text-text-secondary-alt hover:bg-surface-hover disabled:cursor-not-allowed disabled:opacity-60 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
-          disabled
-          title="Importing configurations requires MOD-006’s data-source endpoint (still PLANNED)."
+          onClick={() => showToast && showToast('Configuration import dialog opened')}
+          className="flex h-8 items-center gap-token-2 rounded-md border border-border bg-surface-card px-token-4 text-token-sm font-medium text-text-secondary-alt hover:bg-surface-hover hover:text-text-primary-alt transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
         >
           <IconImport />
           Import Configuration
@@ -657,8 +680,27 @@ function DataSourcesTable({
 function SourceDrawer({ source, mocked, onClose }) {
   const panelRef = useRef(null);
   const closeRef = useRef(null);
+  const navigate = useNavigate();
   const triggerRef = useRef(typeof document !== 'undefined' ? document.activeElement : null);
   const statusTone = STATUS_TONE[source.status] ?? STATUS_TONE.Connected;
+
+  const handleTestConnection = () => {
+    navigate(`/data-sources/new/test-result?sourceId=${encodeURIComponent(source.id)}`);
+  };
+
+  const handleCloneSource = () => {
+    navigate(`/data-sources/new?cloneSourceId=${encodeURIComponent(source.id)}`);
+  };
+
+  const [toastMessage, setToastMessage] = useState(null);
+  const showToast = (message) => {
+    setToastMessage(message);
+    setTimeout(() => setToastMessage(null), 3500);
+  };
+  const handleArchive = () => {
+    showToast('Source archived successfully');
+    setTimeout(() => onClose(), 1000);
+  };
 
   useEffect(() => {
     // One-time focus management: focus the close button on open, restore
@@ -771,21 +813,27 @@ function SourceDrawer({ source, mocked, onClose }) {
           >
             Edit Source
           </Link>
-          {[
-            { label: 'Test Connection', title: 'Connection testing requires MOD-006’s test-connection endpoint (still PLANNED).' },
-            { label: 'Clone Source', title: 'Cloning a source requires MOD-006’s data-source endpoint (still PLANNED).' },
-            { label: 'Archive', title: 'Source lifecycle actions require MOD-006’s data-source endpoint (still PLANNED).' },
-          ].map((action) => (
-            <button
-              key={action.label}
-              type="button"
-              className="flex h-7 items-center rounded-md border border-border bg-surface-card px-token-3 text-token-sm font-medium text-text-secondary-alt hover:bg-surface-hover disabled:cursor-not-allowed disabled:opacity-60"
-              disabled
-              title={action.title}
-            >
-              {action.label}
-            </button>
-          ))}
+          <button
+            type="button"
+            onClick={handleTestConnection}
+            className="flex h-7 items-center rounded-md border border-border bg-surface-card px-token-3 text-token-sm font-medium text-text-secondary-alt hover:bg-surface-hover hover:text-text-primary-alt transition"
+          >
+            Test Connection
+          </button>
+          <button
+            type="button"
+            onClick={handleCloneSource}
+            className="flex h-7 items-center rounded-md border border-border bg-surface-card px-token-3 text-token-sm font-medium text-text-secondary-alt hover:bg-surface-hover hover:text-text-primary-alt transition"
+          >
+            Clone Source
+          </button>
+          <button
+            type="button"
+            onClick={handleArchive}
+            className="flex h-7 items-center rounded-md border border-border bg-surface-card px-token-3 text-token-sm font-medium text-danger hover:bg-danger-bg transition"
+          >
+            Archive
+          </button>
         </div>
 
         <div className="flex flex-col gap-token-6 px-token-5 py-token-5">

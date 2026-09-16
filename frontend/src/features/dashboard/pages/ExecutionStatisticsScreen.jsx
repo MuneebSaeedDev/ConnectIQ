@@ -1,6 +1,9 @@
 import { useMemo, useState } from 'react';
+import { Link } from 'react-router-dom';
 import AppShell from '../../shell/components/AppShell';
 import { useExecutionStatistics } from '../hooks/useExecutionStatistics';
+import { downloadJson } from '../../../utils/exportHelper';
+import { CheckCircle2 } from 'lucide-react';
 import iconPlus from '../../../assets/icons/pipeline-overview/icon-plus.svg';
 import iconExport from '../../../assets/icons/pipeline-overview/icon-export.svg';
 import iconRefreshCw from '../../../assets/icons/data-quality/icon-refresh-cw.svg';
@@ -100,11 +103,31 @@ const STATUS_BADGE = {
  * inspected Figma frame + the sibling dashboard pattern of record. */
 export default function ExecutionStatisticsScreen() {
   const [range, setRange] = useState('7d');
+  const [toastMessage, setToastMessage] = useState(null);
   const { data, isLoading, isError, error, refetch, isFetching } = useExecutionStatistics(range);
+
+  const showToast = (message) => {
+    setToastMessage(message);
+    setTimeout(() => setToastMessage(null), 3500);
+  };
+
+  const handleExport = () => {
+    if (!data) return;
+    downloadJson(data, `connectiq-execution-statistics-${range}`);
+    showToast('Execution statistics report exported as JSON');
+  };
 
   return (
     <AppShell breadcrumb={['ConnectIQ', 'Pipelines', 'Executions']}>
       <div className="flex flex-col gap-token-6">
+        {/* Toast */}
+        {toastMessage && (
+          <div className="fixed top-4 right-4 z-50 px-4 py-2.5 rounded-xl shadow-lg border bg-slate-900 text-white border-slate-700 text-xs font-semibold flex items-center gap-2 animate-in fade-in slide-in-from-top-2 duration-200">
+            <CheckCircle2 className="w-4 h-4 text-emerald-400" />
+            <span>{toastMessage}</span>
+          </div>
+        )}
+
         <div className="flex flex-col gap-token-3 lg:flex-row lg:items-end lg:justify-between">
           <div>
             <div className="flex items-center gap-token-3">
@@ -123,20 +146,18 @@ export default function ExecutionStatisticsScreen() {
             </p>
           </div>
           <div className="flex flex-wrap items-center gap-token-3">
-            <button
-              type="button"
-              className="flex h-8 items-center gap-token-2 rounded-md bg-primary px-token-4 text-token-sm font-semibold text-white hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-60 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
-              disabled
-              title="Generating a report requires MOD-009's Reports module (still PLANNED)."
+            <Link
+              to="/dashboard/performance"
+              className="flex h-8 items-center gap-token-2 rounded-md bg-primary px-token-4 text-token-sm font-semibold text-white hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
             >
               <img src={iconPlus} alt="" className="block h-3.5 w-3.5" />
               Generate Report
-            </button>
+            </Link>
             <button
               type="button"
-              className="flex h-8 items-center gap-token-2 rounded-md border border-border bg-surface-card px-token-4 text-token-sm font-medium text-text-secondary-alt hover:bg-surface-hover disabled:cursor-not-allowed disabled:opacity-60 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
-              disabled
-              title="Export is not yet available — no MOD-009 export endpoint exists."
+              onClick={handleExport}
+              className="flex h-8 items-center gap-token-2 rounded-md border border-border bg-surface-card px-token-4 text-token-sm font-medium text-text-secondary-alt hover:bg-surface-hover hover:text-text-primary-alt transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+              title="Export Execution Statistics Report"
             >
               <img src={iconExport} alt="" className="block h-3.5 w-3.5" />
               Export

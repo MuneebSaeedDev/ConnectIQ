@@ -2,6 +2,8 @@ import { useMemo, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import AppShell from '../../shell/components/AppShell';
 import { useUserLoginHistory } from '../hooks/useUserLoginHistory';
+import { downloadJson } from '../../../utils/exportHelper';
+import { CheckCircle2 } from 'lucide-react';
 import {
   SAVED_VIEWS,
   AUTH_RESULTS,
@@ -64,14 +66,33 @@ const ACCOUNT_STATUS_DOT = {
 /** SCR-038 — User Login History Screen. Node 109:14710, page "Page 1". */
 export default function UserLoginHistoryScreen() {
   const { id } = useParams();
+  const [toastMessage, setToastMessage] = useState(null);
   const { data, isLoading, isError, error, refetch, isFetching } =
     useUserLoginHistory(ORG_ID, id);
+
+  const showToast = (message) => {
+    setToastMessage(message);
+    setTimeout(() => setToastMessage(null), 3500);
+  };
+
+  const handleExport = () => {
+    if (!data?.logins) return;
+    downloadJson(data.logins, `connectiq-user-logins-${id || 'usr'}`);
+    showToast('User login history exported as JSON');
+  };
 
   const displayName = data?.user?.name ?? id;
 
   return (
     <AppShell breadcrumb={['ConnectIQ', 'Administration', 'Users', displayName, 'Login History']}>
       <div className="flex flex-col gap-token-6">
+        {/* Toast */}
+        {toastMessage && (
+          <div className="fixed top-4 right-4 z-50 px-4 py-2.5 rounded-xl shadow-lg border bg-slate-900 text-white border-slate-700 text-xs font-semibold flex items-center gap-2 animate-in fade-in slide-in-from-top-2 duration-200">
+            <CheckCircle2 className="w-4 h-4 text-emerald-400" />
+            <span>{toastMessage}</span>
+          </div>
+        )}
         <span className="sr-only" role="status" aria-live="polite">
           {isLoading
             ? 'Loading login history'
@@ -103,7 +124,7 @@ export default function UserLoginHistoryScreen() {
         )}
 
         {data && (
-          <LoginView data={data} userId={id} onRefresh={() => refetch()} isFetching={isFetching} />
+          <LoginView data={data} userId={id} onRefresh={() => refetch()} isFetching={isFetching} onExport={handleExport} />
         )}
       </div>
     </AppShell>
@@ -123,7 +144,7 @@ function BackLink({ userId }) {
   );
 }
 
-function LoginView({ data, userId, onRefresh, isFetching }) {
+function LoginView({ data, userId, onRefresh, isFetching, onExport }) {
   const [view, setView] = useState('all');
   const [search, setSearch] = useState('');
   const [authResult, setAuthResult] = useState('');
@@ -200,7 +221,7 @@ function LoginView({ data, userId, onRefresh, isFetching }) {
         </div>
       )}
 
-      <Header onRefresh={onRefresh} isFetching={isFetching} />
+      <Header onRefresh={onRefresh} isFetching={isFetching} onExport={onExport} />
       <UserContextStrip user={data.user} userId={userId} />
       <StatGrid stats={data.stats} />
       <SavedViews activeView={view} onSelect={applyView} />
@@ -247,7 +268,7 @@ function LoginView({ data, userId, onRefresh, isFetching }) {
 
 /* ---- Header --------------------------------------------------------- */
 
-function Header({ onRefresh, isFetching }) {
+function Header({ onRefresh, isFetching, onExport }) {
   return (
     <div className="flex flex-col gap-token-4 rounded-md border border-border bg-surface-card p-token-6 shadow-sm lg:flex-row lg:items-start lg:justify-between">
       <div className="min-w-0">
@@ -268,18 +289,8 @@ function Header({ onRefresh, isFetching }) {
         </button>
         <button
           type="button"
-          disabled
-          title={MOD005_TITLE}
-          className="flex h-9 items-center gap-token-2 rounded-md border border-border bg-surface-card px-token-4 text-token-sm font-medium text-text-secondary-alt disabled:cursor-not-allowed disabled:opacity-60"
-        >
-          <IconSave className="block h-3.5 w-3.5" />
-          Save Filter
-        </button>
-        <button
-          type="button"
-          disabled
-          title={MOD005_TITLE}
-          className="flex h-9 items-center gap-token-2 rounded-md bg-primary px-token-4 text-token-sm font-semibold text-text-on-primary disabled:cursor-not-allowed disabled:opacity-60"
+          onClick={onExport}
+          className="flex h-9 items-center gap-token-2 rounded-md bg-primary px-token-4 text-token-sm font-semibold text-text-on-primary hover:opacity-90 transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
         >
           <IconExport className="block h-3.5 w-3.5" />
           Export Login History

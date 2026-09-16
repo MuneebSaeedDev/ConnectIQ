@@ -2,6 +2,8 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import AppShell from '../../shell/components/AppShell';
 import { useRoleList } from '../hooks/useRoleList';
+import { downloadJson } from '../../../utils/exportHelper';
+import { CheckCircle2 } from 'lucide-react';
 import {
   ROLE_TYPE_OPTIONS,
   ROLE_STATUS_OPTIONS,
@@ -55,6 +57,12 @@ export default function RoleListScreen() {
   const [level, setLevel] = useState('All Levels');
   const [permissionGroup, setPermissionGroup] = useState('All Groups');
   const [sort, setSort] = useState('Role Name');
+  const [toastMessage, setToastMessage] = useState(null);
+
+  const showToast = (message) => {
+    setToastMessage(message);
+    setTimeout(() => setToastMessage(null), 3500);
+  };
 
   const { data, isLoading, isError, error, refetch, isFetching } = useRoleList(orgId, {
     search,
@@ -80,10 +88,24 @@ export default function RoleListScreen() {
     setPermissionGroup('All Groups');
   }
 
+  const handleExport = () => {
+    if (!data?.rows) return;
+    downloadJson(data.rows, 'connectiq-roles');
+    showToast('Role directory exported as JSON');
+  };
+
   return (
     <AppShell breadcrumb={['ConnectIQ', 'Administration', 'Roles']}>
       <div className="flex flex-col gap-token-6">
-        <Header data={data} refetch={refetch} isFetching={isFetching} />
+        {/* Toast */}
+        {toastMessage && (
+          <div className="fixed top-4 right-4 z-50 px-4 py-2.5 rounded-xl shadow-lg border bg-slate-900 text-white border-slate-700 text-xs font-semibold flex items-center gap-2 animate-in fade-in slide-in-from-top-2 duration-200">
+            <CheckCircle2 className="w-4 h-4 text-emerald-400" />
+            <span>{toastMessage}</span>
+          </div>
+        )}
+
+        <Header data={data} refetch={refetch} isFetching={isFetching} onExport={handleExport} />
 
         <span className="sr-only" role="status" aria-live="polite">
           {isLoading
@@ -143,7 +165,7 @@ export default function RoleListScreen() {
   );
 }
 
-function Header({ data, refetch, isFetching }) {
+function Header({ data, refetch, isFetching, onExport }) {
   return (
     <div className="flex flex-col gap-token-3 lg:flex-row lg:items-end lg:justify-between">
       <div>
@@ -172,9 +194,9 @@ function Header({ data, refetch, isFetching }) {
         </Link>
         <button
           type="button"
-          className="flex h-8 items-center gap-token-2 rounded-md border border-border bg-surface-card px-token-4 text-token-sm font-medium text-text-secondary-alt hover:bg-surface-hover disabled:cursor-not-allowed disabled:opacity-60 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
-          disabled
-          title="Export is not yet available — no MOD-003 role export endpoint exists."
+          onClick={onExport}
+          className="flex h-8 items-center gap-token-2 rounded-md border border-border bg-surface-card px-token-4 text-token-sm font-medium text-text-secondary-alt hover:bg-surface-hover hover:text-text-primary-alt transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+          title="Export Roles JSON"
         >
           <IconExport />
           Export Roles

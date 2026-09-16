@@ -1,4 +1,6 @@
 import { useEffect, useId, useRef, useState } from 'react';
+import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 import searchIcon from '../../../assets/icons/shell/search.svg';
 import helpIcon from '../../../assets/icons/shell/help.svg';
 import bellIcon from '../../../assets/icons/shell/notification-bell.svg';
@@ -6,34 +8,59 @@ import orgChevron from '../../../assets/icons/shell/org-switch-chevron.svg';
 import NotificationPanel from '../../notifications/components/NotificationPanel';
 import { useNotifications } from '../../notifications/hooks/useNotifications';
 import UserProfileMenu from './UserProfileMenu';
+import SwitchOrganizationModal from '../../organizations/components/SwitchOrganizationModal';
+import { CheckCircle2 } from 'lucide-react';
+
+function resolveCrumbPath(crumb, index) {
+  if (!crumb) return '/dashboard';
+  const clean = crumb.toLowerCase().trim();
+
+  if (clean === 'connectiq' || clean === 'dashboard') return '/dashboard';
+  if (clean === 'pipelines' || clean === 'pipeline library') return '/pipelines';
+  if (clean === 'pipeline builder') return '/pipelines/new';
+  if (clean === 'pipeline overview') return '/dashboard/pipelines';
+  if (clean === 'executions') return '/dashboard/executions';
+  if (clean === 'data' || clean === 'data sources') return '/data-sources';
+  if (clean === 'destinations') return '/destinations';
+  if (clean === 'organizations') return '/organizations';
+  if (clean === 'users') return '/users';
+  if (clean === 'roles') return '/roles';
+  if (clean === 'analytics') return '/dashboard/executive';
+  if (clean === 'operations' || clean === 'workers') return '/operations/workers';
+  if (clean === 'queues') return '/operations/queues';
+  if (clean === 'logs') return '/operations/logs';
+  if (clean === 'system health') return '/dashboard/system-health';
+  if (clean === 'source health') return '/dashboard/source-health';
+  if (clean === 'destination health') return '/dashboard/destination-health';
+  if (clean === 'data quality') return '/dashboard/data-quality';
+  if (clean === 'executive dashboard') return '/dashboard/executive';
+  if (clean === 'performance analytics') return '/dashboard/performance';
+  if (clean === 'notifications') return '/notifications';
+  if (clean === 'help & support' || clean === 'help' || clean === 'support') return '/help';
+  if (clean === 'contact support') return '/support/contact';
+  if (clean === 'account' || clean === 'settings' || clean === 'profile') return '/account/profile';
+  if (clean === 'preferences') return '/account/preferences';
+  if (clean === 'audit logs') return '/account/audit-logs';
+  if (clean === 'integrations') return '/account/integrations';
+  if (clean === 'api keys') return '/account/api-keys';
+  if (clean === 'active sessions') return '/account/active-sessions';
+  if (clean === 'team members') return '/account/team-members';
+
+  if (index === 0) return '/dashboard';
+  return '/dashboard';
+}
 
 /**
  * Global top bar (Figma node 211:1981, "Header"). Shared across every
- * authenticated role — the task requires identical Header/Footer/
- * Sidebar visual structure for every role, so this component takes no
- * role prop and renders unconditionally; only the Sidebar's menu
- * content varies by role.
- *
- * `breadcrumb` lets the page tell the shell which section it's in
- * (Figma shows "ConnectIQ › Pipelines › Monitoring" as static content
- * for one screen — this shell generalizes it to a prop rather than
- * hardcoding "Monitoring" everywhere the shell is reused). Defaults to
- * the app name alone so a screen that hasn't wired a breadcrumb yet
- * still renders a valid header instead of an empty one.
- *
- * MOCK BOUNDARY: the org switcher's "Acme Corp" label is static per
- * the Figma frame — no MOD-004 (Organization Management) backend
- * exists yet to source a real organization list. It renders as a
- * real, focusable button (not a fabricated dropdown) so its eventual
- * wiring doesn't require restructuring the markup.
- *
- * The notification bell opens the real SCR-012 Notification Panel
- * (see features/notifications/) — its unread badge and panel content
- * are live client state (React Query + a mock-fallback API), not
- * static Figma content; see notifications.api.js for that mock
- * boundary.
+ * authenticated role.
  */
 export default function Header({ breadcrumb = ['ConnectIQ'], currentUser, roleLabel, onOpenMobileNav }) {
+  const currentOrg = useSelector((state) => state.session.currentOrganization) || {
+    name: 'Acme Corp',
+    initials: 'AC',
+    fullName: 'Acme Corporation',
+  };
+
   const [notificationsOpen, setNotificationsOpen] = useState(false);
   const notificationsRef = useRef(null);
   const bellButtonRef = useRef(null);
@@ -42,17 +69,21 @@ export default function Header({ breadcrumb = ['ConnectIQ'], currentUser, roleLa
   const notifications = useNotifications();
 
   const [profileMenuOpen, setProfileMenuOpen] = useState(false);
+  const [switchOrgModalOpen, setSwitchOrgModalOpen] = useState(false);
+  const [toastMessage, setToastMessage] = useState(null);
+
   const profileButtonRef = useRef(null);
   const profileMenuId = useId();
   const profileMenuTitleId = useId();
 
+  const showToast = (message) => {
+    setToastMessage(message);
+    setTimeout(() => setToastMessage(null), 3500);
+  };
+
   useEffect(() => {
     if (!notificationsOpen) return;
 
-    // Focus moves into the dialog on open (mirrors the SCR-008 logout
-    // dialog's focus-on-mount fix) — without this, aria-haspopup/
-    // role="dialog" announce a dialog opened but leave focus stranded
-    // on the bell button.
     const panel = notificationsRef.current?.querySelector(`#${panelId}`);
     const focusable = panel?.querySelectorAll(
       'button:not([disabled]), [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
@@ -80,9 +111,6 @@ export default function Header({ breadcrumb = ['ConnectIQ'], currentUser, roleLa
         bellButtonRef.current?.focus();
         return;
       }
-      // Focus trap: while the dialog is open, Tab/Shift+Tab cycle only
-      // within its focusable elements rather than escaping into the
-      // rest of the header/page (a role="dialog" must trap focus).
       if (event.key === 'Tab') {
         const items = getFocusable();
         if (items.length === 0) return;
@@ -111,6 +139,14 @@ export default function Header({ breadcrumb = ['ConnectIQ'], currentUser, roleLa
       className="flex h-12 shrink-0 items-center gap-token-3 border-b border-border bg-surface-card px-token-4 sm:gap-token-5 sm:px-token-6"
       data-node-id="211:1981"
     >
+      {/* Toast */}
+      {toastMessage && (
+        <div className="fixed top-4 right-4 z-50 px-4 py-2.5 rounded-xl shadow-lg border bg-slate-900 text-white border-slate-700 text-xs font-semibold flex items-center gap-2 animate-in fade-in slide-in-from-top-2 duration-200">
+          <CheckCircle2 className="w-4 h-4 text-emerald-400" />
+          <span>{toastMessage}</span>
+        </div>
+      )}
+
       <button
         type="button"
         onClick={onOpenMobileNav}
@@ -122,20 +158,22 @@ export default function Header({ breadcrumb = ['ConnectIQ'], currentUser, roleLa
         </svg>
       </button>
 
+      {/* Interactive Clickable Breadcrumbs */}
       <nav aria-label="Breadcrumb" className="flex min-w-0 flex-1 items-center gap-1.5 overflow-hidden lg:flex-[547]">
         {breadcrumb.map((crumb, index) => {
           const isLast = index === breadcrumb.length - 1;
-          // On narrow screens, collapse everything but the final
-          // (current-page) crumb — the full trail still exists for
-          // larger screens where there's room to show it.
+          const targetPath = resolveCrumbPath(crumb, index, breadcrumb);
+
           if (!isLast && breadcrumb.length > 1) {
             return (
               <span key={`${crumb}-${index}`} className="hidden items-center gap-1.5 sm:flex">
-                <span
-                  className="whitespace-nowrap text-token-base text-decorative-muted"
+                <Link
+                  to={targetPath}
+                  className="whitespace-nowrap text-token-base text-decorative-muted hover:text-primary transition hover:underline"
+                  title={`Navigate to ${crumb}`}
                 >
                   {crumb}
-                </span>
+                </Link>
                 <span aria-hidden="true" className="text-decorative-faint">›</span>
               </span>
             );
@@ -173,13 +211,14 @@ export default function Header({ breadcrumb = ['ConnectIQ'], currentUser, roleLa
       </button>
 
       <div className="flex shrink-0 items-center gap-token-2">
-        <button
-          type="button"
-          aria-label="Help"
-          className="hidden h-8 w-8 items-center justify-center rounded-md text-text-secondary transition-colors duration-150 hover:bg-surface-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary sm:flex"
+        <Link
+          to="/help"
+          aria-label="Help & Documentation"
+          title="Help & Documentation"
+          className="hidden h-8 w-8 items-center justify-center rounded-md text-text-secondary transition-colors duration-150 hover:bg-surface-hover hover:text-text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary sm:flex"
         >
           <img src={helpIcon} alt="" className="block h-[15px] w-[15px]" />
-        </button>
+        </Link>
 
         <div ref={notificationsRef} className="relative">
           <button
@@ -219,12 +258,14 @@ export default function Header({ breadcrumb = ['ConnectIQ'], currentUser, roleLa
 
         <button
           type="button"
+          onClick={() => setSwitchOrgModalOpen(true)}
+          title={`Switch Organization — Current: ${currentOrg.fullName || currentOrg.name}`}
           className="hidden h-8 items-center gap-1.5 rounded-md border border-border bg-surface-page px-token-3 text-token-base font-medium text-text-primary transition-colors duration-150 hover:bg-surface-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary sm:flex"
         >
           <span className="flex h-4 w-4 items-center justify-center rounded-sm bg-shell-accent text-[9px] font-bold tracking-tight text-text-on-primary">
-            AC
+            {currentOrg.initials || 'AC'}
           </span>
-          Acme Corp
+          {currentOrg.name || 'Acme Corp'}
           <img src={orgChevron} alt="" className="block h-3 w-3" />
         </button>
 
@@ -249,9 +290,17 @@ export default function Header({ breadcrumb = ['ConnectIQ'], currentUser, roleLa
               roleLabel={roleLabel}
               triggerRef={profileButtonRef}
               onRequestClose={() => setProfileMenuOpen(false)}
+              onOpenSwitchOrg={() => setSwitchOrgModalOpen(true)}
             />
           )}
         </div>
+
+        {/* Switch Organization Modal with Confirmation Step */}
+        <SwitchOrganizationModal
+          isOpen={switchOrgModalOpen}
+          onClose={() => setSwitchOrgModalOpen(false)}
+          onSwitchSuccess={showToast}
+        />
       </div>
     </div>
   );

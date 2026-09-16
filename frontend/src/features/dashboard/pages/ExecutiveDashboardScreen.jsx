@@ -1,6 +1,9 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import AppShell from '../../shell/components/AppShell';
 import { useExecutiveDashboard } from '../hooks/useExecutiveDashboard';
+import { downloadJson } from '../../../utils/exportHelper';
+import { CheckCircle2 } from 'lucide-react';
 import iconExport from '../../../assets/icons/executive-dashboard/icon-export.svg';
 import iconRefresh from '../../../assets/icons/executive-dashboard/icon-refresh.svg';
 import iconCircleCheck from '../../../assets/icons/executive-dashboard/icon-circle-check.svg';
@@ -100,11 +103,36 @@ const REPORT_TONE = {
 /** SCR-014 — Executive Dashboard Screen. Node 45:7, Figma page "Page 1". */
 export default function ExecutiveDashboardScreen() {
   const [dateRange, setDateRange] = useState('30d');
+  const [toastMessage, setToastMessage] = useState(null);
   const { data, isLoading, isError, error, refetch, isFetching } = useExecutiveDashboard(dateRange);
+
+  const showToast = (message) => {
+    setToastMessage(message);
+    setTimeout(() => setToastMessage(null), 3500);
+  };
+
+  const handleExport = () => {
+    if (!data) return;
+    downloadJson(data, `connectiq-executive-dashboard-${dateRange}`);
+    showToast('Executive dashboard report exported as JSON');
+  };
+
+  const handleShare = () => {
+    navigator.clipboard?.writeText(window.location.href);
+    showToast('Executive dashboard link copied to clipboard');
+  };
 
   return (
     <AppShell breadcrumb={['ConnectIQ', 'Analytics', 'Executive Dashboard']}>
       <div className="flex flex-col gap-token-6">
+        {/* Toast */}
+        {toastMessage && (
+          <div className="fixed top-4 right-4 z-50 px-4 py-2.5 rounded-xl shadow-lg border bg-slate-900 text-white border-slate-700 text-xs font-semibold flex items-center gap-2 animate-in fade-in slide-in-from-top-2 duration-200">
+            <CheckCircle2 className="w-4 h-4 text-emerald-400" />
+            <span>{toastMessage}</span>
+          </div>
+        )}
+
         <div className="flex flex-col gap-token-3 lg:flex-row lg:items-end lg:justify-between">
           <div>
             <div className="flex items-center gap-token-3">
@@ -142,18 +170,18 @@ export default function ExecutiveDashboardScreen() {
             </div>
             <button
               type="button"
-              className="flex h-8 items-center gap-token-2 rounded-md border border-border bg-surface-card px-token-4 text-token-sm font-medium text-text-secondary-alt hover:bg-surface-hover disabled:cursor-not-allowed disabled:opacity-60 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
-              disabled
-              title="Export is not yet available — no MOD-009 export endpoint exists."
+              onClick={handleExport}
+              className="flex h-8 items-center gap-token-2 rounded-md border border-border bg-surface-card px-token-4 text-token-sm font-medium text-text-secondary-alt hover:bg-surface-hover hover:text-text-primary-alt transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+              title="Export Executive Dashboard JSON Report"
             >
               <img src={iconExport} alt="" className="block h-3.5 w-3.5" />
               Export
             </button>
             <button
               type="button"
-              className="flex h-8 items-center rounded-md border border-border bg-surface-card px-token-4 text-token-sm font-medium text-text-secondary-alt hover:bg-surface-hover disabled:cursor-not-allowed disabled:opacity-60 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
-              disabled
-              title="Sharing is not yet available — no MOD-009 share endpoint exists."
+              onClick={handleShare}
+              className="flex h-8 items-center rounded-md border border-border bg-surface-card px-token-4 text-token-sm font-medium text-text-secondary-alt hover:bg-surface-hover hover:text-text-primary-alt transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+              title="Share Dashboard"
             >
               Share
             </button>
@@ -356,6 +384,11 @@ function KpiGrid({ kpis }) {
 }
 
 function TrendChartCard({ title, subtitle, linkLabel, chart, stats, className = '' }) {
+  const targetHref =
+    linkLabel?.toLowerCase().includes('execution')
+      ? '/dashboard/executions'
+      : '/dashboard/performance';
+
   return (
     <div className={`min-w-0 overflow-hidden rounded-md border border-border bg-surface-card shadow-sm ${className}`}>
       <div className="flex items-center justify-between border-b border-border-subtle px-token-5 py-token-4">
@@ -363,14 +396,14 @@ function TrendChartCard({ title, subtitle, linkLabel, chart, stats, className = 
           <h2 className="m-0 text-token-base font-semibold text-text-primary-alt">{title}</h2>
           <p className="m-0 font-mono text-token-meta text-text-faint">{subtitle}</p>
         </div>
-        <button
-          type="button"
-          className="whitespace-nowrap text-token-sm font-medium text-primary hover:underline disabled:cursor-not-allowed disabled:text-text-faint disabled:no-underline"
-          disabled
-          title={`${linkLabel} requires MOD-009's analytics endpoint (still PLANNED).`}
-        >
-          {linkLabel} →
-        </button>
+        {linkLabel && (
+          <Link
+            to={targetHref}
+            className="whitespace-nowrap text-token-sm font-medium text-primary hover:underline transition"
+          >
+            {linkLabel} →
+          </Link>
+        )}
       </div>
       <div className="px-token-5 py-token-5">{chart}</div>
       <div

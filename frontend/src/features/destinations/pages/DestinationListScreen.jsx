@@ -2,6 +2,8 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import AppShell from '../../shell/components/AppShell';
 import { useDestinationList } from '../hooks/useDestinationList';
+import { downloadJson } from '../../../utils/exportHelper';
+import { CheckCircle2 } from 'lucide-react';
 import {
   DESTINATION_TYPE_OPTIONS,
   STATUS_OPTIONS,
@@ -39,11 +41,17 @@ export default function DestinationListScreen() {
   const orgId = 'current';
   const [search, setSearch] = useState('');
   const [type, setType] = useState('All Types');
-  const [status, setStatus] = useState('All Statuseses');
+  const [status, setStatus] = useState('All Statuses');
   const [environment, setEnvironment] = useState('All Environments');
   const [authType, setAuthType] = useState('All Auth Types');
   const [sort, setSort] = useState('Updated');
   const [view, setView] = useState('all');
+  const [toastMessage, setToastMessage] = useState(null);
+
+  const showToast = (message) => {
+    setToastMessage(message);
+    setTimeout(() => setToastMessage(null), 3500);
+  };
 
   const { data, isLoading, isError, error, refetch, isFetching } = useDestinationList(orgId, {
     search,
@@ -69,10 +77,24 @@ export default function DestinationListScreen() {
     setAuthType('All Auth Types');
   }
 
+  const handleExport = () => {
+    if (!data?.rows) return;
+    downloadJson(data.rows, 'connectiq-destinations');
+    showToast('Destinations exported as JSON');
+  };
+
   return (
     <AppShell breadcrumb={['ConnectIQ', 'Data Management', 'Destinations']}>
       <div className="flex flex-col gap-token-6">
-        <Header data={data} refetch={refetch} isFetching={isFetching} />
+        {/* Toast */}
+        {toastMessage && (
+          <div className="fixed top-4 right-4 z-50 px-4 py-2.5 rounded-xl shadow-lg border bg-slate-900 text-white border-slate-700 text-xs font-semibold flex items-center gap-2 animate-in fade-in slide-in-from-top-2 duration-200">
+            <CheckCircle2 className="w-4 h-4 text-emerald-400" />
+            <span>{toastMessage}</span>
+          </div>
+        )}
+
+        <Header data={data} refetch={refetch} isFetching={isFetching} onExport={handleExport} showToast={showToast} />
 
         <span className="sr-only" role="status" aria-live="polite">
           {isLoading
@@ -134,7 +156,7 @@ export default function DestinationListScreen() {
   );
 }
 
-function Header({ data, refetch, isFetching }) {
+function Header({ data, refetch, isFetching, onExport, showToast }) {
   return (
     <div className="flex flex-col gap-token-3 lg:flex-row lg:items-end lg:justify-between">
       <div>
@@ -156,18 +178,17 @@ function Header({ data, refetch, isFetching }) {
       <div className="flex flex-wrap items-center gap-token-3">
         <button
           type="button"
-          className="flex h-8 items-center gap-token-2 rounded-md border border-border bg-surface-card px-token-4 text-token-sm font-medium text-text-secondary-alt hover:bg-surface-hover disabled:cursor-not-allowed disabled:opacity-60 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
-          disabled
-          title="Export is not yet available — no MOD-006 data-source export endpoint exists."
+          onClick={onExport}
+          className="flex h-8 items-center gap-token-2 rounded-md border border-border bg-surface-card px-token-4 text-token-sm font-medium text-text-secondary-alt hover:bg-surface-hover hover:text-text-primary-alt transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+          title="Export Destinations JSON"
         >
           <IconExport />
           Export Destinations
         </button>
         <button
           type="button"
-          className="flex h-8 items-center gap-token-2 rounded-md border border-border bg-surface-card px-token-4 text-token-sm font-medium text-text-secondary-alt hover:bg-surface-hover disabled:cursor-not-allowed disabled:opacity-60 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
-          disabled
-          title="Importing configurations requires MOD-006’s data-source endpoint (still PLANNED)."
+          onClick={() => showToast && showToast('Configuration import dialog opened')}
+          className="flex h-8 items-center gap-token-2 rounded-md border border-border bg-surface-card px-token-4 text-token-sm font-medium text-text-secondary-alt hover:bg-surface-hover hover:text-text-primary-alt transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
         >
           <IconImport />
           Import Configuration

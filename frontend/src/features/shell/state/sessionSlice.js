@@ -16,6 +16,15 @@ import { ROLES } from '../rbac/permissions';
  */
 const initialState = {
   currentUser: { name: 'Jane Doe', initials: 'JD', email: 'jane.doe@acmecorp.io' },
+  currentOrganization: {
+    id: 'org-001',
+    name: 'Acme Corp',
+    fullName: 'Acme Corporation',
+    initials: 'AC',
+    plan: 'Enterprise',
+    region: 'US East',
+    role: 'Super Admin',
+  },
   role: ROLES.DATA_ETL_ENGINEER,
   sidebarCollapsed: false,
 };
@@ -27,11 +36,14 @@ const sessionSlice = createSlice({
     roleChanged(state, action) {
       state.role = action.payload;
     },
+    organizationChanged(state, action) {
+      state.currentOrganization = action.payload;
+    },
     sidebarToggled(state) {
       state.sidebarCollapsed = !state.sidebarCollapsed;
     },
   },
 });
 
-export const { roleChanged, sidebarToggled } = sessionSlice.actions;
+export const { roleChanged, organizationChanged, sidebarToggled } = sessionSlice.actions;
 export default sessionSlice.reducer;

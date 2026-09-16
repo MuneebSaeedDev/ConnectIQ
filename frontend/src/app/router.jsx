@@ -52,6 +52,7 @@ import PermissionMatrixScreen from '../features/roles/pages/PermissionMatrixScre
 import AccessControlSettingsScreen from '../features/roles/pages/AccessControlSettingsScreen';
 import DataSourceListScreen from '../features/dataSources/pages/DataSourceListScreen';
 import AddDataSourceScreen from '../features/dataSources/pages/AddDataSourceScreen';
+import EditDataSourceScreen from '../features/dataSources/pages/EditDataSourceScreen';
 import ApiConnectorSetupScreen from '../features/dataSources/pages/ApiConnectorSetupScreen';
 import DatabaseConnectorSetupScreen from '../features/dataSources/pages/DatabaseConnectorSetupScreen';
 import SourceConnectionSetupScreen from '../features/dataSources/pages/SourceConnectionSetupScreen';
@@ -70,6 +71,7 @@ import DestinationHealthMonitoringScreen from '../features/destinations/pages/De
 import DestinationHistoryScreen from '../features/destinations/pages/DestinationHistoryScreen';
 import CreatePipelineScreen from '../features/pipelines/pages/CreatePipelineScreen';
 import PipelineListScreen from '../features/pipelines/pages/PipelineListScreen';
+import PipelineDetailScreen from '../features/pipelines/pages/PipelineDetailScreen';
 import VisualPipelineBuilderScreen from '../features/pipelines/pages/VisualPipelineBuilderScreen';
 import NodeLibraryScreen from '../features/pipelines/pages/NodeLibraryScreen';
 import SourceNodeConfigScreen from '../features/pipelines/pages/SourceNodeConfigScreen';
@@ -83,6 +85,9 @@ import PipelineSettingsScreen from '../features/pipelines/pages/PipelineSettings
 import PipelineVersionHistoryScreen from '../features/pipelines/pages/PipelineVersionHistoryScreen';
 import PipelineTemplateLibraryScreen from '../features/pipelines/pages/PipelineTemplateLibraryScreen';
 import PipelineTestExecutionScreen from '../features/pipelines/pages/PipelineTestExecutionScreen';
+import NotificationsCenterScreen from '../features/notifications/pages/NotificationsCenterScreen';
+import HelpCenterScreen from '../features/help/pages/HelpCenterScreen';
+import ContactSupportScreen from '../features/help/pages/ContactSupportScreen';
 import AppShell from '../features/shell/components/AppShell.jsx';
 
 // Every route below renders inside the real shared AppShell (MOD-001
@@ -122,10 +127,19 @@ export const router = createBrowserRouter([
   { path: '/logout', element: <LogoutScreen /> },
   { path: '/profile', element: <UserProfileScreen /> },
   { path: '/dashboard', element: <DashboardScreen /> },
+  { path: '/notifications', element: <NotificationsCenterScreen /> },
+  { path: '/help', element: <HelpCenterScreen /> },
+  { path: '/support/help', element: <HelpCenterScreen /> },
+  { path: '/docs', element: <HelpCenterScreen /> },
+  { path: '/support/contact', element: <ContactSupportScreen /> },
+  { path: '/support', element: <ContactSupportScreen /> },
+  { path: '/help/release-notes', element: <HelpCenterScreen /> },
+  { path: '/release-notes', element: <HelpCenterScreen /> },
 
   // Data
   { path: '/data-sources', element: <DataSourceListScreen /> },
   { path: '/data-sources/new', element: <AddDataSourceScreen /> },
+  { path: '/data-sources/:id/edit', element: <EditDataSourceScreen /> },
   { path: '/data-sources/new/connection', element: <SourceConnectionSetupScreen /> },
   { path: '/data-sources/new/database', element: <DatabaseConnectorSetupScreen /> },
   { path: '/data-sources/new/api', element: <ApiConnectorSetupScreen /> },
@@ -147,6 +161,8 @@ export const router = createBrowserRouter([
   // Pipelines
   { path: '/pipelines', element: <PipelineListScreen /> },
   { path: '/pipelines/new', element: <CreatePipelineScreen /> },
+  { path: '/pipelines/:id', element: <PipelineDetailScreen /> },
+  { path: '/pipelines/:id/details', element: <PipelineDetailScreen /> },
   { path: '/pipelines/:id/settings', element: <PipelineSettingsScreen /> },
   { path: '/pipelines/settings', element: <PipelineSettingsScreen /> },
   { path: '/pipelines/:id/history', element: <PipelineVersionHistoryScreen /> },
@@ -201,6 +217,8 @@ export const router = createBrowserRouter([
   { path: '/pipelines/new/run', element: <PipelineTestExecutionScreen /> },
   { path: '/pipelines/:id/test', element: <PipelineTestExecutionScreen /> },
   { path: '/pipelines/test', element: <PipelineTestExecutionScreen /> },
+  { path: '/pipelines/executions', element: <ExecutionStatisticsScreen /> },
+  { path: '/executions', element: <ExecutionStatisticsScreen /> },
   { path: '/dashboard/pipelines', element: <PipelineOverviewScreen /> },
   { path: '/dashboard/executions', element: <ExecutionStatisticsScreen /> },
   { path: '/dashboard/realtime', element: <RealTimeMonitoringScreen /> },

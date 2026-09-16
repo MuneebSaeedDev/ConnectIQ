@@ -15,11 +15,61 @@ class DataSourceController {
         }
     }
 
+    static async getDataSource(req, res, next) {
+        try {
+            const orgId = req.params.orgId || req.user?.organizationId || 'current';
+            const data = await dataSource_service_1.DataSourceService.getDataSource(orgId, req.params.id);
+            return (0, response_1.sendSuccess)(res, data);
+        } catch (error) {
+            next(error);
+        }
+    }
+
     static async createDataSource(req, res, next) {
         try {
             const orgId = req.params.orgId || req.user?.organizationId || 'current';
             const data = await dataSource_service_1.DataSourceService.createDataSource(orgId, req.body);
             return (0, response_1.sendSuccess)(res, data, 201);
+        } catch (error) {
+            next(error);
+        }
+    }
+
+    static async updateDataSource(req, res, next) {
+        try {
+            const orgId = req.params.orgId || req.user?.organizationId || 'current';
+            const data = await dataSource_service_1.DataSourceService.updateDataSource(orgId, req.params.id, req.body);
+            return (0, response_1.sendSuccess)(res, data);
+        } catch (error) {
+            next(error);
+        }
+    }
+
+    static async deleteDataSource(req, res, next) {
+        try {
+            const orgId = req.params.orgId || req.user?.organizationId || 'current';
+            const data = await dataSource_service_1.DataSourceService.deleteDataSource(orgId, req.params.id);
+            return (0, response_1.sendSuccess)(res, data);
+        } catch (error) {
+            next(error);
+        }
+    }
+
+    static async cloneDataSource(req, res, next) {
+        try {
+            const orgId = req.params.orgId || req.user?.organizationId || 'current';
+            const data = await dataSource_service_1.DataSourceService.cloneDataSource(orgId, req.params.id);
+            return (0, response_1.sendSuccess)(res, data, 201);
+        } catch (error) {
+            next(error);
+        }
+    }
+
+    static async archiveDataSource(req, res, next) {
+        try {
+            const orgId = req.params.orgId || req.user?.organizationId || 'current';
+            const data = await dataSource_service_1.DataSourceService.archiveDataSource(orgId, req.params.id);
+            return (0, response_1.sendSuccess)(res, data);
         } catch (error) {
             next(error);
         }

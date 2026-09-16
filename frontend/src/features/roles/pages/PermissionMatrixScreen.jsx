@@ -2,6 +2,8 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import AppShell from '../../shell/components/AppShell';
 import { usePermissionMatrix } from '../hooks/usePermissionMatrix';
+import { downloadJson } from '../../../utils/exportHelper';
+import { CheckCircle2 } from 'lucide-react';
 import {
   ROLE_TYPE_OPTIONS,
   STATE_OPTIONS,
@@ -48,12 +50,32 @@ const PRIVILEGE_TONE = {
 /** SCR-043 — Permission Matrix Screen. Node 113:22359. */
 export default function PermissionMatrixScreen() {
   const orgId = 'current';
+  const [toastMessage, setToastMessage] = useState(null);
   const { data, isLoading, isError, error, refetch, isFetching } = usePermissionMatrix(orgId);
+
+  const showToast = (message) => {
+    setToastMessage(message);
+    setTimeout(() => setToastMessage(null), 3500);
+  };
+
+  const handleExport = () => {
+    if (!data) return;
+    downloadJson(data, 'connectiq-permission-matrix');
+    showToast('Permission matrix schema exported as JSON');
+  };
 
   return (
     <AppShell breadcrumb={['ConnectIQ', 'Administration', 'Roles', 'Permission Matrix']}>
       <div className="flex flex-col gap-token-6">
-        <Header data={data} refetch={refetch} isFetching={isFetching} />
+        {/* Toast */}
+        {toastMessage && (
+          <div className="fixed top-4 right-4 z-50 px-4 py-2.5 rounded-xl shadow-lg border bg-slate-900 text-white border-slate-700 text-xs font-semibold flex items-center gap-2 animate-in fade-in slide-in-from-top-2 duration-200">
+            <CheckCircle2 className="w-4 h-4 text-emerald-400" />
+            <span>{toastMessage}</span>
+          </div>
+        )}
+
+        <Header data={data} refetch={refetch} isFetching={isFetching} onExport={handleExport} />
 
         <span className="sr-only" role="status" aria-live="polite">
           {isLoading
@@ -100,7 +122,7 @@ export default function PermissionMatrixScreen() {
 
 // HEADER-MARKER
 
-function Header({ data, refetch, isFetching }) {
+function Header({ data, refetch, isFetching, onExport }) {
   return (
     <div className="flex flex-col gap-token-3 lg:flex-row lg:items-end lg:justify-between">
       <div>
@@ -129,15 +151,6 @@ function Header({ data, refetch, isFetching }) {
           <IconRefresh spinning={isFetching} />
           Refresh
         </button>
-        <button
-          type="button"
-          className="flex h-8 items-center gap-token-2 rounded-md border border-border bg-surface-card px-token-4 text-token-sm font-medium text-text-secondary-alt hover:bg-surface-hover disabled:cursor-not-allowed disabled:opacity-60 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
-          disabled
-          title="Saving a view requires MOD-003’s permission endpoint (still PLANNED)."
-        >
-          <IconBookmark />
-          Save View
-        </button>
         <Link
           to="/roles"
           className="flex h-8 items-center gap-token-2 rounded-md border border-border bg-surface-card px-token-4 text-token-sm font-medium text-text-secondary-alt hover:bg-surface-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
@@ -147,9 +160,9 @@ function Header({ data, refetch, isFetching }) {
         </Link>
         <button
           type="button"
-          className="flex h-8 items-center gap-token-2 rounded-md bg-primary px-token-4 text-token-sm font-semibold text-text-on-primary hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-60 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
-          disabled
-          title="Exporting the matrix requires MOD-003’s permission endpoint (still PLANNED)."
+          onClick={onExport}
+          className="flex h-8 items-center gap-token-2 rounded-md bg-primary px-token-4 text-token-sm font-semibold text-text-on-primary hover:opacity-90 transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+          title="Export Permission Matrix JSON"
         >
           <IconExport />
           Export Matrix

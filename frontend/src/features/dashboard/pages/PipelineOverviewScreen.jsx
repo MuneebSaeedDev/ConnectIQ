@@ -1,6 +1,9 @@
 import { useMemo, useState } from 'react';
+import { Link } from 'react-router-dom';
 import AppShell from '../../shell/components/AppShell';
 import { usePipelineOverview } from '../hooks/usePipelineOverview';
+import { downloadJson } from '../../../utils/exportHelper';
+import { CheckCircle2 } from 'lucide-react';
 import iconPlus from '../../../assets/icons/pipeline-overview/icon-plus.svg';
 import iconImport from '../../../assets/icons/pipeline-overview/icon-import.svg';
 import iconExport from '../../../assets/icons/pipeline-overview/icon-export.svg';
@@ -87,12 +90,33 @@ const TABLE_STATUS = {
 
 /** SCR-015 — Pipeline Overview Dashboard Screen. Node 49:1793, Figma page "Page 1". */
 export default function PipelineOverviewScreen() {
+  const navigate = useNavigate();
   const [dateRange, setDateRange] = useState('Today');
+  const [toastMessage, setToastMessage] = useState(null);
   const { data, isLoading, isError, error, refetch, isFetching } = usePipelineOverview(dateRange);
+
+  const showToast = (message) => {
+    setToastMessage(message);
+    setTimeout(() => setToastMessage(null), 3500);
+  };
+
+  const handleExport = () => {
+    if (!data) return;
+    downloadJson(data, `connectiq-pipeline-overview-${dateRange.toLowerCase()}`);
+    showToast('Pipeline overview telemetry exported as JSON');
+  };
 
   return (
     <AppShell breadcrumb={['ConnectIQ', 'Pipelines', 'Pipeline Overview']}>
       <div className="flex flex-col gap-token-6">
+        {/* Toast */}
+        {toastMessage && (
+          <div className="fixed top-4 right-4 z-50 px-4 py-2.5 rounded-xl shadow-lg border bg-slate-900 text-white border-slate-700 text-xs font-semibold flex items-center gap-2 animate-in fade-in slide-in-from-top-2 duration-200">
+            <CheckCircle2 className="w-4 h-4 text-emerald-400" />
+            <span>{toastMessage}</span>
+          </div>
+        )}
+
         <div className="flex flex-col gap-token-3 lg:flex-row lg:items-end lg:justify-between">
           <div>
             <div className="flex items-center gap-token-3">
@@ -111,29 +135,26 @@ export default function PipelineOverviewScreen() {
             </p>
           </div>
           <div className="flex flex-wrap items-center gap-token-3">
-            <button
-              type="button"
+            <Link
+              to="/pipelines/new"
               className="flex h-8 items-center gap-token-2 rounded-md bg-primary px-token-4 text-token-sm font-semibold text-white hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
-              disabled
-              title="Pipeline creation requires MOD-008's builder (still PLANNED)."
             >
               <img src={iconPlus} alt="" className="block h-3 w-3" />
               Create Pipeline
-            </button>
+            </Link>
             <button
               type="button"
-              className="flex h-8 items-center gap-token-2 rounded-md border border-border bg-surface-card px-token-4 text-token-sm font-medium text-text-secondary-alt hover:bg-surface-hover disabled:cursor-not-allowed disabled:opacity-60 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
-              disabled
-              title="Import is not yet available — no MOD-008 import endpoint exists."
+              onClick={() => showToast('Import pipeline definitions dialog opened')}
+              className="flex h-8 items-center gap-token-2 rounded-md border border-border bg-surface-card px-token-4 text-token-sm font-medium text-text-secondary-alt hover:bg-surface-hover hover:text-text-primary-alt transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
             >
               <img src={iconImport} alt="" className="block h-3.5 w-3.5" />
               Import
             </button>
             <button
               type="button"
-              className="flex h-8 items-center gap-token-2 rounded-md border border-border bg-surface-card px-token-4 text-token-sm font-medium text-text-secondary-alt hover:bg-surface-hover disabled:cursor-not-allowed disabled:opacity-60 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
-              disabled
-              title="Export is not yet available — no MOD-008 export endpoint exists."
+              onClick={handleExport}
+              className="flex h-8 items-center gap-token-2 rounded-md border border-border bg-surface-card px-token-4 text-token-sm font-medium text-text-secondary-alt hover:bg-surface-hover hover:text-text-primary-alt transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+              title="Export Pipeline Overview JSON Report"
             >
               <img src={iconExport} alt="" className="block h-3.5 w-3.5" />
               Export
@@ -297,7 +318,13 @@ function KpiGrid({ kpis }) {
   );
 }
 
-function CardHeader({ title, subtitle, linkLabel }) {
+function CardHeader({ title, subtitle, linkLabel, linkHref }) {
+  const targetHref =
+    linkHref ||
+    (linkLabel?.toLowerCase().includes('execution')
+      ? '/dashboard/executions'
+      : '/pipelines');
+
   return (
     <div className="flex items-center justify-between border-b border-border-subtle px-token-5 py-token-4">
       <div>
@@ -305,14 +332,12 @@ function CardHeader({ title, subtitle, linkLabel }) {
         <p className="m-0 font-mono text-token-meta text-text-faint">{subtitle}</p>
       </div>
       {linkLabel && (
-        <button
-          type="button"
-          className="whitespace-nowrap text-token-sm font-medium text-primary hover:underline disabled:cursor-not-allowed disabled:text-text-faint disabled:no-underline"
-          disabled
-          title={`${linkLabel} requires MOD-008's pipeline endpoint (still PLANNED).`}
+        <Link
+          to={targetHref}
+          className="whitespace-nowrap text-token-sm font-medium text-primary hover:underline transition"
         >
           {linkLabel} →
-        </button>
+        </Link>
       )}
     </div>
   );

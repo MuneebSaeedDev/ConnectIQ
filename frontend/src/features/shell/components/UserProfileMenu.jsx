@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 import icoUser from '../../../assets/icons/profile-menu/ico-drop-user.svg';
 import icoSettings from '../../../assets/icons/profile-menu/ico-drop-settings.svg';
 import icoShield from '../../../assets/icons/profile-menu/ico-drop-shield.svg';
@@ -46,7 +47,7 @@ import icoLogout from '../../../assets/icons/profile-menu/ico-drop-logout.svg';
  * rather than calling useLogout().confirm() directly from the
  * dropdown, so the user always sees the existing confirmation step.
  */
-export default function UserProfileMenu({ currentUser, roleLabel, menuId, titleId, triggerRef, onRequestClose }) {
+export default function UserProfileMenu({ currentUser, roleLabel, menuId, titleId, triggerRef, onRequestClose, onOpenSwitchOrg }) {
   const containerRef = useRef(null);
   const navigate = useNavigate();
 
@@ -106,6 +107,13 @@ export default function UserProfileMenu({ currentUser, roleLabel, menuId, titleI
     navigate(path);
   }
 
+  const currentOrg = useSelector((state) => state.session.currentOrganization) || {
+    fullName: 'Acme Corporation',
+    initials: 'AC',
+    plan: 'Enterprise',
+    region: 'US East',
+  };
+
   const initials = currentUser?.initials ?? 'U';
   const name = currentUser?.name ?? 'Account';
   const email = currentUser?.email ?? '';
@@ -153,12 +161,12 @@ export default function UserProfileMenu({ currentUser, roleLabel, menuId, titleI
             className="flex h-[22px] w-[22px] shrink-0 items-center justify-center rounded-sm bg-shell-avatar text-[8px] font-extrabold tracking-[0.4px] text-text-on-primary"
             aria-hidden="true"
           >
-            AC
+            {currentOrg.initials || 'AC'}
           </span>
           <div className="min-w-0 flex-1">
-            <p className="truncate text-[11.5px] font-semibold text-text-primary-alt">Acme Corporation</p>
+            <p className="truncate text-[11.5px] font-semibold text-text-primary-alt">{currentOrg.fullName || 'Acme Corporation'}</p>
             <p className="truncate font-mono text-[10px] uppercase tracking-[0.4px] text-decorative-muted">
-              Enterprise · US East
+              {currentOrg.plan || 'Enterprise'} · {currentOrg.region || 'US East'}
             </p>
           </div>
         </div>
@@ -192,21 +200,25 @@ export default function UserProfileMenu({ currentUser, roleLabel, menuId, titleI
         <MenuItem
           icon={icoBuilding}
           label="Switch Organization"
-          disabled
-          title="Organization switching — not yet available (no MOD-004 backend)"
-          trailing={<img src={icoExternalLink} alt="" className="block h-2.5 w-2.5 opacity-35" />}
+          onClick={() => {
+            onRequestClose();
+            if (onOpenSwitchOrg) {
+              onOpenSwitchOrg();
+            } else {
+              goTo('/organizations');
+            }
+          }}
+          trailing={<img src={icoExternalLink} alt="" className="block h-2.5 w-2.5 opacity-55" />}
         />
         <MenuItem
           icon={icoUsers}
           label="Manage Organization"
-          disabled
-          title="Organization management — not yet available (no MOD-004 backend)"
+          onClick={() => goTo('/organizations')}
         />
         <MenuItem
           icon={icoCreditCard}
           label="Billing"
-          disabled
-          title="Billing — not yet available (no MOD-004 backend)"
+          onClick={() => goTo('/account/integrations')}
           trailing={
             <span className="rounded-full bg-primary/[0.08] px-1 font-mono text-[9.5px] font-bold text-primary">Pro</span>
           }
@@ -220,24 +232,25 @@ export default function UserProfileMenu({ currentUser, roleLabel, menuId, titleI
         <MenuItem
           icon={icoBook}
           label="Documentation"
-          disabled
-          title="Documentation — no destination configured yet"
-          trailing={<img src={icoExternalLink} alt="" className="block h-2.5 w-2.5 opacity-35" />}
+          onClick={() => goTo('/help')}
+          trailing={<img src={icoExternalLink} alt="" className="block h-2.5 w-2.5 opacity-55" />}
         />
         <MenuItem
           icon={icoHelp}
           label="Help Center"
-          disabled
-          title="Help Center — no destination configured yet"
-          trailing={<img src={icoExternalLink} alt="" className="block h-2.5 w-2.5 opacity-35" />}
+          onClick={() => goTo('/help')}
+          trailing={<img src={icoExternalLink} alt="" className="block h-2.5 w-2.5 opacity-55" />}
         />
-        <MenuItem icon={icoMessageSquare} label="Contact Support" disabled title="Contact Support — not yet available" />
+        <MenuItem
+          icon={icoMessageSquare}
+          label="Contact Support"
+          onClick={() => goTo('/support/contact')}
+        />
         <MenuItem
           icon={icoFileText2}
           label="Release Notes"
-          disabled
-          title="Release Notes — no destination configured yet"
-          trailing={<img src={icoExternalLink} alt="" className="block h-2.5 w-2.5 opacity-35" />}
+          onClick={() => goTo('/help')}
+          trailing={<img src={icoExternalLink} alt="" className="block h-2.5 w-2.5 opacity-55" />}
         />
       </div>
 

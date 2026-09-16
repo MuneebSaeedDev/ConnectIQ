@@ -2,6 +2,8 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import AppShell from '../../shell/components/AppShell';
 import { useDepartmentManagement } from '../hooks/useDepartmentManagement';
+import { downloadJson } from '../../../utils/exportHelper';
+import { CheckCircle2 } from 'lucide-react';
 
 const PAGE_SIZE = 12;
 

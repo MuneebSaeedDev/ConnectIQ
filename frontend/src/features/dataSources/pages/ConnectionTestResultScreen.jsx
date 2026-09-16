@@ -8,6 +8,7 @@ import {
   buildDiagnosticsText,
   saveValidatedConnection,
 } from '../services/connectionTestResult.api';
+import { downloadJson, downloadFile } from '../../../utils/exportHelper';
 
 /* Result status → token utilities. Mapped to the verified Figma tones
    (node 124:45976): passed → success, partial/warning → warning,
@@ -62,6 +63,17 @@ export default function ConnectionTestResultScreen() {
     }
   }
 
+  function handleExportReport() {
+    if (!result) return;
+    downloadJson(result, `connection-test-result-${result.connectionId}`);
+  }
+
+  function handleExportDiagnostics() {
+    if (!result) return;
+    const text = buildDiagnosticsText(result);
+    downloadFile(text, `diagnostics-${result.connectionId}.txt`, 'text/plain');
+  }
+
   async function handleSave() {
     if (!result) return;
     setSaveState({ status: 'saving', message: '' });
@@ -109,7 +121,7 @@ export default function ConnectionTestResultScreen() {
 
         {result && (
           <>
-            <Header result={result} mocked={result.mocked} onClose={() => navigate('/data-sources')} onCopy={handleCopyDiagnostics} copied={copied} onRetry={() => refetch()} retrying={isFetching} onSave={handleSave} onViewConfig={() => navigate('/data-sources/new/connection')} saving={saveState.status === 'saving'} saved={saveState.status === 'mocked'} />
+            <Header result={result} mocked={result.mocked} onClose={() => navigate('/data-sources')} onCopy={handleCopyDiagnostics} copied={copied} onExport={handleExportReport} onRetry={() => refetch()} retrying={isFetching} onSave={handleSave} onViewConfig={() => navigate('/data-sources/new/connection')} saving={saveState.status === 'saving'} saved={saveState.status === 'mocked'} />
 
             {saveState.status === 'mocked' && (
               <div className="rounded-md border border-warning bg-warning-bg p-token-5" role="alert">
@@ -127,7 +139,7 @@ export default function ConnectionTestResultScreen() {
                 <PerformanceMetrics result={result} />
                 <SecurityValidation result={result} />
                 <PermissionVerification result={result} />
-                <Diagnostics result={result} filter={diagFilter} setFilter={setDiagFilter} onCopy={handleCopyDiagnostics} copied={copied} />
+                <Diagnostics result={result} filter={diagFilter} setFilter={setDiagFilter} onCopy={handleCopyDiagnostics} copied={copied} onExport={handleExportDiagnostics} />
                 <ValidationHistory result={result} search={historySearch} setSearch={setHistorySearch} />
               </div>
 
@@ -148,7 +160,7 @@ export default function ConnectionTestResultScreen() {
 }
 
 /* ---- Header ---------------------------------------------------------- */
-function Header({ result, mocked, onClose, onCopy, copied, onRetry, retrying, onViewConfig, onSave, saving, saved }) {
+function Header({ result, mocked, onClose, onCopy, copied, onExport, onRetry, retrying, onViewConfig, onSave, saving, saved }) {
   return (
     <div className="flex flex-col gap-token-3 lg:flex-row lg:items-end lg:justify-between">
       <div className="min-w-0">
@@ -172,7 +184,7 @@ function Header({ result, mocked, onClose, onCopy, copied, onRetry, retrying, on
           {copied ? <IconCheck className="h-3.5 w-3.5 text-success" /> : <IconCopy />}
           {copied ? 'Copied' : 'Copy Diagnostics'}
         </button>
-        <button type="button" disabled title="Export requires MOD-006's report endpoint (still PLANNED)." className="flex h-8 items-center gap-token-2 rounded-md border border-border bg-surface-card px-token-4 text-token-sm font-medium text-text-secondary-alt disabled:cursor-not-allowed disabled:opacity-60">
+        <button type="button" onClick={onExport} className="flex h-8 items-center gap-token-2 rounded-md border border-border bg-surface-card px-token-4 text-token-sm font-medium text-text-secondary-alt hover:bg-surface-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">
           <IconDownload />
           Export Report
         </button>
@@ -451,7 +463,7 @@ function PermissionVerification({ result }) {
 }
 
 /* ---- Section: Diagnostics ------------------------------------------- */
-function Diagnostics({ result, filter, setFilter, onCopy, copied }) {
+function Diagnostics({ result, filter, setFilter, onCopy, copied, onExport }) {
   const q = filter.trim().toLowerCase();
   const rows = useMemo(
     () => result.diagnostics.filter((d) => !q || `${d.category} ${d.key} ${d.value}`.toLowerCase().includes(q)),
@@ -463,7 +475,7 @@ function Diagnostics({ result, filter, setFilter, onCopy, copied }) {
         {copied ? <IconCheck className="h-3 w-3 text-success" /> : <IconCopy className="h-3 w-3" />}
         {copied ? 'Copied' : 'Copy Diagnostics'}
       </button>
-      <button type="button" disabled title="Export requires MOD-006's report endpoint (still PLANNED)." className="flex h-7 items-center gap-token-1 rounded-md border border-border bg-surface-card px-token-3 text-token-meta font-medium text-text-secondary-alt disabled:cursor-not-allowed disabled:opacity-60">
+      <button type="button" onClick={onExport} className="flex h-7 items-center gap-token-1 rounded-md border border-border bg-surface-card px-token-3 text-token-meta font-medium text-text-secondary-alt hover:bg-surface-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">
         <IconDownload className="h-3 w-3" />
         Export
       </button>
@@ -510,6 +522,7 @@ function Diagnostics({ result, filter, setFilter, onCopy, copied }) {
 
 /* ---- Section: Validation History ------------------------------------ */
 function ValidationHistory({ result, search, setSearch }) {
+  const [selectedHistory, setSelectedHistory] = useState(null);
   const q = search.trim().toLowerCase();
   const rows = useMemo(
     () => result.history.filter((h) => !q || `${h.timestamp} ${h.result} ${h.testedBy} ${h.environment}`.toLowerCase().includes(q)),
@@ -548,7 +561,13 @@ function ValidationHistory({ result, search, setSearch }) {
                   <td className="px-token-4 py-token-2 text-token-meta text-text-secondary-alt">{h.testedBy}</td>
                   <td className="px-token-4 py-token-2 text-token-meta text-text-secondary-alt">{h.environment}</td>
                   <td className="px-token-4 py-token-2 text-right">
-                    <button type="button" disabled title="Historical run detail requires MOD-006's backend (still PLANNED)." className="text-token-meta font-semibold text-text-faint disabled:cursor-not-allowed">View</button>
+                    <button
+                      type="button"
+                      onClick={() => setSelectedHistory(h)}
+                      className="text-token-meta font-semibold text-primary hover:underline"
+                    >
+                      View
+                    </button>
                   </td>
                 </tr>
               ))
@@ -556,6 +575,54 @@ function ValidationHistory({ result, search, setSearch }) {
           </tbody>
         </table>
       </div>
+
+      {selectedHistory && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-overlay-scrim p-4" onClick={() => setSelectedHistory(null)}>
+          <div className="w-full max-w-md rounded-lg border border-border bg-surface-card p-6 shadow-xl" onClick={(e) => e.stopPropagation()}>
+            <div className="flex items-center justify-between border-b border-border-subtle pb-3">
+              <h3 className="m-0 text-token-base font-bold text-text-primary-alt">Validation Run Details</h3>
+              <button
+                type="button"
+                onClick={() => setSelectedHistory(null)}
+                className="text-text-faint hover:text-text-primary-alt"
+              >
+                ✕
+              </button>
+            </div>
+            <dl className="mt-4 flex flex-col gap-3 text-token-sm">
+              <div className="flex justify-between border-b border-border-subtle pb-2">
+                <dt className="text-text-faint">Timestamp:</dt>
+                <dd className="font-mono font-medium text-text-primary-alt">{selectedHistory.timestamp}</dd>
+              </div>
+              <div className="flex justify-between border-b border-border-subtle pb-2">
+                <dt className="text-text-faint">Result:</dt>
+                <dd><StatusPill status={selectedHistory.result} /></dd>
+              </div>
+              <div className="flex justify-between border-b border-border-subtle pb-2">
+                <dt className="text-text-faint">Duration:</dt>
+                <dd className="font-mono text-text-primary-alt">{selectedHistory.duration}</dd>
+              </div>
+              <div className="flex justify-between border-b border-border-subtle pb-2">
+                <dt className="text-text-faint">Tested By:</dt>
+                <dd className="text-text-primary-alt">{selectedHistory.testedBy}</dd>
+              </div>
+              <div className="flex justify-between border-b border-border-subtle pb-2">
+                <dt className="text-text-faint">Environment:</dt>
+                <dd className="text-text-primary-alt">{selectedHistory.environment}</dd>
+              </div>
+            </dl>
+            <div className="mt-6 flex justify-end">
+              <button
+                type="button"
+                onClick={() => setSelectedHistory(null)}
+                className="h-8 rounded-md bg-primary px-4 text-token-sm font-semibold text-text-on-primary hover:opacity-90"
+              >
+                Done
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </Card>
   );
 }

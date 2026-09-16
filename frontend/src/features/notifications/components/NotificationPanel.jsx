@@ -1,4 +1,5 @@
 import { useMemo, useState } from 'react';
+import { Link } from 'react-router-dom';
 import icoGear from '../../../assets/icons/notifications/ico-gear.svg';
 import icoFail from '../../../assets/icons/notifications/ico-notif-fail.svg';
 import icoWarn from '../../../assets/icons/notifications/ico-notif-warn.svg';
@@ -112,15 +113,15 @@ export default function NotificationPanel({
           )}
         </div>
         <div className="flex items-center gap-1">
-          <button
-            type="button"
+          <Link
+            to="/account/notifications"
+            onClick={onRequestClose}
             aria-label="Notification settings"
-            title="Notification settings — not yet available"
-            disabled
-            className="flex h-7 w-7 items-center justify-center rounded-sm text-text-secondary-alt opacity-50 transition-colors duration-150 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+            title="Notification settings"
+            className="flex h-7 w-7 items-center justify-center rounded-sm text-text-secondary-alt hover:text-text-primary-alt hover:bg-surface-hover transition-colors duration-150 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
           >
             <img src={icoGear} alt="" className="block h-[15px] w-[15px]" />
-          </button>
+          </Link>
           <button
             type="button"
             onClick={onMarkAllRead}
@@ -277,15 +278,13 @@ export default function NotificationPanel({
       </div>
 
       <div className="flex items-center justify-center border-t border-border-subtle px-token-4 py-3">
-        <button
-          type="button"
-          disabled
-          title="Full notifications history — not yet available"
-          className="text-[12.5px] font-semibold text-primary opacity-50"
+        <Link
+          to="/notifications"
+          className="text-[12.5px] font-semibold text-primary hover:underline transition"
           onClick={onRequestClose}
         >
           View all notifications →
-        </button>
+        </Link>
       </div>
     </div>
   );

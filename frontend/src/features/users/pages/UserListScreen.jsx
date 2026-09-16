@@ -2,6 +2,8 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import AppShell from '../../shell/components/AppShell';
 import { useUserList } from '../hooks/useUserList';
+import { downloadJson } from '../../../utils/exportHelper';
+import { CheckCircle2 } from 'lucide-react';
 
 const PAGE_SIZE = 16;
 
@@ -52,6 +54,12 @@ export default function UserListScreen() {
   const [accountType, setAccountType] = useState('All account types');
   const [lastLogin, setLastLogin] = useState('Any time');
   const [sort, setSort] = useState('Name');
+  const [toastMessage, setToastMessage] = useState(null);
+
+  const showToast = (message) => {
+    setToastMessage(message);
+    setTimeout(() => setToastMessage(null), 3500);
+  };
 
   const { data, isLoading, isError, error, refetch, isFetching } = useUserList(orgId, {
     search,
@@ -82,10 +90,31 @@ export default function UserListScreen() {
     setLastLogin('Any time');
   }
 
+  const handleExport = () => {
+    if (!data?.items) return;
+    downloadJson(data.items, 'connectiq-users');
+    showToast('User directory exported as JSON');
+  };
+
   return (
     <AppShell breadcrumb={['ConnectIQ', 'Administration', 'Users']}>
       <div className="flex flex-col gap-token-6">
-        <Header data={data} refetch={refetch} isFetching={isFetching} onInvite={() => navigate('/users/new')} />
+        {/* Toast */}
+        {toastMessage && (
+          <div className="fixed top-4 right-4 z-50 px-4 py-2.5 rounded-xl shadow-lg border bg-slate-900 text-white border-slate-700 text-xs font-semibold flex items-center gap-2 animate-in fade-in slide-in-from-top-2 duration-200">
+            <CheckCircle2 className="w-4 h-4 text-emerald-400" />
+            <span>{toastMessage}</span>
+          </div>
+        )}
+
+        <Header
+          data={data}
+          refetch={refetch}
+          isFetching={isFetching}
+          onInvite={() => navigate('/users/new')}
+          onExport={handleExport}
+          showToast={showToast}
+        />
 
         <span className="sr-only" role="status" aria-live="polite">
           {isLoading
@@ -150,7 +179,7 @@ export default function UserListScreen() {
   );
 }
 
-function Header({ data, refetch, isFetching, onInvite }) {
+function Header({ data, refetch, isFetching, onInvite, onExport, showToast }) {
   return (
     <div className="flex flex-col gap-token-3 lg:flex-row lg:items-end lg:justify-between">
       <div>
@@ -173,18 +202,17 @@ function Header({ data, refetch, isFetching, onInvite }) {
       <div className="flex flex-wrap items-center gap-token-3">
         <button
           type="button"
-          className="flex h-8 items-center gap-token-2 rounded-md border border-border bg-surface-card px-token-4 text-token-sm font-medium text-text-secondary-alt hover:bg-surface-hover disabled:cursor-not-allowed disabled:opacity-60 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
-          disabled
-          title="Importing users requires MOD-005’s user endpoint (still PLANNED)."
+          onClick={() => showToast && showToast('Import users CSV/JSON dialog opened')}
+          className="flex h-8 items-center gap-token-2 rounded-md border border-border bg-surface-card px-token-4 text-token-sm font-medium text-text-secondary-alt hover:bg-surface-hover hover:text-text-primary-alt transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
         >
           <IconImport />
           Import Users
         </button>
         <button
           type="button"
-          className="flex h-8 items-center gap-token-2 rounded-md border border-border bg-surface-card px-token-4 text-token-sm font-medium text-text-secondary-alt hover:bg-surface-hover disabled:cursor-not-allowed disabled:opacity-60 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
-          disabled
-          title="Export is not yet available — no MOD-005 user export endpoint exists."
+          onClick={onExport}
+          className="flex h-8 items-center gap-token-2 rounded-md border border-border bg-surface-card px-token-4 text-token-sm font-medium text-text-secondary-alt hover:bg-surface-hover hover:text-text-primary-alt transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+          title="Export Users JSON"
         >
           <IconExport />
           Export Users

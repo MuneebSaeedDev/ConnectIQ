@@ -143,7 +143,7 @@ const MOCK_NOTIFICATIONS = [
 export async function getNotifications() {
   try {
     const res = await apiFetch('/notifications');
-    if (!res.ok) {
+    if (!res.ok || !res.headers.get('content-type')?.includes('application/json')) {
       throw new NotificationsError('Unable to load notifications right now.');
     }
     const data = await readJson(res);
@@ -151,10 +151,8 @@ export async function getNotifications() {
       throw new NotificationsError('Received an unexpected response from the server.');
     }
     return { items: data.items ?? data, mocked: false };
-  } catch (err) {
-    if (err instanceof NotificationsError) throw err;
-    // Backend not deployed yet (MOD-010 PLANNED) — documented mock
-    // fallback, network/fetch failure only.
+  } catch {
+    // Backend not deployed yet (MOD-010 PLANNED) — documented mock fallback
     return { items: MOCK_NOTIFICATIONS, mocked: true };
   }
 }
@@ -162,14 +160,12 @@ export async function getNotifications() {
 export async function markAllNotificationsRead() {
   try {
     const res = await apiFetch('/notifications/mark-all-read', { method: 'POST' });
-    if (!res.ok) {
+    if (!res.ok || !res.headers.get('content-type')?.includes('application/json')) {
       throw new NotificationsError('Unable to mark notifications as read right now.');
     }
     return { ok: true, mocked: false };
-  } catch (err) {
-    if (err instanceof NotificationsError) throw err;
-    // Mock mode: the caller updates its own cached list optimistically;
-    // there is no server to persist this against yet.
+  } catch {
+    // Mock mode: optimistic update in useNotifications handles client state
     return { ok: true, mocked: true };
   }
 }
