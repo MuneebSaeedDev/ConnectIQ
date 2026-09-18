@@ -941,14 +941,6 @@ function IconRefresh({ className }) {
     </svg>
   );
 }
-function IconSave({ className }) {
-  return (
-    <svg viewBox="0 0 16 16" className={className} fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-      <path d="M3 2h8l2 2v10H3z" />
-      <path d="M5 2v4h5V2M5 14v-4h6v4" />
-    </svg>
-  );
-}
 function IconExport({ className }) {
   return (
     <svg viewBox="0 0 16 16" className={className} fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">

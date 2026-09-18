@@ -1,0 +1,7 @@
+--- frontend/src/features/dashboard/pages/RealTimeMonitoringScreen.jsx
++++ frontend/src/features/dashboard/pages/RealTimeMonitoringScreen.jsx
+@@ -705,3 +705,2 @@
+           <img src={iconExport} alt="" className="block h-3.5 w-3.5" />
+-          Export
++          Export Monitoring Table
+         </button>

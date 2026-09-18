@@ -90,7 +90,6 @@ const TABLE_STATUS = {
 
 /** SCR-015 — Pipeline Overview Dashboard Screen. Node 49:1793, Figma page "Page 1". */
 export default function PipelineOverviewScreen() {
-  const navigate = useNavigate();
   const [dateRange, setDateRange] = useState('Today');
   const [toastMessage, setToastMessage] = useState(null);
   const { data, isLoading, isError, error, refetch, isFetching } = usePipelineOverview(dateRange);

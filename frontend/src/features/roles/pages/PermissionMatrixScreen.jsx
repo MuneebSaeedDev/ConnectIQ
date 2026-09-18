@@ -1053,14 +1053,6 @@ function IconRefresh({ spinning }) {
   );
 }
 
-function IconBookmark() {
-  return (
-    <svg viewBox="0 0 16 16" className="block h-3.5 w-3.5" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-      <path d="M4 2.5h8v11l-4-3-4 3v-11Z" />
-    </svg>
-  );
-}
-
 function IconCompare() {
   return (
     <svg viewBox="0 0 16 16" className="block h-3.5 w-3.5" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">

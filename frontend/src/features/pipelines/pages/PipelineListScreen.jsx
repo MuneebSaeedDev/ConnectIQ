@@ -1201,8 +1201,9 @@ export default function PipelineListScreen() {
                                     <button
                                       type="button"
                                       onClick={(e) => {
-                                        handlePauseToggle(pipe.id, pipe.status === 'Paused' ? 'Running' : 'Paused', e);
+                                        e.stopPropagation();
                                         setActiveDropdownMenu(null);
+                                        handlePauseToggle(pipe.id, pipe.status === 'Paused' ? 'Running' : 'Paused', e);
                                       }}
                                       className="w-full px-3 py-1.5 text-slate-700 hover:bg-slate-50"
                                     >
@@ -1211,8 +1212,9 @@ export default function PipelineListScreen() {
                                     <button
                                       type="button"
                                       onClick={(e) => {
-                                        handleDuplicate(pipe.id, e);
+                                        e.stopPropagation();
                                         setActiveDropdownMenu(null);
+                                        handleDuplicate(pipe.id, e);
                                       }}
                                       className="w-full px-3 py-1.5 text-slate-700 hover:bg-slate-50"
                                     >
@@ -1221,8 +1223,9 @@ export default function PipelineListScreen() {
                                     <button
                                       type="button"
                                       onClick={(e) => {
-                                        handleDelete(pipe.id, e);
+                                        e.stopPropagation();
                                         setActiveDropdownMenu(null);
+                                        handleDelete(pipe.id, e);
                                       }}
                                       className="w-full px-3 py-1.5 text-red-600 hover:bg-red-50 border-t border-slate-100"
                                     >
