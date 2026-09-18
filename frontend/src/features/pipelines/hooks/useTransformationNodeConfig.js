@@ -311,7 +311,7 @@ export function useTransformationNodeConfig(nodeId = 'node_trans_008', pipelineI
         testing: {
           ...prev.testing,
           lastRun: 'Just now',
-          testResults: res.results || prev.testing.testResults,
+          testResults: res?.results || prev?.testing?.testResults || [],
         },
       }));
       showFeedback('success', `Ran ${res.results?.length || 4} test cases: ${res.passedCount} passed, ${res.failedCount} failed.`);

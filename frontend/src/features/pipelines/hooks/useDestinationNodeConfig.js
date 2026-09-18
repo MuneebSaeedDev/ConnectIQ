@@ -152,7 +152,7 @@ export function useDestinationNodeConfig(nodeId = 'dst_node_0073', pipelineId = 
     });
   };
 
-  const handleTestConnection = async () => {
+  const handleTestConnection = async (e) => { if (e && e.preventDefault) e.preventDefault(); 
     setIsTestingConn(true);
     try {
       const report = await testDestinationConnection(nodeId, pipelineId, form);

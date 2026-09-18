@@ -80,7 +80,7 @@ export default function SummaryRail({
       <div className="pt-3 space-y-2">
         <button
           type="button"
-          onClick={onTestConnection}
+          onClick={(e) => { e.preventDefault(); onTestConnection(); }}
           disabled={isTestingConn}
           className="w-full flex items-center justify-center gap-2 py-2 px-4 bg-white hover:bg-slate-100 border border-slate-300 text-slate-700 text-xs font-semibold rounded-md shadow-2xs transition disabled:opacity-50"
         >

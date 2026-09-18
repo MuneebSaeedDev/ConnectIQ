@@ -4,7 +4,7 @@ import { AlertTriangle, X } from 'lucide-react';
 export default function DiscardChangesModal({
   isOpen,
   onClose,
-  onDiscard,
+  onConfirm,
 }) {
   if (!isOpen) return null;
 
@@ -48,7 +48,7 @@ export default function DiscardChangesModal({
             </button>
             <button
               type="button"
-              onClick={onDiscard}
+              onClick={onConfirm}
               className="px-4 py-1.5 text-xs font-semibold text-white bg-rose-600 hover:bg-rose-700 rounded transition cursor-pointer shadow-xs"
             >
               Discard Changes

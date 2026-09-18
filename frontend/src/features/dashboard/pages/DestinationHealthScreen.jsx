@@ -103,7 +103,14 @@ export default function DestinationHealthScreen() {
     setTimeout(() => setToastMessage(null), 3500);
   };
 
-  const handleExport = () => {
+  
+
+  
+  const notifyPlanned = (feature) => {
+    showToast(feature + ' is still PLANNED in this module.');
+  };
+
+const handleExport = () => {
     if (!data) return;
     downloadJson(data, `connectiq-destination-health-${timeRange.toLowerCase()}`);
     showToast('Destination health report exported as JSON');
@@ -232,20 +239,20 @@ export default function DestinationHealthScreen() {
             <KpiGrid kpis={data.kpis} />
 
             <div className="flex flex-col gap-token-4 xl:flex-row">
-              <DeliverySuccessCard data={data.deliverySuccess} />
-              <DestinationAlertsCard alerts={data.destinationAlerts} />
+              <DeliverySuccessCard data={data.deliverySuccess} onViewLogs={() => notifyPlanned("Delivery Logs")} />
+              <DestinationAlertsCard alerts={data.destinationAlerts} onViewAll={() => notifyPlanned("Destination Alerts")} />
             </div>
 
             <DeliveryVolumeCard data={data.deliveryVolume} />
 
             <div className="flex flex-col gap-token-4 xl:flex-row">
-              <SyncPerformanceCard data={data.syncPerformance} />
+              <SyncPerformanceCard data={data.syncPerformance} onViewAll={() => notifyPlanned("Sync Performance")} />
               <DeliveryMethodsCard data={data.deliveryMethods} />
             </div>
 
             <DeliverySlaTable data={data.deliverySla} />
 
-            <AllDestinationsTable table={data.allDestinations} />
+            <AllDestinationsTable table={data.allDestinations} onColumnsClick={() => notifyPlanned("Columns View")} onFilterClick={() => notifyPlanned("Advanced Filtering")} />
 
             <ScreenFooter data={data} isFetching={isFetching} />
           </>
@@ -311,7 +318,7 @@ function KpiGrid({ kpis }) {
   );
 }
 
-function CardHeader({ title, subtitle, linkLabel }) {
+function CardHeader({ title, subtitle, linkLabel, onAction }) {
   return (
     <div className="flex items-center justify-between border-b border-border-subtle px-token-5 py-token-4">
       <div>
@@ -321,9 +328,9 @@ function CardHeader({ title, subtitle, linkLabel }) {
       {linkLabel && (
         <button
           type="button"
-          className="whitespace-nowrap text-token-sm font-medium text-primary hover:underline disabled:cursor-not-allowed disabled:text-text-faint disabled:no-underline"
-          disabled
-          title={`${linkLabel} requires MOD-007's Destinations module (still PLANNED).`}
+          onClick={onAction}
+          className="whitespace-nowrap text-token-sm font-medium text-primary hover:underline transition cursor-pointer"
+          title={linkLabel}
         >
           {linkLabel} →
         </button>
@@ -359,11 +366,11 @@ function linePath(points) {
  * project dependency yet (agent-rules.md §4), same precedent as
  * SourceHealthScreen's ConnectionHealthCard and the other MOD-009
  * sibling screens' inline charts. */
-function DeliverySuccessCard({ data }) {
+function DeliverySuccessCard({ data, onViewLogs }) {
   const points = chartPoints(data.series, 95, 100);
   return (
     <div className="min-w-0 flex-1 overflow-hidden rounded-md border border-border bg-surface-card shadow-sm">
-      <CardHeader title="Delivery Success" subtitle={data.subtitle} />
+      <CardHeader title="Delivery Success" subtitle={data.subtitle} linkLabel="View logs" onAction={onViewLogs} />
       <div className="px-token-5 py-token-4">
         <div className="mb-token-3 flex items-center justify-between">
           <p className="m-0 font-mono text-token-xs font-semibold uppercase tracking-[0.06em] text-text-faint">Success rate — last 24h</p>
@@ -415,10 +422,10 @@ function DeliverySuccessCard({ data }) {
   );
 }
 
-function DestinationAlertsCard({ alerts }) {
+function DestinationAlertsCard({ alerts, onViewAll }) {
   return (
     <div className="min-w-0 flex-1 overflow-hidden rounded-md border border-border bg-surface-card shadow-sm">
-      <CardHeader title="Destination Alerts" subtitle="Actionable · severity sorted" />
+      <CardHeader title="Destination Alerts" subtitle="Actionable · severity sorted" linkLabel="View all" onAction={onViewAll} />
       {alerts.length === 0 ? (
         <p className="m-0 px-token-5 py-token-8 text-center text-token-sm text-text-secondary-alt">No active alerts.</p>
       ) : (
@@ -496,11 +503,11 @@ function DeliveryVolumeCard({ data }) {
   );
 }
 
-function SyncPerformanceCard({ data }) {
+function SyncPerformanceCard({ data, onViewAll }) {
   const points = chartPoints(data.series, 97, 100);
   return (
     <div className="min-w-0 flex-1 overflow-hidden rounded-md border border-border bg-surface-card shadow-sm">
-      <CardHeader title="Sync Performance" subtitle={data.subtitle} />
+      <CardHeader title="Sync Performance" subtitle={data.subtitle} linkLabel="View all" onAction={onViewAll} />
       <div className="px-token-5 py-token-4">
         <svg viewBox={`0 0 ${CHART_WIDTH} ${CHART_HEIGHT}`} className="h-20 w-full" role="img" aria-label="Sync success rate over the last 24 hours">
           <path d={linePath(points)} fill="none" stroke="#0f5699" strokeWidth="2" />
@@ -640,7 +647,7 @@ function DeliverySlaTable({ data }) {
   );
 }
 
-function AllDestinationsTable({ table }) {
+function AllDestinationsTable({ table, onColumnsClick, onFilterClick }) {
   const [search, setSearch] = useState('');
   const [categoryFilter, setCategoryFilter] = useState('all');
   const [selected, setSelected] = useState(() => new Set());

@@ -4,17 +4,17 @@ import { Copy, X } from 'lucide-react';
 export default function DuplicateNodeModal({
   isOpen,
   onClose,
-  onConfirm,
-  currentName,
+  onDuplicate,
+  currentNodeName,
 }) {
-  const [nodeName, setNodeName] = useState(`${currentName || 'customer_validator'}_copy`);
+  const [nodeName, setNodeName] = useState(`${currentNodeName || 'customer_validator'}_copy`);
 
   if (!isOpen) return null;
 
   const handleSubmit = (e) => {
     e.preventDefault();
     if (nodeName.trim()) {
-      onConfirm(nodeName.trim());
+      onDuplicate(nodeName.trim());
     }
   };
 

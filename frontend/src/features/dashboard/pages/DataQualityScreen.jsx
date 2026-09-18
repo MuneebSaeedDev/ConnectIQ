@@ -101,6 +101,14 @@ export default function DataQualityScreen() {
     setTimeout(() => setToastMessage(null), 3500);
   };
 
+  
+
+  
+
+  const notifyPlanned = (feature) => {
+    showToast(feature + ' is still PLANNED in this module/dashboard.');
+  };
+
   const handleExport = () => {
     if (!data) return;
     downloadJson(data, `connectiq-data-quality-${dateRange.toLowerCase()}`);
@@ -230,12 +238,12 @@ export default function DataQualityScreen() {
             <KpiGrid kpis={data.kpis} />
 
             <div className="flex flex-col gap-token-4 xl:flex-row">
-              <QualityScoreTrendCard data={data.qualityScoreTrend} />
+              <QualityScoreTrendCard data={data.qualityScoreTrend} onViewDetails={() => notifyPlanned("Full history")} />
               <QualityAlertsCard alerts={data.qualityAlerts} />
             </div>
 
             <div className="flex flex-col gap-token-4 xl:flex-row">
-              <ValidationResultsCard data={data.validationResults} />
+              <ValidationResultsCard data={data.validationResults} onViewAll={() => notifyPlanned("Validation Results")} />
               <DatasetHealthCard data={data.datasetHealth} />
             </div>
 
@@ -246,7 +254,7 @@ export default function DataQualityScreen() {
 
             <SchemaMonitoringCard rows={data.schemaChanges} />
 
-            <FailedValidationsTable table={data.failedValidations} />
+            <FailedValidationsTable table={data.failedValidations} onColumnsClick={() => notifyPlanned("Columns View")} onFilterClick={() => notifyPlanned("Advanced Filtering")} />
 
             <ScreenFooter data={data} isFetching={isFetching} />
           </>
@@ -310,7 +318,7 @@ function KpiGrid({ kpis }) {
   );
 }
 
-function CardHeader({ title, subtitle, linkLabel }) {
+function CardHeader({ title, subtitle, linkLabel, onAction }) {
   return (
     <div className="flex items-center justify-between border-b border-border-subtle px-token-5 py-token-4">
       <div>
@@ -320,9 +328,9 @@ function CardHeader({ title, subtitle, linkLabel }) {
       {linkLabel && (
         <button
           type="button"
-          className="whitespace-nowrap text-token-sm font-medium text-primary hover:underline disabled:cursor-not-allowed disabled:text-text-faint disabled:no-underline"
-          disabled
-          title={`${linkLabel} requires MOD-009's data quality endpoint (still PLANNED).`}
+          onClick={onAction}
+          className="whitespace-nowrap text-token-sm font-medium text-primary hover:underline transition cursor-pointer"
+          title={linkLabel}
         >
           {linkLabel} →
         </button>
@@ -349,13 +357,13 @@ function linePath(points) {
  * regions (node 50:5262) are hand-drawn static vector art with no
  * live-render contract — same precedent as ExecutiveDashboardScreen's
  * SlaTrendChart and PipelineOverviewScreen's SuccessRateChart. */
-function QualityScoreTrendCard({ data }) {
+function QualityScoreTrendCard({ data, onViewDetails }) {
   const min = Math.min(...data.series) - 0.5;
   const max = Math.max(...data.series) + 0.3;
   const points = chartPoints(data.series, min, max);
   return (
     <div className="min-w-0 flex-[1.8] overflow-hidden rounded-md border border-border bg-surface-card shadow-sm">
-      <CardHeader title="Quality Score Trend" subtitle={data.subtitle} linkLabel="Full history" />
+      <CardHeader title="Quality Score Trend" subtitle={data.subtitle} linkLabel="Full history" onAction={onViewDetails} />
       <div className="px-token-5 py-token-5">
         <div className="mb-token-3 flex items-center justify-between">
           <p className="m-0 font-mono text-token-xs font-semibold uppercase tracking-[0.06em] text-text-faint">Overall quality score — last 30 days</p>
@@ -470,7 +478,7 @@ function Legend({ swatchClass, label }) {
   );
 }
 
-function ValidationResultsCard({ data }) {
+function ValidationResultsCard({ data, onViewAll }) {
   return (
     <div className="min-w-0 flex-[1.8] overflow-hidden rounded-md border border-border bg-surface-card shadow-sm">
       <CardHeader title="Validation Results" subtitle={data.subtitle} linkLabel="View all" />
@@ -640,7 +648,7 @@ function SchemaMonitoringCard({ rows }) {
   );
 }
 
-function FailedValidationsTable({ table }) {
+function FailedValidationsTable({ table, onColumnsClick, onFilterClick }) {
   const [search, setSearch] = useState('');
   const [severityFilter, setSeverityFilter] = useState('all');
   const [selected, setSelected] = useState(() => new Set());

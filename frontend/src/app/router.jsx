@@ -84,6 +84,9 @@ import DestinationNodeConfigScreen from '../features/pipelines/pages/Destination
 import PipelineSettingsScreen from '../features/pipelines/pages/PipelineSettingsScreen';
 import PipelineVersionHistoryScreen from '../features/pipelines/pages/PipelineVersionHistoryScreen';
 import PipelineTemplateLibraryScreen from '../features/pipelines/pages/PipelineTemplateLibraryScreen';
+import PipelineScheduleScreen from '../features/pipelines/pages/PipelineScheduleScreen';
+import PipelineParametersScreen from '../features/pipelines/pages/PipelineParametersScreen';
+import PipelineReviewScreen from '../features/pipelines/pages/PipelineReviewScreen';
 import PipelineTestExecutionScreen from '../features/pipelines/pages/PipelineTestExecutionScreen';
 import NotificationsCenterScreen from '../features/notifications/pages/NotificationsCenterScreen';
 import HelpCenterScreen from '../features/help/pages/HelpCenterScreen';
@@ -211,9 +214,9 @@ export const router = createBrowserRouter([
   { path: '/pipelines/builder/nodes/destination', element: <DestinationNodeConfigScreen /> },
   { path: '/pipelines/builder/destination', element: <DestinationNodeConfigScreen /> },
   { path: '/pipelines/new/transformations', element: <TransformationNodeConfigScreen /> },
-  { path: '/pipelines/new/schedule', element: shellRoute('SCR-064', 'Pipeline Builder — Schedule', ['ConnectIQ', 'Pipelines', 'Pipeline Builder', 'Schedule']) },
-  { path: '/pipelines/new/parameters', element: shellRoute('SCR-064', 'Pipeline Builder — Parameters', ['ConnectIQ', 'Pipelines', 'Pipeline Builder', 'Parameters']) },
-  { path: '/pipelines/new/review', element: shellRoute('SCR-064', 'Pipeline Builder — Review', ['ConnectIQ', 'Pipelines', 'Pipeline Builder', 'Review']) },
+  { path: '/pipelines/new/schedule', element: <PipelineScheduleScreen /> },
+  { path: '/pipelines/new/parameters', element: <PipelineParametersScreen /> },
+  { path: '/pipelines/new/review', element: <PipelineReviewScreen /> },
   { path: '/pipelines/new/run', element: <PipelineTestExecutionScreen /> },
   { path: '/pipelines/:id/test', element: <PipelineTestExecutionScreen /> },
   { path: '/pipelines/test', element: <PipelineTestExecutionScreen /> },

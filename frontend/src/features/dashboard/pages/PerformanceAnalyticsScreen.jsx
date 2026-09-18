@@ -107,7 +107,18 @@ export default function PerformanceAnalyticsScreen() {
     setTimeout(() => setToastMessage(null), 3500);
   };
 
-  const handleExport = () => {
+  
+  const handleExportComponents = () => {
+    if (!data?.components) return;
+    downloadJson(data.components, 'connectiq-component-performance-' + range);
+    showToast('Component Performance report exported successfully');
+  };
+
+  const notifyPlanned = (feature) => {
+    showToast(feature + ' is still PLANNED in this module version.');
+  };
+
+const handleExport = () => {
     if (!data) return;
     downloadJson(data, `connectiq-performance-analytics-${range}`);
     showToast('Performance analytics report exported as JSON');
@@ -229,7 +240,7 @@ export default function PerformanceAnalyticsScreen() {
             <KpiGrid kpis={data.kpis} />
 
             <div className="flex flex-col gap-token-4 xl:flex-row">
-              <ScoreTrendCard data={data.scoreTrend} />
+              <ScoreTrendCard data={data.scoreTrend} onViewDetails={() => notifyPlanned("Detailed Reports")} />
               <ResourceUtilizationCard data={data.resourceUtilization} />
             </div>
 
@@ -239,18 +250,18 @@ export default function PerformanceAnalyticsScreen() {
             </div>
 
             <div className="flex flex-col gap-token-4 xl:flex-row">
-              <FastestPipelinesCard data={data.fastestPipelines} />
-              <RegressionsCard data={data.regressions} />
+              <FastestPipelinesCard data={data.fastestPipelines} onViewFastest={() => notifyPlanned("Pipeline Detail")} />
+              <RegressionsCard data={data.regressions} onViewRegressions={() => notifyPlanned("Operations Diagnostics")} />
             </div>
 
-            <WorkersTable data={data.workers} />
+            <WorkersTable data={data.workers} onViewWorkers={() => notifyPlanned("Worker Management")} />
 
             <div className="flex flex-col gap-token-4 xl:flex-row">
               <CapacityCard data={data.capacity} />
               <RecommendationsCard data={data.recommendations} />
             </div>
 
-            <ComponentsTable table={data.components} />
+            <ComponentsTable table={data.components} handleExportComponents={handleExportComponents} />
 
             <ScreenFooter data={data} isFetching={isFetching} />
           </>
@@ -307,7 +318,7 @@ function KpiGrid({ kpis }) {
   );
 }
 
-function CardHeader({ title, subtitle, linkLabel, linkTitle }) {
+function CardHeader({ title, subtitle, linkLabel, linkTitle, onAction }) {
   return (
     <div className="flex items-center justify-between border-b border-border-subtle px-token-5 py-token-4">
       <div>
@@ -317,9 +328,9 @@ function CardHeader({ title, subtitle, linkLabel, linkTitle }) {
       {linkLabel && (
         <button
           type="button"
-          className="whitespace-nowrap text-token-sm font-medium text-primary hover:underline disabled:cursor-not-allowed disabled:text-text-faint disabled:no-underline"
-          disabled
-          title={linkTitle ?? `${linkLabel} is not yet available (module still PLANNED).`}
+          onClick={onAction}
+          className="whitespace-nowrap text-token-sm font-medium text-primary hover:underline transition cursor-pointer"
+          title={linkTitle ?? linkLabel}
         >
           {linkLabel} →
         </button>
@@ -342,11 +353,11 @@ function seriesPath(values, max) {
  * (agent-rules.md §4), same precedent as the sibling MOD-009 screens.
  * Score and SLA share a 0–100 scale; both ride high (truthful — the
  * platform is performing near target). */
-function ScoreTrendCard({ data }) {
+function ScoreTrendCard({ data, onViewDetails }) {
   const max = data.axisMax;
   return (
     <div className="min-w-0 flex-1 overflow-hidden rounded-md border border-border bg-surface-card shadow-sm">
-      <CardHeader title="Performance Score Trend" subtitle={data.subtitle} linkLabel="View details" linkTitle="Detailed trend view requires MOD-009's Reports module (still PLANNED)." />
+      <CardHeader title="Performance Score Trend" subtitle={data.subtitle} linkLabel="View details" onAction={onViewDetails} />
       <div className="px-token-5 py-token-4">
         <div className="mb-token-3 flex items-center gap-token-4 text-token-sm text-text-secondary-alt">
           <span className="flex items-center gap-token-2">
@@ -459,10 +470,10 @@ function ThroughputCard({ data }) {
   );
 }
 
-function FastestPipelinesCard({ data }) {
+function FastestPipelinesCard({ data, onViewFastest }) {
   return (
     <div className="min-w-0 flex-1 overflow-hidden rounded-md border border-border bg-surface-card shadow-sm">
-      <CardHeader title="Fastest Pipelines" subtitle={data.subtitle} linkLabel="View all" linkTitle="Pipeline detail requires MOD-006's Pipelines module (still PLANNED)." />
+      <CardHeader title="Fastest Pipelines" subtitle={data.subtitle} linkLabel="View all" onAction={onViewFastest} />
       <ul className="m-0 flex list-none flex-col p-0">
         {data.rows.map((row, i) => (
           <li key={row.rank} className={`flex items-center gap-token-3 px-token-5 py-token-3 ${i < data.rows.length - 1 ? 'border-b border-border-subtle' : ''}`}>
@@ -477,10 +488,10 @@ function FastestPipelinesCard({ data }) {
   );
 }
 
-function RegressionsCard({ data }) {
+function RegressionsCard({ data, onViewRegressions }) {
   return (
     <div className="min-w-0 flex-1 overflow-hidden rounded-md border border-border bg-surface-card shadow-sm">
-      <CardHeader title="Performance Regressions" subtitle={data.subtitle} linkLabel="View diagnostics" linkTitle="Diagnostics require MOD-008's Operations module (still PLANNED)." />
+      <CardHeader title="Performance Regressions" subtitle={data.subtitle} linkLabel="View diagnostics" onAction={onViewRegressions} />
       <ul className="m-0 flex list-none flex-col p-0">
         {data.rows.map((row, i) => (
           <li key={row.name} className={`flex items-center gap-token-3 px-token-5 py-token-3 ${i < data.rows.length - 1 ? 'border-b border-border-subtle' : ''}`}>
@@ -495,10 +506,10 @@ function RegressionsCard({ data }) {
   );
 }
 
-function WorkersTable({ data }) {
+function WorkersTable({ data, onViewWorkers }) {
   return (
     <div className="overflow-hidden rounded-md border border-border bg-surface-card shadow-sm">
-      <CardHeader title="Worker Performance" subtitle={data.subtitle} linkLabel="View all workers" linkTitle="Worker management requires MOD-008's Operations module (still PLANNED)." />
+      <CardHeader title="Worker Performance" subtitle={data.subtitle} linkLabel="View all workers" onAction={onViewWorkers} />
       <div className="overflow-x-auto">
         <table className="w-full border-collapse">
           <thead>
@@ -599,7 +610,7 @@ function TrendGlyph({ trend }) {
   return <span className={`font-mono text-token-xs font-bold ${g.tone}`} aria-label={`trend ${trend}`}>{g.char}</span>;
 }
 
-function ComponentsTable({ table }) {
+function ComponentsTable({ table, handleExportComponents }) {
   const [search, setSearch] = useState('');
   const [categoryFilter, setCategoryFilter] = useState('All');
   const [slaFilter, setSlaFilter] = useState('All');
@@ -642,9 +653,9 @@ function ComponentsTable({ table }) {
         </div>
         <button
           type="button"
-          className="flex h-8 items-center gap-token-2 rounded-md border border-border bg-surface-card px-token-4 text-token-sm font-medium text-text-secondary-alt hover:bg-surface-hover disabled:cursor-not-allowed disabled:opacity-60 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
-          disabled
-          title="Export is not yet available — no MOD-009 export endpoint exists."
+          onClick={handleExportComponents}
+          className="flex h-8 items-center gap-token-2 rounded-md border border-border bg-surface-card px-token-4 text-token-sm font-medium text-text-secondary-alt hover:bg-surface-hover hover:text-text-primary-alt transition cursor-pointer shadow-2xs"
+          title="Export Component Performance Table"
         >
           <img src={iconExport} alt="" className="block h-3.5 w-3.5" />
           Export table

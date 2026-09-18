@@ -11,7 +11,7 @@ export default function StickyFooterActionBar({
   onSaveDraft,
   onValidate,
   onTestValidation,
-  onApplyConfig,
+  onApplyConfig, onApplyConfiguration,
 }) {
   return (
     <div
@@ -89,7 +89,7 @@ export default function StickyFooterActionBar({
 
         <button
           type="button"
-          onClick={onApplyConfig}
+          onClick={onApplyConfig || onApplyConfiguration}
           disabled={isSaving}
           className="inline-flex items-center gap-1.5 px-4 py-1.5 text-xs font-semibold text-white bg-blue-600 hover:bg-blue-700 rounded-md transition cursor-pointer shadow-xs disabled:opacity-50"
         >

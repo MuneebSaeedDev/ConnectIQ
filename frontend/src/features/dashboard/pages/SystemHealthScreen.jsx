@@ -70,7 +70,13 @@ export default function SystemHealthScreen() {
     setTimeout(() => setToastMessage(null), 3500);
   };
 
-  const handleExport = () => {
+  
+  
+  const notifyPlanned = (feature) => {
+    showToast(feature + ' is still PLANNED in this module.');
+  };
+
+const handleExport = () => {
     if (!data) return;
     downloadJson(data, `connectiq-system-health-${timeRange.toLowerCase()}`);
     showToast('System health operational report exported as JSON');
@@ -183,7 +189,7 @@ export default function SystemHealthScreen() {
             <KpiGrid kpis={data.kpis} />
 
             <div className="flex flex-col gap-token-4 xl:flex-row">
-              <ServiceHealthCard data={data.serviceHealth} />
+              <ServiceHealthCard data={data.serviceHealth} onViewLogs={() => notifyPlanned("Service Logs")} />
               <SystemAlertsCard alerts={data.alerts} />
             </div>
 
@@ -296,7 +302,7 @@ function KpiGrid({ kpis }) {
   );
 }
 
-function CardHeader({ title, subtitle, linkLabel }) {
+function CardHeader({ title, subtitle, linkLabel, onAction }) {
   return (
     <div className="flex items-center justify-between border-b border-border-subtle px-token-5 py-token-4">
       <div>
@@ -306,9 +312,9 @@ function CardHeader({ title, subtitle, linkLabel }) {
       {linkLabel && (
         <button
           type="button"
-          className="whitespace-nowrap text-token-sm font-medium text-primary hover:underline disabled:cursor-not-allowed disabled:text-text-faint disabled:no-underline"
-          disabled
-          title={`${linkLabel} requires MOD-009's system health endpoint (still PLANNED).`}
+          onClick={onAction}
+          className="whitespace-nowrap text-token-sm font-medium text-primary hover:underline transition cursor-pointer"
+          title={linkLabel}
         >
           {linkLabel} →
         </button>
@@ -327,10 +333,10 @@ function StatusBadge({ status }) {
   );
 }
 
-function ServiceHealthCard({ data }) {
+function ServiceHealthCard({ data, onViewLogs }) {
   return (
     <div className="min-w-0 flex-1 overflow-hidden rounded-md border border-border bg-surface-card shadow-sm">
-      <CardHeader title="Service Health" subtitle={data.subtitle} linkLabel="View logs" />
+      <CardHeader title="Service Health" subtitle={data.subtitle} linkLabel="View logs" onAction={onViewLogs} />
       <div className="overflow-x-auto">
         <table className="w-full border-collapse">
           <thead>
@@ -362,10 +368,10 @@ function ServiceHealthCard({ data }) {
   );
 }
 
-function SystemAlertsCard({ alerts }) {
+function SystemAlertsCard({ alerts, onViewAll }) {
   return (
     <div className="min-w-0 flex-1 overflow-hidden rounded-md border border-border bg-surface-card shadow-sm">
-      <CardHeader title="System Alerts" subtitle="Actionable · severity sorted" />
+      <CardHeader title="System Alerts" subtitle="Actionable · severity sorted" linkLabel="View all" onAction={onViewAll} />
       {alerts.length === 0 ? (
         <p className="m-0 px-token-5 py-token-8 text-center text-token-sm text-text-secondary-alt">No active alerts.</p>
       ) : (

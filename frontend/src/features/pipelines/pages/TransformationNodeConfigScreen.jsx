@@ -308,10 +308,12 @@ export default function TransformationNodeConfigScreen() {
             </div>
 
             {/* Right Summary Rail (Figma 220:7098 - 220px) */}
+            <div className="hidden xl:block shrink-0 w-full xl:w-56">
             <TransformationNodeSummaryRail
               form={form}
               summaries={summaries}
             />
+          </div>
           </div>
 
           {/* Full-width Bottom Telemetry & Validation Panel (Figma 220:7271 & 220:7320) */}

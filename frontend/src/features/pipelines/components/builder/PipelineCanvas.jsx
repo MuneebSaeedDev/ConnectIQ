@@ -117,16 +117,22 @@ export default function PipelineCanvas({
   const [dragOffset, setDragOffset] = useState({ x: 0, y: 0 });
   const [isPanning, setIsPanning] = useState(false);
   const [panStart, setPanStart] = useState({ x: 0, y: 0 });
+  const [isSpacePressed, setIsSpacePressed] = useState(false);
 
   // Port connection dragging state
   const [connectingFromId, setConnectingFromId] = useState(null);
   const [mouseCanvasPos, setMouseCanvasPos] = useState({ x: 0, y: 0 });
 
-  // Delete key shortcut listener
+  // Keyboard shortcuts listener for Spacebar pan and Delete
   useEffect(() => {
     const handleKeyDown = (e) => {
       const activeTag = document.activeElement?.tagName?.toLowerCase();
       if (['input', 'textarea', 'select'].includes(activeTag)) return;
+
+      if (e.code === 'Space' || e.key === ' ') {
+        e.preventDefault();
+        setIsSpacePressed(true);
+      }
 
       if ((e.key === 'Delete' || e.key === 'Backspace') && selectedNodeId) {
         e.preventDefault();
@@ -134,8 +140,18 @@ export default function PipelineCanvas({
       }
     };
 
+    const handleKeyUp = (e) => {
+      if (e.code === 'Space' || e.key === ' ') {
+        setIsSpacePressed(false);
+      }
+    };
+
     window.addEventListener('keydown', handleKeyDown);
-    return () => window.removeEventListener('keydown', handleKeyDown);
+    window.addEventListener('keyup', handleKeyUp);
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+      window.removeEventListener('keyup', handleKeyUp);
+    };
   }, [selectedNodeId, onDeleteNode]);
 
   // Map nodes by ID for fast lookup
@@ -164,7 +180,7 @@ export default function PipelineCanvas({
     e.stopPropagation();
     onSelectNode(nodeId);
 
-    if (activeTool === 'pan') return;
+    if (activeTool === 'pan' || isSpacePressed) { setIsPanning(true); setPanStart({ x: e.clientX - pan.x, y: e.clientY - pan.y }); return; }
 
     const coords = getCanvasCoords(e);
     const node = nodeMap.get(nodeId);
@@ -180,7 +196,7 @@ export default function PipelineCanvas({
   // Canvas Pan Handlers
   const handleCanvasMouseDown = (e) => {
     if (e.button !== 0 && e.button !== 1) return; // Left or middle button
-    if (activeTool === 'pan' || e.button === 1 || e.spaceKey) {
+    if (activeTool === 'pan' || e.button === 1 || isSpacePressed) {
       setIsPanning(true);
       setPanStart({ x: e.clientX - pan.x, y: e.clientY - pan.y });
     } else {
@@ -260,7 +276,7 @@ export default function PipelineCanvas({
       onDrop={handleCanvasDrop}
       onDragOver={handleCanvasDragOver}
       className={`relative flex-1 w-full h-full overflow-hidden select-none bg-[#f8f9fb] ${
-        activeTool === 'pan' || isPanning ? 'cursor-grab active:cursor-grabbing' : 'cursor-default'
+        isSpacePressed || activeTool === 'pan' || isPanning ? 'cursor-grab active:cursor-grabbing' : 'cursor-default'
       }`}
       style={{
         backgroundImage: gridEnabled
