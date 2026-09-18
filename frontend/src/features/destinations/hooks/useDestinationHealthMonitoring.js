@@ -47,12 +47,40 @@ export function useDestinationHealthMonitoring(destinationId = 'dest_sf_prod_01'
 
   // Combined data with local mutation overlays
   const data = useMemo(() => {
-    const base = fetchedData || DEFAULT_DESTINATION_HEALTH_DATA;
-    return {
-      ...base,
-      healthChecks: localChecks || base.healthChecks,
-      alerts: localAlerts || base.alerts,
+    const base = {
+      ...DEFAULT_DESTINATION_HEALTH_DATA,
+      ...(fetchedData || {}),
+      kpiMetrics: {
+        ...DEFAULT_DESTINATION_HEALTH_DATA.kpiMetrics,
+        ...(fetchedData?.kpiMetrics || {}),
+      },
+      diagnostics: {
+        ...DEFAULT_DESTINATION_HEALTH_DATA.diagnostics,
+        ...(fetchedData?.diagnostics || {}),
+      },
+      healthTimeline: Array.isArray(fetchedData?.healthTimeline)
+        ? fetchedData.healthTimeline
+        : DEFAULT_DESTINATION_HEALTH_DATA.healthTimeline,
+      performanceOverview: Array.isArray(fetchedData?.performanceOverview)
+        ? fetchedData.performanceOverview
+        : DEFAULT_DESTINATION_HEALTH_DATA.performanceOverview,
+      healthChecks: Array.isArray(localChecks || fetchedData?.healthChecks)
+        ? localChecks || fetchedData.healthChecks
+        : DEFAULT_DESTINATION_HEALTH_DATA.healthChecks,
+      connectionHistory: Array.isArray(fetchedData?.connectionHistory)
+        ? fetchedData.connectionHistory
+        : DEFAULT_DESTINATION_HEALTH_DATA.connectionHistory,
+      alerts: Array.isArray(localAlerts || fetchedData?.alerts)
+        ? localAlerts || fetchedData.alerts
+        : DEFAULT_DESTINATION_HEALTH_DATA.alerts,
+      connectedPipelines: Array.isArray(fetchedData?.connectedPipelines)
+        ? fetchedData.connectedPipelines
+        : DEFAULT_DESTINATION_HEALTH_DATA.connectedPipelines,
+      recommendations: Array.isArray(fetchedData?.recommendations)
+        ? fetchedData.recommendations
+        : DEFAULT_DESTINATION_HEALTH_DATA.recommendations,
     };
+    return base;
   }, [fetchedData, localChecks, localAlerts]);
 
   // Filtered and paginated connection history

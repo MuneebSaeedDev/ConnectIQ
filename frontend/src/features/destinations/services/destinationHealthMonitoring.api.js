@@ -508,7 +508,35 @@ export async function getDestinationHealth(orgId = ORG_ID, destinationId = 'dest
     }
     const data = await readJson(res);
     return {
+      ...DEFAULT_DESTINATION_HEALTH_DATA,
       ...data,
+      kpiMetrics: {
+        ...DEFAULT_DESTINATION_HEALTH_DATA.kpiMetrics,
+        ...(data?.kpiMetrics || {}),
+      },
+      diagnostics: {
+        ...DEFAULT_DESTINATION_HEALTH_DATA.diagnostics,
+        ...(data?.diagnostics || {}),
+      },
+      healthTimeline: Array.isArray(data?.healthTimeline)
+        ? data.healthTimeline
+        : DEFAULT_DESTINATION_HEALTH_DATA.healthTimeline,
+      performanceOverview: Array.isArray(data?.performanceOverview)
+        ? data.performanceOverview
+        : DEFAULT_DESTINATION_HEALTH_DATA.performanceOverview,
+      healthChecks: Array.isArray(data?.healthChecks)
+        ? data.healthChecks
+        : DEFAULT_DESTINATION_HEALTH_DATA.healthChecks,
+      connectionHistory: Array.isArray(data?.connectionHistory)
+        ? data.connectionHistory
+        : DEFAULT_DESTINATION_HEALTH_DATA.connectionHistory,
+      alerts: Array.isArray(data?.alerts) ? data.alerts : DEFAULT_DESTINATION_HEALTH_DATA.alerts,
+      connectedPipelines: Array.isArray(data?.connectedPipelines)
+        ? data.connectedPipelines
+        : DEFAULT_DESTINATION_HEALTH_DATA.connectedPipelines,
+      recommendations: Array.isArray(data?.recommendations)
+        ? data.recommendations
+        : DEFAULT_DESTINATION_HEALTH_DATA.recommendations,
       mocked: false,
     };
   } catch (err) {

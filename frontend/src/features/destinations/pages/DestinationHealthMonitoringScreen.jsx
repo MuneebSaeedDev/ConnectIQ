@@ -167,9 +167,9 @@ export default function DestinationHealthMonitoringScreen() {
                 </h1>
                 <span className="inline-flex items-center gap-1.5 rounded-full bg-success-bg px-2.5 py-0.5 text-xs font-medium text-success-strong">
                   <span className="h-2 w-2 rounded-full bg-success animate-pulse" />
-                  {data.statusLabel || 'Healthy'}
+                  {data?.statusLabel || 'Healthy'}
                 </span>
-                {data.mocked && (
+                {data?.mocked && (
                   <span className="inline-flex items-center rounded bg-surface-muted px-2 py-0.5 text-xs text-text-secondary">
                     Sample Data
                   </span>
@@ -192,8 +192,8 @@ export default function DestinationHealthMonitoringScreen() {
                 type="button"
                 onClick={() =>
                   setActiveLogItem({
-                    title: `Destination Logs — ${data.name}`,
-                    logs: `[${data.lastUpdated} INFO] Destination telemetry active. Monitoring interval: 5m.\n[${data.lastUpdated} INFO] Health checks passed. Warehouse active.\n[${data.lastUpdated} INFO] Zero active connection bottlenecks detected.`,
+                    title: `Destination Logs — ${data?.name || 'Destination'}`,
+                    logs: `[${data?.lastUpdated || '14:31:02 UTC'} INFO] Destination telemetry active. Monitoring interval: 5m.\n[${data?.lastUpdated || '14:31:02 UTC'} INFO] Health checks passed. Warehouse active.\n[${data?.lastUpdated || '14:31:02 UTC'} INFO] Zero active connection bottlenecks detected.`,
                   })
                 }
                 className="inline-flex items-center gap-1.5 rounded-md border border-border bg-surface-card px-3 py-1.5 text-xs font-medium text-text-secondary-strong hover:bg-surface-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary transition-colors"
@@ -235,31 +235,31 @@ export default function DestinationHealthMonitoringScreen() {
           <div className="mt-6 grid grid-cols-2 gap-4 border-t border-border pt-4 sm:grid-cols-3 lg:grid-cols-6">
             <div>
               <span className="text-[11px] font-medium uppercase tracking-wider text-text-secondary">Destination</span>
-              <p className="mt-0.5 text-xs font-semibold text-text-primary">{data.name}</p>
+              <p className="mt-0.5 text-xs font-semibold text-text-primary">{data?.name || 'Snowflake Production'}</p>
             </div>
             <div>
               <span className="text-[11px] font-medium uppercase tracking-wider text-text-secondary">Type</span>
-              <p className="mt-0.5 text-xs font-medium text-text-primary">{data.type}</p>
+              <p className="mt-0.5 text-xs font-medium text-text-primary">{data?.type || 'Snowflake'}</p>
             </div>
             <div>
               <span className="text-[11px] font-medium uppercase tracking-wider text-text-secondary">Environment</span>
               <div className="mt-0.5">
                 <span className="inline-flex items-center rounded bg-surface-muted px-2 py-0.5 text-xs font-medium text-text-secondary-strong">
-                  {data.environment}
+                  {data?.environment || 'Production'}
                 </span>
               </div>
             </div>
             <div>
               <span className="text-[11px] font-medium uppercase tracking-wider text-text-secondary">Last Health Check</span>
-              <p className="mt-0.5 text-xs text-text-primary">{data.lastHealthCheck}</p>
+              <p className="mt-0.5 text-xs text-text-primary">{data?.lastHealthCheck || '2 min ago'}</p>
             </div>
             <div>
               <span className="text-[11px] font-medium uppercase tracking-wider text-text-secondary">Last Successful</span>
-              <p className="mt-0.5 text-xs text-text-primary">{data.lastSuccessfulConnection}</p>
+              <p className="mt-0.5 text-xs text-text-primary">{data?.lastSuccessfulConnection || '4 min ago'}</p>
             </div>
             <div>
               <span className="text-[11px] font-medium uppercase tracking-wider text-text-secondary">Monitoring Interval</span>
-              <p className="mt-0.5 text-xs text-text-primary">{data.monitoringInterval}</p>
+              <p className="mt-0.5 text-xs text-text-primary">{data?.monitoringInterval || '5 minutes'}</p>
             </div>
           </div>
         </div>
@@ -272,7 +272,7 @@ export default function DestinationHealthMonitoringScreen() {
             {/* Health Score Pill */}
             <div className="flex items-center gap-4 lg:col-span-3">
               <div className="flex h-16 w-16 items-center justify-center rounded-full bg-success-bg border border-success/20">
-                <span className="text-2xl font-bold text-success-strong">{data.healthScore}</span>
+                <span className="text-2xl font-bold text-success-strong">{data?.healthScore ?? 98}</span>
               </div>
               <div>
                 <span className="text-xs font-semibold uppercase tracking-wider text-text-secondary">Health Score</span>
@@ -287,28 +287,28 @@ export default function DestinationHealthMonitoringScreen() {
             <div className="grid grid-cols-2 gap-4 border-t border-border pt-4 sm:grid-cols-5 lg:col-span-9 lg:border-t-0 lg:border-l lg:pl-6 lg:pt-0">
               <div>
                 <span className="text-[11px] text-text-secondary">Availability</span>
-                <p className="text-base font-bold text-text-primary">{data.availability30d}</p>
+                <p className="text-base font-bold text-text-primary">{data?.availability30d || '99.98%'}</p>
                 <span className="text-[11px] text-text-secondary">last 30d</span>
               </div>
               <div>
                 <span className="text-[11px] text-text-secondary">Active Alerts</span>
-                <p className="text-base font-bold text-text-primary">{data.activeAlertsCount}</p>
-                <span className="text-[11px] text-text-secondary">{data.activeAlertsSubtext}</span>
+                <p className="text-base font-bold text-text-primary">{data?.activeAlertsCount ?? 0}</p>
+                <span className="text-[11px] text-text-secondary">{data?.activeAlertsSubtext || 'Active Alerts no issues'}</span>
               </div>
               <div>
                 <span className="text-[11px] text-text-secondary">Last Incident</span>
-                <p className="text-base font-bold text-text-primary">{data.lastIncident}</p>
-                <span className="text-[11px] text-text-secondary">{data.lastIncidentDate}</span>
+                <p className="text-base font-bold text-text-primary">{data?.lastIncident || '12 days ago'}</p>
+                <span className="text-[11px] text-text-secondary">{data?.lastIncidentDate || 'Aug 22, 2026'}</span>
               </div>
               <div>
                 <span className="text-[11px] text-text-secondary">Current Status</span>
-                <p className="text-base font-bold text-success-strong">{data.statusLabel}</p>
-                <span className="text-[11px] text-text-secondary">{data.currentStatusDetail}</span>
+                <p className="text-base font-bold text-success-strong">{data?.statusLabel || 'Healthy'}</p>
+                <span className="text-[11px] text-text-secondary">{data?.currentStatusDetail || 'all checks passed'}</span>
               </div>
               <div>
                 <span className="text-[11px] text-text-secondary">Last Updated</span>
-                <p className="text-base font-bold text-text-primary">{data.lastUpdatedRelative}</p>
-                <span className="text-[11px] text-text-secondary">{data.lastUpdated}</span>
+                <p className="text-base font-bold text-text-primary">{data?.lastUpdatedRelative || '2 min ago'}</p>
+                <span className="text-[11px] text-text-secondary">{data?.lastUpdated || '14:31:02 UTC'}</span>
               </div>
             </div>
           </div>
@@ -321,92 +321,92 @@ export default function DestinationHealthMonitoringScreen() {
           {/* Availability */}
           <div className="rounded-lg border border-border bg-surface-card p-4 shadow-sm flex flex-col justify-between">
             <div>
-              <span className="text-xs text-text-secondary">{data.kpiMetrics.availability.label}</span>
-              <p className="mt-1 text-xl font-bold text-text-primary">{data.kpiMetrics.availability.value}</p>
+              <span className="text-xs text-text-secondary">{data?.kpiMetrics?.availability?.label || 'Availability'}</span>
+              <p className="mt-1 text-xl font-bold text-text-primary">{data?.kpiMetrics?.availability?.value || '99.98%'}</p>
             </div>
             <div className="mt-3 flex items-center justify-between">
               <div className="flex items-center gap-1 text-xs text-success-strong font-medium">
                 <ArrowUpRight className="h-3.5 w-3.5" />
-                <span>{data.kpiMetrics.availability.trend}</span>
-                <span className="text-[10px] text-text-secondary ml-1">{data.kpiMetrics.availability.period}</span>
+                <span>{data?.kpiMetrics?.availability?.trend || '+0.01%'}</span>
+                <span className="text-[10px] text-text-secondary ml-1">{data?.kpiMetrics?.availability?.period || 'Last 30 days'}</span>
               </div>
-              <Sparkline data={data.kpiMetrics.availability.sparkline} color="var(--color-success)" />
+              <Sparkline data={data?.kpiMetrics?.availability?.sparkline || [99.85, 99.9, 99.95, 99.98]} color="var(--color-success)" />
             </div>
           </div>
 
           {/* Avg Response Time */}
           <div className="rounded-lg border border-border bg-surface-card p-4 shadow-sm flex flex-col justify-between">
             <div>
-              <span className="text-xs text-text-secondary">{data.kpiMetrics.avgResponseTime.label}</span>
-              <p className="mt-1 text-xl font-bold text-text-primary">{data.kpiMetrics.avgResponseTime.value}</p>
+              <span className="text-xs text-text-secondary">{data?.kpiMetrics?.avgResponseTime?.label || 'Avg Response Time'}</span>
+              <p className="mt-1 text-xl font-bold text-text-primary">{data?.kpiMetrics?.avgResponseTime?.value || '142ms'}</p>
             </div>
             <div className="mt-3 flex items-center justify-between">
               <div className="flex items-center gap-1 text-xs text-success-strong font-medium">
                 <ArrowDownRight className="h-3.5 w-3.5" />
-                <span>{data.kpiMetrics.avgResponseTime.trend}</span>
-                <span className="text-[10px] text-text-secondary ml-1">{data.kpiMetrics.avgResponseTime.period}</span>
+                <span>{data?.kpiMetrics?.avgResponseTime?.trend || '-8ms'}</span>
+                <span className="text-[10px] text-text-secondary ml-1">{data?.kpiMetrics?.avgResponseTime?.period || 'vs. yesterday'}</span>
               </div>
-              <Sparkline data={data.kpiMetrics.avgResponseTime.sparkline} color="var(--color-primary)" />
+              <Sparkline data={data?.kpiMetrics?.avgResponseTime?.sparkline || [158, 150, 145, 142]} color="var(--color-primary)" />
             </div>
           </div>
 
           {/* Successful Connections */}
           <div className="rounded-lg border border-border bg-surface-card p-4 shadow-sm flex flex-col justify-between">
             <div>
-              <span className="text-xs text-text-secondary">{data.kpiMetrics.successfulConnections.label}</span>
-              <p className="mt-1 text-xl font-bold text-text-primary">{data.kpiMetrics.successfulConnections.value}</p>
+              <span className="text-xs text-text-secondary">{data?.kpiMetrics?.successfulConnections?.label || 'Successful Connections'}</span>
+              <p className="mt-1 text-xl font-bold text-text-primary">{data?.kpiMetrics?.successfulConnections?.value || '1,284'}</p>
             </div>
             <div className="mt-3 flex items-center justify-between">
               <div className="flex items-center gap-1 text-xs text-success-strong font-medium">
                 <ArrowUpRight className="h-3.5 w-3.5" />
-                <span>{data.kpiMetrics.successfulConnections.trend}</span>
-                <span className="text-[10px] text-text-secondary ml-1">{data.kpiMetrics.successfulConnections.period}</span>
+                <span>{data?.kpiMetrics?.successfulConnections?.trend || '+12'}</span>
+                <span className="text-[10px] text-text-secondary ml-1">{data?.kpiMetrics?.successfulConnections?.period || 'Last 24h'}</span>
               </div>
-              <Sparkline data={data.kpiMetrics.successfulConnections.sparkline} color="var(--color-success)" />
+              <Sparkline data={data?.kpiMetrics?.successfulConnections?.sparkline || [1180, 1220, 1260, 1284]} color="var(--color-success)" />
             </div>
           </div>
 
           {/* Failed Connections */}
           <div className="rounded-lg border border-border bg-surface-card p-4 shadow-sm flex flex-col justify-between">
             <div>
-              <span className="text-xs text-text-secondary">{data.kpiMetrics.failedConnections.label}</span>
-              <p className="mt-1 text-xl font-bold text-text-primary">{data.kpiMetrics.failedConnections.value}</p>
+              <span className="text-xs text-text-secondary">{data?.kpiMetrics?.failedConnections?.label || 'Failed Connections'}</span>
+              <p className="mt-1 text-xl font-bold text-text-primary">{data?.kpiMetrics?.failedConnections?.value || '3'}</p>
             </div>
             <div className="mt-3 flex items-center justify-between">
               <div className="flex items-center gap-1 text-xs text-danger-strong font-medium">
                 <ArrowDownRight className="h-3.5 w-3.5" />
-                <span>{data.kpiMetrics.failedConnections.trend}</span>
-                <span className="text-[10px] text-text-secondary ml-1">{data.kpiMetrics.failedConnections.period}</span>
+                <span>{data?.kpiMetrics?.failedConnections?.trend || '-1'}</span>
+                <span className="text-[10px] text-text-secondary ml-1">{data?.kpiMetrics?.failedConnections?.period || 'Last 24h'}</span>
               </div>
-              <Sparkline data={data.kpiMetrics.failedConnections.sparkline} color="var(--color-danger)" />
+              <Sparkline data={data?.kpiMetrics?.failedConnections?.sparkline || [6, 5, 4, 3]} color="var(--color-danger)" />
             </div>
           </div>
 
           {/* Auth Status */}
           <div className="rounded-lg border border-border bg-surface-card p-4 shadow-sm flex flex-col justify-between">
             <div>
-              <span className="text-xs text-text-secondary">{data.kpiMetrics.authStatus.label}</span>
-              <p className="mt-1 text-xl font-bold text-success-strong">{data.kpiMetrics.authStatus.value}</p>
+              <span className="text-xs text-text-secondary">{data?.kpiMetrics?.authStatus?.label || 'Auth Status'}</span>
+              <p className="mt-1 text-xl font-bold text-success-strong">{data?.kpiMetrics?.authStatus?.value || 'Valid'}</p>
             </div>
             <div className="mt-3">
-              <span className="text-xs font-medium text-text-primary">{data.kpiMetrics.authStatus.subtext}</span>
-              <p className="text-[11px] text-text-secondary">{data.kpiMetrics.authStatus.detail}</p>
+              <span className="text-xs font-medium text-text-primary">{data?.kpiMetrics?.authStatus?.subtext || 'Expires in 47d'}</span>
+              <p className="text-[11px] text-text-secondary">{data?.kpiMetrics?.authStatus?.detail || 'OAuth token active'}</p>
             </div>
           </div>
 
           {/* Write Success Rate */}
           <div className="rounded-lg border border-border bg-surface-card p-4 shadow-sm flex flex-col justify-between">
             <div>
-              <span className="text-xs text-text-secondary">{data.kpiMetrics.writeSuccessRate.label}</span>
-              <p className="mt-1 text-xl font-bold text-text-primary">{data.kpiMetrics.writeSuccessRate.value}</p>
+              <span className="text-xs text-text-secondary">{data?.kpiMetrics?.writeSuccessRate?.label || 'Write Success Rate'}</span>
+              <p className="mt-1 text-xl font-bold text-text-primary">{data?.kpiMetrics?.writeSuccessRate?.value || '99.77%'}</p>
             </div>
             <div className="mt-3 flex items-center justify-between">
               <div className="flex items-center gap-1 text-xs text-success-strong font-medium">
                 <ArrowUpRight className="h-3.5 w-3.5" />
-                <span>{data.kpiMetrics.writeSuccessRate.trend}</span>
-                <span className="text-[10px] text-text-secondary ml-1">{data.kpiMetrics.writeSuccessRate.period}</span>
+                <span>{data?.kpiMetrics?.writeSuccessRate?.trend || '+0.02%'}</span>
+                <span className="text-[10px] text-text-secondary ml-1">{data?.kpiMetrics?.writeSuccessRate?.period || 'Last 24h'}</span>
               </div>
-              <Sparkline data={data.kpiMetrics.writeSuccessRate.sparkline} color="var(--color-success)" />
+              <Sparkline data={data?.kpiMetrics?.writeSuccessRate?.sparkline || [99.7, 99.73, 99.76, 99.77]} color="var(--color-success)" />
             </div>
           </div>
         </div>
@@ -431,7 +431,7 @@ export default function DestinationHealthMonitoringScreen() {
                 </tr>
               </thead>
               <tbody className="divide-y divide-border font-mono">
-                {data.healthTimeline.map((item) => (
+                {(data?.healthTimeline || []).map((item) => (
                   <tr key={item.id} className="hover:bg-surface-hover/50 transition-colors">
                     <td className="px-5 py-3 text-text-secondary">{item.timestamp}</td>
                     <td className="px-5 py-3 font-sans font-medium text-text-primary">{item.event}</td>
@@ -465,7 +465,7 @@ export default function DestinationHealthMonitoringScreen() {
           </div>
 
           <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-7">
-            {data.performanceOverview.map((metric) => (
+            {(data?.performanceOverview || []).map((metric) => (
               <div
                 key={metric.id}
                 className="flex flex-col justify-between rounded-md border border-border bg-surface-muted/30 p-3"
@@ -520,7 +520,7 @@ export default function DestinationHealthMonitoringScreen() {
                 </tr>
               </thead>
               <tbody className="divide-y divide-border">
-                {data.healthChecks.map((check) => {
+                {(data?.healthChecks || []).map((check) => {
                   const isRunning = runningCheckId === check.id;
                   return (
                     <tr key={check.id} className="hover:bg-surface-hover/50 transition-colors">
@@ -698,7 +698,7 @@ export default function DestinationHealthMonitoringScreen() {
           </div>
 
           <div className="flex flex-col gap-3">
-            {data.alerts.map((alert) => (
+            {(data?.alerts || []).map((alert) => (
               <div
                 key={alert.id}
                 className={`rounded-lg border p-4 transition-colors ${
@@ -796,7 +796,7 @@ export default function DestinationHealthMonitoringScreen() {
                 </tr>
               </thead>
               <tbody className="divide-y divide-border">
-                {data.connectedPipelines.map((pipe) => (
+                {(data?.connectedPipelines || []).map((pipe) => (
                   <tr key={pipe.id} className="hover:bg-surface-hover/50 transition-colors">
                     <td className="px-5 py-3 font-medium text-text-primary">{pipe.name}</td>
                     <td className="px-5 py-3">
@@ -861,7 +861,7 @@ export default function DestinationHealthMonitoringScreen() {
           {diagnosticsExpanded && (
             <div className="border-t border-border p-5 bg-surface-muted/20">
               <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-                {Object.entries(data.diagnostics).map(([key, val]) => (
+                {Object.entries(data?.diagnostics || {}).map(([key, val]) => (
                   <div key={key} className="rounded border border-border bg-surface-card p-3">
                     <span className="text-[11px] font-medium uppercase tracking-wider text-text-secondary">
                       {key.replace(/([A-Z])/g, ' $1').trim()}
@@ -886,7 +886,7 @@ export default function DestinationHealthMonitoringScreen() {
           </div>
 
           <div className="divide-y divide-border">
-            {data.recommendations.map((rec) => (
+            {(data?.recommendations || []).map((rec) => (
               <div
                 key={rec.id}
                 className="flex flex-col gap-3 p-5 sm:flex-row sm:items-center sm:justify-between hover:bg-surface-hover/30 transition-colors"
