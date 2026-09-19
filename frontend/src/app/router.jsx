@@ -88,6 +88,9 @@ import PipelineScheduleScreen from '../features/pipelines/pages/PipelineSchedule
 import PipelineParametersScreen from '../features/pipelines/pages/PipelineParametersScreen';
 import PipelineReviewScreen from '../features/pipelines/pages/PipelineReviewScreen';
 import PipelineTestExecutionScreen from '../features/pipelines/pages/PipelineTestExecutionScreen';
+import TransformationRulesListScreen from '../features/transformations/pages/TransformationRulesListScreen';
+import CreateTransformationRuleScreen from '../features/transformations/pages/CreateTransformationRuleScreen';
+import DataCleaningRulesScreen from '../features/dataCleaning/pages/DataCleaningRulesListScreen';
 import NotificationsCenterScreen from '../features/notifications/pages/NotificationsCenterScreen';
 import HelpCenterScreen from '../features/help/pages/HelpCenterScreen';
 import ContactSupportScreen from '../features/help/pages/ContactSupportScreen';
@@ -225,6 +228,13 @@ export const router = createBrowserRouter([
   { path: '/dashboard/pipelines', element: <PipelineOverviewScreen /> },
   { path: '/dashboard/executions', element: <ExecutionStatisticsScreen /> },
   { path: '/dashboard/realtime', element: <RealTimeMonitoringScreen /> },
+
+  // Transformations Engine
+  { path: '/transformations/rules', element: <TransformationRulesListScreen /> },
+  { path: '/transformations/cleaning', element: <DataCleaningRulesScreen /> },
+  { path: '/transformations', element: <TransformationRulesListScreen /> },
+  { path: '/transformations/rules/new', element: <CreateTransformationRuleScreen /> },
+  { path: '/transformations/rules/:id/edit', element: <CreateTransformationRuleScreen /> },
 
   // Operations
   { path: '/operations/workers', element: shellRoute('MOD-008', 'Workers', ['ConnectIQ', 'Operations', 'Workers']) },
