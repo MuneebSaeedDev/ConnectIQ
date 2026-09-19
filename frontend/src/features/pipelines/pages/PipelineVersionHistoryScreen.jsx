@@ -4,13 +4,11 @@ import AppShell from '../../shell/components/AppShell';
 import { usePipelineHistory } from '../hooks/usePipelineHistory';
 import {
   History,
-  GitBranch,
   RotateCcw,
   CheckCircle2,
   AlertCircle,
   Info,
   Loader2,
-  Calendar,
   User,
   ChevronRight,
   GitCommit,

@@ -8,14 +8,6 @@ import { PERMISSIONS } from './permissions';
  * only if at least one of its children is visible, so an empty
  * section never renders (per the task requirement that inapplicable
  * items are hidden, not disabled).
- *
- * Route paths marked `unbuilt: true` don't have a real screen behind
- * them yet — every module below Data Sources/Destinations is still
- * `PLANNED` per docs/modules/module-plan.md. Per agent-rules.md §5/§9,
- * this shell must not fabricate destination screens, so those items
- * render as real nav links to their (currently placeholder) route
- * rather than being invented away — `RoutePlaceholder` already exists
- * in the router for exactly this purpose.
  */
 export const NAV_TREE = [
   {
@@ -62,6 +54,21 @@ export const NAV_TREE = [
       },
       { key: 'executions', label: 'Executions', href: '/dashboard/executions', permissions: [PERMISSIONS.PIPELINE_READ] },
       { key: 'monitoring', label: 'Monitoring', href: '/dashboard/realtime', permissions: [PERMISSIONS.PIPELINE_READ] },
+    ],
+  },
+  {
+    key: 'transformations',
+    label: 'Transformations',
+    icon: 'transformations',
+    collapsible: true,
+    permissions: [PERMISSIONS.PIPELINE_READ],
+    items: [
+      { key: 'transformation-rules', label: 'Transformation Rules', href: '/transformations/rules', permissions: [PERMISSIONS.PIPELINE_READ] },
+      { key: 'custom-expressions', label: 'Custom Expressions', href: '/transformations/expressions', permissions: [PERMISSIONS.PIPELINE_READ] },
+      { key: 'type-conversion-rules', label: 'Type Conversion Rules', href: '/transformations/type-conversion', permissions: [PERMISSIONS.PIPELINE_READ] },
+      { key: 'date-formatting-rules', label: 'Date Formatting Rules', href: '/transformations/date-formatting', permissions: [PERMISSIONS.PIPELINE_READ] },
+      { key: 'data-cleaning-rules', label: 'Data Cleaning Rules', href: '/transformations/cleaning', permissions: [PERMISSIONS.PIPELINE_READ] },
+      { key: 'lookup-tables', label: 'Lookup Tables', href: '/transformations/lookup-tables', permissions: [PERMISSIONS.PIPELINE_READ] },
     ],
   },
   {

@@ -76,7 +76,7 @@ import VisualPipelineBuilderScreen from '../features/pipelines/pages/VisualPipel
 import NodeLibraryScreen from '../features/pipelines/pages/NodeLibraryScreen';
 import SourceNodeConfigScreen from '../features/pipelines/pages/SourceNodeConfigScreen';
 import FilterNodeConfigScreen from '../features/pipelines/pages/FilterNodeConfigScreen';
-import MappingNodeConfigScreen from '../features/pipelines/pages/MappingNodeConfigScreen';
+import FieldMappingScreen from '../features/transformations/pages/FieldMappingScreen';
 import TransformationNodeConfigScreen from '../features/pipelines/pages/TransformationNodeConfigScreen';
 import ValidationNodeConfigScreen from '../features/pipelines/pages/ValidationNodeConfigScreen';
 import MergeNodeConfigScreen from '../features/pipelines/pages/MergeNodeConfigScreen';
@@ -90,11 +90,16 @@ import PipelineReviewScreen from '../features/pipelines/pages/PipelineReviewScre
 import PipelineTestExecutionScreen from '../features/pipelines/pages/PipelineTestExecutionScreen';
 import TransformationRulesListScreen from '../features/transformations/pages/TransformationRulesListScreen';
 import CreateTransformationRuleScreen from '../features/transformations/pages/CreateTransformationRuleScreen';
-import DataCleaningRulesScreen from '../features/dataCleaning/pages/DataCleaningRulesListScreen';
+import CustomExpressionBuilderScreen from '../features/transformations/pages/CustomExpressionBuilderScreen';
+import DataCleaningRulesListScreen from '../features/transformations/pages/DataCleaningRulesListScreen';
+import LookupTablesListScreen from '../features/transformations/pages/LookupTablesListScreen';
 import NotificationsCenterScreen from '../features/notifications/pages/NotificationsCenterScreen';
 import HelpCenterScreen from '../features/help/pages/HelpCenterScreen';
 import ContactSupportScreen from '../features/help/pages/ContactSupportScreen';
+import TypeConversionRulesScreen from '../features/transformations/pages/TypeConversionRulesScreen';
+import DateFormattingRulesScreen from '../features/transformations/pages/DateFormattingRulesScreen';
 import AppShell from '../features/shell/components/AppShell.jsx';
+import RouteErrorBoundary from '../features/shell/components/RouteErrorBoundary.jsx';
 
 // Every route below renders inside the real shared AppShell (MOD-001
 // — Header/Sidebar/Footer, see features/shell/components/AppShell.jsx)
@@ -191,11 +196,11 @@ export const router = createBrowserRouter([
   { path: '/pipelines/:id/nodes/filter', element: <FilterNodeConfigScreen /> },
   { path: '/pipelines/builder/nodes/filter', element: <FilterNodeConfigScreen /> },
   { path: '/pipelines/builder/filter', element: <FilterNodeConfigScreen /> },
-  { path: '/pipelines/new/mapping', element: <MappingNodeConfigScreen /> },
-  { path: '/pipelines/nodes/mapping', element: <MappingNodeConfigScreen /> },
-  { path: '/pipelines/:id/nodes/mapping', element: <MappingNodeConfigScreen /> },
-  { path: '/pipelines/builder/nodes/mapping', element: <MappingNodeConfigScreen /> },
-  { path: '/pipelines/builder/mapping', element: <MappingNodeConfigScreen /> },
+  { path: '/pipelines/new/mapping', element: <FieldMappingScreen /> },
+  { path: '/pipelines/nodes/mapping', element: <FieldMappingScreen /> },
+  { path: '/pipelines/:id/nodes/mapping', element: <FieldMappingScreen /> },
+  { path: '/pipelines/builder/nodes/mapping', element: <FieldMappingScreen /> },
+  { path: '/pipelines/builder/mapping', element: <FieldMappingScreen /> },
   { path: '/pipelines/new/transformation', element: <TransformationNodeConfigScreen /> },
   { path: '/pipelines/nodes/transformation', element: <TransformationNodeConfigScreen /> },
   { path: '/pipelines/:id/nodes/transformation', element: <TransformationNodeConfigScreen /> },
@@ -231,10 +236,19 @@ export const router = createBrowserRouter([
 
   // Transformations Engine
   { path: '/transformations/rules', element: <TransformationRulesListScreen /> },
-  { path: '/transformations/cleaning', element: <DataCleaningRulesScreen /> },
-  { path: '/transformations', element: <TransformationRulesListScreen /> },
   { path: '/transformations/rules/new', element: <CreateTransformationRuleScreen /> },
   { path: '/transformations/rules/:id/edit', element: <CreateTransformationRuleScreen /> },
+  { path: '/transformations/mapping', element: <FieldMappingScreen /> },
+  { path: '/transformations/field-mapping', element: <FieldMappingScreen /> },
+  { path: '/transformations/cleaning', element: <DataCleaningRulesListScreen /> },
+  { path: '/transformations/data-cleaning', element: <DataCleaningRulesListScreen /> },
+  { path: '/transformations/type-conversion', element: <TypeConversionRulesScreen /> },
+  { path: '/transformations/date-formatting', element: <DateFormattingRulesScreen /> },
+  { path: '/transformations/lookup-tables', element: <LookupTablesListScreen /> },
+  { path: '/transformations/expressions', element: <CustomExpressionBuilderScreen /> },
+  { path: '/transformations/custom-expressions', element: <CustomExpressionBuilderScreen /> },
+  { path: '/transformations/builder', element: <CustomExpressionBuilderScreen /> },
+  { path: '/transformations', element: <TransformationRulesListScreen /> },
 
   // Operations
   { path: '/operations/workers', element: shellRoute('MOD-008', 'Workers', ['ConnectIQ', 'Operations', 'Workers']) },
@@ -273,4 +287,7 @@ export const router = createBrowserRouter([
   { path: '/roles/:id/edit', element: <EditRoleScreen /> },
   { path: '/organizations/current/activity', element: <OrganizationActivityScreen /> },
   { path: '/settings/access-control', element: <AccessControlSettingsScreen /> },
+
+  // Catch-all 404 handler
+  { path: '*', element: <RouteErrorBoundary /> },
 ]);

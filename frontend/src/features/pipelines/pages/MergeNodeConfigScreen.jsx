@@ -8,10 +8,15 @@ import InputStreamsSection from '../components/mergeNode/InputStreamsSection';
 import JoinStrategySection from '../components/mergeNode/JoinStrategySection';
 import JoinConditionsSection from '../components/mergeNode/JoinConditionsSection';
 import FieldMappingSection from '../components/mergeNode/FieldMappingSection';
+import ConflictResolutionSection from '../components/mergeNode/ConflictResolutionSection';
 import DeduplicationSection from '../components/mergeNode/DeduplicationSection';
 import PerformanceBufferSection from '../components/mergeNode/PerformanceBufferSection';
 import SummaryRail from '../components/mergeNode/SummaryRail';
 import TestExecutionSection from '../components/mergeNode/TestExecutionSection';
+import StickyFooterActionBar from '../components/mergeNode/StickyFooterActionBar';
+import DuplicateNodeModal from '../components/mergeNode/DuplicateNodeModal';
+import DiscardChangesModal from '../components/mergeNode/DiscardChangesModal';
+import ViewSourceSchemaModal from '../components/mergeNode/ViewSourceSchemaModal';
 import { AlertCircle, CheckCircle2, Info, Loader2 } from 'lucide-react';
 
 export default function MergeNodeConfigScreen() {
@@ -23,7 +28,7 @@ export default function MergeNodeConfigScreen() {
 
   const {
     form,
-    
+
     isLoading,
     isError,
     error,
@@ -54,6 +59,7 @@ export default function MergeNodeConfigScreen() {
     updateFieldMapping,
 
     handleSave,
+    handleSaveDraft,
     handleReset,
     handleValidateJoin,
     handleRunTest,
@@ -230,6 +236,44 @@ export default function MergeNodeConfigScreen() {
 
         </div>
       </main>
+
+      {/* Sticky Bottom Action Bar */}
+      <StickyFooterActionBar
+        isDirty={isDirty}
+        lastSaved="2026-09-18 16:45:00"
+        onCancel={handleCancelClick}
+        onSaveDraft={handleSaveDraft}
+        onValidate={handleValidateJoin}
+        onPreviewData={() => handleRunTest(50)}
+        onApplyConfig={handleSave}
+        isSaving={isSaving}
+        isValidating={isValidating}
+        isPreviewing={isTesting}
+      />
+
+      {/* Modals */}
+      <DuplicateNodeModal
+        isOpen={duplicateModalOpen}
+        onClose={() => setDuplicateModalOpen(false)}
+        onConfirm={handleDuplicate}
+        currentNodeName={form.nodeName}
+      />
+
+      <DiscardChangesModal
+        isOpen={discardModalOpen}
+        onClose={() => setDiscardModalOpen(false)}
+        onConfirm={() => {
+          setDiscardModalOpen(false);
+          navigate(-1);
+        }}
+        unsavedCount={unsavedChangesCount}
+      />
+
+      <ViewSourceSchemaModal
+        isOpen={Boolean(viewSchemaModalOpen)}
+        onClose={() => setViewSchemaModalOpen(false)}
+        inputDataset={viewSchemaModalOpen === 'primary' ? form.primaryStream : form.secondaryStream}
+      />
 
     </AppShell>
   );

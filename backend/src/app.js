@@ -15,6 +15,7 @@ const destinations_routes_1 = __importDefault(require("./routes/destinations.rou
 const pipelines_routes_1 = __importDefault(require("./routes/pipelines.routes"));
 const notifications_routes_1 = __importDefault(require("./routes/notifications.routes"));
 const accountSettings_routes_1 = __importDefault(require("./routes/accountSettings.routes"));
+const transformations_routes_1 = __importDefault(require("./routes/transformations.routes"));
 const response_1 = require("./utils/response");
 
 const app = (0, express_1.default)();
@@ -60,6 +61,12 @@ app.use('/api/organizations', notifications_routes_1.default);
 app.use('/organizations', notifications_routes_1.default);
 app.use('/api', notifications_routes_1.default);
 app.use('/', notifications_routes_1.default);
+
+// Mount transformations routes under /api/organizations, /organizations, /api, and root
+app.use('/api/organizations', transformations_routes_1.default);
+app.use('/organizations', transformations_routes_1.default);
+app.use('/api', transformations_routes_1.default);
+app.use('/', transformations_routes_1.default);
 
 // Mount Organization/RBAC module routes under /api/organizations or /organizations
 app.use('/api/organizations', organizations_routes_1.default);

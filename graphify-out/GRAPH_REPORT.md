@@ -1,16 +1,16 @@
-# Graph Report - ConnectIQ  (2026-09-18)
+# Graph Report - ConnectIQ  (2026-09-19)
 
 ## Corpus Check
-- 517 files · ~582,444 words
+- 627 files · ~633,657 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 4193 nodes · 6967 edges · 229 communities (203 shown, 26 thin omitted)
-- Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 59 edges (avg confidence: 0.52)
+- 4510 nodes · 7592 edges · 243 communities (213 shown, 30 thin omitted)
+- Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 66 edges (avg confidence: 0.54)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `db3161ea`
+- Built from commit: `84d236a5`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -69,7 +69,7 @@
 - OrganizationActivityScreen.jsx
 - DepartmentManagementScreen.jsx
 - AddUserScreen.jsx
-- TransformationNodeConfigScreen.jsx
+- transformationNodeConfig.api.js
 - UserListScreen.jsx
 - UserProfileScreen.jsx
 - EditForm
@@ -79,28 +79,28 @@
 - EditDataSourceScreen.jsx
 - EditDataSourceScreen
 - dependencies
-- useTwoFactor
+- react
 - editRole.api.js
 - PermissionMatrixScreen.jsx
 - ApiConnectorSetupScreen.jsx
 - EditRoleScreen.jsx
 - SettingsForm
-- client.js
+- useBootstrap.js
 - userProfile.api.js
 - UserActivityHistoryScreen.jsx
 - UserPermissionManagementScreen.jsx
 - DashboardScreen.jsx
-- useResetPasswordRequest
+- auth.api.js
 - DestinationListScreen.jsx
 - UserLoginHistoryScreen.jsx
 - ConfirmDialog
 - permissions.js
-- SourceNodeConfigScreen.jsx
+- PipelineSettingsScreen.jsx
 - NumberField
 - CreateRoleScreen.jsx
 - accessControlSettings.api.js
 - DatabaseConnectorSetupScreen.jsx
-- readJson
+- SourceNodeConfigScreen.jsx
 - SourceConnectionSetupScreen.jsx
 - ConnectionTestResultScreen.jsx
 - CreateRoleScreen
@@ -109,16 +109,16 @@
 - ConfirmDialog
 - csvUpload.api.js
 - destinationConnectionTest.api.js
-- createRole
+- setField
 - AddDataSourceScreen
 - AddDataSourceScreen.jsx
 - ConfirmDialog
 - CsvUploadScreen
 - DataSourceListScreen.jsx
 - ExcelUploadScreen.jsx
-- filterNodeConfig.api.js
+- TransformationRuleService
 - ExcelUploadScreen
-- transformationNodeConfig.api.js
+- TransformationNodeConfigScreen.jsx
 - editOrganization.api.js
 - destinationHealthMonitoring.api.js
 - destinationConfiguration.api.js
@@ -129,7 +129,7 @@
 - destinationHistory.api.js
 - SftpConnectionScreen.jsx
 - SourceHealthMonitoringScreen.jsx
-- auth.api.js
+- apiFetch
 - setField
 - CreatePipelineScreen.jsx
 - Header.jsx
@@ -139,71 +139,75 @@
 - SftpConnectionScreen
 - WebhookConfigurationScreen.jsx
 - webhookConfiguration.api.js
-- ExpressionEditorSection.jsx
+- transformationRules.api.js
 - pipelineList.api.js
 - EditForm
 - ConfirmDialog
 - WebhookConfigurationScreen
-- connectionTestResult.api.js
+- FieldMappingScreen.jsx
 - Sidebar.jsx
 - ConfirmDialog
 - isModified
 - DestinationController
 - ConfirmDialog
-- UserProfileMenu
+- nodeLibrary.api.js
 - design_context.md
 - ConfirmDialog
 - ConfirmDialog
 - NodeLibraryScreen.jsx
-- react
-- createDataSource
+- ValidationNodeConfigScreen.jsx
+- useResetPasswordConfirm.js
 - MergeNodeConfigScreen.jsx
-- MappingNodeConfigScreen.jsx
+- DateFormattingRulesScreen.jsx
 - usePipelineList.js
-- dashboard.api.js
+- client.js
 - validationNodeConfig.api.js
 - FilterNodeConfigScreen.jsx
 - screen_lists.md
 - DataSourceController
-- DataCleaningSection.jsx
+- mergeNodeConfig.api.js
 - notification.controller.js
 - AccountSettingsService
 - AuthController
 - AccountSettingsController
 - rbac.controller.js
 - DestinationListScreen
-- useEmailVerification.js
-- useResetPasswordConfirm.js
-- PipelineTestExecutionScreen.jsx
-- PipelineDetailScreen.jsx
+- typeConversion.api.js
+- filterNodeConfig.api.js
+- SettingsForm
+- department.service.js
 - downloadJson
-- uploadCsvFile
-- ConfirmDialog
+- CreateTransformationRuleScreen.jsx
+- DataCleaningRulesListScreen.jsx
 - RecentOperationalActivitySection.jsx
-- startCsvImport
+- CustomExpressionBuilderScreen.jsx
 - ExpandedRowPreview.jsx
 - PipelineAnalyticsSection.jsx
-- RecentExecutionsSection.jsx
+- UserController
 - DataSourcesTable
 - DestinationsTable
-- transformationNode/GeneralInfoSection.jsx
-- transformationNode/RuntimeConfigSection.jsx
-- TransformationModeSelector.jsx
+- userActivityHistory.api.js
+- TransformationRulesListScreen.jsx
+- ApiKeysSettingsScreen.jsx
 - SourceDrawer
 - SourceDrawer
-- DepartmentDrawer
-- TeamDrawer
+- NotificationPanel.jsx
+- UserProfileMenu
+- Module Summary: MOD-011 Transformation Engine (Partial)
+- executionStats.api.js
 - app.js
-- router.jsx
+- settings.api.js
 - auth.middleware.js
 - accountSettings.service.js
 - jwt.js
 - editUser.api.js
+- organizationSettings.api.js
+- ExpressionEditorSection.jsx
 - organization.service.js
 - Module Summary: MOD-004 Organization Management
 - auth.service.js
 - Module Summary: MOD-005 User Management & Profile
-- organization.controller.js
+- OrganizationController
 - errors.js
 - Module Summary: MOD-006 Data Sources & Connectors
 - MOD-001: Shell & Bootstrap
@@ -212,40 +216,48 @@
 - Module Summary: MOD-007 Destinations
 - Module Summary: MOD-008 Pipeline Builder & Execution
 - Module Summary: MOD-010 Notifications
-- apiFetch
-- team.service.js
+- uploadCsvFile
+- CleaningRulesTable.jsx
+- organization.controller.js
 - EditForm
+- startCsvImport
 - notification.model.js
 - loginHistory.model.js
 - userActivity.model.js
-- UserController
-- PipelineSettingsScreen.jsx
+- RecentExecutionsSection.jsx
+- App.jsx
 - accountSettings.controller.js
 - 41. Role-Based Experience
-- AppShell.jsx
+- router.jsx
+- InfrastructureComponentsTable
 - pipelineHistory.api.js
-- NotificationsCenterScreen.jsx
+- notifications.api.js
 - isModified
 - PipelineTemplateLibraryScreen.jsx
-- organizationActivity.model.js
+- PipelineDetailDrawer.jsx
 - 3. Visual Hierarchy
 - 7. Typography Rules
 - 35. Buttons
 - 4. Color System
-- importWorkbook
+- DataCleaningSection.jsx
 - ConfirmDialog
 - 12. Application Shell
 - Enterprise ETL Platform — Design System
 - 20. Pipeline Builder Design
 - 6. Typography
-- ApiKeysSettingsScreen.jsx
-- useLogin
+- PipelineDetailScreen.jsx
+- useTransformationRuleForm.js
+- getSystemHealth
+- transformationNode/GeneralInfoSection.jsx
+- transformationNode/RuntimeConfigSection.jsx
+- TransformationModeSelector.jsx
+- useDataCleaningRules.js
 
 ## God Nodes (most connected - your core abstractions)
-1. `react` - 279 edges
-2. `apiFetch()` - 212 edges
-3. `readJson()` - 200 edges
-4. `AppShell()` - 72 edges
+1. `react` - 372 edges
+2. `apiFetch()` - 237 edges
+3. `readJson()` - 201 edges
+4. `AppShell()` - 83 edges
 5. `downloadJson()` - 47 edges
 6. `AccountSettingsService` - 20 edges
 7. `AccountSettingsController` - 19 edges
@@ -256,23 +268,23 @@
 ## Surprising Connections (you probably didn't know these)
 - `handleExportReport()` --calls--> `downloadJson()`  [EXTRACTED]
   frontend/src/features/dataSources/pages/ConnectionTestResultScreen.jsx → frontend/src/utils/exportHelper.js
-- `useEmailVerification()` --calls--> `useAppDispatch`  [EXTRACTED]
-  frontend/src/features/auth/hooks/useEmailVerification.js → frontend/src/app/hooks.js
-- `useLogin()` --calls--> `useAppDispatch`  [EXTRACTED]
-  frontend/src/features/auth/hooks/useLogin.js → frontend/src/app/hooks.js
-- `useResetPasswordConfirm()` --calls--> `useAppDispatch`  [EXTRACTED]
-  frontend/src/features/auth/hooks/useResetPasswordConfirm.js → frontend/src/app/hooks.js
-- `useResetPasswordRequest()` --calls--> `useAppDispatch`  [EXTRACTED]
-  frontend/src/features/auth/hooks/useResetPasswordRequest.js → frontend/src/app/hooks.js
+- `handleSave()` --calls--> `saveValidatedConnection()`  [EXTRACTED]
+  frontend/src/features/dataSources/pages/ConnectionTestResultScreen.jsx → frontend/src/features/dataSources/services/connectionTestResult.api.js
+- `fetchDateFormattingRuleById()` --calls--> `apiFetch()`  [EXTRACTED]
+  frontend/src/features/transformations/services/dateFormatting.api.js → frontend/src/services/api/client.js
+- `toggleDateFormattingRuleStatus()` --calls--> `apiFetch()`  [EXTRACTED]
+  frontend/src/features/transformations/services/dateFormatting.api.js → frontend/src/services/api/client.js
+- `duplicateDateFormattingRule()` --calls--> `apiFetch()`  [EXTRACTED]
+  frontend/src/features/transformations/services/dateFormatting.api.js → frontend/src/services/api/client.js
 
 ## Import Cycles
 - None detected.
 
-## Communities (229 total, 26 thin omitted)
+## Communities (243 total, 30 thin omitted)
 
 ### Community 0 - "TeamManagementScreen.jsx"
 Cohesion: 0.07
-Nodes (11): useTeamManagement(), CODE_TONE, DOT_TONE, KPI_TONE, PIPELINE_TONE, STATUS_TONE, TeamManagementScreen(), TeamsTable() (+3 more)
+Nodes (12): useTeamManagement(), CODE_TONE, DOT_TONE, KPI_TONE, PIPELINE_TONE, STATUS_TONE, TeamDrawer(), getFocusable() (+4 more)
 
 ### Community 1 - "agent.md"
 Cohesion: 0.05
@@ -280,7 +292,7 @@ Nodes (41): 10.1 Registration Rule, 10.2 Token Design, 10.3 Authentication Reque
 
 ### Community 2 - "ErrorAnalyticsScreen.jsx"
 Cohesion: 0.07
-Nodes (19): useErrorAnalytics(), BAR_TONE, DELTA_TONE, ERROR_STATUS, ErrorAnalyticsScreen(), ErrorsTable(), INCIDENT_STATUS, KPI_ICON (+11 more)
+Nodes (17): useErrorAnalytics(), BAR_TONE, DELTA_TONE, ERROR_STATUS, ErrorAnalyticsScreen(), ErrorsTable(), INCIDENT_STATUS, KPI_ICON (+9 more)
 
 ### Community 3 - "excelUpload.api.js"
 Cohesion: 0.07
@@ -292,23 +304,23 @@ Nodes (37): autoprefixer, dependencies, lucide-react, react, react-dom, react-re
 
 ### Community 5 - "DataQualityScreen.jsx"
 Cohesion: 0.06
-Nodes (19): useDataQuality(), ALERT_SEVERITY, chartPoints(), DataQualityScreen(), DATE_RANGES, FailedValidationsTable(), HEALTH_BAR_TONE, HEALTH_DOT_TONE (+11 more)
+Nodes (17): useDataQuality(), ALERT_SEVERITY, chartPoints(), DataQualityScreen(), DATE_RANGES, FailedValidationsTable(), HEALTH_BAR_TONE, HEALTH_DOT_TONE (+9 more)
 
 ### Community 6 - "ExecutiveDashboardScreen.jsx"
 Cohesion: 0.06
 Nodes (21): useExecutiveDashboard(), AdoptionTrendChart(), ALERT_SEVERITY, chartPoints(), DATE_RANGES, ExecutiveDashboardScreen(), HEALTH_BAR_TONE, HEALTH_DOT_TONE (+13 more)
 
 ### Community 7 - "PipelineOverviewScreen.jsx"
-Cohesion: 0.06
-Nodes (18): usePipelineOverview(), ALERT_SEVERITY, AllPipelinesTable(), chartPoints(), DATE_RANGES, HEALTH_BAR_TONE, HEALTH_DOT_TONE, KPI_ICON (+10 more)
+Cohesion: 0.07
+Nodes (16): usePipelineOverview(), ALERT_SEVERITY, AllPipelinesTable(), chartPoints(), DATE_RANGES, HEALTH_BAR_TONE, HEALTH_DOT_TONE, KPI_ICON (+8 more)
 
 ### Community 8 - "Screen Matrix"
 Cohesion: 0.05
 Nodes (39): Conflicts / ambiguities, Design system, Figma Notes, Figma Notes, Figma Screen Inventory, Missing or inaccessible Figma information, MOD-001 AppShell visual-polish redesign (2026-08-22), MOD-001 shared shell build notes (2026-08-22) (+31 more)
 
 ### Community 9 - "index.js"
-Cohesion: 0.08
-Nodes (18): App(), queryClient, router, authSlice, initialState, initialState, logoutSlice, initialState (+10 more)
+Cohesion: 0.09
+Nodes (15): authSlice, initialState, emailVerificationSlice, initialState, initialState, logoutSlice, initialState, passwordResetConfirmSlice (+7 more)
 
 ### Community 10 - "VisualPipelineBuilderScreen.jsx"
 Cohesion: 0.11
@@ -316,7 +328,7 @@ Nodes (24): BuilderHeader(), BuilderSubheader(), ExecutionConsole(), NodeConfigP
 
 ### Community 11 - "CreateOrganizationScreen.jsx"
 Cohesion: 0.09
-Nodes (17): buildPayload(), computeChecklist(), CreateOrganizationScreen(), handleConfirmCreate(), markTouched(), setField(), showError(), INITIAL_FORM (+9 more)
+Nodes (16): buildPayload(), computeChecklist(), CreateOrganizationScreen(), handleConfirmCreate(), markTouched(), setField(), showError(), INITIAL_FORM (+8 more)
 
 ### Community 12 - "Dependency Notes"
 Cohesion: 0.11
@@ -399,28 +411,28 @@ Cohesion: 0.50
 Nodes (3): Expanding the Oxlint configuration, React Compiler, React + TypeScript + Vite
 
 ### Community 32 - "2026-09-13 — MOD-004 Organization Management (Backend + Conversion to JS)"
-Cohesion: 0.50
-Nodes (3): 2026-09-13 — MOD-004 Organization Management (Backend + Conversion to JS), Review Log, Review log entry
+Cohesion: 0.40
+Nodes (4): 2026-09-13 — MOD-004 Organization Management (Backend + Conversion to JS), MOD-011 / SCR-078, Review Log, Review log entry
 
 ### Community 43 - "SystemHealthScreen.jsx"
-Cohesion: 0.07
-Nodes (16): useSystemHealth(), ALERT_SEVERITY, chartPoints(), healthBarTone(), InfrastructureComponentsTable(), KPI_ICON, KPI_TONE, linePath() (+8 more)
+Cohesion: 0.10
+Nodes (9): ALERT_SEVERITY, chartPoints(), KPI_ICON, KPI_TONE, linePath(), STATUS_BADGE, TIME_RANGES, TREND_TONE (+1 more)
 
 ### Community 44 - "DestinationHealthScreen.jsx"
 Cohesion: 0.07
 Nodes (19): useDestinationHealth(), ALERT_SEVERITY, AllDestinationsTable(), chartPoints(), DeliverySuccessCard(), DestinationHealthScreen(), KPI_ICON, KPI_TONE (+11 more)
 
 ### Community 45 - "ExecutionStatisticsScreen.jsx"
-Cohesion: 0.06
-Nodes (18): useExecutionStatistics(), ENV_TONE, ExecutionsTable(), ExecutionStatisticsScreen(), INSIGHT_TONE, KPI_ICON, KPI_TONE, OUTCOME_TONE (+10 more)
+Cohesion: 0.07
+Nodes (16): useExecutionStatistics(), ENV_TONE, ExecutionsTable(), ExecutionStatisticsScreen(), INSIGHT_TONE, KPI_ICON, KPI_TONE, OUTCOME_TONE (+8 more)
 
 ### Community 46 - "UserDetailsScreen.jsx"
 Cohesion: 0.08
-Nodes (9): useUserDetails(), STATUS_TONE, TAG_TONE, UserDetailsScreen(), FEATURE_ACCESS_BY_LICENSE, ROLE_ACCESS_SCOPE, buildBaseline(), getUserDetails() (+1 more)
+Nodes (7): useUserDetails(), STATUS_TONE, TAG_TONE, UserDetailsScreen(), buildBaseline(), getUserDetails(), UserDetailsError
 
 ### Community 47 - "RealTimeMonitoringScreen.jsx"
 Cohesion: 0.06
-Nodes (19): useRealTimeMonitoring(), ACTIVITY_BADGE, ALERT_TONE, CONN_TONE, EVENT_TONE, INFRA_TONE, KPI_ICON, KPI_TONE (+11 more)
+Nodes (17): useRealTimeMonitoring(), ACTIVITY_BADGE, ALERT_TONE, CONN_TONE, EVENT_TONE, INFRA_TONE, KPI_ICON, KPI_TONE (+9 more)
 
 ### Community 48 - ".oxlintrc.json"
 Cohesion: 0.25
@@ -439,24 +451,24 @@ Cohesion: 0.06
 Nodes (5): BOOLEAN_KEYS, CHANGE_LABELS, CIDR_LIST_PATTERN, ConfirmDialog(), EDITABLE_KEYS
 
 ### Community 53 - "OrganizationSettingsScreen.jsx"
-Cohesion: 0.05
-Nodes (45): useOrganizationSettings(), BOOLEAN_KEYS, BrandingSettings(), CHANGE_LABELS, ComplianceAudit(), computeChecklist(), ConfirmDialog(), displayValue() (+37 more)
+Cohesion: 0.07
+Nodes (20): BOOLEAN_KEYS, CHANGE_LABELS, ConfirmDialog(), EDITABLE_KEYS, IconArrowRight(), IconBell(), IconCheck(), IconCheckCircle() (+12 more)
 
 ### Community 54 - "OrganizationActivityScreen.jsx"
 Cohesion: 0.06
-Nodes (15): useOrganizationActivity(), ActivityTable(), CATEGORY_TONE, EventDrawer(), getFocusable(), handleKeyDown(), KPI_TONE, OrganizationActivityScreen() (+7 more)
+Nodes (13): useOrganizationActivity(), ActivityTable(), CATEGORY_TONE, EventDrawer(), getFocusable(), handleKeyDown(), KPI_TONE, OrganizationActivityScreen() (+5 more)
 
 ### Community 55 - "DepartmentManagementScreen.jsx"
 Cohesion: 0.08
-Nodes (10): useDepartmentManagement(), DepartmentManagementScreen(), DepartmentsTable(), DEPT_TONE, KPI_TONE, PIPELINE_TONE, STATUS_TONE, DepartmentManagementError (+2 more)
+Nodes (11): useDepartmentManagement(), DepartmentDrawer(), getFocusable(), handleKeyDown(), DepartmentManagementScreen(), DepartmentsTable(), DEPT_TONE, KPI_TONE (+3 more)
 
 ### Community 56 - "AddUserScreen.jsx"
 Cohesion: 0.08
-Nodes (17): AddUserScreen(), handleConfirmInvite(), markTouched(), setField(), showError(), AuthenticationSecurity(), BasicInformation(), buildPayload() (+9 more)
+Nodes (16): AddUserScreen(), handleConfirmInvite(), markTouched(), setField(), showError(), AuthenticationSecurity(), BasicInformation(), buildPayload() (+8 more)
 
-### Community 57 - "TransformationNodeConfigScreen.jsx"
-Cohesion: 0.09
-Nodes (17): AdvancedConfigSection(), BottomTelemetryPanel(), DiscardChangesModal(), DuplicateNodeModal(), DuplicateRemovalSection(), FixValidationModal(), InputDatasetSection(), LookupTransformationSection() (+9 more)
+### Community 57 - "transformationNodeConfig.api.js"
+Cohesion: 0.24
+Nodes (13): DateFormattingSection(), useTransformationNodeConfig(), DATE_FORMATS, DEFAULT_TRANSFORMATION_NODE_CONFIG, duplicateTransformationNode(), fetchTransformationNodeConfig(), LOCALES, refreshUpstreamSchema() (+5 more)
 
 ### Community 58 - "UserListScreen.jsx"
 Cohesion: 0.07
@@ -484,19 +496,19 @@ Nodes (12): displayValue(), NotificationPreferences(), PersonalInformation(), Pe
 
 ### Community 64 - "EditDataSourceScreen.jsx"
 Cohesion: 0.07
-Nodes (12): ALL_TABLE_IDS, CONNECTOR_ORDER, INITIAL_FORM, AUTH_FIELD_MAP, CONNECTOR_GROUPS, DATA_SOURCE_OPTIONS, DataSourceError, NOTIFICATION_CHANNELS (+4 more)
+Nodes (7): ALL_TABLE_IDS, ConfirmDialog(), getFocusable(), handleKeyDown(), CONNECTOR_ORDER, formatRows(), INITIAL_FORM
 
 ### Community 65 - "EditDataSourceScreen"
-Cohesion: 0.17
-Nodes (19): Authentication(), computeChecklist(), ConnectionConfiguration(), connectionFieldsFor(), EditDataSourceScreen(), markTouched(), setConnector(), setField() (+11 more)
+Cohesion: 0.15
+Nodes (22): Authentication(), buildPayload(), computeChecklist(), ConnectionConfiguration(), connectionFieldsFor(), EditDataSourceScreen(), handleConfirmCreate(), handleTestConnection() (+14 more)
 
 ### Community 66 - "dependencies"
 Cohesion: 0.06
 Nodes (35): author, dependencies, bcryptjs, bullmq, cookie-parser, cors, dotenv, express (+27 more)
 
-### Community 67 - "useTwoFactor"
-Cohesion: 0.23
-Nodes (9): useTwoFactor(), handleKeyDown(), resend(), setDigit(), submit(), TwoFactorAuthenticationScreen(), handleSubmit(), resendTwoFactorCode() (+1 more)
+### Community 67 - "react"
+Cohesion: 0.05
+Nodes (14): CreateLookupTableDrawer(), DeleteLookupTableModal(), LookupTablesFilter(), LookupTablesHeader(), LookupTablesTable(), LookupTableStats(), LookupTableStatusBadge(), LookupTablesToolbar() (+6 more)
 
 ### Community 68 - "editRole.api.js"
 Cohesion: 0.21
@@ -508,7 +520,7 @@ Nodes (27): usePermissionMatrix(), CELL_STATE, DetailPanel(), getFocusable(), ha
 
 ### Community 70 - "ApiConnectorSetupScreen.jsx"
 Cohesion: 0.05
-Nodes (42): ApiConnectorSetupScreen(), addPair(), handleConfirmCreate(), handleTestRequest(), invalidateTest(), markTouched(), removePair(), setField() (+34 more)
+Nodes (40): ApiConnectorSetupScreen(), addPair(), handleConfirmCreate(), handleTestRequest(), invalidateTest(), markTouched(), removePair(), setField() (+32 more)
 
 ### Community 71 - "EditRoleScreen.jsx"
 Cohesion: 0.06
@@ -518,9 +530,9 @@ Nodes (7): ADMIN_LABEL, BOOLEAN_KEYS, GROUP_LABEL, PERM_LABEL, RESOURCE_LABEL, S
 Cohesion: 0.12
 Nodes (15): AuthenticationPolicies(), computeChecklist(), computeImpact(), displayValue(), MfaPolicies(), NetworkRestrictions(), SettingsForm(), guardedNavigate() (+7 more)
 
-### Community 73 - "client.js"
-Cohesion: 0.20
-Nodes (11): env, useBootstrap(), run(), SplashScreen(), checkConnectivity(), loadPlatformConfig(), restoreSession(), useExecutionStats() (+3 more)
+### Community 73 - "useBootstrap.js"
+Cohesion: 0.29
+Nodes (8): useBootstrap(), run(), SplashScreen(), checkConnectivity(), loadPlatformConfig(), restoreSession(), bootstrapSlice, initialState
 
 ### Community 74 - "userProfile.api.js"
 Cohesion: 0.36
@@ -528,19 +540,19 @@ Nodes (6): useMyProfile(), UserProfileScreen(), buildBaseline(), getMyProfile(),
 
 ### Community 75 - "UserActivityHistoryScreen.jsx"
 Cohesion: 0.06
-Nodes (14): useUserActivityHistory(), ACCOUNT_STATUS_DOT, SEVERITY_TONE, STAT_TONE, STATUS_TONE, UserActivityHistoryScreen(), ACTIVITY_TYPES, buildBaseline() (+6 more)
+Nodes (4): ACCOUNT_STATUS_DOT, SEVERITY_TONE, STAT_TONE, STATUS_TONE
 
 ### Community 76 - "UserPermissionManagementScreen.jsx"
 Cohesion: 0.06
 Nodes (11): useUserPermissions(), PermissionView(), handleSave(), STATE_TONE, UserPermissionManagementScreen(), ACCESS_LEVEL_OPTIONS, buildBaseline(), getUserPermissions() (+3 more)
 
 ### Community 77 - "DashboardScreen.jsx"
-Cohesion: 0.09
-Nodes (14): ExportDashboardModal(), SystemStatusDetailModal(), HEALTH_BAR_TONE, HEALTH_DOT_TONE, healthBarTone(), HealthMeterRow(), KPI_BAR_TONE, KPI_ICON (+6 more)
+Cohesion: 0.10
+Nodes (15): ExportDashboardModal(), SystemStatusDetailModal(), useDashboardSummary(), DashboardScreen(), HEALTH_BAR_TONE, HEALTH_DOT_TONE, healthBarTone(), HealthMeterRow() (+7 more)
 
-### Community 78 - "useResetPasswordRequest"
-Cohesion: 0.24
-Nodes (9): useResetPasswordRequest(), submit(), validate(), ResetPasswordScreen(), handleSubmit(), SignupScreen(), handleSubmit(), validate() (+1 more)
+### Community 78 - "auth.api.js"
+Cohesion: 0.07
+Nodes (44): useAppDispatch, useAppSelector, maskEmail(), useEmailVerification(), resend(), useLogin(), submit(), validate() (+36 more)
 
 ### Community 79 - "DestinationListScreen.jsx"
 Cohesion: 0.09
@@ -558,9 +570,9 @@ Nodes (3): ConfirmDialog(), getFocusable(), handleKeyDown()
 Cohesion: 0.17
 Nodes (13): NAV_TREE, ALL_PERMISSIONS, DATA_ETL_ENGINEER_PERMISSIONS, hasAnyPermission(), hasPermission(), PERMISSIONS, ROLE_LABELS, ROLE_PERMISSIONS (+5 more)
 
-### Community 83 - "SourceNodeConfigScreen.jsx"
-Cohesion: 0.09
-Nodes (17): AdvancedSettingsSection(), AuthenticationSection(), DataExtractionSection(), DataSamplingPreviewSection(), DiscardChangesModal(), DuplicateNodeModal(), LiveValidationCard(), MonitoringSection() (+9 more)
+### Community 83 - "PipelineSettingsScreen.jsx"
+Cohesion: 0.12
+Nodes (19): AdvancedSettingsSection(), DataProcessingSection(), DiscardChangesModal(), ErrorHandlingSection(), ExecutionSettingsSection(), GeneralSettingsSection(), NotificationsSection(), PipelineSettingsHeader() (+11 more)
 
 ### Community 84 - "NumberField"
 Cohesion: 0.36
@@ -572,23 +584,23 @@ Nodes (10): useAccessControlSettings(), AccessControlSettingsScreen(), ACCESS_CO
 
 ### Community 87 - "DatabaseConnectorSetupScreen.jsx"
 Cohesion: 0.06
-Nodes (30): Authentication(), buildPayload(), computeChecklist(), ConfirmDialog(), getFocusable(), handleKeyDown(), ConnectionConfiguration(), ConnectionOptions() (+22 more)
+Nodes (29): Authentication(), buildPayload(), computeChecklist(), ConfirmDialog(), getFocusable(), handleKeyDown(), ConnectionConfiguration(), ConnectionOptions() (+21 more)
 
-### Community 88 - "readJson"
-Cohesion: 0.12
-Nodes (29): GeneralInfoSection(), SourceConfigSection(), SourceConnectorSection(), useSourceNodeConfig(), BASELINE_LIVE_VALIDATIONS, BASELINE_PREVIEW_DATA, BASELINE_SCHEMA_MAPPINGS, CATEGORIES (+21 more)
+### Community 88 - "SourceNodeConfigScreen.jsx"
+Cohesion: 0.06
+Nodes (46): AdvancedSettingsSection(), AuthenticationSection(), DataExtractionSection(), DataSamplingPreviewSection(), DiscardChangesModal(), DuplicateNodeModal(), GeneralInfoSection(), LiveValidationCard() (+38 more)
 
 ### Community 89 - "SourceConnectionSetupScreen.jsx"
 Cohesion: 0.10
 Nodes (10): SourceConnectionSetupScreen(), CONNECTORS_BY_ID, ADD_DATA_SOURCE_ROUTE, CONNECTION_METHOD_GROUPS, LIVE_METHOD_ROUTES, METHOD_ORDER, METHODS_BY_ID, NOTE: `defaultPort` on each method is informational only — SCR-047 (+2 more)
 
 ### Community 90 - "ConnectionTestResultScreen.jsx"
-Cohesion: 0.06
-Nodes (12): Diagnostics(), PerformanceMetrics(), Recommendations(), ResultBanner(), ScoreStat(), SecurityReviewCard(), STATUS_LABEL, STATUS_TONE (+4 more)
+Cohesion: 0.05
+Nodes (24): useConnectionTestResult(), ConnectionTestResultScreen(), handleCopyDiagnostics(), handleExportDiagnostics(), handleExportReport(), handleSave(), Diagnostics(), PerformanceMetrics() (+16 more)
 
 ### Community 91 - "CreateRoleScreen"
 Cohesion: 0.12
-Nodes (15): AdministrativePrivileges(), computeChecklist(), countPermissions(), CreateRoleScreen(), markTouched(), removeResourceRow(), showError(), toggleAdmin() (+7 more)
+Nodes (14): AdministrativePrivileges(), buildPayload(), computeChecklist(), countPermissions(), CreateRoleScreen(), handleConfirmCreate(), removeResourceRow(), toggleAdmin() (+6 more)
 
 ### Community 92 - "createRole.api.js"
 Cohesion: 0.12
@@ -596,7 +608,7 @@ Nodes (16): ACCESS_LEVEL_OPTIONS, ADMIN_PRIVILEGES, ASSIGNABLE_BY_OPTIONS, Creat
 
 ### Community 93 - "FtpConnectionScreen.jsx"
 Cohesion: 0.05
-Nodes (36): Authentication(), buildPayload(), computeChecklist(), ConfirmDialog(), getFocusable(), handleKeyDown(), ConnectionConfiguration(), CRED_META (+28 more)
+Nodes (34): Authentication(), buildPayload(), computeChecklist(), ConfirmDialog(), getFocusable(), handleKeyDown(), ConnectionConfiguration(), CRED_META (+26 more)
 
 ### Community 95 - "csvUpload.api.js"
 Cohesion: 0.08
@@ -606,17 +618,17 @@ Nodes (25): COLUMN_TYPE_OPTIONS, COMPLIANCE_FRAMEWORKS, CsvUploadError, DEFAULT_
 Cohesion: 0.21
 Nodes (11): useDestinationConnectionTest(), DestinationConnectionTestScreen(), buildDiagnosticsExportText(), DEFAULT_DESTINATION_METADATA, DEFAULT_TEST_CONFIG, DEFAULT_TEST_RESULT_SUCCESS, DestinationConnectionTestError, ORG_ID (+3 more)
 
-### Community 98 - "createRole"
+### Community 98 - "setField"
 Cohesion: 0.29
-Nodes (7): buildPayload(), handleConfirmCreate(), setField(), PermissionInheritance(), RoleAssignmentRules(), createRole(), slugifyKey()
+Nodes (7): markTouched(), setField(), showError(), PermissionInheritance(), RoleAssignmentRules(), RoleInformation(), slugifyKey()
 
 ### Community 99 - "AddDataSourceScreen"
-Cohesion: 0.17
-Nodes (19): AddDataSourceScreen(), markTouched(), setConnector(), setField(), showError(), toggleChannel(), toggleSchema(), toggleTable() (+11 more)
+Cohesion: 0.12
+Nodes (26): AddDataSourceScreen(), handleConfirmCreate(), handleTestConnection(), markTouched(), setConnector(), setField(), showError(), toggleChannel() (+18 more)
 
 ### Community 100 - "AddDataSourceScreen.jsx"
 Cohesion: 0.07
-Nodes (7): ALL_TABLE_IDS, ConfirmDialog(), getFocusable(), handleKeyDown(), CONNECTOR_ORDER, formatRows(), INITIAL_FORM
+Nodes (12): ALL_TABLE_IDS, CONNECTOR_ORDER, INITIAL_FORM, AUTH_FIELD_MAP, CONNECTOR_GROUPS, DATA_SOURCE_OPTIONS, DataSourceError, NOTIFICATION_CHANNELS (+4 more)
 
 ### Community 101 - "ConfirmDialog"
 Cohesion: 1.00
@@ -630,25 +642,25 @@ Nodes (10): computeChecklist(), CsvUploadScreen(), markTouched(), setField(), sh
 Cohesion: 0.09
 Nodes (10): KPI_TONE, STATUS_TONE, AUTH_TYPE_OPTIONS, DataSourceListError, ENVIRONMENT_OPTIONS, MOCK_DATA_SOURCE_LIST, SAVED_VIEWS, SORT_OPTIONS (+2 more)
 
-### Community 105 - "filterNodeConfig.api.js"
-Cohesion: 0.15
-Nodes (21): FilterRulesSection(), GeneralInfoSection(), RuntimeConfigSection(), useFilterNodeConfig(), CATEGORY_OPTIONS, DATA_TYPE_OPTIONS, DEFAULT_FILTER_NODE_CONFIG, duplicateFilterNode() (+13 more)
+### Community 105 - "TransformationRuleService"
+Cohesion: 0.04
+Nodes (16): response_1, transformation_service_1, TransformationController, response_1, transformationRule_service_1, TransformationRuleController, mongoose_1, TransformationRuleSchema (+8 more)
 
 ### Community 106 - "ExcelUploadScreen"
-Cohesion: 0.14
-Nodes (14): computeChecklist(), DataQualityValidation(), DestinationConfiguration(), ExcelUploadScreen(), setField(), setParsing(), setToggle(), toggleFramework() (+6 more)
+Cohesion: 0.12
+Nodes (16): buildPayload(), computeChecklist(), DataQualityValidation(), DestinationConfiguration(), ExcelUploadScreen(), handleConfirmImport(), setField(), setParsing() (+8 more)
 
-### Community 107 - "transformationNodeConfig.api.js"
-Cohesion: 0.24
-Nodes (13): DateFormattingSection(), useTransformationNodeConfig(), DATE_FORMATS, DEFAULT_TRANSFORMATION_NODE_CONFIG, duplicateTransformationNode(), fetchTransformationNodeConfig(), LOCALES, refreshUpstreamSchema() (+5 more)
+### Community 107 - "TransformationNodeConfigScreen.jsx"
+Cohesion: 0.09
+Nodes (17): AdvancedConfigSection(), BottomTelemetryPanel(), DiscardChangesModal(), DuplicateNodeModal(), DuplicateRemovalSection(), FixValidationModal(), InputDatasetSection(), LookupTransformationSection() (+9 more)
 
 ### Community 108 - "editOrganization.api.js"
 Cohesion: 0.26
 Nodes (9): useEditableOrganization(), EditOrganizationScreen(), CreateOrganizationError, ORG_FORM_OPTIONS, PLAN_CATALOG, SUBSCRIPTION_PLANS, buildBaseline(), EditOrganizationError (+1 more)
 
 ### Community 109 - "destinationHealthMonitoring.api.js"
-Cohesion: 0.24
-Nodes (11): useDestinationHealthMonitoring(), DestinationHealthMonitoringScreen(), acknowledgeDestinationAlert(), DEFAULT_DESTINATION_HEALTH_DATA, DestinationHealthError, getDestinationHealth(), HEALTH_STATUS_OPTIONS, ORG_ID (+3 more)
+Cohesion: 0.31
+Nodes (10): useDestinationHealthMonitoring(), acknowledgeDestinationAlert(), DEFAULT_DESTINATION_HEALTH_DATA, DestinationHealthError, getDestinationHealth(), HEALTH_STATUS_OPTIONS, ORG_ID, runAllDestinationHealthChecks() (+2 more)
 
 ### Community 110 - "destinationConfiguration.api.js"
 Cohesion: 0.28
@@ -659,8 +671,8 @@ Cohesion: 0.33
 Nodes (4): useDataSourceList(), DataSourceListScreen(), getDataSources(), useDebounce()
 
 ### Community 112 - "OrganizationListScreen.jsx"
-Cohesion: 0.08
-Nodes (10): useOrganizationList(), KPI_TONE, ORG_TONE, OrganizationListScreen(), OrganizationsTable(), PLAN_TONE, STATUS_TONE, getOrganizationList() (+2 more)
+Cohesion: 0.09
+Nodes (8): useOrganizationList(), KPI_TONE, ORG_TONE, OrganizationListScreen(), OrganizationsTable(), PLAN_TONE, STATUS_TONE, getOrganizationList()
 
 ### Community 113 - "setField"
 Cohesion: 0.20
@@ -682,9 +694,9 @@ Nodes (5): CRED_META, cronHint(), INITIAL_FORM, SchedulingAutomation(), TRANSFER
 Cohesion: 0.06
 Nodes (13): useSourceHealth(), HEALTH_FILTERS, HEALTH_TONE, KPI_TONE, POSTURE_TONE, SEVERITY_TONE, SourceHealthMonitoringScreen(), TIMELINE_TONE (+5 more)
 
-### Community 118 - "auth.api.js"
-Cohesion: 0.21
-Nodes (13): useAppDispatch, useAppSelector, useLogout(), confirm(), reset(), LogoutScreen(), handleConfirm(), login() (+5 more)
+### Community 118 - "apiFetch"
+Cohesion: 0.14
+Nodes (29): createDataSource(), testConnection(), createApiConnector(), sendTestRequest(), saveValidatedConnection(), createDatabaseSource(), importWorkbook(), browseDirectories() (+21 more)
 
 ### Community 119 - "setField"
 Cohesion: 0.30
@@ -695,8 +707,8 @@ Cohesion: 0.29
 Nodes (11): CreatePipelineScreen(), BUSINESS_DOMAINS, CATEGORIES, createPipeline(), ENVIRONMENTS, INITIAL_PIPELINE_FORM, savePipelineDraft(), TEAMS (+3 more)
 
 ### Community 121 - "Header.jsx"
-Cohesion: 0.16
-Nodes (11): ICONS, NotificationPanel(), SEVERITY_BADGE, SEVERITY_WASH, TABS, ORGANIZATIONS, SwitchOrganizationModal(), Header() (+3 more)
+Cohesion: 0.31
+Nodes (6): ORGANIZATIONS, SwitchOrganizationModal(), Header(), getFocusable(), handleKeyDown(), resolveCrumbPath()
 
 ### Community 122 - "ConfirmDialog"
 Cohesion: 1.00
@@ -707,24 +719,24 @@ Cohesion: 0.04
 Nodes (15): pipeline_service_1, PipelineController, response_1, ExecutionLogSchema, mongoose_1, PipelineExecutionSchema, PipelineNodeSchema, PipelineSchema (+7 more)
 
 ### Community 124 - "sftpConnection.api.js"
-Cohesion: 0.17
-Nodes (12): NEGOTIATED_SUITE, ORG_ID, SAMPLE_MATCHES, SFTP_AUTH_FIELD_MAP, SFTP_AUTH_METHODS, SFTP_OPTIONS, SFTP_TRANSPORT, SFTP_TRIGGER_TYPES (+4 more)
+Cohesion: 0.18
+Nodes (10): NEGOTIATED_SUITE, ORG_ID, SAMPLE_MATCHES, SFTP_AUTH_FIELD_MAP, SFTP_AUTH_METHODS, SFTP_OPTIONS, SFTP_TRANSPORT, SFTP_TRIGGER_TYPES (+2 more)
 
 ### Community 125 - "SftpConnectionScreen"
 Cohesion: 0.24
-Nodes (9): buildPayload(), computeChecklist(), SftpConnectionScreen(), handleBrowse(), handleConfirmCreate(), handleTestConnection(), validate(), browseSftpDirectories() (+1 more)
+Nodes (9): buildPayload(), computeChecklist(), SftpConnectionScreen(), handleBrowse(), handleConfirmCreate(), handleTestConnection(), validate(), simulatedChecks() (+1 more)
 
 ### Community 126 - "WebhookConfigurationScreen.jsx"
 Cohesion: 0.07
 Nodes (4): AUTH_ORDER, INITIAL_FORM, RETRY_SCHEDULE, SAMPLE_HEADERS
 
 ### Community 127 - "webhookConfiguration.api.js"
-Cohesion: 0.14
-Nodes (14): AUTH_METHODS_BY_ID, DEFAULT_IP_ALLOWLIST, DEFAULT_JSON_SCHEMA, DEFAULT_SUBSCRIBED_EVENT_IDS, EVENT_CATEGORIES, EVENTS_BY_ID, generateEndpoint(), ORG_ID (+6 more)
+Cohesion: 0.15
+Nodes (12): AUTH_METHODS_BY_ID, DEFAULT_IP_ALLOWLIST, DEFAULT_JSON_SCHEMA, DEFAULT_SUBSCRIBED_EVENT_IDS, EVENT_CATEGORIES, EVENTS_BY_ID, ORG_ID, TOTAL_EVENT_COUNT (+4 more)
 
-### Community 128 - "ExpressionEditorSection.jsx"
-Cohesion: 0.29
-Nodes (5): AddRuleModal(), EXPRESSION_SNIPPET_CATEGORIES, ExpressionEditorSection(), SNIPPET_EXAMPLES, DATA_TYPES
+### Community 128 - "transformationRules.api.js"
+Cohesion: 0.27
+Nodes (9): RuleBasicInfoSection(), TransformationRulesFilter(), useTransformationRulesList(), deleteTransformationRule(), fetchTransformationRules(), MOCK_TRANSFORMATION_RULES, toggleTransformationRuleStatus(), TRANSFORMATION_CATEGORIES (+1 more)
 
 ### Community 129 - "pipelineList.api.js"
 Cohesion: 0.10
@@ -736,11 +748,11 @@ Nodes (8): computeChecklist(), displayValue(), EditForm(), guardedNavigate(), ha
 
 ### Community 132 - "WebhookConfigurationScreen"
 Cohesion: 0.22
-Nodes (10): WebhookConfigurationScreen(), handleConfirmCreate(), handleGenerateEndpoint(), handleTestWebhook(), setAuthMethod(), buildPayload(), computeChecklist(), createWebhookSource() (+2 more)
+Nodes (10): WebhookConfigurationScreen(), handleConfirmCreate(), handleGenerateEndpoint(), handleTestWebhook(), setAuthMethod(), buildPayload(), computeChecklist(), generateEndpoint() (+2 more)
 
-### Community 133 - "connectionTestResult.api.js"
-Cohesion: 0.18
-Nodes (13): useConnectionTestResult(), ConnectionTestResultScreen(), handleCopyDiagnostics(), handleExportDiagnostics(), handleExportReport(), handleSave(), buildDiagnosticsText(), ConnectionTestResultError (+5 more)
+### Community 133 - "FieldMappingScreen.jsx"
+Cohesion: 0.07
+Nodes (33): AddMappingModal(), AdvancedConfigSection(), AutoMappingSection(), DataPreviewSection(), DataTypeAndNullSection(), DiscardChangesModal(), DuplicateNodeModal(), GeneralInfoSection() (+25 more)
 
 ### Community 134 - "Sidebar.jsx"
 Cohesion: 0.19
@@ -758,9 +770,9 @@ Nodes (11): destination_service_1, DestinationController, response_1, Destinatio
 Cohesion: 1.00
 Nodes (3): ConfirmDialog(), getFocusable(), handleKeyDown()
 
-### Community 139 - "UserProfileMenu"
-Cohesion: 0.33
-Nodes (3): UserProfileMenu(), getFocusable(), handleKeyDown()
+### Community 139 - "nodeLibrary.api.js"
+Cohesion: 0.21
+Nodes (17): useNodeLibrary(), CATEGORY_OPTIONS, CERTIFICATION_OPTIONS, COMPATIBILITY_OPTIONS, CONNECTOR_TYPE_OPTIONS, createCustomNode(), exportCatalogFile(), getNodeCatalog() (+9 more)
 
 ### Community 140 - "design_context.md"
 Cohesion: 0.06
@@ -775,32 +787,32 @@ Cohesion: 1.00
 Nodes (3): ConfirmDialog(), getFocusable(), handleKeyDown()
 
 ### Community 143 - "NodeLibraryScreen.jsx"
-Cohesion: 0.06
-Nodes (41): AddToPipelineModal(), SAMPLE_PIPELINES, CreateCustomNodeModal(), ExportCatalogModal(), ImportNodePackageModal(), ManageCategoriesModal(), NODE_ICON_MAP, NodeCard() (+33 more)
+Cohesion: 0.07
+Nodes (24): AddToPipelineModal(), SAMPLE_PIPELINES, CreateCustomNodeModal(), ExportCatalogModal(), ImportNodePackageModal(), ManageCategoriesModal(), NODE_ICON_MAP, NodeCard() (+16 more)
 
-### Community 144 - "react"
-Cohesion: 0.06
-Nodes (24): AdvancedConfigSection(), BusinessRulesSection(), DataPreviewSection(), DataTypeValidationSection(), EmailValidationSection(), ErrorStructureSection(), FieldValidationRulesSection(), GeneralInfoSection() (+16 more)
+### Community 144 - "ValidationNodeConfigScreen.jsx"
+Cohesion: 0.07
+Nodes (23): AdvancedConfigSection(), BusinessRulesSection(), DataPreviewSection(), DataTypeValidationSection(), EmailValidationSection(), ErrorStructureSection(), FieldValidationRulesSection(), GeneralInfoSection() (+15 more)
 
-### Community 145 - "createDataSource"
-Cohesion: 0.29
-Nodes (8): handleConfirmCreate(), handleTestConnection(), buildPayload(), buildPayload(), handleConfirmCreate(), handleTestConnection(), createDataSource(), testConnection()
+### Community 145 - "useResetPasswordConfirm.js"
+Cohesion: 0.16
+Nodes (17): useResetPasswordConfirm(), submit(), validate(), ForgetPasswordScreen(), handleSubmit(), confirmPasswordReset(), SettingsShellScaffold(), useChangePassword() (+9 more)
 
 ### Community 146 - "MergeNodeConfigScreen.jsx"
-Cohesion: 0.08
-Nodes (24): DeduplicationSection(), FieldMappingSection(), GeneralInfoSection(), InputStreamsSection(), JoinConditionsSection(), JoinStrategySection(), MergeNodeHeader(), PerformanceBufferSection() (+16 more)
+Cohesion: 0.09
+Nodes (17): ConflictResolutionSection(), DeduplicationSection(), DiscardChangesModal(), DuplicateNodeModal(), FieldMappingSection(), GeneralInfoSection(), InputStreamsSection(), JoinConditionsSection() (+9 more)
 
-### Community 147 - "MappingNodeConfigScreen.jsx"
-Cohesion: 0.07
-Nodes (33): AddMappingModal(), AdvancedConfigSection(), AutoMappingSection(), DataPreviewSection(), DataTypeAndNullSection(), DiscardChangesModal(), DuplicateNodeModal(), GeneralInfoSection() (+25 more)
+### Community 147 - "DateFormattingRulesScreen.jsx"
+Cohesion: 0.09
+Nodes (29): CreateDateFormattingRuleDrawer(), DateFormattingRulesFilters(), SUPPORTED_DATE_TYPES, DateFormattingRulesHeader(), DateFormattingRulesStats(), DateFormattingRulesTable(), DeleteDateFormattingRuleDialog(), TestDateFormattingRuleDrawer() (+21 more)
 
 ### Community 148 - "usePipelineList.js"
 Cohesion: 0.39
 Nodes (8): usePipelineList(), PipelineListScreen(), bulkOperatePipelines(), deletePipeline(), duplicatePipeline(), getPipelines(), setPipelineStatus(), triggerPipelineRun()
 
-### Community 149 - "dashboard.api.js"
-Cohesion: 0.38
-Nodes (5): useDashboardSummary(), DashboardScreen(), DashboardError, getDashboardSummary(), MOCK_SUMMARY
+### Community 149 - "client.js"
+Cohesion: 0.05
+Nodes (25): env, DashboardError, MOCK_SUMMARY, DataQualityError, MOCK_DATA_QUALITY, ErrorAnalyticsError, MOCK_ERROR_ANALYTICS, ExecutionStatisticsError (+17 more)
 
 ### Community 150 - "validationNodeConfig.api.js"
 Cohesion: 0.13
@@ -818,9 +830,9 @@ Nodes (22): 10. Transformation Engine (8 Screens), 11. Validation Engine (8 Scre
 Cohesion: 0.06
 Nodes (11): dataSource_service_1, DataSourceController, response_1, DataSourceSchema, mongoose_1, dataSource_controller_1, express_1, router (+3 more)
 
-### Community 154 - "DataCleaningSection.jsx"
-Cohesion: 0.33
-Nodes (4): DataCleaningSection(), TypeConversionSection(), DATA_CLEANING_OPERATIONS, INVALID_VALUE_HANDLING_OPTIONS
+### Community 154 - "mergeNodeConfig.api.js"
+Cohesion: 0.22
+Nodes (12): useMergeNodeConfig(), DEFAULT_MERGE_NODE_CONFIG, duplicateMergeNode(), getMergeNodeConfig(), INPUT_STREAM_LEFT, INPUT_STREAM_RIGHT, MERGE_STRATEGIES, MergeNodeConfigError (+4 more)
 
 ### Community 155 - "notification.controller.js"
 Cohesion: 0.10
@@ -838,53 +850,57 @@ Nodes (16): joi_1, rbac_service_1, RbacController, response_1, role_model_1, acc
 Cohesion: 0.50
 Nodes (3): useDestinationList(), DestinationListScreen(), getDestinations()
 
-### Community 161 - "useEmailVerification.js"
-Cohesion: 0.24
-Nodes (9): maskEmail(), useEmailVerification(), resend(), EmailVerificationScreen(), confirmEmailVerification(), EmailVerificationError, resendVerificationEmail(), emailVerificationSlice (+1 more)
+### Community 161 - "typeConversion.api.js"
+Cohesion: 0.09
+Nodes (28): DeleteConversionRuleDialog(), ConversionDirection(), TYPE_COLORS, TypeBadge(), TypeConversionMatrix(), TypeConversionRulesContainer(), TypeConversionRulesFilters(), TypeConversionRulesHeader() (+20 more)
 
-### Community 162 - "useResetPasswordConfirm.js"
+### Community 162 - "filterNodeConfig.api.js"
 Cohesion: 0.15
-Nodes (18): useResetPasswordConfirm(), submit(), validate(), ForgetPasswordScreen(), handleSubmit(), confirmPasswordReset(), PasswordResetConfirmError, SettingsShellScaffold() (+10 more)
+Nodes (21): FilterRulesSection(), GeneralInfoSection(), RuntimeConfigSection(), useFilterNodeConfig(), CATEGORY_OPTIONS, DATA_TYPE_OPTIONS, DEFAULT_FILTER_NODE_CONFIG, duplicateFilterNode() (+13 more)
 
-### Community 163 - "PipelineTestExecutionScreen.jsx"
-Cohesion: 0.52
-Nodes (4): usePipelineTest(), PipelineTestExecutionScreen(), executePipelineTest(), MOCK_TEST_PLAN
+### Community 163 - "SettingsForm"
+Cohesion: 0.18
+Nodes (18): BrandingSettings(), computeChecklist(), displayValue(), GeneralSettings(), IntegrationSettings(), NotificationSettings(), OperationalDefaults(), SecurityAuthentication() (+10 more)
 
-### Community 164 - "PipelineDetailScreen.jsx"
-Cohesion: 0.33
-Nodes (5): DASHBOARD_PIPELINE_MAP, EXEC_STATUS, PipelineDetailScreen(), STATUS_CONFIG, BASELINE_PIPELINES
+### Community 164 - "department.service.js"
+Cohesion: 0.15
+Nodes (6): DepartmentSchema, mongoose_1, { Department }, { DepartmentNotFoundError }, DepartmentService, DepartmentNotFoundError
 
 ### Community 165 - "downloadJson"
-Cohesion: 0.80
-Nodes (4): downloadCsv(), downloadFile(), downloadJson(), exportArrayAsCsv()
-
-### Community 166 - "uploadCsvFile"
-Cohesion: 0.50
-Nodes (4): handleFileSelected(), deriveTableName(), formatBytes(), uploadCsvFile()
-
-### Community 167 - "ConfirmDialog"
 Cohesion: 0.67
-Nodes (4): ConfirmDialog(), getFocusable(), handleKeyDown(), formatRows()
+Nodes (5): ComplianceAudit(), downloadCsv(), downloadFile(), downloadJson(), exportArrayAsCsv()
+
+### Community 166 - "CreateTransformationRuleScreen.jsx"
+Cohesion: 0.17
+Nodes (9): CreateRuleHeader(), DATA_TYPES, RuleFieldsSection(), RuleLogicBuilderSection(), OPERATIONS_BY_CATEGORY, RuleLogicSection(), RuleTestPreviewSection(), RULE_TYPES (+1 more)
+
+### Community 167 - "DataCleaningRulesListScreen.jsx"
+Cohesion: 0.18
+Nodes (9): CleaningRulesFilter(), CleaningRulesHeader(), CleaningRulesStats(), CleaningRulesToolbar(), CreateCleaningRuleDrawer(), MOCK_SAMPLE_RECORDS, RuleTestDrawer(), useDataCleaningRules() (+1 more)
 
 ### Community 168 - "RecentOperationalActivitySection.jsx"
 Cohesion: 0.50
 Nodes (3): ACTION_BADGES, RecentOperationalActivitySection(), STATUS_CONFIG
 
-### Community 169 - "startCsvImport"
-Cohesion: 0.67
-Nodes (3): buildPayload(), handleConfirmImport(), startCsvImport()
+### Community 169 - "CustomExpressionBuilderScreen.jsx"
+Cohesion: 0.24
+Nodes (8): CustomExpressionStats(), BUILT_IN_FUNCTIONS, ExpressionBuilderDrawer(), SAMPLE_FIELDS, MOCK_EXPRESSIONS, useCustomExpressions(), CustomExpressionBuilderScreen(), getStatusBadge()
 
-### Community 175 - "transformationNode/GeneralInfoSection.jsx"
-Cohesion: 0.50
-Nodes (3): GeneralInfoSection(), OWNER_OPTIONS, TRANSFORMATION_CATEGORY_OPTIONS
+### Community 172 - "UserController"
+Cohesion: 0.06
+Nodes (7): response_1, user_service_1, UserController, express_1, router, user_controller_1, UserService
 
-### Community 176 - "transformationNode/RuntimeConfigSection.jsx"
-Cohesion: 0.50
-Nodes (3): RuntimeConfigSection(), ERROR_HANDLING_OPTIONS, RETRY_POLICY_OPTIONS
+### Community 175 - "userActivityHistory.api.js"
+Cohesion: 0.21
+Nodes (10): useUserActivityHistory(), UserActivityHistoryScreen(), ACTIVITY_TYPES, buildBaseline(), getUserActivityHistory(), PLACEHOLDER_MARK, SAVED_VIEWS, SEVERITIES (+2 more)
 
-### Community 177 - "TransformationModeSelector.jsx"
-Cohesion: 0.50
-Nodes (3): MODE_ICONS, TransformationModeSelector(), TRANSFORMATION_MODES
+### Community 176 - "TransformationRulesListScreen.jsx"
+Cohesion: 0.29
+Nodes (5): DeleteRuleModal(), TransformationRulesHeader(), TransformationRulesSummary(), TransformationRulesTable(), TransformationRulesListScreen()
+
+### Community 177 - "ApiKeysSettingsScreen.jsx"
+Cohesion: 0.39
+Nodes (7): ApiKeysSettingsScreen(), handleCreate(), handleRevoke(), load(), createApiKey(), getApiKeys(), revokeApiKey()
 
 ### Community 178 - "SourceDrawer"
 Cohesion: 1.00
@@ -894,21 +910,29 @@ Nodes (3): SourceDrawer(), getFocusable(), handleKeyDown()
 Cohesion: 1.00
 Nodes (3): SourceDrawer(), getFocusable(), handleKeyDown()
 
-### Community 180 - "DepartmentDrawer"
-Cohesion: 1.00
-Nodes (3): DepartmentDrawer(), getFocusable(), handleKeyDown()
+### Community 180 - "NotificationPanel.jsx"
+Cohesion: 0.29
+Nodes (5): ICONS, NotificationPanel(), SEVERITY_BADGE, SEVERITY_WASH, TABS
 
-### Community 181 - "TeamDrawer"
-Cohesion: 1.00
-Nodes (3): TeamDrawer(), getFocusable(), handleKeyDown()
+### Community 181 - "UserProfileMenu"
+Cohesion: 0.33
+Nodes (3): UserProfileMenu(), getFocusable(), handleKeyDown()
+
+### Community 182 - "Module Summary: MOD-011 Transformation Engine (Partial)"
+Cohesion: 0.33
+Nodes (5): Backend Capabilities & Data Models, Frontend Screens Mapped, Module Identification, Module Summary: MOD-011 Transformation Engine (Partial), Quality Gates & Verification
+
+### Community 183 - "executionStats.api.js"
+Cohesion: 0.47
+Nodes (4): useExecutionStats(), ExecutionStatsError, getExecutionStats(), MOCK_EXECUTION_STATS
 
 ### Community 184 - "app.js"
-Cohesion: 0.13
-Nodes (14): accountSettings_routes_1, app, auth_routes_1, cookie_parser_1, cors_1, dataSources_routes_1, destinations_routes_1, express_1 (+6 more)
+Cohesion: 0.12
+Nodes (15): accountSettings_routes_1, app, auth_routes_1, cookie_parser_1, cors_1, dataSources_routes_1, destinations_routes_1, express_1 (+7 more)
 
-### Community 185 - "router.jsx"
+### Community 185 - "settings.api.js"
 Cohesion: 0.07
-Nodes (43): SourceNodeConfigScreen(), RoutePlaceholder(), AccountSettingsLayout(), ActiveSessionsSettingsScreen(), handleTerminate(), handleTerminateAll(), load(), AuditLogsSettingsScreen() (+35 more)
+Nodes (41): AccountSettingsLayout(), ActiveSessionsSettingsScreen(), handleTerminate(), handleTerminateAll(), load(), AuditLogsSettingsScreen(), load(), SEVERITY_BADGE (+33 more)
 
 ### Community 186 - "auth.middleware.js"
 Cohesion: 0.14
@@ -923,12 +947,20 @@ Cohesion: 0.13
 Nodes (7): dotenv_1, node_process_1, app_1, env_1, mongoose_1, env_1, jsonwebtoken_1
 
 ### Community 189 - "editUser.api.js"
-Cohesion: 0.22
-Nodes (10): useEditableUser(), EditUserScreen(), ADD_USER_OPTIONS, InviteUserError, LICENSE_POOL, TAKEN_EMPLOYEE_IDS, buildBaseline(), EDIT_USER_OPTIONS (+2 more)
+Cohesion: 0.20
+Nodes (12): useEditableUser(), EditUserScreen(), ADD_USER_OPTIONS, FEATURE_ACCESS_BY_LICENSE, InviteUserError, LICENSE_POOL, ROLE_ACCESS_SCOPE, TAKEN_EMPLOYEE_IDS (+4 more)
+
+### Community 190 - "organizationSettings.api.js"
+Cohesion: 0.36
+Nodes (6): useOrganizationSettings(), OrganizationSettingsScreen(), buildBaseline(), getOrganizationSettings(), OrganizationSettingsError, SETTINGS_OPTIONS
+
+### Community 191 - "ExpressionEditorSection.jsx"
+Cohesion: 0.29
+Nodes (5): AddRuleModal(), EXPRESSION_SNIPPET_CATEGORIES, ExpressionEditorSection(), SNIPPET_EXAMPLES, DATA_TYPES
 
 ### Community 192 - "organization.service.js"
-Cohesion: 0.14
-Nodes (7): mongoose_1, OrganizationSchema, { Organization }, { OrganizationActivity }, { OrganizationNotFoundError, ConflictError }, OrganizationService, OrganizationNotFoundError
+Cohesion: 0.10
+Nodes (10): mongoose_1, OrganizationSchema, mongoose_1, OrganizationActivitySchema, { Organization }, { OrganizationActivity }, { OrganizationNotFoundError, ConflictError }, OrganizationService (+2 more)
 
 ### Community 193 - "Module Summary: MOD-004 Organization Management"
 Cohesion: 0.33
@@ -942,13 +974,9 @@ Nodes (13): EmailVerificationTokenSchema, mongoose_1, PasswordResetTokenSchema, 
 Cohesion: 0.33
 Nodes (5): Backend Capabilities & Data Models, Frontend Screens Mapped, Module Identification, Module Summary: MOD-005 User Management & Profile, Quality Gates & Verification
 
-### Community 196 - "organization.controller.js"
-Cohesion: 0.12
-Nodes (11): { departmentService }, { organizationActivityService }, OrganizationController, { organizationService }, { sendSuccess, sendError }, { teamService }, express, { organizationController } (+3 more)
-
 ### Community 197 - "errors.js"
-Cohesion: 0.07
-Nodes (13): DepartmentSchema, mongoose_1, { Department }, { DepartmentNotFoundError }, DepartmentService, AppError, AuthenticationError, AuthorizationError (+5 more)
+Cohesion: 0.10
+Nodes (11): mongoose_1, TeamSchema, { Team }, { TeamNotFoundError }, AppError, AuthenticationError, AuthorizationError, NotFoundError (+3 more)
 
 ### Community 198 - "Module Summary: MOD-006 Data Sources & Connectors"
 Cohesion: 0.33
@@ -978,29 +1006,33 @@ Nodes (5): Backend Capabilities & Data Models, Frontend Screens Mapped, Module I
 Cohesion: 0.33
 Nodes (5): Backend Capabilities & Data Models, Frontend Screens Mapped, Module Identification, Module Summary: MOD-010 Notifications, Quality Gates & Verification
 
-### Community 205 - "apiFetch"
-Cohesion: 0.40
-Nodes (10): useDestinationNodeConfig(), DEFAULT_DESTINATION_NODE_CONFIG, DestinationNodeConfigError, duplicateDestinationNode(), getDestinationNodeConfig(), saveDestinationNodeConfig(), saveDestinationNodeDraft(), testDestinationConnection() (+2 more)
+### Community 205 - "uploadCsvFile"
+Cohesion: 0.50
+Nodes (4): handleFileSelected(), deriveTableName(), formatBytes(), uploadCsvFile()
 
-### Community 207 - "team.service.js"
-Cohesion: 0.15
-Nodes (6): mongoose_1, TeamSchema, { Team }, { TeamNotFoundError }, TeamService, TeamNotFoundError
+### Community 206 - "CleaningRulesTable.jsx"
+Cohesion: 0.43
+Nodes (4): CleaningRulesTable(), onTopicAction(), CleaningRuleStatusBadge(), CleaningRuleTypeBadge()
+
+### Community 207 - "organization.controller.js"
+Cohesion: 0.10
+Nodes (12): { departmentService }, { organizationActivityService }, { organizationService }, { sendSuccess, sendError }, { teamService }, express, { organizationController }, router (+4 more)
 
 ### Community 208 - "EditForm"
 Cohesion: 0.22
 Nodes (8): computeChecklist(), displayValue(), EditForm(), guardedNavigate(), handleCancel(), handleConfirmSave(), validate(), updateUser()
 
+### Community 209 - "startCsvImport"
+Cohesion: 0.67
+Nodes (3): buildPayload(), handleConfirmImport(), startCsvImport()
+
 ### Community 210 - "notification.model.js"
 Cohesion: 0.50
 Nodes (3): mongoose_1, NotificationPreferenceSchema, NotificationSchema
 
-### Community 213 - "UserController"
-Cohesion: 0.06
-Nodes (7): response_1, user_service_1, UserController, express_1, router, user_controller_1, UserService
-
-### Community 215 - "PipelineSettingsScreen.jsx"
-Cohesion: 0.46
-Nodes (5): usePipelineSettings(), PipelineSettingsScreen(), DEFAULT_PIPELINE_SETTINGS, getPipelineSettings(), savePipelineSettings()
+### Community 215 - "App.jsx"
+Cohesion: 0.47
+Nodes (3): App(), queryClient, router
 
 ### Community 216 - "accountSettings.controller.js"
 Cohesion: 0.20
@@ -1010,29 +1042,25 @@ Nodes (8): accountSettings_service_1, errors_1, joi_1, response_1, accountSettin
 Cohesion: 0.22
 Nodes (9): 41. Role-Based Experience, Auditor, Business User, Data Analyst, Data Engineer, Operations Engineer, Organization Admin, QA / Data Quality Manager (+1 more)
 
-### Community 218 - "AppShell.jsx"
-Cohesion: 0.16
-Nodes (9): CATEGORIES, ContactSupportScreen(), PRIORITIES, CATEGORIES, FAQS, HelpCenterScreen(), AppShell(), DEFAULT_STATS (+1 more)
+### Community 218 - "router.jsx"
+Cohesion: 0.10
+Nodes (21): DestinationHealthMonitoringScreen(), CATEGORIES, ContactSupportScreen(), PRIORITIES, CATEGORIES, FAQS, HelpCenterScreen(), CATEGORY_MAP (+13 more)
 
 ### Community 220 - "pipelineHistory.api.js"
 Cohesion: 0.33
 Nodes (6): usePipelineHistory(), PipelineVersionHistoryScreen(), getPipelineHistory(), MOCK_HISTORY, PipelineHistoryError, rollbackPipeline()
 
-### Community 221 - "NotificationsCenterScreen.jsx"
-Cohesion: 0.23
-Nodes (10): QUERY_KEY, useNotifications(), CATEGORY_MAP, NotificationsCenterScreen(), SEVERITY_BADGE, SEVERITY_ICON, getNotifications(), markAllNotificationsRead() (+2 more)
+### Community 221 - "notifications.api.js"
+Cohesion: 0.39
+Nodes (6): QUERY_KEY, useNotifications(), getNotifications(), markAllNotificationsRead(), MOCK_NOTIFICATIONS, NotificationsError
 
 ### Community 222 - "isModified"
 Cohesion: 0.49
 Nodes (10): AuthenticationSecurity(), isModified(), markTouched(), setField(), showError(), LicenseManagement(), NotificationPreferences(), OrganizationAssignment() (+2 more)
 
 ### Community 223 - "PipelineTemplateLibraryScreen.jsx"
-Cohesion: 0.44
-Nodes (6): usePipelineTemplates(), PipelineTemplateLibraryScreen(), getPipelineTemplates(), instantiateTemplate(), MOCK_TEMPLATES, TEMPLATE_CATEGORIES
-
-### Community 224 - "organizationActivity.model.js"
-Cohesion: 0.25
-Nodes (4): mongoose_1, OrganizationActivitySchema, { OrganizationActivity }, OrganizationActivityService
+Cohesion: 0.20
+Nodes (11): TemplateCard(), TYPE_ICONS, ICONS, TemplatePreviewModal(), UseTemplateModal(), usePipelineTemplates(), PipelineTemplateLibraryScreen(), getPipelineTemplates() (+3 more)
 
 ### Community 225 - "3. Visual Hierarchy"
 Cohesion: 0.40
@@ -1050,41 +1078,57 @@ Nodes (4): 35. Buttons, Destructive, Primary, Secondary
 Cohesion: 0.50
 Nodes (4): 4. Color System, Base Colors, Primary Accent, Semantic Colors
 
-### Community 229 - "importWorkbook"
-Cohesion: 0.67
-Nodes (3): buildPayload(), handleConfirmImport(), importWorkbook()
+### Community 229 - "DataCleaningSection.jsx"
+Cohesion: 0.33
+Nodes (4): DataCleaningSection(), TypeConversionSection(), DATA_CLEANING_OPERATIONS, INVALID_VALUE_HANDLING_OPTIONS
 
 ### Community 230 - "ConfirmDialog"
 Cohesion: 1.00
 Nodes (3): ConfirmDialog(), getFocusable(), handleKeyDown()
 
-### Community 236 - "ApiKeysSettingsScreen.jsx"
-Cohesion: 0.39
-Nodes (7): ApiKeysSettingsScreen(), handleCreate(), handleRevoke(), load(), createApiKey(), getApiKeys(), revokeApiKey()
+### Community 235 - "PipelineDetailScreen.jsx"
+Cohesion: 0.33
+Nodes (5): DASHBOARD_PIPELINE_MAP, EXEC_STATUS, PipelineDetailScreen(), STATUS_CONFIG, BASELINE_PIPELINES
 
-### Community 238 - "useLogin"
-Cohesion: 0.47
-Nodes (5): useLogin(), submit(), validate(), LoginScreen(), handleSubmit()
+### Community 236 - "useTransformationRuleForm.js"
+Cohesion: 0.53
+Nodes (5): useTransformationRuleForm(), CreateTransformationRuleScreen(), createTransformationRule(), fetchTransformationRuleById(), updateTransformationRule()
+
+### Community 237 - "getSystemHealth"
+Cohesion: 0.67
+Nodes (3): useSystemHealth(), SystemHealthScreen(), getSystemHealth()
+
+### Community 238 - "transformationNode/GeneralInfoSection.jsx"
+Cohesion: 0.50
+Nodes (3): GeneralInfoSection(), OWNER_OPTIONS, TRANSFORMATION_CATEGORY_OPTIONS
+
+### Community 239 - "transformationNode/RuntimeConfigSection.jsx"
+Cohesion: 0.50
+Nodes (3): RuntimeConfigSection(), ERROR_HANDLING_OPTIONS, RETRY_POLICY_OPTIONS
+
+### Community 240 - "TransformationModeSelector.jsx"
+Cohesion: 0.50
+Nodes (3): MODE_ICONS, TransformationModeSelector(), TRANSFORMATION_MODES
 
 ## Knowledge Gaps
-- **924 isolated node(s):** `name`, `version`, `description`, `main`, `start` (+919 more)
+- **962 isolated node(s):** `name`, `version`, `description`, `main`, `start` (+957 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **26 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **30 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `react` connect `react` to `TeamManagementScreen.jsx`, `ErrorAnalyticsScreen.jsx`, `DataQualityScreen.jsx`, `ExecutiveDashboardScreen.jsx`, `PipelineOverviewScreen.jsx`, `index.js`, `VisualPipelineBuilderScreen.jsx`, `CreateOrganizationScreen.jsx`, `SourceHealthScreen.jsx`, `PerformanceAnalyticsScreen.jsx`, `SystemHealthScreen.jsx`, `DestinationHealthScreen.jsx`, `ExecutionStatisticsScreen.jsx`, `RealTimeMonitoringScreen.jsx`, `.oxlintrc.json`, `RoleListScreen.jsx`, `EditOrganizationScreen.jsx`, `EditUserScreen.jsx`, `OrganizationSettingsScreen.jsx`, `OrganizationActivityScreen.jsx`, `DepartmentManagementScreen.jsx`, `AddUserScreen.jsx`, `TransformationNodeConfigScreen.jsx`, `UserListScreen.jsx`, `UserProfileScreen.jsx`, `DestinationNodeConfigScreen.jsx`, `AccessControlSettingsScreen.jsx`, `EditDataSourceScreen.jsx`, `useTwoFactor`, `PermissionMatrixScreen.jsx`, `ApiConnectorSetupScreen.jsx`, `EditRoleScreen.jsx`, `client.js`, `UserActivityHistoryScreen.jsx`, `UserPermissionManagementScreen.jsx`, `DashboardScreen.jsx`, `useResetPasswordRequest`, `DestinationListScreen.jsx`, `UserLoginHistoryScreen.jsx`, `permissions.js`, `SourceNodeConfigScreen.jsx`, `CreateRoleScreen.jsx`, `DatabaseConnectorSetupScreen.jsx`, `readJson`, `SourceConnectionSetupScreen.jsx`, `ConnectionTestResultScreen.jsx`, `FtpConnectionScreen.jsx`, `CsvUploadScreen.jsx`, `destinationConnectionTest.api.js`, `AddDataSourceScreen.jsx`, `DataSourceListScreen.jsx`, `ExcelUploadScreen.jsx`, `filterNodeConfig.api.js`, `transformationNodeConfig.api.js`, `destinationHealthMonitoring.api.js`, `destinationConfiguration.api.js`, `DataSourceListScreen`, `OrganizationListScreen.jsx`, `AddDestinationScreen.jsx`, `destinationHistory.api.js`, `SftpConnectionScreen.jsx`, `SourceHealthMonitoringScreen.jsx`, `auth.api.js`, `CreatePipelineScreen.jsx`, `Header.jsx`, `WebhookConfigurationScreen.jsx`, `ExpressionEditorSection.jsx`, `pipelineList.api.js`, `Sidebar.jsx`, `UserProfileMenu`, `NodeLibraryScreen.jsx`, `MergeNodeConfigScreen.jsx`, `MappingNodeConfigScreen.jsx`, `validationNodeConfig.api.js`, `FilterNodeConfigScreen.jsx`, `DataCleaningSection.jsx`, `useEmailVerification.js`, `useResetPasswordConfirm.js`, `PipelineTestExecutionScreen.jsx`, `PipelineDetailScreen.jsx`, `RecentOperationalActivitySection.jsx`, `ExpandedRowPreview.jsx`, `PipelineAnalyticsSection.jsx`, `RecentExecutionsSection.jsx`, `transformationNode/GeneralInfoSection.jsx`, `transformationNode/RuntimeConfigSection.jsx`, `TransformationModeSelector.jsx`, `router.jsx`, `apiFetch`, `PipelineSettingsScreen.jsx`, `AppShell.jsx`, `pipelineHistory.api.js`, `NotificationsCenterScreen.jsx`, `PipelineTemplateLibraryScreen.jsx`, `ApiKeysSettingsScreen.jsx`?**
-  _High betweenness centrality (0.212) - this node is a cross-community bridge._
-- **Why does `AppShell()` connect `AppShell.jsx` to `TeamManagementScreen.jsx`, `pipelineList.api.js`, `ErrorAnalyticsScreen.jsx`, `DataQualityScreen.jsx`, `ExecutiveDashboardScreen.jsx`, `PipelineOverviewScreen.jsx`, `VisualPipelineBuilderScreen.jsx`, `CreateOrganizationScreen.jsx`, `SourceHealthScreen.jsx`, `NodeLibraryScreen.jsx`, `react`, `MergeNodeConfigScreen.jsx`, `MappingNodeConfigScreen.jsx`, `FilterNodeConfigScreen.jsx`, `PerformanceAnalyticsScreen.jsx`, `PipelineTestExecutionScreen.jsx`, `PipelineDetailScreen.jsx`, `SystemHealthScreen.jsx`, `DestinationHealthScreen.jsx`, `ExecutionStatisticsScreen.jsx`, `UserDetailsScreen.jsx`, `RealTimeMonitoringScreen.jsx`, `RoleListScreen.jsx`, `EditOrganizationScreen.jsx`, `OrganizationDetailsScreen.jsx`, `EditUserScreen.jsx`, `OrganizationSettingsScreen.jsx`, `OrganizationActivityScreen.jsx`, `DepartmentManagementScreen.jsx`, `AddUserScreen.jsx`, `router.jsx`, `TransformationNodeConfigScreen.jsx`, `UserListScreen.jsx`, `UserProfileScreen.jsx`, `DestinationNodeConfigScreen.jsx`, `AccessControlSettingsScreen.jsx`, `EditDataSourceScreen.jsx`, `PermissionMatrixScreen.jsx`, `ApiConnectorSetupScreen.jsx`, `EditRoleScreen.jsx`, `UserActivityHistoryScreen.jsx`, `UserPermissionManagementScreen.jsx`, `DashboardScreen.jsx`, `DestinationListScreen.jsx`, `UserLoginHistoryScreen.jsx`, `SourceNodeConfigScreen.jsx`, `CreateRoleScreen.jsx`, `DatabaseConnectorSetupScreen.jsx`, `PipelineSettingsScreen.jsx`, `SourceConnectionSetupScreen.jsx`, `ConnectionTestResultScreen.jsx`, `pipelineHistory.api.js`, `FtpConnectionScreen.jsx`, `NotificationsCenterScreen.jsx`, `PipelineTemplateLibraryScreen.jsx`, `CsvUploadScreen.jsx`, `destinationConnectionTest.api.js`, `AddDataSourceScreen.jsx`, `DataSourceListScreen.jsx`, `ExcelUploadScreen.jsx`, `destinationHealthMonitoring.api.js`, `destinationConfiguration.api.js`, `OrganizationListScreen.jsx`, `AddDestinationScreen.jsx`, `destinationHistory.api.js`, `SftpConnectionScreen.jsx`, `SourceHealthMonitoringScreen.jsx`, `CreatePipelineScreen.jsx`, `WebhookConfigurationScreen.jsx`?**
-  _High betweenness centrality (0.072) - this node is a cross-community bridge._
-- **Why does `apiFetch()` connect `apiFetch` to `TeamManagementScreen.jsx`, `ErrorAnalyticsScreen.jsx`, `excelUpload.api.js`, `DataQualityScreen.jsx`, `ExecutiveDashboardScreen.jsx`, `PipelineOverviewScreen.jsx`, `CreateOrganizationScreen.jsx`, `SourceHealthScreen.jsx`, `PerformanceAnalyticsScreen.jsx`, `SystemHealthScreen.jsx`, `DestinationHealthScreen.jsx`, `ExecutionStatisticsScreen.jsx`, `UserDetailsScreen.jsx`, `RealTimeMonitoringScreen.jsx`, `RoleListScreen.jsx`, `OrganizationDetailsScreen.jsx`, `OrganizationSettingsScreen.jsx`, `OrganizationActivityScreen.jsx`, `DepartmentManagementScreen.jsx`, `AddUserScreen.jsx`, `UserListScreen.jsx`, `EditForm`, `ProfileForm`, `EditDataSourceScreen.jsx`, `useTwoFactor`, `editRole.api.js`, `PermissionMatrixScreen.jsx`, `ApiConnectorSetupScreen.jsx`, `SettingsForm`, `client.js`, `userProfile.api.js`, `UserActivityHistoryScreen.jsx`, `UserPermissionManagementScreen.jsx`, `DestinationListScreen.jsx`, `UserLoginHistoryScreen.jsx`, `accessControlSettings.api.js`, `DatabaseConnectorSetupScreen.jsx`, `readJson`, `createRole.api.js`, `FtpConnectionScreen.jsx`, `csvUpload.api.js`, `destinationConnectionTest.api.js`, `createRole`, `DataSourceListScreen.jsx`, `editOrganization.api.js`, `destinationHealthMonitoring.api.js`, `destinationConfiguration.api.js`, `DataSourceListScreen`, `OrganizationListScreen.jsx`, `AddDestinationScreen.jsx`, `destinationHistory.api.js`, `SourceHealthMonitoringScreen.jsx`, `auth.api.js`, `CreatePipelineScreen.jsx`, `sftpConnection.api.js`, `SftpConnectionScreen`, `webhookConfiguration.api.js`, `pipelineList.api.js`, `EditForm`, `WebhookConfigurationScreen`, `connectionTestResult.api.js`, `NodeLibraryScreen.jsx`, `createDataSource`, `MergeNodeConfigScreen.jsx`, `usePipelineList.js`, `dashboard.api.js`, `DestinationListScreen`, `useEmailVerification.js`, `useResetPasswordConfirm.js`, `PipelineTestExecutionScreen.jsx`, `uploadCsvFile`, `startCsvImport`, `router.jsx`, `editUser.api.js`, `EditForm`, `PipelineSettingsScreen.jsx`, `pipelineHistory.api.js`, `NotificationsCenterScreen.jsx`, `PipelineTemplateLibraryScreen.jsx`, `importWorkbook`, `ApiKeysSettingsScreen.jsx`?**
-  _High betweenness centrality (0.038) - this node is a cross-community bridge._
+- **Why does `react` connect `react` to `TeamManagementScreen.jsx`, `ErrorAnalyticsScreen.jsx`, `DataQualityScreen.jsx`, `ExecutiveDashboardScreen.jsx`, `PipelineOverviewScreen.jsx`, `VisualPipelineBuilderScreen.jsx`, `CreateOrganizationScreen.jsx`, `SourceHealthScreen.jsx`, `PerformanceAnalyticsScreen.jsx`, `SystemHealthScreen.jsx`, `DestinationHealthScreen.jsx`, `ExecutionStatisticsScreen.jsx`, `RealTimeMonitoringScreen.jsx`, `.oxlintrc.json`, `RoleListScreen.jsx`, `EditOrganizationScreen.jsx`, `EditUserScreen.jsx`, `OrganizationSettingsScreen.jsx`, `OrganizationActivityScreen.jsx`, `DepartmentManagementScreen.jsx`, `AddUserScreen.jsx`, `transformationNodeConfig.api.js`, `UserListScreen.jsx`, `UserProfileScreen.jsx`, `DestinationNodeConfigScreen.jsx`, `AccessControlSettingsScreen.jsx`, `EditDataSourceScreen.jsx`, `PermissionMatrixScreen.jsx`, `ApiConnectorSetupScreen.jsx`, `EditRoleScreen.jsx`, `useBootstrap.js`, `UserActivityHistoryScreen.jsx`, `UserPermissionManagementScreen.jsx`, `DashboardScreen.jsx`, `auth.api.js`, `DestinationListScreen.jsx`, `UserLoginHistoryScreen.jsx`, `permissions.js`, `PipelineSettingsScreen.jsx`, `CreateRoleScreen.jsx`, `DatabaseConnectorSetupScreen.jsx`, `SourceNodeConfigScreen.jsx`, `SourceConnectionSetupScreen.jsx`, `ConnectionTestResultScreen.jsx`, `FtpConnectionScreen.jsx`, `CsvUploadScreen.jsx`, `destinationConnectionTest.api.js`, `AddDataSourceScreen.jsx`, `DataSourceListScreen.jsx`, `ExcelUploadScreen.jsx`, `TransformationNodeConfigScreen.jsx`, `destinationHealthMonitoring.api.js`, `destinationConfiguration.api.js`, `DataSourceListScreen`, `OrganizationListScreen.jsx`, `AddDestinationScreen.jsx`, `destinationHistory.api.js`, `SftpConnectionScreen.jsx`, `SourceHealthMonitoringScreen.jsx`, `apiFetch`, `CreatePipelineScreen.jsx`, `Header.jsx`, `WebhookConfigurationScreen.jsx`, `transformationRules.api.js`, `pipelineList.api.js`, `FieldMappingScreen.jsx`, `Sidebar.jsx`, `nodeLibrary.api.js`, `NodeLibraryScreen.jsx`, `ValidationNodeConfigScreen.jsx`, `useResetPasswordConfirm.js`, `MergeNodeConfigScreen.jsx`, `DateFormattingRulesScreen.jsx`, `validationNodeConfig.api.js`, `FilterNodeConfigScreen.jsx`, `mergeNodeConfig.api.js`, `typeConversion.api.js`, `filterNodeConfig.api.js`, `CreateTransformationRuleScreen.jsx`, `DataCleaningRulesListScreen.jsx`, `RecentOperationalActivitySection.jsx`, `CustomExpressionBuilderScreen.jsx`, `ExpandedRowPreview.jsx`, `PipelineAnalyticsSection.jsx`, `TransformationRulesListScreen.jsx`, `ApiKeysSettingsScreen.jsx`, `NotificationPanel.jsx`, `UserProfileMenu`, `settings.api.js`, `ExpressionEditorSection.jsx`, `CleaningRulesTable.jsx`, `RecentExecutionsSection.jsx`, `App.jsx`, `router.jsx`, `pipelineHistory.api.js`, `PipelineTemplateLibraryScreen.jsx`, `PipelineDetailDrawer.jsx`, `DataCleaningSection.jsx`, `PipelineDetailScreen.jsx`, `useTransformationRuleForm.js`, `transformationNode/GeneralInfoSection.jsx`, `transformationNode/RuntimeConfigSection.jsx`, `TransformationModeSelector.jsx`, `useDataCleaningRules.js`?**
+  _High betweenness centrality (0.244) - this node is a cross-community bridge._
+- **Why does `AppShell()` connect `router.jsx` to `TeamManagementScreen.jsx`, `pipelineList.api.js`, `ErrorAnalyticsScreen.jsx`, `DataQualityScreen.jsx`, `ExecutiveDashboardScreen.jsx`, `PipelineOverviewScreen.jsx`, `FieldMappingScreen.jsx`, `VisualPipelineBuilderScreen.jsx`, `CreateOrganizationScreen.jsx`, `SourceHealthScreen.jsx`, `NodeLibraryScreen.jsx`, `ValidationNodeConfigScreen.jsx`, `MergeNodeConfigScreen.jsx`, `DateFormattingRulesScreen.jsx`, `FilterNodeConfigScreen.jsx`, `PerformanceAnalyticsScreen.jsx`, `typeConversion.api.js`, `CreateTransformationRuleScreen.jsx`, `DataCleaningRulesListScreen.jsx`, `CustomExpressionBuilderScreen.jsx`, `SystemHealthScreen.jsx`, `DestinationHealthScreen.jsx`, `ExecutionStatisticsScreen.jsx`, `UserDetailsScreen.jsx`, `RealTimeMonitoringScreen.jsx`, `TransformationRulesListScreen.jsx`, `RoleListScreen.jsx`, `EditOrganizationScreen.jsx`, `OrganizationDetailsScreen.jsx`, `EditUserScreen.jsx`, `OrganizationSettingsScreen.jsx`, `OrganizationActivityScreen.jsx`, `DepartmentManagementScreen.jsx`, `AddUserScreen.jsx`, `UserListScreen.jsx`, `UserProfileScreen.jsx`, `DestinationNodeConfigScreen.jsx`, `AccessControlSettingsScreen.jsx`, `EditDataSourceScreen.jsx`, `react`, `PermissionMatrixScreen.jsx`, `ApiConnectorSetupScreen.jsx`, `EditRoleScreen.jsx`, `UserActivityHistoryScreen.jsx`, `UserPermissionManagementScreen.jsx`, `DashboardScreen.jsx`, `DestinationListScreen.jsx`, `UserLoginHistoryScreen.jsx`, `PipelineSettingsScreen.jsx`, `CreateRoleScreen.jsx`, `DatabaseConnectorSetupScreen.jsx`, `SourceNodeConfigScreen.jsx`, `SourceConnectionSetupScreen.jsx`, `ConnectionTestResultScreen.jsx`, `pipelineHistory.api.js`, `FtpConnectionScreen.jsx`, `PipelineTemplateLibraryScreen.jsx`, `CsvUploadScreen.jsx`, `destinationConnectionTest.api.js`, `AddDataSourceScreen.jsx`, `DataSourceListScreen.jsx`, `ExcelUploadScreen.jsx`, `PipelineDetailScreen.jsx`, `TransformationNodeConfigScreen.jsx`, `destinationConfiguration.api.js`, `OrganizationListScreen.jsx`, `AddDestinationScreen.jsx`, `destinationHistory.api.js`, `SftpConnectionScreen.jsx`, `SourceHealthMonitoringScreen.jsx`, `CreatePipelineScreen.jsx`, `WebhookConfigurationScreen.jsx`?**
+  _High betweenness centrality (0.060) - this node is a cross-community bridge._
+- **Why does `apiFetch()` connect `apiFetch` to `TeamManagementScreen.jsx`, `ErrorAnalyticsScreen.jsx`, `excelUpload.api.js`, `DataQualityScreen.jsx`, `ExecutiveDashboardScreen.jsx`, `PipelineOverviewScreen.jsx`, `SourceHealthScreen.jsx`, `PerformanceAnalyticsScreen.jsx`, `DestinationHealthScreen.jsx`, `ExecutionStatisticsScreen.jsx`, `UserDetailsScreen.jsx`, `RealTimeMonitoringScreen.jsx`, `RoleListScreen.jsx`, `OrganizationDetailsScreen.jsx`, `OrganizationActivityScreen.jsx`, `DepartmentManagementScreen.jsx`, `UserListScreen.jsx`, `EditForm`, `ProfileForm`, `editRole.api.js`, `PermissionMatrixScreen.jsx`, `ApiConnectorSetupScreen.jsx`, `SettingsForm`, `useBootstrap.js`, `userProfile.api.js`, `UserPermissionManagementScreen.jsx`, `DashboardScreen.jsx`, `auth.api.js`, `DestinationListScreen.jsx`, `UserLoginHistoryScreen.jsx`, `PipelineSettingsScreen.jsx`, `accessControlSettings.api.js`, `DatabaseConnectorSetupScreen.jsx`, `SourceNodeConfigScreen.jsx`, `ConnectionTestResultScreen.jsx`, `createRole.api.js`, `FtpConnectionScreen.jsx`, `csvUpload.api.js`, `destinationConnectionTest.api.js`, `AddDataSourceScreen.jsx`, `DataSourceListScreen.jsx`, `editOrganization.api.js`, `destinationHealthMonitoring.api.js`, `destinationConfiguration.api.js`, `DataSourceListScreen`, `OrganizationListScreen.jsx`, `AddDestinationScreen.jsx`, `destinationHistory.api.js`, `SourceHealthMonitoringScreen.jsx`, `CreatePipelineScreen.jsx`, `sftpConnection.api.js`, `SftpConnectionScreen`, `webhookConfiguration.api.js`, `transformationRules.api.js`, `pipelineList.api.js`, `EditForm`, `WebhookConfigurationScreen`, `nodeLibrary.api.js`, `useResetPasswordConfirm.js`, `DateFormattingRulesScreen.jsx`, `usePipelineList.js`, `client.js`, `mergeNodeConfig.api.js`, `DestinationListScreen`, `typeConversion.api.js`, `SettingsForm`, `userActivityHistory.api.js`, `ApiKeysSettingsScreen.jsx`, `executionStats.api.js`, `settings.api.js`, `editUser.api.js`, `organizationSettings.api.js`, `uploadCsvFile`, `EditForm`, `startCsvImport`, `pipelineHistory.api.js`, `notifications.api.js`, `PipelineTemplateLibraryScreen.jsx`, `useTransformationRuleForm.js`, `getSystemHealth`, `useDataCleaningRules.js`?**
+  _High betweenness centrality (0.033) - this node is a cross-community bridge._
 - **What connects `name`, `version`, `description` to the rest of the system?**
-  _924 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _962 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `TeamManagementScreen.jsx` be split into smaller, more focused modules?**
   _Cohesion score 0.07311827956989247 - nodes in this community are weakly interconnected._
 - **Should `agent.md` be split into smaller, more focused modules?**
   _Cohesion score 0.047619047619047616 - nodes in this community are weakly interconnected._
 - **Should `ErrorAnalyticsScreen.jsx` be split into smaller, more focused modules?**
-  _Cohesion score 0.06722689075630252 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.07258064516129033 - nodes in this community are weakly interconnected._
