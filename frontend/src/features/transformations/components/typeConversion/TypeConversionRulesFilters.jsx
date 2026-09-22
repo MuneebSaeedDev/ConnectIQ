@@ -59,7 +59,7 @@ export const TypeConversionRulesFilters = ({ filters, onFilterChange }) => {
             </select>
           </div>
 
-          <div className="hidden sm:block text-[#94a3b8]">→</div>
+          <div className="sm:block text-[#94a3b8]">→</div>
 
           {/* Target Type Filter */}
           <div className="w-full sm:w-auto">

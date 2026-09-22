@@ -154,7 +154,7 @@ export default function TransformationRulesListScreen() {
           {/* Pagination */}
           {pagination.totalPages > 1 && (
             <div className="flex items-center justify-between border-t border-slate-200 bg-white px-4 py-3 rounded-lg border shadow-xs sm:px-6">
-              <div className="hidden sm:block">
+              <div className="sm:block">
                 <p className="text-xs text-slate-700">
                   Showing page <span className="font-semibold">{pagination.page}</span> of{' '}
                   <span className="font-semibold">{pagination.totalPages}</span> (

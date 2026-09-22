@@ -60,7 +60,7 @@ export const DateFormattingRulesFilters = ({ filters, onFilterChange }) => {
             </select>
           </div>
 
-          <div className="hidden sm:block text-slate-400">→</div>
+          <div className="sm:block text-slate-400">→</div>
 
           {/* Output Type Filter */}
           <div className="w-full sm:w-auto">

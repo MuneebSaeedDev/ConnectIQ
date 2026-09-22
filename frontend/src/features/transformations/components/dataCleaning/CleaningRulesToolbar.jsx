@@ -117,7 +117,7 @@ export default function CleaningRulesToolbar({
           <div className="flex items-center gap-4">
             <button
               onClick={() => onSelectAll(!isAllSelected)}
-              className="flex items-center gap-2 text-sm text-slate-600 hover:text-slate-900 group focus:outline-hidden"
+              className="flex items-center gap-2 text-sm text-slate-600 hover:text-slate-900 group focus:outline-none"
             >
               {isAllSelected ? (
                 <CheckSquare className="w-4 h-4 text-blue-600" />

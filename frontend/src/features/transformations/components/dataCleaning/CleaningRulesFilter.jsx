@@ -41,7 +41,7 @@ export default function CleaningRulesFilter({
         </div>
         <div className="flex items-center gap-2">
           {/* Quick filter access (optional mobile toggle, normally inline on desktop) */}
-          <div className="hidden sm:flex items-center gap-2 p-1.5px bg-slate-100 rounded-md text-slate-500 border border-slate-200">
+          <div className="sm:flex items-center gap-2 p-1.5px bg-slate-100 rounded-md text-slate-500 border border-slate-200">
              <SlidersHorizontal className="size-4 mx-2 text-slate-500"/>
           </div>
         </div>

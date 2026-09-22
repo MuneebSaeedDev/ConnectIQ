@@ -80,16 +80,16 @@ export default function LookupTablesTable({
               <th scope="col" className="px-3 py-3.5 text-left text-[11px] font-semibold text-slate-500 uppercase tracking-wider">
                 Lookup Type
               </th>
-              <th scope="col" className="hidden lg:table-cell px-3 py-3.5 text-left text-[11px] font-semibold text-slate-500 uppercase tracking-wider">
+              <th scope="col" className="lg:table-cell px-3 py-3.5 text-left text-[11px] font-semibold text-slate-500 uppercase tracking-wider">
                 Key → Return Field
               </th>
-              <th scope="col" className="hidden sm:table-cell px-3 py-3.5 text-left text-[11px] font-semibold text-slate-500 uppercase tracking-wider">
+              <th scope="col" className="sm:table-cell px-3 py-3.5 text-left text-[11px] font-semibold text-slate-500 uppercase tracking-wider">
                 Status
               </th>
-              <th scope="col" className="hidden xl:table-cell px-3 py-3.5 text-left text-[11px] font-semibold text-slate-500 uppercase tracking-wider">
+              <th scope="col" className="xl:table-cell px-3 py-3.5 text-left text-[11px] font-semibold text-slate-500 uppercase tracking-wider">
                 Pipelines
               </th>
-              <th scope="col" className="hidden lg:table-cell px-3 py-3.5 text-left text-[11px] font-semibold text-slate-500 uppercase tracking-wider">
+              <th scope="col" className="lg:table-cell px-3 py-3.5 text-left text-[11px] font-semibold text-slate-500 uppercase tracking-wider">
                 Last Updated
               </th>
               <th scope="col" className="relative py-3.5 pl-3 pr-4 sm:pr-6">
@@ -131,7 +131,7 @@ export default function LookupTablesTable({
                   <td className="whitespace-nowrap px-3 py-4 text-sm">
                     <LookupTypeBadge type={table.type} />
                   </td>
-                  <td className="hidden lg:table-cell whitespace-nowrap px-3 py-4 text-sm">
+                  <td className="lg:table-cell whitespace-nowrap px-3 py-4 text-sm">
                     <div className="flex items-center gap-1.5 text-slate-600 overflow-hidden max-w-[220px]">
                       <span className="font-mono text-xs bg-slate-100 px-1.5 py-0.5 rounded truncate max-w-[90px]" title={table.keyField}>
                         {table.keyField}
@@ -142,15 +142,15 @@ export default function LookupTablesTable({
                       </span>
                     </div>
                   </td>
-                  <td className="hidden sm:table-cell whitespace-nowrap px-3 py-4 text-sm">
+                  <td className="sm:table-cell whitespace-nowrap px-3 py-4 text-sm">
                     <LookupTableStatusBadge status={table.status} />
                   </td>
-                  <td className="hidden xl:table-cell whitespace-nowrap px-3 py-4 text-sm text-slate-500">
+                  <td className="xl:table-cell whitespace-nowrap px-3 py-4 text-sm text-slate-500">
                     <span className={`font-medium ${table.pipelinesCount > 0 ? 'text-slate-900' : 'text-slate-400'}`}>
                       {table.pipelinesCount || 0}
                     </span>
                   </td>
-                  <td className="hidden lg:table-cell whitespace-nowrap px-3 py-4 text-sm text-slate-500">
+                  <td className="lg:table-cell whitespace-nowrap px-3 py-4 text-sm text-slate-500">
                     <div className="text-slate-900">{new Date(table.lastUpdated || Date.now()).toLocaleDateString()}</div>
                     <div className="text-[11px] truncate max-w-[120px]">{table.updatedBy}</div>
                   </td>
@@ -158,14 +158,14 @@ export default function LookupTablesTable({
                     <div className="flex items-center justify-end gap-2 group">
                       <button
                         onClick={() => onTest(table)}
-                        className="text-slate-400 hover:text-blue-600 opacity-0 group-hover:opacity-100 transition-opacity p-1 focus:outline-hidden focus:opacity-100"
+                        className="text-slate-400 hover:text-blue-600 opacity-0 group-hover:opacity-100 transition-opacity p-1 focus:outline-none focus:opacity-100"
                         title="Test Lookup Table"
                       >
                         <SearchCode className="w-4 h-4" />
                       </button>
                       <button
                         onClick={() => onToggleStatus(tableId)}
-                        className={`p-1 transition-opacity focus:outline-hidden ${
+                        className={`p-1 transition-opacity focus:outline-none ${
                           table.status === 'Active'
                             ? 'text-emerald-600 hover:text-amber-600 opacity-0 group-hover:opacity-100 focus:opacity-100'
                             : 'text-slate-400 hover:text-emerald-600'
@@ -179,7 +179,7 @@ export default function LookupTablesTable({
                       <div className="relative inline-block text-left ml-2" ref={openDropdownId === tableId ? dropdownRef : null}>
                         <button
                           onClick={(e) => handleDropdownClick(e, tableId)}
-                          className={`p-1 focus:outline-hidden transition-colors rounded ${
+                          className={`p-1 focus:outline-none transition-colors rounded ${
                             openDropdownId === tableId ? 'bg-slate-100 text-slate-900' : 'text-slate-400 hover:text-slate-600'
                           }`}
                         >
@@ -187,7 +187,7 @@ export default function LookupTablesTable({
                         </button>
 
                         {openDropdownId === tableId && (
-                          <div className="absolute right-0 z-50 mt-2 w-48 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-hidden">
+                          <div className="absolute right-0 z-50 mt-2 w-48 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                              <div className="py-1">
                                <button
                                  onClick={() => { onEdit(table); setOpenDropdownId(null); }}

@@ -30,17 +30,17 @@ export default function LookupTablesHeader({
           type="button"
           onClick={onRefresh}
           disabled={isRefreshing}
-          className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-slate-700 bg-white border border-slate-300 rounded-md shadow-xs hover:bg-slate-50 focus:outline-hidden focus:ring-2 focus:ring-blue-500 disabled:opacity-50 transition-colors"
+          className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-slate-700 bg-white border border-slate-300 rounded-md shadow-xs hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-blue-500 disabled:opacity-50 transition-colors"
           title="Refresh lookup tables list"
         >
           <RefreshCw className={`w-3.5 h-3.5 text-slate-500 ${isRefreshing ? 'animate-spin' : ''}`} />
-          <span className="hidden sm:inline">Refresh</span>
+          <span className="sm:inline">Refresh</span>
         </button>
 
         <button
           type="button"
           onClick={onImportTables}
-          className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-slate-700 bg-white border border-slate-300 rounded-md shadow-xs hover:bg-slate-50 focus:outline-hidden focus:ring-2 focus:ring-blue-500 transition-colors"
+          className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-slate-700 bg-white border border-slate-300 rounded-md shadow-xs hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors"
         >
           <Upload className="w-3.5 h-3.5 text-slate-500" />
           <span>Import</span>
@@ -49,7 +49,7 @@ export default function LookupTablesHeader({
         <button
           type="button"
           onClick={onExportTables}
-          className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-slate-700 bg-white border border-slate-300 rounded-md shadow-xs hover:bg-slate-50 focus:outline-hidden focus:ring-2 focus:ring-blue-500 transition-colors"
+          className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-slate-700 bg-white border border-slate-300 rounded-md shadow-xs hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors"
         >
           <Download className="w-3.5 h-3.5 text-slate-500" />
           <span>Export</span>
@@ -58,7 +58,7 @@ export default function LookupTablesHeader({
         <button
           type="button"
           onClick={onCreateTable}
-          className="inline-flex items-center gap-1.5 px-3.5 py-1.5 text-xs font-semibold text-white bg-blue-600 rounded-md shadow-xs hover:bg-blue-700 focus:outline-hidden focus:ring-2 focus:ring-blue-500 focus:ring-offset-1 transition-colors"
+          className="inline-flex items-center gap-1.5 px-3.5 py-1.5 text-xs font-semibold text-white bg-blue-600 rounded-md shadow-xs hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-1 transition-colors"
         >
           <Plus className="w-4 h-4" />
           <span>Create Lookup Table</span>

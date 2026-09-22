@@ -193,7 +193,7 @@ export default function LookupTablesListScreen() {
 
           {pagination.totalPages > 1 && (
             <div className="flex items-center justify-between border border-slate-200 bg-white px-4 py-3 rounded-lg shadow-xs sm:px-6">
-              <div className="hidden sm:block">
+              <div className="sm:block">
                 <p className="text-sm text-slate-700">
                   Showing page <span className="font-semibold">{pagination.page}</span> of <span className="font-semibold">{pagination.totalPages}</span> ({pagination.total} total)
                 </p>
